@@ -21,36 +21,20 @@ pipeline {
           """
         }
       }
-      stage('Deploy Insights') {
+      stage('Deploy Uploader JSON') {
         when {
           branch 'master'
         }
         steps {
-             sh 'rsync -arv -e "ssh -i /tmp/akamai-ssh" * sshacs@unprotected.upload.akamai.com:/114034/insights/static/core/'
+             sh 'rsync -arv -e "ssh -i /tmp/akamai-ssh" ./uploader* sshacs@unprotected.upload.akamai.com:/114034/r/insights/v1/static/core/'
         }
       }
-      stage('Deploy Insights Beta') {
+      stage('Deploy Egg') {
         when {
           branch 'master'
         }
         steps {
-             sh 'rsync -arv -e "ssh -i /tmp/akamai-ssh" * sshacs@unprotected.upload.akamai.com:/114034/insightsbeta/static/core/'
-        }
-      }
-      stage('Deploy Insights Alpha') {
-        when {
-          branch 'master'
-        }
-        steps {
-             sh 'rsync -arv -e "ssh -i /tmp/akamai-ssh" * sshacs@unprotected.upload.akamai.com:/114034/insightsalpha/static/core/' 
-        }
-      }
-      stage('Deploy Legacy API') {
-        when {
-          branch 'master'
-        }
-        steps {
-             sh 'rsync -arv -e "ssh -i /tmp/akamai-ssh" * sshacs@unprotected.upload.akamai.com:/114034/r/insights/v1/static/core/'
+             sh 'rsync -arv -e "ssh -i /tmp/akamai-ssh" ./insights-core.egg* sshacs@unprotected.upload.akamai.com:/114034/r/insights/v1/static/core/'
         }
       }
     }
