@@ -29,6 +29,7 @@ pipeline {
         }
         steps {
              sh 'rsync -arv -e "ssh -i /tmp/akamai-ssh -o StrictHostKeyChecking=no" ./uploader* sshacs@unprotected.upload.akamai.com:/114034/r/insights/v1/static/core/'
+             sh 'rsync -arv -e "ssh -i /tmp/akamai-ssh -o StrictHostKeyChecking=no" ./uploader* sshacs@unprotected.upload.akamai.com:/114034/r/insights/v1/static/'
         }
       }
       stage('Deploy Egg') {
