@@ -4,8 +4,7 @@ pipeline {
       label 'python'
     }
   }
-  if (env.CHANGE_ID == null) {
-    stages {
+  stages {
       stage('Write SSH Key') {
         steps {
              writeFile file: "/tmp/akamai-ssh", text: "${env.AKAMAI_SSH_KEY}\n-----END RSA PRIVATE KEY-----"
@@ -24,19 +23,24 @@ pipeline {
       stage('Deploy Uploader JSON') {
         when {
           branch 'master'
+          not {
+            changeRequest()
+          }
         }
         steps {
-             sh 'rsync -arv -e "ssh -i /tmp/akamai-ssh" ./uploader* sshacs@unprotected.upload.akamai.com:/114034/r/insights/v1/static/core/'
+             sh 'rsync -arv -e "ssh -i /tmp/akamai-ssh -o StrictHostKeyChecking=no" ./uploader* sshacs@unprotected.upload.akamai.com:/114034/r/insights/v1/static/core/'
         }
       }
       stage('Deploy Egg') {
         when {
           branch 'master'
+          not {
+            changeRequest()
+          }
         }
         steps {
-             sh 'rsync -arv -e "ssh -i /tmp/akamai-ssh" ./insights-core.egg* sshacs@unprotected.upload.akamai.com:/114034/r/insights/v1/static/core/'
-        }
-      }
-    }
-  }
-}
+             sh 'rsync -arv -e "ssh -i /tmp/akamai-ssh -o StrictHostKeyChecking=no" ./insights-core.egg* sshacs@unprotected.upload.akamai.com:/114034/r/insights/v1/static/core/'
+       }
+     }
+   }
+ }
