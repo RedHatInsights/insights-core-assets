@@ -276,6 +276,16 @@
             "symbolic_name": "ip_route_show_table_all"
         },
         {
+            "command": "/usr/bin/ipcs -m",
+            "pattern": [],
+            "symbolic_name": "ipcs_m"
+        },
+        {
+            "command": "/usr/bin/ipcs -m -p",
+            "pattern": [],
+            "symbolic_name": "ipcs_m_p"
+        },
+        {
             "command": "/usr/bin/ipcs -s",
             "pattern": [],
             "symbolic_name": "ipcs_s"
@@ -614,6 +624,7 @@
                 "ntpd",
                 "openshift start master api",
                 "openshift start master controllers",
+                "openshift start node",
                 "phc2sys",
                 "postgres",
                 "ptp4l",
@@ -837,7 +848,7 @@
             "symbolic_name": "virt_what"
         },
         {
-            "command": "/usr/bin/find /var/crash /var/tmp -path '*.reports-*/whoopsie-report'",
+            "command": "/usr/bin/find /var/crash /var/tmp -path '*.reports-*/whoopsie-report' -print -quit",
             "pattern": [],
             "symbolic_name": "woopsie"
         },
@@ -939,7 +950,7 @@
             "symbolic_name": "ceilometer_conf"
         },
         {
-            "file": "/var/lib/config-data/ceilometer/etc/ceilometer/ceilometer.conf",
+            "file": "/var/lib/config-data/puppet-generated/ceilometer/etc/ceilometer/ceilometer.conf",
             "pattern": [],
             "symbolic_name": "ceilometer_conf"
         },
@@ -969,6 +980,11 @@
         },
         {
             "file": "/etc/cinder/cinder.conf",
+            "pattern": [],
+            "symbolic_name": "cinder_conf"
+        },
+        {
+            "file": "/var/lib/config-data/puppet-generated/cinder/etc/cinder/cinder.conf",
             "pattern": [],
             "symbolic_name": "cinder_conf"
         },
@@ -1133,7 +1149,7 @@
             "symbolic_name": "galera_cnf"
         },
         {
-            "file": "/var/lib/config-data/mysql/etc/my.cnf.d/galera.cnf",
+            "file": "/var/lib/config-data/puppet-generated/mysql/etc/my.cnf.d/galera.cnf",
             "pattern": [],
             "symbolic_name": "galera_cnf"
         },
@@ -1163,7 +1179,7 @@
             "symbolic_name": "haproxy_cfg"
         },
         {
-            "file": "/var/lib/config-data/haproxy/etc/haproxy/haproxy.cfg",
+            "file": "/var/lib/config-data/puppet-generated/haproxy/etc/haproxy/haproxy.cfg",
             "pattern": [],
             "symbolic_name": "haproxy_cfg"
         },
@@ -1173,7 +1189,7 @@
             "symbolic_name": "heat_conf"
         },
         {
-            "file": "/var/lib/config-data/heat/etc/heat/heat.conf",
+            "file": "/var/lib/config-data/puppet-generated/heat/etc/heat/heat.conf",
             "pattern": [],
             "symbolic_name": "heat_conf"
         },
@@ -1563,7 +1579,7 @@
             "symbolic_name": "nova_conf"
         },
         {
-            "file": "/var/lib/config-data/nova/etc/nova/nova.conf",
+            "file": "/var/lib/config-data/puppet-generated/nova/etc/nova/nova.conf",
             "pattern": [],
             "symbolic_name": "nova_conf"
         },
@@ -1915,7 +1931,7 @@
             "symbolic_name": "swift_object_expirer_conf"
         },
         {
-            "file": "/var/lib/config-data/swift/etc/swift/object-expirer.conf",
+            "file": "/var/lib/config-data/puppet-generated/swift/etc/swift/object-expirer.conf",
             "pattern": [],
             "symbolic_name": "swift_object_expirer_conf"
         },
@@ -1925,7 +1941,7 @@
             "symbolic_name": "swift_proxy_server_conf"
         },
         {
-            "file": "/var/lib/config-data/swift/etc/swift/proxy-server.conf",
+            "file": "/var/lib/config-data/puppet-generated/swift/etc/swift/proxy-server.conf",
             "pattern": [],
             "symbolic_name": "swift_proxy_server_conf"
         },
@@ -1963,6 +1979,11 @@
             "file": "/etc/opt/rh/rh-mongodb26/sysconfig/()*mongod",
             "pattern": [],
             "symbolic_name": "sysconfig_rh_mongodb26"
+        },
+        {
+            "file": "/etc/sysconfig/prelink",
+            "pattern": [],
+            "symbolic_name": "sysconfig_prelink"
         },
         {
             "file": "/etc/sysconfig/virt-who",
@@ -2045,7 +2066,6 @@
             "file": "/var/log/vdsm/vdsm.log",
             "pattern": [
                 "(mailbox-spm) [storage.Misc.excCmd] /usr/bin/taskset --cpu-list",
-                "16514': No route to host",
                 "Changed state to Down: 'NoneType' object has no attribute 'attrib'",
                 "Changed state to Down: internal error: Attempted double use of PCI slot",
                 "ERROR (mailbox-spm) [storage.MailBox.SpmMailMonitor]",
@@ -2191,7 +2211,7 @@
             "symbolic_name": "gnocchi_metricd_log"
         },
         {
-            "file": "/var/lib/config-data/gnocchi/etc/gnocchi/gnocchi.conf",
+            "file": "/var/lib/config-data/puppet-generated/gnocchi/etc/gnocchi/gnocchi.conf",
             "pattern": [
                 "[",
                 "driver",
@@ -2217,7 +2237,7 @@
             "symbolic_name": "neutron_conf"
         },
         {
-            "file": "/var/lib/config-data/neutron/etc/neutron/neutron.conf",
+            "file": "/var/lib/config-data/puppet-generated/neutron/etc/neutron/neutron.conf",
             "pattern": [
                 "[",
                 "dhcp_agents_per_network"
@@ -2226,6 +2246,11 @@
         },
         {
             "file": "/etc/neutron/plugin.ini",
+            "pattern": [],
+            "symbolic_name": "neutron_plugin_ini"
+        },
+        {
+            "file": "/var/lib/config-data/puppet-generated/neutron/etc/neutron/plugin.ini",
             "pattern": [],
             "symbolic_name": "neutron_plugin_ini"
         },
@@ -2258,7 +2283,7 @@
             "symbolic_name": "neutron_metadata_agent_ini"
         },
         {
-            "file": "/var/lib/config-data/neutron/etc/neutron/metadata_agent.ini",
+            "file": "/var/lib/config-data/puppet-generated/neutron/etc/neutron/metadata_agent.ini",
             "pattern": [
                 "[",
                 "auth_url"
@@ -7834,5 +7859,5 @@
             ]
         }
     },
-    "version": "2018-09-20T14:13:09.627392"
+    "version": "2018-09-27T15:21:41.189547"
 }
