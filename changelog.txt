@@ -1,5 +1,8 @@
 Insights Client Core Changelog
 
+v3.0.48 - Oct 2 2018
+- Use built-in function for determining hostname like v1 client
+
 v3.0.47 - Sep 27 2018
 - Don't exit when display_name only set in config file
 - Make remove.conf location configurable
