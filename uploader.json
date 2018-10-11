@@ -614,6 +614,7 @@
                 "ntpd",
                 "openshift start master api",
                 "openshift start master controllers",
+                "openshift start node",
                 "phc2sys",
                 "postgres",
                 "ptp4l",
@@ -1083,9 +1084,11 @@
         {
             "file": "/var/log/ovirt-engine/engine.log",
             "pattern": [
-                "CLUSTER_CANNOT_UPDATE_COMPATIBILITY_VERSION_WITH_LOWER_HOSTS",
-                "Received fatal alert: certificate_expired",
-                "has paused due to storage I/O problem"
+                "org.ovirt.engine.core.bll.storage.lease.AddVmLeaseCommand",
+                "org.ovirt.engine.core.bll.storage.lease.RemoveVmLeaseCommand",
+                "org.ovirt.engine.core.dal.dbbroker.auditloghandling.AuditLogDirector",
+                "org.ovirt.engine.core.vdsbroker.vdsbroker.HotPlugLeaseVDSCommand",
+                "org.ovirt.engine.core.vdsbroker.vdsbroker.HotUnplugLeaseVDSCommand"
             ],
             "symbolic_name": "engine_log"
         },
@@ -1364,6 +1367,7 @@
                 "Abort command issued",
                 "DMA Status error.  Resetting chip",
                 "Dazed and confused, but trying to continue",
+                "Detected Tx Unit Hang",
                 "Device offlined - not ready after error recovery",
                 "Error deleting EBS Disk volume aws",
                 "Error in FW/Card",
@@ -1772,6 +1776,7 @@
         {
             "file": "/etc/rsyslog.conf",
             "pattern": [
+                "imjournal",
                 "imtcp",
                 "regex"
             ],
@@ -2045,7 +2050,6 @@
             "file": "/var/log/vdsm/vdsm.log",
             "pattern": [
                 "(mailbox-spm) [storage.Misc.excCmd] /usr/bin/taskset --cpu-list",
-                "16514': No route to host",
                 "Changed state to Down: 'NoneType' object has no attribute 'attrib'",
                 "Changed state to Down: internal error: Attempted double use of PCI slot",
                 "ERROR (mailbox-spm) [storage.MailBox.SpmMailMonitor]",
@@ -2179,14 +2183,14 @@
         {
             "file": "/var/log/containers/gnocchi/gnocchi-metricd.log",
             "pattern": [
-                "ToozError: Cannot extend an unlocked lock"
+                "ObjectNotFound: error opening pool 'metrics'"
             ],
             "symbolic_name": "gnocchi_metricd_log"
         },
         {
             "file": "/var/log/gnocchi/metricd.log",
             "pattern": [
-                "ToozError: Cannot extend an unlocked lock"
+                "ObjectNotFound: error opening pool 'metrics'"
             ],
             "symbolic_name": "gnocchi_metricd_log"
         },
@@ -2194,6 +2198,7 @@
             "file": "/var/lib/config-data/gnocchi/etc/gnocchi/gnocchi.conf",
             "pattern": [
                 "[",
+                "ceph_pool",
                 "driver",
                 "storage"
             ],
@@ -2203,6 +2208,7 @@
             "file": "/etc/gnocchi/gnocchi.conf",
             "pattern": [
                 "[",
+                "ceph_pool",
                 "driver",
                 "storage"
             ],
@@ -7834,5 +7840,5 @@
             ]
         }
     },
-    "version": "2018-09-20T14:13:09.627392"
+    "version": "2018-10-11T14:32:20.532363"
 }
