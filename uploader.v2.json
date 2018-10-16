@@ -250,7 +250,7 @@
             "symbolic_name": "httpd_M"
         },
         {
-            "command": "/bin/rpm -qa --qf='\\{\"name\":\"%{NAME}\",\"epoch\":\"%{EPOCH}\",\"version\":\"%{VERSION}\",\"release\":\"%{RELEASE}\",\"arch\":\"%{ARCH}\",\"installtime\":\"%{INSTALLTIME:date}\",\"buildtime\":\"%{BUILDTIME}\",\"vendor\":\"%{VENDOR}\",\"buildhost\":\"%{BUILDHOST}\",\"sigpgp\":\"%{SIGPGP:pgpsig}\"\\}\n'",
+            "command": "/bin/rpm -qa --root={CONTAINER_MOUNT_POINT} --qf='\\{\"name\":\"%{NAME}\",\"epoch\":\"%{EPOCH}\",\"version\":\"%{VERSION}\",\"release\":\"%{RELEASE}\",\"arch\":\"%{ARCH}\",\"installtime\":\"%{INSTALLTIME:date}\",\"buildtime\":\"%{BUILDTIME}\",\"vendor\":\"%{VENDOR}\",\"buildhost\":\"%{BUILDHOST}\",\"sigpgp\":\"%{SIGPGP:pgpsig}\"\\}\n'",
             "pattern": [],
             "symbolic_name": "installed_rpms",
             "image": true
