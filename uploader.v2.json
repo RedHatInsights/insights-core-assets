@@ -508,6 +508,11 @@
             "symbolic_name": "lvs_noheadings"
         },
         {
+            "command": "/usr/bin/md5sum /dev/null /etc/localtime /usr/share/zoneinfo/America/{Sao_Paulo,Campo_Grande,Cuiaba} /etc/pki/{product,product-default}/69.pem 2>/dev/null",
+            "pattern": [],
+            "symbolic_name": "md5chk_files"
+        },
+        {
             "command": "/usr/bin/find /sys/bus/pci/devices/*/mlx4_port[0-9] -print -exec cat {} \\;",
             "pattern": [],
             "symbolic_name": "mlx4_port"
