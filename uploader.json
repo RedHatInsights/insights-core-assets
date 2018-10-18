@@ -2363,6 +2363,11 @@
             "glob": "/var/opt/amq-broker/*/etc/broker.xml",
             "symbolic_name": "amq_broker",
             "pattern": []
+        },
+        {
+            "glob": "/sys/class/scsi_host/host[0-9]*/eh_deadline",
+            "symbolic_name": "scsi_eh_deadline",
+            "pattern": []
         }
     ],
     "meta_specs": {
