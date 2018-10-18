@@ -250,7 +250,7 @@
             "symbolic_name": "httpd_M"
         },
         {
-            "command": "/bin/rpm -qa --qf='%{NAME}-%{VERSION}-%{RELEASE}.%{ARCH}\t%{INSTALLTIME:date}\t%{BUILDTIME}\t%{VENDOR}\t%{BUILDHOST}\tDUMMY\t%{SIGPGP:pgpsig}\n'",
+            "command": "/bin/rpm -qa --qf='\\{\"name\":\"%{NAME}\",\"epoch\":\"%{EPOCH}\",\"version\":\"%{VERSION}\",\"release\":\"%{RELEASE}\",\"arch\":\"%{ARCH}\",\"installtime\":\"%{INSTALLTIME:date}\",\"buildtime\":\"%{BUILDTIME}\",\"vendor\":\"%{VENDOR}\",\"buildhost\":\"%{BUILDHOST}\",\"sigpgp\":\"%{SIGPGP:pgpsig}\"\\}\n'",
             "pattern": [],
             "symbolic_name": "installed_rpms",
             "image": true
@@ -2276,6 +2276,20 @@
                 ":database:"
             ],
             "symbolic_name": "smartpdc_settings"
+        },
+        {
+            "file": "/etc/neutron/l3_agent.ini",
+            "pattern": [
+                "["
+            ],
+            "symbolic_name": "neutron_l3_agent_ini"
+        },
+        {
+            "file": "/var/lib/config-data/puppet-generated/neutron/etc/neutron/l3_agent.ini",
+            "pattern": [
+                "["
+            ],
+            "symbolic_name": "neutron_l3_agent_ini"
         },
         {
             "file": "/var/log/neutron/l3-agent.log",
@@ -7870,5 +7884,5 @@
             ]
         }
     },
-    "version": "2018-10-11T14:32:20.532363"
+    "version": "2018-10-18T13:47:13.173385"
 }
