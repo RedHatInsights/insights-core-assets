@@ -602,6 +602,11 @@
             "symbolic_name": "ovs_vsctl_show"
         },
         {
+            "command": "/usr/sbin/passenger-status",
+            "pattern": [],
+            "symbolic_name": "passenger_status"
+        },
+        {
             "command": "/usr/sbin/pcs status",
             "pattern": [],
             "symbolic_name": "pcs_status"
