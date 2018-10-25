@@ -386,7 +386,6 @@
         {
             "command": "/bin/ls -ln /usr/sbin",
             "pattern": [
-                "postdrop",
                 "total"
             ],
             "symbolic_name": "ls_usr_sbin"
@@ -655,6 +654,7 @@
                 "/usr/sbin/fcoemon --syslog",
                 "COMMAND",
                 "catalina.base",
+                "ceilometer-coll",
                 "chronyd",
                 "cmirrord",
                 "greenplum",
@@ -1437,7 +1437,6 @@
                 "megaraid_sas: FW detected to be in faultstate, restarting it",
                 "mode:0x20",
                 "multipathd.service operation timed out. Terminating",
-                "nectar.downloaders.threaded:ERROR: Skipping requests to",
                 "nf_conntrack: expectation table full",
                 "nf_conntrack: table full, dropping packet",
                 "page allocation failure",
@@ -2290,14 +2289,16 @@
         {
             "file": "/etc/neutron/l3_agent.ini",
             "pattern": [
-                "["
+                "[",
+                "agent_mode"
             ],
             "symbolic_name": "neutron_l3_agent_ini"
         },
         {
             "file": "/var/lib/config-data/puppet-generated/neutron/etc/neutron/l3_agent.ini",
             "pattern": [
-                "["
+                "[",
+                "agent_mode"
             ],
             "symbolic_name": "neutron_l3_agent_ini"
         },
@@ -2409,5 +2410,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2018-10-18T13:47:21.581267"
+    "version": "2018-10-25T13:56:19.647604"
 }
