@@ -2420,5 +2420,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2018-11-01T13:53:49.916232"
+    "version": "2018-10-25T13:56:19.647604"
 }
