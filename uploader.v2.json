@@ -2190,11 +2190,6 @@
             "symbolic_name": "yum_repos_d"
         },
         {
-            "file": "/var/log/redhat-access-insights/redhat-access-insights.log",
-            "pattern": [],
-            "symbolic_name": "redhat_access_insights_log"
-        },
-        {
             "file": "/var/log/redhat_access_proactive/redhat_access_proactive.log",
             "pattern": [],
             "symbolic_name": "redhat_access_proactive_log"
