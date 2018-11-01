@@ -512,6 +512,11 @@
             "symbolic_name": "lvs_noheadings"
         },
         {
+            "command": "/usr/bin/md5sum /dev/null /etc/pki/{product,product-default}/69.pem",
+            "pattern": [],
+            "symbolic_name": "md5chk_files"
+        },
+        {
             "command": "/usr/bin/find /sys/bus/pci/devices/*/mlx4_port[0-9] -print -exec cat {} \\;",
             "pattern": [],
             "symbolic_name": "mlx4_port"
@@ -2190,11 +2195,6 @@
             "symbolic_name": "yum_repos_d"
         },
         {
-            "file": "/var/log/redhat-access-insights/redhat-access-insights.log",
-            "pattern": [],
-            "symbolic_name": "redhat_access_insights_log"
-        },
-        {
             "file": "/var/log/redhat_access_proactive/redhat_access_proactive.log",
             "pattern": [],
             "symbolic_name": "redhat_access_proactive_log"
@@ -2387,6 +2387,11 @@
         {
             "glob": "/var/opt/amq-broker/*/etc/broker.xml",
             "symbolic_name": "amq_broker",
+            "pattern": []
+        },
+        {
+            "glob": "/sys/class/scsi_host/host[0-9]*/eh_deadline",
+            "symbolic_name": "scsi_eh_deadline",
             "pattern": []
         }
     ],
