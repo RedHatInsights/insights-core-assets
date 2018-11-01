@@ -907,6 +907,7 @@
             "pattern": [
                 "comm=\"logrotate\" path=\"/var/log/candlepin",
                 "comm=\"mongod\"",
+                "comm=\"virtlogd\" name=\"console.log\"",
                 "denied",
                 "type=AVC"
             ],
@@ -1567,11 +1568,13 @@
         {
             "file": "/var/log/nova/nova-compute.log",
             "pattern": [
+                "/console.log: Permission denied",
                 "Live Migration failure: operation failed: Failed to connect to remote libvirt URI qemu+ssh",
                 "Resuming guest",
                 "does not match source",
                 "error: Failed to start domain",
                 "libvirt-guests.sh",
+                "libvirtError: Unable to delete file /var/lib/nova/instances/",
                 "unsupported configuration: Target device drive address",
                 "unsupported configuration: Unable to find security driver for model selinux"
             ],
@@ -1580,11 +1583,13 @@
         {
             "file": "/var/log/containers/nova/nova-compute.log",
             "pattern": [
+                "/console.log: Permission denied",
                 "Live Migration failure: operation failed: Failed to connect to remote libvirt URI qemu+ssh",
                 "Resuming guest",
                 "does not match source",
                 "error: Failed to start domain",
                 "libvirt-guests.sh",
+                "libvirtError: Unable to delete file /var/lib/nova/instances/",
                 "unsupported configuration: Target device drive address",
                 "unsupported configuration: Unable to find security driver for model selinux"
             ],
@@ -7905,5 +7910,5 @@
             ]
         }
     },
-    "version": "2018-10-25T13:56:25.088456"
+    "version": "2018-11-01T13:53:43.788116"
 }
