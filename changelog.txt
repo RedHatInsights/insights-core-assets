@@ -1,5 +1,11 @@
 Insights Client Core Changelog
 
+v3.0.52 - Oct 18 2018
+- Fix parsing bug
+
+v3.0.50 - Oct 10 2018
+- Unicode fix for certificate strings
+
 v3.0.49 - Oct 4 2018
 - Fix timeout command in RHEL 6
 

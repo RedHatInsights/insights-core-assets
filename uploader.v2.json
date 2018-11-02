@@ -250,7 +250,7 @@
             "symbolic_name": "httpd_M"
         },
         {
-            "command": "/bin/rpm -qa --root={CONTAINER_MOUNT_POINT} --qf='%{NAME}-%{VERSION}-%{RELEASE}.%{ARCH}\t%{INSTALLTIME:date}\t%{BUILDTIME}\t%{VENDOR}\t%{BUILDHOST}\tDUMMY\t%{SIGPGP:pgpsig}\n'",
+            "command": "/bin/rpm -qa --root={CONTAINER_MOUNT_POINT} --qf='\\{\"name\":\"%{NAME}\",\"epoch\":\"%{EPOCH}\",\"version\":\"%{VERSION}\",\"release\":\"%{RELEASE}\",\"arch\":\"%{ARCH}\",\"installtime\":\"%{INSTALLTIME:date}\",\"buildtime\":\"%{BUILDTIME}\",\"vendor\":\"%{VENDOR}\",\"buildhost\":\"%{BUILDHOST}\",\"sigpgp\":\"%{SIGPGP:pgpsig}\"\\}\n'",
             "pattern": [],
             "symbolic_name": "installed_rpms",
             "image": true
@@ -379,9 +379,13 @@
             "symbolic_name": "ls_var_lib_mongodb"
         },
         {
+            "command": "/bin/ls -laRZ /var/lib/nova/instances",
+            "pattern": [],
+            "symbolic_name": "ls_var_lib_nova_instances"
+        },
+        {
             "command": "/bin/ls -ln /usr/sbin",
             "pattern": [
-                "postdrop",
                 "total"
             ],
             "symbolic_name": "ls_usr_sbin"
@@ -508,6 +512,11 @@
             "symbolic_name": "lvs_noheadings"
         },
         {
+            "command": "/usr/bin/md5sum /dev/null /etc/pki/{product,product-default}/69.pem",
+            "pattern": [],
+            "symbolic_name": "md5chk_files"
+        },
+        {
             "command": "/usr/bin/find /sys/bus/pci/devices/*/mlx4_port[0-9] -print -exec cat {} \\;",
             "pattern": [],
             "symbolic_name": "mlx4_port"
@@ -602,6 +611,11 @@
             "symbolic_name": "ovs_vsctl_show"
         },
         {
+            "command": "/usr/sbin/passenger-status",
+            "pattern": [],
+            "symbolic_name": "passenger_status"
+        },
+        {
             "command": "/usr/sbin/pcs status",
             "pattern": [],
             "symbolic_name": "pcs_status"
@@ -645,6 +659,7 @@
                 "/usr/sbin/fcoemon --syslog",
                 "COMMAND",
                 "catalina.base",
+                "ceilometer-coll",
                 "chronyd",
                 "cmirrord",
                 "greenplum",
@@ -892,6 +907,7 @@
             "pattern": [
                 "comm=\"logrotate\" path=\"/var/log/candlepin",
                 "comm=\"mongod\"",
+                "comm=\"virtlogd\" name=\"console.log\"",
                 "denied",
                 "type=AVC"
             ],
@@ -1427,7 +1443,6 @@
                 "megaraid_sas: FW detected to be in faultstate, restarting it",
                 "mode:0x20",
                 "multipathd.service operation timed out. Terminating",
-                "nectar.downloaders.threaded:ERROR: Skipping requests to",
                 "nf_conntrack: expectation table full",
                 "nf_conntrack: table full, dropping packet",
                 "page allocation failure",
@@ -1553,11 +1568,13 @@
         {
             "file": "/var/log/nova/nova-compute.log",
             "pattern": [
+                "/console.log: Permission denied",
                 "Live Migration failure: operation failed: Failed to connect to remote libvirt URI qemu+ssh",
                 "Resuming guest",
                 "does not match source",
                 "error: Failed to start domain",
                 "libvirt-guests.sh",
+                "libvirtError: Unable to delete file /var/lib/nova/instances/",
                 "unsupported configuration: Target device drive address",
                 "unsupported configuration: Unable to find security driver for model selinux"
             ],
@@ -1566,11 +1583,13 @@
         {
             "file": "/var/log/containers/nova/nova-compute.log",
             "pattern": [
+                "/console.log: Permission denied",
                 "Live Migration failure: operation failed: Failed to connect to remote libvirt URI qemu+ssh",
                 "Resuming guest",
                 "does not match source",
                 "error: Failed to start domain",
                 "libvirt-guests.sh",
+                "libvirtError: Unable to delete file /var/lib/nova/instances/",
                 "unsupported configuration: Target device drive address",
                 "unsupported configuration: Unable to find security driver for model selinux"
             ],
@@ -2181,11 +2200,6 @@
             "symbolic_name": "yum_repos_d"
         },
         {
-            "file": "/var/log/redhat-access-insights/redhat-access-insights.log",
-            "pattern": [],
-            "symbolic_name": "redhat_access_insights_log"
-        },
-        {
             "file": "/var/log/redhat_access_proactive/redhat_access_proactive.log",
             "pattern": [],
             "symbolic_name": "redhat_access_proactive_log"
@@ -2278,6 +2292,22 @@
             "symbolic_name": "smartpdc_settings"
         },
         {
+            "file": "/etc/neutron/l3_agent.ini",
+            "pattern": [
+                "[",
+                "agent_mode"
+            ],
+            "symbolic_name": "neutron_l3_agent_ini"
+        },
+        {
+            "file": "/var/lib/config-data/puppet-generated/neutron/etc/neutron/l3_agent.ini",
+            "pattern": [
+                "[",
+                "agent_mode"
+            ],
+            "symbolic_name": "neutron_l3_agent_ini"
+        },
+        {
             "file": "/var/log/neutron/l3-agent.log",
             "pattern": [
                 "Duplicate iptables rule detected",
@@ -2368,6 +2398,11 @@
             "glob": "/sys/class/scsi_host/host[0-9]*/fwrev",
             "symbolic_name": "scsi_fwver",
             "pattern": []
+        },
+        {
+            "glob": "/sys/class/scsi_host/host[0-9]*/eh_deadline",
+            "symbolic_name": "scsi_eh_deadline",
+            "pattern": []
         }
     ],
     "meta_specs": {
@@ -2390,5 +2425,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2018-10-11T14:32:26.348806"
+    "version": "2018-11-01T13:53:49.916232"
 }
