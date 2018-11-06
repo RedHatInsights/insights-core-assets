@@ -1,5 +1,8 @@
 Insights Client Core Changelog
 
+v3.0.55 - Oct 31 2018
+- Platform upload implementation
+
 v3.0.52 - Oct 18 2018
 - Fix parsing bug
 
