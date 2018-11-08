@@ -182,6 +182,11 @@
             "pattern": [],
             "symbolic_name": "facter"
         },
+        {    
+            "command": "/usr/bin/qpid-stat -g --ssl-certificate=/etc/pki/katello/qpid_client_striped.crt -b amqps://localhost:5671",
+            "pattern": [],
+            "symbolic_name": "qpid_stat_g"
+        },
         {
             "command": "/bin/fc-match -sv 'sans:regular:roman' family fontformat",
             "pattern": [],
@@ -688,6 +693,11 @@
                 "nginx: worker process"
             ],
             "symbolic_name": "ps_ef"
+        },
+        {
+            "command": "/bin/ps -eo pid,ppid,comm",
+            "pattern": [],
+            "symbolic_name": "ps_eo"
         },
         {
             "command": "/sbin/pvs --nameprefixes --noheadings --separator='|' -a -o pv_all,vg_name --config=\"global{locking_type=0}\"",
@@ -2392,6 +2402,11 @@
         {
             "glob": "/var/opt/amq-broker/*/etc/broker.xml",
             "symbolic_name": "amq_broker",
+            "pattern": []
+        },
+        {
+            "glob": "/sys/class/scsi_host/host[0-9]*/fwrev",
+            "symbolic_name": "scsi_fwver",
             "pattern": []
         },
         {
