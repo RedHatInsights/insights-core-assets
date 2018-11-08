@@ -182,7 +182,7 @@
             "pattern": [],
             "symbolic_name": "facter"
         },
-        {    
+        {
             "command": "/usr/bin/qpid-stat -g --ssl-certificate=/etc/pki/katello/qpid_client_striped.crt -b amqps://localhost:5671",
             "pattern": [],
             "symbolic_name": "qpid_stat_g"
@@ -918,7 +918,6 @@
                 "comm=\"logrotate\" path=\"/var/log/candlepin",
                 "comm=\"mongod\"",
                 "comm=\"virtlogd\" name=\"console.log\"",
-                "denied",
                 "type=AVC"
             ],
             "symbolic_name": "audit_log"
@@ -1383,7 +1382,6 @@
             "pattern": [
                 "Duplicate entry",
                 "Too many open files",
-                "[ERROR]",
                 "for key 'PRIMARY'"
             ],
             "symbolic_name": "mariadb_log"
@@ -1403,6 +1401,7 @@
             "pattern": [
                 " disconnect jid=",
                 "11000 E11000 duplicate key error index: pulp_database.repo_profile_applicability.$profile_hash_-1_repo_id_-1",
+                ": Machine check events logged",
                 ": segfault at ",
                 ": session replaced: jid=",
                 "Abort command issued",
@@ -1416,7 +1415,7 @@
                 "Link down",
                 "List /apis/image.openshift.io/v1/images",
                 "MDC/MDIO access timeout",
-                "Machine",
+                "Machine Check Exception",
                 "Medium access timeout failure. Offlining disk!",
                 "Neighbour table overflow",
                 "Out of MCCQ wrbs",
@@ -1434,6 +1433,7 @@
                 "does not seem to be present, delaying initialization",
                 "error Error on attach: Node not found",
                 "ext4_ext_search_left",
+                "failed while handling",
                 "failed: Connection amqps:",
                 "fiid_obj_get: 'present_countdown_value': data not available",
                 "firewalld - dynamic firewall daemon",
@@ -1469,7 +1469,6 @@
                 "tg3_start_xmit",
                 "timeout; kill it",
                 "udev: renamed network interface",
-                "udevd",
                 "unknown filesystem type 'binfmt_misc'",
                 "vdsm-tool: EnvironmentError: Failed to restore the persisted networks"
             ],
@@ -7925,5 +7924,5 @@
             ]
         }
     },
-    "version": "2018-11-01T13:53:43.788116"
+    "version": "2018-11-08T17:24:14.726475"
 }
