@@ -690,6 +690,11 @@
             "symbolic_name": "ps_ef"
         },
         {
+            "command": "/bin/ps -eo pid,ppid,comm",
+            "pattern": [],
+            "symbolic_name": "ps_eo"
+        },
+        {
             "command": "/sbin/pvs --nameprefixes --noheadings --separator='|' -a -o pv_all,vg_name --config=\"global{locking_type=0}\"",
             "pattern": [],
             "symbolic_name": "pvs_noheadings"
