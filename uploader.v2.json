@@ -183,6 +183,11 @@
             "symbolic_name": "facter"
         },
         {
+            "command": "/usr/bin/qpid-stat -g --ssl-certificate=/etc/pki/katello/qpid_client_striped.crt -b amqps://localhost:5671",
+            "pattern": [],
+            "symbolic_name": "qpid_stat_g"
+        },
+        {
             "command": "/bin/fc-match -sv 'sans:regular:roman' family fontformat",
             "pattern": [],
             "symbolic_name": "fc_match"
@@ -690,6 +695,11 @@
             "symbolic_name": "ps_ef"
         },
         {
+            "command": "/bin/ps -eo pid,ppid,comm",
+            "pattern": [],
+            "symbolic_name": "ps_eo"
+        },
+        {
             "command": "/sbin/pvs --nameprefixes --noheadings --separator='|' -a -o pv_all,vg_name --config=\"global{locking_type=0}\"",
             "pattern": [],
             "symbolic_name": "pvs_noheadings"
@@ -908,7 +918,6 @@
                 "comm=\"logrotate\" path=\"/var/log/candlepin",
                 "comm=\"mongod\"",
                 "comm=\"virtlogd\" name=\"console.log\"",
-                "denied",
                 "type=AVC"
             ],
             "symbolic_name": "audit_log"
@@ -1373,7 +1382,6 @@
             "pattern": [
                 "Duplicate entry",
                 "Too many open files",
-                "[ERROR]",
                 "for key 'PRIMARY'"
             ],
             "symbolic_name": "mariadb_log"
@@ -1393,6 +1401,7 @@
             "pattern": [
                 " disconnect jid=",
                 "11000 E11000 duplicate key error index: pulp_database.repo_profile_applicability.$profile_hash_-1_repo_id_-1",
+                ": Machine check events logged",
                 ": segfault at ",
                 ": session replaced: jid=",
                 "Abort command issued",
@@ -1406,7 +1415,7 @@
                 "Link down",
                 "List /apis/image.openshift.io/v1/images",
                 "MDC/MDIO access timeout",
-                "Machine",
+                "Machine Check Exception",
                 "Medium access timeout failure. Offlining disk!",
                 "Neighbour table overflow",
                 "Out of MCCQ wrbs",
@@ -1424,6 +1433,7 @@
                 "does not seem to be present, delaying initialization",
                 "error Error on attach: Node not found",
                 "ext4_ext_search_left",
+                "failed while handling",
                 "failed: Connection amqps:",
                 "fiid_obj_get: 'present_countdown_value': data not available",
                 "firewalld - dynamic firewall daemon",
@@ -1459,7 +1469,6 @@
                 "tg3_start_xmit",
                 "timeout; kill it",
                 "udev: renamed network interface",
-                "udevd",
                 "unknown filesystem type 'binfmt_misc'",
                 "vdsm-tool: EnvironmentError: Failed to restore the persisted networks"
             ],
@@ -2395,6 +2404,11 @@
             "pattern": []
         },
         {
+            "glob": "/sys/class/scsi_host/host[0-9]*/fwrev",
+            "symbolic_name": "scsi_fwver",
+            "pattern": []
+        },
+        {
             "glob": "/sys/class/scsi_host/host[0-9]*/eh_deadline",
             "symbolic_name": "scsi_eh_deadline",
             "pattern": []
@@ -2420,5 +2434,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2018-11-01T13:53:49.916232"
+    "version": "2018-11-08T17:24:02.293129"
 }
