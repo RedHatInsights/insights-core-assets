@@ -1,6 +1,11 @@
 {
     "commands": [
         {
+            "command": "/usr/sbin/dmidecode -s system-uuid",
+            "pattern": [],
+            "symbolic_name": "bios_uuid"
+        },
+        {
             "command": "/sbin/blkid -c /dev/null",
             "pattern": [],
             "symbolic_name": "blkid"
@@ -238,6 +243,11 @@
             "command": "/bin/hostname -f",
             "pattern": [],
             "symbolic_name": "hostname"
+        },
+        {
+            "command": "/bin/hostname -I",
+            "pattern": [],
+            "symbolic_name": "ip_addresses"
         },
         {
             "command": "/usr/sbin/httpd -V",
@@ -758,6 +768,11 @@
             "symbolic_name": "software_collections_list"
         },
         {
+            "command": "/usr/bin/subscription-manager identity",
+            "pattern": [],
+            "symbolic_name": "subscription_manager_id"
+        },
+        {
             "command": "/usr/bin/subscription-manager release --show",
             "pattern": [],
             "symbolic_name": "subscription_manager_release_show"
@@ -907,6 +922,11 @@
             "file": "/etc/redhat_access_proactive/machine-id",
             "pattern": [],
             "symbolic_name": "machine_id2"
+        },
+        {
+            "file": "/etc/machine-id",
+            "pattern": [],
+            "symbolic_name": "etc_machine_id"
         },
         {
             "file": "/proc/1/cgroup",
@@ -2426,6 +2446,11 @@
         {
             "glob": "/sys/devices/system/cpu/vulnerabilities/*",
             "symbolic_name": "cpu_vulns",
+            "pattern": []
+        },
+        {
+            "glob": "/sys/class/net/*/address",
+            "symbolic_name": "mac_addresses",
             "pattern": []
         },
         {
