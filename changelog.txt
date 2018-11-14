@@ -1,5 +1,8 @@
 Insights Client Core Changelog
 
+v3.0.59 - Nov 14 2018
+- Regression fixes
+
 v3.0.58 - Nov 12 2018
 - Reduce interval between upload retries from 300s to 180s
 
