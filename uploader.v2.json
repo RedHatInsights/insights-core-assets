@@ -2222,6 +2222,11 @@
             ],
             "symbolic_name": "virt_who_conf"
         },
+	{
+            "file": "/etc/libvirt/virtlogd.conf",
+            "pattern": [],
+            "symbolic_name": "virtlogd_conf"
+        },
         {
             "file": "/etc/pam.d/vsftpd",
             "pattern": [],
