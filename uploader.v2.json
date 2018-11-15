@@ -979,6 +979,16 @@
             "pattern": [],
             "symbolic_name": "ceilometer_conf"
         },
+	{
+            "file": "/etc/ceph/ceph.conf",
+            "pattern": [],
+            "symbolic_name": "ceph_conf"
+        },
+	{
+            "file": "/var/lib/config-data/puppet-generated/ceph/etc/ceph/ceph.conf",
+            "pattern": [],
+            "symbolic_name": "ceph_conf"
+	},
         {
             "file": "/var/log/ceph/ceph.log",
             "pattern": [
