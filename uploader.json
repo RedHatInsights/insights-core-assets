@@ -464,6 +464,7 @@
                 "libssl.so",
                 "lsnrctl",
                 "oracle",
+                "rgw_swift",
                 "tnslsnr"
             ],
             "symbolic_name": "lsof"
@@ -980,6 +981,22 @@
             "symbolic_name": "ceilometer_conf"
         },
         {
+            "file": "/etc/ceph/ceph.conf",
+            "pattern": [
+                "[",
+                "rgw_swift_account_in_url"
+            ],
+            "symbolic_name": "ceph_conf"
+        },
+        {
+            "file": "/var/lib/config-data/puppet-generated/ceph/etc/ceph/ceph.conf",
+            "pattern": [
+                "[",
+                "rgw_swift_account_in_url"
+            ],
+            "symbolic_name": "ceph_conf"
+        },
+        {
             "file": "/var/log/ceph/ceph.log",
             "pattern": [
                 "[WRN] slow request"
@@ -1465,6 +1482,8 @@
                 "skb_over_panic",
                 "start request repeated too quickly for docker.service",
                 "swapper: page allocation failure",
+                "systemd: Unit ip6tables.service entered failed state",
+                "systemd: Unit iptables.service entered failed state",
                 "systemd[1]: Received SIGCHLD from PID",
                 "tg3_start_xmit",
                 "timeout; kill it",
@@ -7924,5 +7943,5 @@
             ]
         }
     },
-    "version": "2018-11-08T17:24:14.726475"
+    "version": "2018-11-15T13:51:21.073908"
 }
