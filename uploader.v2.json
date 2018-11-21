@@ -208,6 +208,11 @@
             "symbolic_name": "getsebool"
         },
         {
+            "command": "/usr/sbin/gluster volume info",
+            "pattern": [],
+            "symbolic_name": "gluster_v_info"
+        },
+        {
             "command": "/bin/ls -l /boot/grub/grub.conf",
             "pattern": [],
             "symbolic_name": "grub1_config_perms"
