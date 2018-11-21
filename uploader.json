@@ -208,6 +208,11 @@
             "symbolic_name": "getsebool"
         },
         {
+            "command": "/usr/sbin/gluster volume info",
+            "pattern": [],
+            "symbolic_name": "gluster_v_info"
+        },
+        {
             "command": "/bin/ls -l /boot/grub/grub.conf",
             "pattern": [],
             "symbolic_name": "grub1_config_perms"
@@ -2344,7 +2349,8 @@
             "file": "/var/log/neutron/l3-agent.log",
             "pattern": [
                 "Duplicate iptables rule detected",
-                "Error while deleting router"
+                "Error while deleting router",
+                "Stderr: Another app is currently holding the xtables lock"
             ],
             "symbolic_name": "neutron_l3_agent_log"
         },
@@ -7943,5 +7949,5 @@
             ]
         }
     },
-    "version": "2018-11-15T13:51:21.073908"
+    "version": "2018-11-21T11:20:09.053777"
 }
