@@ -934,6 +934,11 @@
             "symbolic_name": "auditd_conf"
         },
         {
+            "file": "/sys/fs/selinux/avc/hash_stats",
+            "pattern": [],
+            "symbolic_name": "avc_hash_stats"
+        },
+        {
             "file": "/proc/net/bonding/()*bond.*",
             "pattern": [],
             "symbolic_name": "bond"
