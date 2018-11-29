@@ -1,6 +1,11 @@
 {
     "commands": [
         {
+            "command": "/usr/sbin/dmidecode -s system-uuid",
+            "pattern": [],
+            "symbolic_name": "bios_uuid"
+        },
+        {
             "command": "/sbin/blkid -c /dev/null",
             "pattern": [],
             "symbolic_name": "blkid"
@@ -240,6 +245,11 @@
             "symbolic_name": "hostname"
         },
         {
+            "command": "/bin/hostname -I",
+            "pattern": [],
+            "symbolic_name": "ip_addresses"
+        },
+        {
             "command": "/usr/sbin/httpd -V",
             "pattern": [],
             "symbolic_name": "httpd_V"
@@ -389,6 +399,11 @@
             "symbolic_name": "ls_var_lib_mongodb"
         },
         {
+            "command": "/bin/ls -laR /var/lib/nova/instances",
+            "pattern": [],
+            "symbolic_name": "ls_R_var_lib_nova_instances"
+        },
+        {
             "command": "/bin/ls -laRZ /var/lib/nova/instances",
             "pattern": [],
             "symbolic_name": "ls_var_lib_nova_instances"
@@ -469,6 +484,7 @@
                 "libssl.so",
                 "lsnrctl",
                 "oracle",
+                "ovs-vswit",
                 "rgw_swift",
                 "tnslsnr"
             ],
@@ -518,7 +534,7 @@
             "symbolic_name": "lsscsi"
         },
         {
-            "command": "/sbin/lvs --nameprefixes --noheadings --separator='|' -a -o lv_name,lv_size,lv_attr,mirror_log,vg_name,devices,region_size,data_percent,metadata_percent,segtype --config=\"global{locking_type=0}\"",
+            "command": "/sbin/lvs --nameprefixes --noheadings --separator='|' -a -o lv_name,lv_size,lv_attr,mirror_log,vg_name,devices,region_size,data_percent,metadata_percent,segtype,seg_monitor --config=\"global{locking_type=0}\"",
             "pattern": [],
             "symbolic_name": "lvs_noheadings"
         },
@@ -758,6 +774,11 @@
             "symbolic_name": "software_collections_list"
         },
         {
+            "command": "/usr/bin/subscription-manager identity",
+            "pattern": [],
+            "symbolic_name": "subscription_manager_id"
+        },
+        {
             "command": "/usr/bin/subscription-manager release --show",
             "pattern": [],
             "symbolic_name": "subscription_manager_release_show"
@@ -909,6 +930,11 @@
             "symbolic_name": "machine_id2"
         },
         {
+            "file": "/etc/machine-id",
+            "pattern": [],
+            "symbolic_name": "etc_machine_id"
+        },
+        {
             "file": "/proc/1/cgroup",
             "pattern": [],
             "symbolic_name": "init_process_cgroup"
@@ -932,6 +958,16 @@
             "file": "/etc/audit/auditd.conf",
             "pattern": [],
             "symbolic_name": "auditd_conf"
+        },
+        {
+            "file": "/sys/fs/selinux/avc/hash_stats",
+            "pattern": [],
+            "symbolic_name": "avc_hash_stats"
+        },
+        {
+            "file": "/sys/fs/selinux/avc/cache_threshold",
+            "pattern": [],
+            "symbolic_name": "avc_cache_threshold"
         },
         {
             "file": "/proc/net/bonding/()*bond.*",
@@ -1164,7 +1200,9 @@
         },
         {
             "file": "/var/log/ovirt-engine/ui.log",
-            "pattern": [],
+            "pattern": [
+                "Uncaught exception: com.google.gwt.event.shared.UmbrellaException"
+            ],
             "symbolic_name": "ovirt_engine_ui_log"
         },
         {
@@ -1450,6 +1488,7 @@
                 "Uhhuh. NMI received for unknown reason",
                 "Virtualization daemon",
                 "WRITE SAME failed. Manually zeroing",
+                "] trap divide error ",
                 "belongs to docker.service",
                 "blocked FC remote port time out",
                 "does not seem to be present, delaying initialization",
@@ -1475,6 +1514,7 @@
                 "megaraid_sas: FW detected to be in faultstate, restarting it",
                 "mode:0x20",
                 "multipathd.service operation timed out. Terminating",
+                "netlink_socket|ERR|fcntl: Too many open file",
                 "nf_conntrack: expectation table full",
                 "nf_conntrack: table full, dropping packet",
                 "page allocation failure",
@@ -1741,6 +1781,11 @@
             "file": "/proc/net/snmp6",
             "pattern": [],
             "symbolic_name": "proc_snmp_ipv6"
+        },
+        {
+            "file": "/proc/stat",
+            "pattern": [],
+            "symbolic_name": "proc_stat"
         },
         {
             "file": "/sos_commands/process/ps_auxwww",
@@ -2426,6 +2471,11 @@
         {
             "glob": "/sys/devices/system/cpu/vulnerabilities/*",
             "symbolic_name": "cpu_vulns",
+            "pattern": []
+        },
+        {
+            "glob": "/sys/class/net/*/address",
+            "symbolic_name": "mac_addresses",
             "pattern": []
         },
         {
@@ -7949,5 +7999,5 @@
             ]
         }
     },
-    "version": "2018-11-21T11:20:09.053777"
+    "version": "2018-11-29T17:15:40.880477"
 }
