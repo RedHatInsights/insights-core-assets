@@ -954,6 +954,11 @@
             "symbolic_name": "auditd_conf"
         },
         {
+            "file": "/sys/fs/selinux/avc/cache_threshold",
+            "pattern": [],
+            "symbolic_name": "avc_cache_threshold"
+        },
+        {
             "file": "/proc/net/bonding/()*bond.*",
             "pattern": [],
             "symbolic_name": "bond"
