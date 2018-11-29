@@ -399,6 +399,11 @@
             "symbolic_name": "ls_var_lib_mongodb"
         },
         {
+            "command": "/bin/ls -laR /var/lib/nova/instances",
+            "pattern": [],
+            "symbolic_name": "ls_R_var_lib_nova_instances"
+        },
+        {
             "command": "/bin/ls -laRZ /var/lib/nova/instances",
             "pattern": [],
             "symbolic_name": "ls_var_lib_nova_instances"
