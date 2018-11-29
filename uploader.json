@@ -1763,6 +1763,11 @@
             "symbolic_name": "proc_snmp_ipv6"
         },
         {
+            "file": "/proc/stat",
+            "pattern": [],
+            "symbolic_name": "proc_stat"
+        },
+        {
             "file": "/sos_commands/process/ps_auxwww",
             "pattern": [],
             "symbolic_name": "ps_auxwww"
