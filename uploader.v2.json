@@ -1802,6 +1802,11 @@
             "pattern": [],
             "symbolic_name": "qemu_xml"
         },
+	{
+            "file": "/etc/rabbitmq/rabbitmq-env.conf",
+            "pattern": [],
+            "symbolic_name": "rabbitmq_env"
+        },
         {
             "file": "/var/log/rabbitmq/startup_log",
             "pattern": [
