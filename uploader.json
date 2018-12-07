@@ -1052,7 +1052,7 @@
         {
             "file": "/var/log/ceph/()*ceph-osd.*\\.log$",
             "pattern": [
-                "Thread.cc"
+                "common/Thread.cc"
             ],
             "symbolic_name": "ceph_osd_log"
         },
@@ -1438,6 +1438,7 @@
                 "auto_activation_volume_list",
                 "filter",
                 "locking_type",
+                "thin_pool_autoextend",
                 "volume_list"
             ],
             "symbolic_name": "lvm_conf"
@@ -1488,6 +1489,7 @@
                 "SCSI device reset on",
                 "SDN initialization failed: Error: Existing service with IP: None is not part of service network",
                 "Sense Key : Illegal Request [current]",
+                "TX stuck with port_enabled=1: resetting channels",
                 "Temperature above threshold",
                 "This system does not support \"SSSE3\"",
                 "Uhhuh. NMI received for unknown reason",
@@ -1647,6 +1649,8 @@
             "file": "/var/log/nova/nova-compute.log",
             "pattern": [
                 "/console.log: Permission denied",
+                ": No such device or address",
+                "Could not open ",
                 "Live Migration failure: operation failed: Failed to connect to remote libvirt URI qemu+ssh",
                 "Resuming guest",
                 "does not match source",
@@ -1662,6 +1666,8 @@
             "file": "/var/log/containers/nova/nova-compute.log",
             "pattern": [
                 "/console.log: Permission denied",
+                ": No such device or address",
+                "Could not open ",
                 "Live Migration failure: operation failed: Failed to connect to remote libvirt URI qemu+ssh",
                 "Resuming guest",
                 "does not match source",
@@ -1808,6 +1814,11 @@
             "symbolic_name": "qemu_xml"
         },
         {
+            "file": "/etc/rabbitmq/rabbitmq-env.conf",
+            "pattern": [],
+            "symbolic_name": "rabbitmq_env"
+        },
+        {
             "file": "/var/log/rabbitmq/startup_log",
             "pattern": [
                 "Event crashed log handler:"
@@ -1884,7 +1895,6 @@
             "file": "/var/log/rhsm/rhsm.log",
             "pattern": [
                 "KeyError: 'config.network.dnsConfig.hostName'",
-                "Temporary failure in name resolution",
                 "Validation failed: Name is invalid",
                 "virt.host_type=hyperv, virt.uuid=Not Settable"
             ],
@@ -2231,6 +2241,13 @@
                 "type"
             ],
             "symbolic_name": "virt_who_conf"
+        },
+        {
+            "file": "/etc/libvirt/virtlogd.conf",
+            "pattern": [
+                "max_size"
+            ],
+            "symbolic_name": "virtlogd_conf"
         },
         {
             "file": "/etc/pam.d/vsftpd",
@@ -8004,5 +8021,5 @@
             ]
         }
     },
-    "version": "2018-11-29T17:15:40.880477"
+    "version": "2018-12-06T16:50:59.289218"
 }
