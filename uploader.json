@@ -493,7 +493,6 @@
                 "libssl",
                 "libssl.so",
                 "lsnrctl",
-                "oracle",
                 "ovs-vswit",
                 "rgw_swift",
                 "tnslsnr"
@@ -632,7 +631,7 @@
             "pattern": [],
             "symbolic_name": "nova_uid"
         },
-	    {
+        {
             "command": "/usr/bin/id -u nova_migration",
             "pattern": [],
             "symbolic_name": "nova_migration_uid"
@@ -1496,6 +1495,7 @@
                 ": segfault at ",
                 ": session replaced: jid=",
                 "Abort command issued",
+                "CIFS VFS: protocol revalidation - security settings mismatch",
                 "DMA Status error.  Resetting chip",
                 "Dazed and confused, but trying to continue",
                 "Detected Tx Unit Hang",
@@ -1542,6 +1542,7 @@
                 "kernel: lockd: Unknown symbol register_inet6addr_notifier",
                 "kernel: lockd: Unknown symbol unregister_inet6addr_notifier",
                 "kernel: megasas: Found FW in FAULT state,will reset adapter.",
+                "kernel: unregister_netdevice: waiting for lo to become free. Usage count =",
                 "khash_super_prune_nolock",
                 "megaraid_sas: FW detected to be in faultstate, restarting it",
                 "mode:0x20",
@@ -1676,8 +1677,11 @@
                 "/console.log: Permission denied",
                 ": No such device or address",
                 "Could not open ",
+                "During sync_power_state the instance has a pending task",
+                "Instance shutdown by itself. Calling the stop API.",
                 "Live Migration failure: operation failed: Failed to connect to remote libvirt URI qemu+ssh",
                 "Resuming guest",
+                "cmt=off: Property '.cmt' not found",
                 "does not match source",
                 "error: Failed to start domain",
                 "libvirt-guests.sh",
@@ -1693,8 +1697,11 @@
                 "/console.log: Permission denied",
                 ": No such device or address",
                 "Could not open ",
+                "During sync_power_state the instance has a pending task",
+                "Instance shutdown by itself. Calling the stop API.",
                 "Live Migration failure: operation failed: Failed to connect to remote libvirt URI qemu+ssh",
                 "Resuming guest",
+                "cmt=off: Property '.cmt' not found",
                 "does not match source",
                 "error: Failed to start domain",
                 "libvirt-guests.sh",
@@ -8067,5 +8074,5 @@
             ]
         }
     },
-    "version": "2018-12-06T16:50:59.289218"
+    "version": "2018-12-13T15:22:46.100218"
 }
