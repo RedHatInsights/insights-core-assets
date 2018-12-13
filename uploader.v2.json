@@ -218,6 +218,11 @@
             "symbolic_name": "gluster_v_info"
         },
         {
+            "command": "/usr/sbin/gluster volume status",
+            "pattern": [],
+            "symbolic_name": "gluster_v_status"
+        },
+        {
             "command": "/bin/ls -l /boot/grub/grub.conf",
             "pattern": [],
             "symbolic_name": "grub1_config_perms"
