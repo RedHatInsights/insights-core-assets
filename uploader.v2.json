@@ -1,6 +1,11 @@
 {
     "commands": [
         {
+            "command": "/sbin/auditctl -s",
+            "pattern": [],
+            "symbolic_name": "auditctl_status"
+        },
+        {
             "command": "/sbin/blkid -c /dev/null",
             "pattern": [],
             "symbolic_name": "blkid"

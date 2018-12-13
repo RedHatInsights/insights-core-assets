@@ -1,6 +1,11 @@
 {
     "commands": [
         {
+            "command": "/sbin/auditctl -s",
+            "pattern": [],
+            "symbolic_name": "auditctl_status"
+        },
+        {
             "command": "/usr/sbin/dmidecode -s system-uuid",
             "pattern": [],
             "symbolic_name": "bios_uuid"
