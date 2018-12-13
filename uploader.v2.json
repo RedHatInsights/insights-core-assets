@@ -2521,6 +2521,11 @@
             "pattern": []
         },
         {
+            "glob": "/sys/fs/cgroup/cpu/kubepods.slice/kubepods-burstable.slice/kubepods-burstable-pod[a-f0-9_]*.slice/cpu.cfs_quota_us",
+            "symbolic_name": "kubepods_cpu_quota",
+            "pattern": []
+        },
+        {
             "glob": "/sys/class/scsi_host/host[0-9]*/fwrev",
             "symbolic_name": "scsi_fwver",
             "pattern": []
