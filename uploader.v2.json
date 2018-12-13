@@ -539,6 +539,11 @@
             "symbolic_name": "lvs_noheadings"
         },
         {
+            "command": "/bin/awk -F':' '{ if($3 > max) max = $3 } END { print max }' /etc/passwd",
+            "pattern": [],
+            "symbolic_name": "max_uid"
+        },
+        {
             "command": "/usr/bin/md5sum /dev/null /etc/pki/{product,product-default}/69.pem",
             "pattern": [],
             "symbolic_name": "md5chk_files"
