@@ -588,6 +588,11 @@
             "symbolic_name": "named_checkconf_p"
         },
         {
+            "command": "/bin/ls /var/run/netns",
+            "pattern": [],
+            "symbolic_name": "namespace"
+        },
+        {
             "command": "/bin/netstat -neopa",
             "pattern": [],
             "symbolic_name": "netstat"
