@@ -608,6 +608,16 @@
             "symbolic_name": "nova_crontab"
         },
         {
+            "command": "/usr/bin/id -u nova",
+            "pattern": [],
+            "symbolic_name": "nova_uid"
+        },
+	    {
+            "command": "/usr/bin/id -u nova_migration",
+            "pattern": [],
+            "symbolic_name": "nova_migration_uid"
+        },
+        {
             "command": "/usr/sbin/ntpq -c 'rv 0 leap'",
             "pattern": [],
             "symbolic_name": "ntpq_leap"
