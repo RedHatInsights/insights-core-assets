@@ -1,5 +1,13 @@
 Insights Client Core Changelog
 
+v3.0.66 - Dec 5 2018
+- Improve robustness of config parsing
+- Cache branch info instead of fetching repeatedly
+- Fix proxy connect request bug
+- Platform remediation implementation
+- Switch from optparse to argparse for CLI options
+- Python 3 compatibility fixes
+
 v3.0.59 - Nov 14 2018
 - Regression fixes
 
