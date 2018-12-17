@@ -1004,6 +1004,11 @@
             "symbolic_name": "bond"
         },
         {
+            "file": "/sys/class/net/bond[0-9]*/bonding/tlb_dynamic_lb",
+            "pattern": [],
+            "symbolic_name": "bond_dynamic_lb"
+        },
+        {
             "file": "/var/log/tomcat/()*catalina\\.out",
             "pattern": [
                 "APPARENT DEADLOCK!",
@@ -2669,6 +2674,22 @@
                 {
                     "archive_file_name": "/{EXPANDED_FILE_NAME}",
                     "file": "/proc/net/bonding/()*bond.*",
+                    "pattern": []
+                }
+            ]
+        },
+        "bond_dynamic_lb": {
+            "docker_container": [
+                {
+                    "archive_file_name": "/insights_data/container/rootfs/{EXPANDED_FILE_NAME}",
+                    "file": "{CONTAINER_MOUNT_POINT}/sys/class/net/bond[0-9]*/bonding/tlb_dynamic_lb",
+                    "pattern": []
+                }
+            ],
+            "host": [
+                {
+                    "archive_file_name": "/{EXPANDED_FILE_NAME}",
+                    "file": "/sys/class/net/bond[0-9]*/bonding/tlb_dynamic_lb",
                     "pattern": []
                 }
             ]
