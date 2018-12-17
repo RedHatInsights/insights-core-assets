@@ -1745,6 +1745,7 @@
         {
             "file": "/etc/odbc.ini",
             "pattern": [
+		"DRIVER"
                 "Driver",
                 "NO_SSPS",
                 "No_ssps",
@@ -5538,11 +5539,6 @@
                 }
             ]
         },
-	{
-            "file": "/usr/bin/nmcli conn show",
-            "pattern": [],
-            "symbolic_name": "nmcli_conn_show"
-        },
         "nova-api_log": {
             "docker_container": [
                 {
@@ -5571,6 +5567,11 @@
                     ]
                 }
             ]
+        },
+	{
+            "file": "/usr/bin/nmcli conn show",
+            "pattern": [],
+            "symbolic_name": "nmcli_conn_show"
         },
         "nova-compute.log": {
             "docker_container": [
