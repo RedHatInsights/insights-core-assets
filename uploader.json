@@ -1745,7 +1745,6 @@
         {
             "file": "/etc/odbc.ini",
             "pattern": [
-                "DRIVERn",
                 "Driver",
                 "NO_SSPS",
                 "No_ssps",
