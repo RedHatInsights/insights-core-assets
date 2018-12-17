@@ -1372,6 +1372,11 @@
             "pattern": [],
             "symbolic_name": "ifcfg"
         },
+	{
+            "file": "/etc/sysconfig/network-scripts/()*route-.*",
+            "pattern": [],
+            "symbolic_name": "route"
+        },
         {
             "file": "/etc/ImageMagick/()*policy\\.xml",
             "pattern": [
@@ -4048,6 +4053,29 @@
                 {
                     "archive_file_name": "/{EXPANDED_FILE_NAME}",
                     "file": "/etc/sysconfig/network-scripts/()*ifcfg-.*",
+                    "pattern": []
+                }
+            ]
+        },
+	"ifcfg_static_route": {
+            "docker_container": [
+                {
+                    "archive_file_name": "/insights_data/container/rootfs/{EXPANDED_FILE_NAME}",
+                    "file": "{CONTAINER_MOUNT_POINT}/etc/sysconfig/network-scripts/()*route-.*",
+                    "pattern": []
+                }
+            ],
+            "docker_image": [
+                {
+                    "archive_file_name": "/insights_data/image/rootfs/{EXPANDED_FILE_NAME}",
+                    "file": "{CONTAINER_MOUNT_POINT}/etc/sysconfig/network-scripts/()*route-.*",
+                    "pattern": []
+                }
+            ],
+            "host": [
+                {
+                    "archive_file_name": "/{EXPANDED_FILE_NAME}",
+                    "file": "/etc/sysconfig/network-scripts/()*route-.*",
                     "pattern": []
                 }
             ]

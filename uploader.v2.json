@@ -1372,6 +1372,11 @@
             "pattern": [],
             "symbolic_name": "ifcfg"
         },
+	{
+            "file": "/etc/sysconfig/network-scripts/()*route-.*",
+            "pattern": [],
+            "symbolic_name": "route"
+        },
         {
             "file": "/etc/ImageMagick/()*policy\\.xml",
             "pattern": [
