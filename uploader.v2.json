@@ -1372,11 +1372,6 @@
             "pattern": [],
             "symbolic_name": "ifcfg"
         },
-	{
-            "file": "/etc/sysconfig/network-scripts/()*route-.*",
-            "pattern": [],
-            "symbolic_name": "route"
-        },
         {
             "file": "/etc/ImageMagick/()*policy\\.xml",
             "pattern": [
@@ -1661,6 +1656,11 @@
             "file": "/etc/opt/rh/rh-nginx18/nginx/()*nginx.conf",
             "pattern": [],
             "symbolic_name": "nginx_conf"
+        },
+	{
+            "file": "/usr/bin/nmcli conn show",
+            "pattern": [],
+            "symbolic_name": "nmcli_conn_show"
         },
         {
             "file": "/var/log/nova/nova-api.log",
