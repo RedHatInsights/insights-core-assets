@@ -602,11 +602,6 @@
             "symbolic_name": "namespace"
         },
         {
-            "command": "/usr/bin/nmcli conn show",
-            "pattern": [],
-            "symbolic_name": "nmcli_conn_show"
-        },
-        {
             "command": "/bin/netstat -neopa",
             "pattern": [],
             "symbolic_name": "netstat"
@@ -625,6 +620,11 @@
             "command": "/bin/netstat -agn",
             "pattern": [],
             "symbolic_name": "netstat__agn"
+        },
+        {
+            "command": "/usr/bin/nmcli conn show",
+            "pattern": [],
+            "symbolic_name": "nmcli_conn_show"
         },
         {
             "command": "/usr/bin/crontab -l -u nova",
@@ -1750,7 +1750,7 @@
         {
             "file": "/etc/odbc.ini",
             "pattern": [
-		"DRIVER",
+                "DRIVER",
                 "Driver",
                 "NO_SSPS",
                 "No_ssps",
