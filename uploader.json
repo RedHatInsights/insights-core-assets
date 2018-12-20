@@ -602,6 +602,11 @@
             "symbolic_name": "namespace"
         },
         {
+            "command": "/usr/bin/nmcli conn show",
+            "pattern": [],
+            "symbolic_name": "nmcli_conn_show"
+        },
+        {
             "command": "/bin/netstat -neopa",
             "pattern": [],
             "symbolic_name": "netstat"
@@ -5567,11 +5572,6 @@
                     ]
                 }
             ]
-        },
-	{
-            "file": "/usr/bin/nmcli conn show",
-            "pattern": [],
-            "symbolic_name": "nmcli_conn_show"
         },
         "nova-compute.log": {
             "docker_container": [
