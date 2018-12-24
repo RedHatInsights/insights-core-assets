@@ -1004,11 +1004,6 @@
             "symbolic_name": "bond"
         },
         {
-            "file": "/sys/class/net/bond[0-9]*/bonding/tlb_dynamic_lb",
-            "pattern": [],
-            "symbolic_name": "bond_dynamic_lb"
-        },
-        {
             "file": "/var/log/tomcat/()*catalina\\.out",
             "pattern": [
                 "APPARENT DEADLOCK!",
@@ -2546,6 +2541,11 @@
         {
             "glob": "/sys/class/net/*/address",
             "symbolic_name": "mac_addresses",
+            "pattern": []
+        },
+        {
+            "glob": "/sys/class/net/bond[0-9]*/bonding/tlb_dynamic_lb",
+            "symbolic_name": "bond_dynamic_lb",
             "pattern": []
         },
         {

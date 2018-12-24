@@ -1004,11 +1004,6 @@
             "symbolic_name": "bond"
         },
         {
-            "file": "/sys/class/net/bond[0-9]*/bonding/tlb_dynamic_lb",
-            "pattern": [],
-            "symbolic_name": "bond_dynamic_lb"
-        },
-        {
             "file": "/var/log/tomcat/()*catalina\\.out",
             "pattern": [
                 "APPARENT DEADLOCK!",
@@ -2554,6 +2549,11 @@
             "pattern": []
         },
         {
+            "glob": "/sys/class/net/bond[0-9]*/bonding/tlb_dynamic_lb",
+            "symbolic_name": "bond_dynamic_lb",
+            "pattern": []
+        },
+        {
             "glob": "/var/opt/amq-broker/*/etc/broker.xml",
             "symbolic_name": "amq_broker",
             "pattern": []
@@ -2674,22 +2674,6 @@
                 {
                     "archive_file_name": "/{EXPANDED_FILE_NAME}",
                     "file": "/proc/net/bonding/()*bond.*",
-                    "pattern": []
-                }
-            ]
-        },
-        "bond_dynamic_lb": {
-            "docker_container": [
-                {
-                    "archive_file_name": "/insights_data/container/rootfs/{EXPANDED_FILE_NAME}",
-                    "file": "{CONTAINER_MOUNT_POINT}/sys/class/net/bond[0-9]*/bonding/tlb_dynamic_lb",
-                    "pattern": []
-                }
-            ],
-            "host": [
-                {
-                    "archive_file_name": "/{EXPANDED_FILE_NAME}",
-                    "file": "/sys/class/net/bond[0-9]*/bonding/tlb_dynamic_lb",
                     "pattern": []
                 }
             ]
