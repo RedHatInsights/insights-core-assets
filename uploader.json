@@ -622,6 +622,11 @@
             "symbolic_name": "netstat__agn"
         },
         {
+            "command": "/usr/bin/nmcli conn show",
+            "pattern": [],
+            "symbolic_name": "nmcli_conn_show"
+        },
+        {
             "command": "/usr/bin/crontab -l -u nova",
             "pattern": [],
             "symbolic_name": "nova_crontab"
