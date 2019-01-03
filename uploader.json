@@ -1121,6 +1121,11 @@
             "pattern": [],
             "symbolic_name": "cmdline"
         },
+	{
+            "file": "/etc/corosync/corosync.conf",
+            "pattern": [],
+            "symbolic_name": "corosync_conf"
+        },
         {
             "file": "/etc/cobbler/modules.conf",
             "pattern": [],
