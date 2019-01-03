@@ -2559,6 +2559,11 @@
             "pattern": []
         },
         {
+            "glob": "/sys/class/net/bond[0-9]*/bonding/tlb_dynamic_lb",
+            "symbolic_name": "bond_dynamic_lb",
+            "pattern": []
+        },
+        {
             "glob": "/var/opt/amq-broker/*/etc/broker.xml",
             "symbolic_name": "amq_broker",
             "pattern": []
