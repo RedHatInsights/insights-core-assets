@@ -633,6 +633,11 @@
             "pattern": [],
             "symbolic_name": "nmcli_conn_show"
         },
+		{
+			"command": "/usr/bin/nmcli dev show",
+			"pattern": [],
+			"symbolic_name": "nmcli_dev_show"
+        },
         {
             "command": "/usr/bin/crontab -l -u nova",
             "pattern": [],
