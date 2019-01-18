@@ -926,6 +926,11 @@
             "symbolic_name": "tuned_adm"
         },
         {
+            "command": "/usr/bin/ulimit -a -H",
+            "pattern": [],
+            "symbolic_name": "ulimit_hard"
+        },
+        {
             "command": "/bin/uname -a",
             "pattern": [],
             "symbolic_name": "uname"
@@ -7605,6 +7610,15 @@
                 {
                     "archive_file_name": "/insights_commands/tuned-adm_list",
                     "command": "/usr/sbin/tuned-adm list",
+                    "pattern": []
+                }
+            ]
+        },
+        "ulimit_hard": {
+            "host": [
+                {
+                    "archive_file_name": "insights_commands/ulimit_-a_-H",
+                    "command": "/usr/bin/ulimit -a -H",
                     "pattern": []
                 }
             ]
