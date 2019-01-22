@@ -2628,6 +2628,11 @@
             "pattern": []
         },
         {
+            "glob": "/sys/devices/system/node/node[0-9]*/cpulist",
+            "symbolic_name": "numa_cpus",
+            "pattern": []
+        },
+        {
             "glob": "/sys/class/scsi_host/host[0-9]*/eh_deadline",
             "symbolic_name": "scsi_eh_deadline",
             "pattern": []
