@@ -7614,15 +7614,6 @@
                 }
             ]
         },
-        "ulimit_hard": {
-            "host": [
-                {
-                    "archive_file_name": "insights_commands/ulimit_-a_-H",
-                    "command": "/usr/bin/ulimit -a -H",
-                    "pattern": []
-                }
-            ]
-        },
         "uname": {
             "host": [
                 {
