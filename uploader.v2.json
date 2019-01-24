@@ -2643,6 +2643,11 @@
             "pattern": []
         },
         {
+            "glob": "/sys/devices/system/node/node[0-9]*/cpulist",
+            "symbolic_name": "numa_cpus",
+            "pattern": []
+        },
+        {
             "glob": "/sys/class/scsi_host/host[0-9]*/fwrev",
             "symbolic_name": "scsi_fwver",
             "pattern": []
