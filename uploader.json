@@ -109,6 +109,7 @@
         {
             "command": "/bin/dmesg",
             "pattern": [
+                "Brought up ",
                 "CIFS VFS: protocol revalidation - security settings mismatch",
                 "CSUM",
                 "CVE-2017-1000364",
@@ -120,15 +121,20 @@
                 "Kernel page table isolation",
                 "Linux version",
                 "NUMA: ",
+                "Node 0 CPUs: ",
+                "QLogic QLE2692 - QLogic 16Gb FC Dual-port HBA",
                 "SMBIOS ",
+                "TECH PREVIEW: NVMe over FC may not be fully supported.",
                 "WRITE SAME failed. Manually zeroing",
                 "blocked FC remote port time out",
                 "crashkernel reservation failed",
                 "crashkernel=auto resulted in zero bytes of reserved memory",
+                "fw=8.08.",
                 "is now offline",
                 "ixgbevf: Unknown parameter `InterruptThrottleRate'",
                 "mce: ",
                 "netconsole: network logging started",
+                "the DIE domain not a subset of the NUMA domain",
                 "vpd r/w failed",
                 "x86/pti"
             ],
@@ -1084,12 +1090,16 @@
         },
         {
             "file": "/var/log/ceilometer/compute.log",
-            "pattern": [],
+            "pattern": [
+                "Cannot inspect data of"
+            ],
             "symbolic_name": "ceilometer_compute_log"
         },
         {
             "file": "/var/log/containers/ceilometer/compute.log",
-            "pattern": [],
+            "pattern": [
+                "Cannot inspect data of"
+            ],
             "symbolic_name": "ceilometer_compute_log"
         },
         {
@@ -1545,6 +1555,7 @@
             "file": "/var/log/messages",
             "pattern": [
                 " disconnect jid=",
+                "/input/input",
                 "11000 E11000 duplicate key error index: pulp_database.repo_profile_applicability.$profile_hash_-1_repo_id_-1",
                 ": Machine check events logged",
                 ": segfault at ",
@@ -1566,7 +1577,6 @@
                 "Neighbour table overflow",
                 "Out of MCCQ wrbs",
                 "Out of memory: kill process",
-                "Resolv.conf file '/etc/resolv.conf' contains search line consisting of more than 3 domains",
                 "SCSI device reset on",
                 "SDN initialization failed: Error: Existing service with IP: None is not part of service network",
                 "Scheduled import of stream",
@@ -1583,6 +1593,7 @@
                 "callbacks suppressed",
                 "chardev: opening backend \"socket\" failed",
                 "does not seem to be present, delaying initialization",
+                "drivers/input/input-leds.c:115 input_leds_connect",
                 "error Error on attach: Node not found",
                 "eviction manager: eviction criteria not yet met for threshold",
                 "ext4_ext_search_left",
@@ -8168,5 +8179,5 @@
             ]
         }
     },
-    "version": "2019-01-17T14:10:36.409679"
+    "version": "2019-01-24T15:26:16.342790"
 }
