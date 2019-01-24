@@ -2276,6 +2276,11 @@
             "symbolic_name": "tmpfilesd"
         },
         {
+            "file": "/etc/tuned.conf",
+            "pattern": [],
+            "symbolic_name": "tuned_conf"
+        },
+        {
             "file": "/etc/sysconfig/rhn/up2date",
             "pattern": [],
             "symbolic_name": "up2date"
