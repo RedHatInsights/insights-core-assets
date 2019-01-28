@@ -1251,6 +1251,11 @@
             "symbolic_name": "dirsrv_errors"
         },
         {
+            "file": "/etc/dnf/modules.d/.*\\.module",
+            "pattern": [],
+            "symbolic_name": "dnf_modules"
+        },
+        {
             "file": "/etc/redhat-access-insights/machine-id",
             "pattern": [],
             "symbolic_name": "machine_id1"
