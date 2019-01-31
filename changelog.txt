@@ -1,5 +1,13 @@
 Insights Client Core Changelog
 
+v3.0.75 - Jan 30 2019
+- Improve remove.conf parsing
+- Remove deprecated options: --from-stdin, --from-file, --run-these
+- Allow specifying files in remove.conf that would be included in wildcards
+- Allow specifying symbolic names for commands and files in remove.conf
+- Log canonical facts and x-rh-insights-request-id header
+- Fix platform registration messaging
+
 v3.0.72 - Jan 9 2019
 - Disable registration for platform uploads
 - Improve messaging
