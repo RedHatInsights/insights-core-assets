@@ -108,6 +108,7 @@
                 "CIFS VFS: protocol revalidation - security settings mismatch",
                 "CSUM",
                 "CVE-2017-1000364",
+                "CVE-2018-14634",
                 "Device is ineligible for IOMMU domain attach due to platform RMRR requirement",
                 "Dropping TSO",
                 "EDAC ",
@@ -1278,7 +1279,9 @@
         {
             "file": "/var/log/ovirt-engine/engine.log",
             "pattern": [
+                "Data Center",
                 "ERROR",
+                "INFO",
                 "Low disk space. Host",
                 "VDS_LOW_DISK_SPACE_ERROR",
                 "org.ovirt.engine.core.bll.storage.lease.AddVmLeaseCommand",
@@ -1609,6 +1612,7 @@
                 "ext4_ext_search_left",
                 "failed while handling",
                 "failed: Connection amqps:",
+                "failed: rpc error: code = 2 desc = unable to inspect docker image",
                 "fiid_obj_get: 'present_countdown_value': data not available",
                 "firewalld - dynamic firewall daemon",
                 "fit failure summary on nodes : Insufficient pods",
@@ -2699,5 +2703,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-01-24T15:26:29.221412"
+    "version": "2019-02-01T11:03:11.810309"
 }
