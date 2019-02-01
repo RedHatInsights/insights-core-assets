@@ -580,11 +580,11 @@
             "pattern": [],
             "symbolic_name": "mount"
         },
-		{
+        {
             "command": "/sbin/modinfo i40e",
             "pattern": [],
             "symbolic_name": "modinfo_i40e"
-		},
+        },
         {
             "command": "/usr/bin/find /sys/devices/virtual/net/ -name multicast_querier -print -exec cat {} \\;",
             "pattern": [],
