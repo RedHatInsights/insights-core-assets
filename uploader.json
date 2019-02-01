@@ -113,6 +113,7 @@
                 "CIFS VFS: protocol revalidation - security settings mismatch",
                 "CSUM",
                 "CVE-2017-1000364",
+                "CVE-2018-14634",
                 "Device is ineligible for IOMMU domain attach due to platform RMRR requirement",
                 "Dropping TSO",
                 "EDAC ",
@@ -579,6 +580,11 @@
             "command": "/bin/mount",
             "pattern": [],
             "symbolic_name": "mount"
+        },
+        {
+            "command": "/sbin/modinfo i40e",
+            "pattern": [],
+            "symbolic_name": "modinfo_i40e"
         },
         {
             "command": "/usr/bin/find /sys/devices/virtual/net/ -name multicast_querier -print -exec cat {} \\;",
@@ -1251,6 +1257,11 @@
             "symbolic_name": "dirsrv_errors"
         },
         {
+            "file": "/etc/dnf/modules.d/.*\\.module",
+            "pattern": [],
+            "symbolic_name": "dnf_modules"
+        },
+        {
             "file": "/etc/redhat-access-insights/machine-id",
             "pattern": [],
             "symbolic_name": "machine_id1"
@@ -1268,7 +1279,9 @@
         {
             "file": "/var/log/ovirt-engine/engine.log",
             "pattern": [
+                "Data Center",
                 "ERROR",
+                "INFO",
                 "Low disk space. Host",
                 "VDS_LOW_DISK_SPACE_ERROR",
                 "org.ovirt.engine.core.bll.storage.lease.AddVmLeaseCommand",
@@ -1599,6 +1612,7 @@
                 "ext4_ext_search_left",
                 "failed while handling",
                 "failed: Connection amqps:",
+                "failed: rpc error: code = 2 desc = unable to inspect docker image",
                 "fiid_obj_get: 'present_countdown_value': data not available",
                 "firewalld - dynamic firewall daemon",
                 "fit failure summary on nodes : Insufficient pods",
@@ -8179,5 +8193,5 @@
             ]
         }
     },
-    "version": "2019-01-24T15:26:16.342790"
+    "version": "2019-02-01T11:03:17.350988"
 }
