@@ -820,6 +820,11 @@
             "symbolic_name": "rhn_schema_version"
         },
         {
+            "command": "python -m insights.tools.cat --no-header rhev_data_center",
+            "pattern": [],
+            "symbolic_name": "rhev_data_center"
+        },
+        {
             "command": "/usr/bin/crontab -l -u root",
             "pattern": [
                 "heat-manage"
