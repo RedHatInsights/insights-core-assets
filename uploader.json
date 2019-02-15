@@ -2095,6 +2095,11 @@
             "pattern": [],
             "symbolic_name": "scsi"
         },
+		{
+            "file": "/proc/net/sctp/assocs",
+            "pattern": [],
+            "symbolic_name": "sctp_asc"
+		},
         {
             "file": "/var/log/secure",
             "pattern": [
