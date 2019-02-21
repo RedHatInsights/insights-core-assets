@@ -2101,6 +2101,11 @@
             "symbolic_name": "scsi"
         },
         {
+            "file": "/proc/net/sctp/eps",
+            "pattern": [],
+            "symbolic_name": "sctp_eps"
+        },
+        {
             "file": "/var/log/secure",
             "pattern": [
                 "error: session_pty_req: session"
