@@ -41,7 +41,7 @@
             "symbolic_name": "ceph_v"
         },
         {
-            "command": "python -m insights.tools.cat ceph_insights",
+            "command": "python -m insights.tools.cat --no-header ceph_insights",
             "pattern": [],
             "symbolic_name": "ceph_insights"
         },
