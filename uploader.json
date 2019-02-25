@@ -1863,6 +1863,11 @@
             "symbolic_name": "rc_local"
         },
         {
+            "file": "/etc/rdma/rdma.conf",
+            "pattern": [],
+            "symbolic_name": "rdma_conf"
+        },
+        {
             "file": "/etc/redhat-release",
             "pattern": [],
             "symbolic_name": "redhat_release"
