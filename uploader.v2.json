@@ -2215,6 +2215,14 @@
             "symbolic_name": "ssh_foreman_config"
         },
         {
+            "file": "/usr/share/foreman-proxy/.ssh/ssh_config",
+            "pattern": [
+                "Host",
+                "ProxyCommand"
+            ],
+            "symbolic_name": "ssh_foreman_proxy_config"
+        },
+        {
             "file": "/etc/swift/object-expirer.conf",
             "pattern": [],
             "symbolic_name": "swift_object_expirer_conf"
