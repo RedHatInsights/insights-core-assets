@@ -295,6 +295,11 @@
             "symbolic_name": "httpd_worker_V"
         },
         {
+            "command": "python -m insights.tools.cat --no-header httpd_on_nfs",
+            "pattern": [],
+            "symbolic_name": "httpd_on_nfs"
+        },
+        {
             "command": "/usr/sbin/httpd -M",
             "pattern": [],
             "symbolic_name": "httpd_M"
