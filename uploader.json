@@ -46,7 +46,7 @@
             "symbolic_name": "ceph_v"
         },
         {
-            "command": "python -m insights.tools.cat ceph_insights",
+            "command": "python -m insights.tools.cat --no-header ceph_insights",
             "pattern": [],
             "symbolic_name": "ceph_insights"
         },
@@ -131,6 +131,7 @@
                 "QLogic QLE2692 - QLogic 16Gb FC Dual-port HBA",
                 "SMBIOS ",
                 "TECH PREVIEW: NVMe over FC may not be fully supported.",
+                "VPD access disabled",
                 "WRITE SAME failed. Manually zeroing",
                 "blocked FC remote port time out",
                 "crashkernel reservation failed",
@@ -818,6 +819,11 @@
             "command": "/usr/bin/rhn-schema-version",
             "pattern": [],
             "symbolic_name": "rhn_schema_version"
+        },
+        {
+            "command": "python -m insights.tools.cat --no-header rhev_data_center",
+            "pattern": [],
+            "symbolic_name": "rhev_data_center"
         },
         {
             "command": "/usr/bin/crontab -l -u root",
@@ -1615,6 +1621,7 @@
                 "drivers/input/input-leds.c:115 input_leds_connect",
                 "error Error on attach: Node not found",
                 "eviction manager: eviction criteria not yet met for threshold",
+                "eviction manager: must evict pod(s) to reclaim nodefsInodes",
                 "ext4_ext_search_left",
                 "failed while handling",
                 "failed: Connection amqps:",
@@ -1660,7 +1667,8 @@
                 "timeout; kill it",
                 "udev: renamed network interface",
                 "unknown filesystem type 'binfmt_misc'",
-                "vdsm-tool: EnvironmentError: Failed to restore the persisted networks"
+                "vdsm-tool: EnvironmentError: Failed to restore the persisted networks",
+                "watch chan error: etcdserver: mvcc: required revision has been compacted"
             ],
             "symbolic_name": "messages"
         },
@@ -1778,6 +1786,7 @@
                 "ERROR oslo_messaging.rpc.server InvalidSharedStorage",
                 "FlavorDiskSmallerThanImage: Flavor's disk is too small for requested image.",
                 "Instance shutdown by itself. Calling the stop API.",
+                "Live Migration failure: internal error: process exited while connecting to monitor",
                 "Live Migration failure: operation failed: Failed to connect to remote libvirt URI qemu+ssh",
                 "No such device or address",
                 "Resuming guest",
@@ -1809,6 +1818,7 @@
                 "ERROR oslo_messaging.rpc.server InvalidSharedStorage",
                 "FlavorDiskSmallerThanImage: Flavor's disk is too small for requested image.",
                 "Instance shutdown by itself. Calling the stop API.",
+                "Live Migration failure: internal error: process exited while connecting to monitor",
                 "Live Migration failure: operation failed: Failed to connect to remote libvirt URI qemu+ssh",
                 "No such device or address",
                 "Resuming guest",
@@ -2099,6 +2109,11 @@
             "file": "/proc/net/sctp/assocs",
             "pattern": [],
             "symbolic_name": "sctp_asc"
+        },
+        {
+            "file": "/proc/net/sctp/eps",
+            "pattern": [],
+            "symbolic_name": "sctp_eps"
         },
         {
             "file": "/var/log/secure",
@@ -8212,5 +8227,5 @@
             ]
         }
     },
-    "version": "2019-02-08T11:44:43.831337"
+    "version": "2019-02-21T13:39:05.133740"
 }
