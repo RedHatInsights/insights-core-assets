@@ -1,5 +1,9 @@
 Insights Client Core Changelog
 
+v3.0.80 - Feb 28 2019
+- Warn if HTTP_PROXY is set
+- Fix pre-command exception (BZ1559076)
+
 v3.0.75 - Jan 30 2019
 - Improve remove.conf parsing
 - Remove deprecated options: --from-stdin, --from-file, --run-these
