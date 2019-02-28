@@ -1604,6 +1604,7 @@
             "file": "/var/log/messages",
             "pattern": [
                 " disconnect jid=",
+                ", type vxfs) has no security xattr handler",
                 "/input/input",
                 "11000 E11000 duplicate key error index: pulp_database.repo_profile_applicability.$profile_hash_-1_repo_id_-1",
                 ": Machine check events logged",
@@ -8265,5 +8266,5 @@
             ]
         }
     },
-    "version": "2019-02-21T13:39:05.133740"
+    "version": "2019-02-28T14:47:38.518187"
 }
