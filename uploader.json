@@ -826,6 +826,11 @@
             "symbolic_name": "rhev_data_center"
         },
         {
+            "command": "python -m insights.tools.cat --no-header sapcontrol_getsystemupdatelist",
+            "pattern": [],
+            "symbolic_name": "sapcontrol_getsystemupdatelist"
+        },
+        {
             "command": "/usr/bin/crontab -l -u root",
             "pattern": [
                 "heat-manage"
@@ -1256,6 +1261,21 @@
             "symbolic_name": "cpuset_cpus"
         },
         {
+            "file": "/etc/crypto-policies/config",
+            "pattern": [],
+            "symbolic_name": "crypto_policies_config"
+        },
+        {
+            "file": "/etc/crypto-policies/state/current",
+            "pattern": [],
+            "symbolic_name": "crypto_policies_state_current"
+        },
+        {
+            "file": "/etc/crypto-policies/back-ends/opensshserver.config",
+            "pattern": [],
+            "symbolic_name": "crypto_policies_opensshserver"
+        },
+        {
             "file": "/sys/kernel/debug/x86/retp_enabled",
             "pattern": [],
             "symbolic_name": "x86_retp_enabled"
@@ -1281,6 +1301,11 @@
             "file": "/etc/sysconfig/docker-storage-setup",
             "pattern": [],
             "symbolic_name": "docker_storage_setup"
+        },
+        {
+            "file": "/etc/sysconfig/docker-storage",
+            "pattern": [],
+            "symbolic_name": "docker_storage"
         },
         {
             "file": "/etc/sysconfig/docker",
@@ -1579,6 +1604,7 @@
             "file": "/var/log/messages",
             "pattern": [
                 " disconnect jid=",
+                ", type vxfs) has no security xattr handler",
                 "/input/input",
                 "11000 E11000 duplicate key error index: pulp_database.repo_profile_applicability.$profile_hash_-1_repo_id_-1",
                 ": Machine check events logged",
@@ -2106,6 +2132,11 @@
             "symbolic_name": "scsi"
         },
         {
+            "file": "/proc/net/sctp/assocs",
+            "pattern": [],
+            "symbolic_name": "sctp_asc"
+        },
+        {
             "file": "/proc/net/sctp/eps",
             "pattern": [],
             "symbolic_name": "sctp_eps"
@@ -2220,6 +2251,14 @@
             "symbolic_name": "ssh_foreman_config"
         },
         {
+            "file": "/usr/share/foreman-proxy/.ssh/ssh_config",
+            "pattern": [
+                "Host",
+                "ProxyCommand"
+            ],
+            "symbolic_name": "ssh_foreman_proxy_config"
+        },
+        {
             "file": "/etc/swift/object-expirer.conf",
             "pattern": [],
             "symbolic_name": "swift_object_expirer_conf"
@@ -2278,6 +2317,11 @@
             "file": "/etc/sysconfig/prelink",
             "pattern": [],
             "symbolic_name": "sysconfig_prelink"
+        },
+        {
+            "file": "/etc/sysconfig/sshd",
+            "pattern": [],
+            "symbolic_name": "sysconfig_sshd"
         },
         {
             "file": "/etc/sysconfig/virt-who",
@@ -8222,5 +8266,5 @@
             ]
         }
     },
-    "version": "2019-02-21T13:39:05.133740"
+    "version": "2019-02-28T14:47:38.518187"
 }
