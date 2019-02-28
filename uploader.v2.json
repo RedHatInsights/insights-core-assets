@@ -2106,6 +2106,11 @@
             "symbolic_name": "scsi"
         },
         {
+            "file": "/proc/net/sctp/assocs",
+            "pattern": [],
+            "symbolic_name": "sctp_asc"
+        },
+        {
             "file": "/proc/net/sctp/eps",
             "pattern": [],
             "symbolic_name": "sctp_eps"
