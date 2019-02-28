@@ -1288,6 +1288,11 @@
             "symbolic_name": "docker_storage_setup"
         },
         {
+            "file": "/etc/sysconfig/docker-storage",
+            "pattern": [],
+            "symbolic_name": "docker_storage"
+        },
+        {
             "file": "/etc/sysconfig/docker",
             "pattern": [],
             "symbolic_name": "docker_sysconfig"
