@@ -2334,6 +2334,11 @@
             "symbolic_name": "systemd_logind_conf"
         },
         {
+            "file": "/etc/systemd/system.conf.d/origin-accounting.conf",
+            "pattern": [],
+            "symbolic_name": "systemd_system_origin_accounting"
+        },
+        {
             "file": "/usr/lib/systemd/system/docker.service",
             "pattern": [],
             "symbolic_name": "systemd_docker"
