@@ -1535,6 +1535,11 @@
             "pattern": [],
             "symbolic_name": "iptables_permanent"
         },
+	{
+            "file": "/var/log/ironic-inspector/ironic-inspector.log",
+            "pattern": [],
+            "symbolic_name": "ironic_inspector_log"
+        },
         {
             "file": "/etc/kdump.conf",
             "pattern": [],
