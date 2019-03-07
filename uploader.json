@@ -1130,6 +1130,16 @@
             ],
             "symbolic_name": "ceilometer_compute_log"
         },
+	{
+            "file": "/var/log/ceilometer/collector.log",
+            "pattern": [],
+            "symbolic_name": "ceilometer_collector_log"
+        },
+        {
+            "file": "/var/log/containers/ceilometer/collector.log",
+            "pattern": [],
+            "symbolic_name": "ceilometer_collector_log"
+        },
         {
             "file": "/etc/ceph/ceph.conf",
             "pattern": [
