@@ -1,5 +1,9 @@
 Insights Client Core Changelog
 
+v3.0.81 - Mar 8 2019
+- Fix abrt error when running core module (BZ1686439)
+- Fix subscription-manager command traceback
+
 v3.0.80 - Feb 28 2019
 - Warn if HTTP_PROXY is set
 - Fix pre-command exception (BZ1559076)
