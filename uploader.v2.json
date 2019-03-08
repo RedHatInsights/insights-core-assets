@@ -707,6 +707,11 @@
             "symbolic_name": "openvswitch_other_config"
         },
         {
+            "command": "/usr/bin/ovs-vsctl list bridge",
+            "pattern": [],
+            "symbolic_name": "ovs_vsctl_list_bridge"
+        },
+        {
             "command": "/usr/bin/ovs-vsctl show",
             "pattern": [],
             "symbolic_name": "ovs_vsctl_show"
