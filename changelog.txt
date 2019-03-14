@@ -1,5 +1,8 @@
 Insights Client Core Changelog
 
+v3.0.83 - Mar 14 2019
+- Generate machine-id on startup
+
 v3.0.81 - Mar 8 2019
 - Fix abrt error when running core module (BZ1686439)
 - Fix subscription-manager command traceback
