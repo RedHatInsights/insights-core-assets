@@ -122,6 +122,7 @@
                 "Device is ineligible for IOMMU domain attach due to platform RMRR requirement",
                 "Dropping TSO",
                 "EDAC ",
+                "Emulex OneConnect OCe10100, FCoE Initiator",
                 "FEATURE IBPB_SUPPORT",
                 "FEATURE SPEC_CTRL",
                 "Kernel page table isolation",
@@ -293,6 +294,11 @@
             "command": "/usr/sbin/httpd.worker -V",
             "pattern": [],
             "symbolic_name": "httpd_worker_V"
+        },
+        {
+            "command": "python -m insights.tools.cat --no-header httpd_on_nfs",
+            "pattern": [],
+            "symbolic_name": "httpd_on_nfs"
         },
         {
             "command": "/usr/sbin/httpd -M",
@@ -1186,6 +1192,7 @@
         {
             "file": "/etc/cluster/cluster.conf",
             "pattern": [
+                "START_PROFILE",
                 "clusternode name="
             ],
             "symbolic_name": "cluster_conf"
@@ -1332,7 +1339,9 @@
             "file": "/var/log/ovirt-engine/server.log",
             "pattern": [
                 "ERROR [org.jboss.as.controller.management-operation]",
-                "Operation (\"deploy\") failed"
+                "INFO  [org.wildfly.extension.undertow",
+                "Operation (\"deploy\") failed",
+                "Registered web context: '/ovirt-engine/api' for server"
             ],
             "symbolic_name": "ovirt_engine_server_log"
         },
@@ -1536,6 +1545,14 @@
             "symbolic_name": "iptables_permanent"
         },
         {
+            "file": "/var/log/ironic-inspector/ironic-inspector.log",
+            "pattern": [
+                "Certificate did not match expected hostname",
+                "ERROR requests.packages.urllib3.connection"
+            ],
+            "symbolic_name": "ironic_inspector_log"
+        },
+        {
             "file": "/etc/kdump.conf",
             "pattern": [],
             "symbolic_name": "kdump_conf"
@@ -1619,11 +1636,13 @@
                 "Error in FW/Card",
                 "Error running DeviceResume dm_task_run failed",
                 "Failed to bind socket: No such file or directory",
+                "Failed to get system container stats for",
                 "Link down",
                 "List /apis/image.openshift.io/v1/images",
                 "MDC/MDIO access timeout",
                 "Machine Check Exception",
                 "Medium access timeout failure. Offlining disk!",
+                "MountVolume.SetUp succeeded for volume",
                 "Neighbour table overflow",
                 "Out of MCCQ wrbs",
                 "Out of memory: kill process",
@@ -1649,6 +1668,7 @@
                 "eviction manager: eviction criteria not yet met for threshold",
                 "eviction manager: must evict pod(s) to reclaim nodefsInodes",
                 "ext4_ext_search_left",
+                "failed to modify QP to RTR: -22",
                 "failed while handling",
                 "failed: Connection amqps:",
                 "failed: rpc error: code = 2 desc = unable to inspect docker image",
@@ -1810,6 +1830,7 @@
                 "ERROR nova.virt.libvirt.driver",
                 "ERROR oslo_messaging.rpc.server Command: scp -r",
                 "ERROR oslo_messaging.rpc.server InvalidSharedStorage",
+                "ERROR oslo_messaging.rpc.server Stderr: u'Device crypt-dm-uuid-mpath",
                 "FlavorDiskSmallerThanImage: Flavor's disk is too small for requested image.",
                 "Instance shutdown by itself. Calling the stop API.",
                 "Live Migration failure: internal error: process exited while connecting to monitor",
@@ -1821,6 +1842,7 @@
                 "cmt=off: Property '.cmt' not found",
                 "does not match source",
                 "error: Failed to start domain",
+                "is not active",
                 "is not on shared storage",
                 "libvirt-guests.sh",
                 "libvirtError: Requested operation is not valid: domain has assigned non-USB host devices",
@@ -1842,6 +1864,7 @@
                 "ERROR nova.virt.libvirt.driver",
                 "ERROR oslo_messaging.rpc.server Command: scp -r",
                 "ERROR oslo_messaging.rpc.server InvalidSharedStorage",
+                "ERROR oslo_messaging.rpc.server Stderr: u'Device crypt-dm-uuid-mpath",
                 "FlavorDiskSmallerThanImage: Flavor's disk is too small for requested image.",
                 "Instance shutdown by itself. Calling the stop API.",
                 "Live Migration failure: internal error: process exited while connecting to monitor",
@@ -1853,6 +1876,7 @@
                 "cmt=off: Property '.cmt' not found",
                 "does not match source",
                 "error: Failed to start domain",
+                "is not active",
                 "is not on shared storage",
                 "libvirt-guests.sh",
                 "libvirtError: Requested operation is not valid: domain has assigned non-USB host devices",
@@ -2012,6 +2036,11 @@
             "file": "/etc/rc.d/rc.local",
             "pattern": [],
             "symbolic_name": "rc_local"
+        },
+        {
+            "file": "/etc/rdma/rdma.conf",
+            "pattern": [],
+            "symbolic_name": "rdma_conf"
         },
         {
             "file": "/etc/redhat-release",
@@ -2337,6 +2366,11 @@
             "file": "/etc/systemd/logind.conf",
             "pattern": [],
             "symbolic_name": "systemd_logind_conf"
+        },
+        {
+            "file": "/etc/systemd/system.conf.d/origin-accounting.conf",
+            "pattern": [],
+            "symbolic_name": "systemd_system_origin_accounting"
         },
         {
             "file": "/usr/lib/systemd/system/docker.service",
@@ -8266,5 +8300,5 @@
             ]
         }
     },
-    "version": "2019-02-28T14:47:38.518187"
+    "version": "2019-03-14T13:44:38.256625"
 }
