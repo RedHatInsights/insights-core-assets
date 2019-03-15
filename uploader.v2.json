@@ -2146,6 +2146,11 @@
             "symbolic_name": "samba"
         },
         {
+            "file": "/etc/redhat-access/redhat-access-insights.properties",
+            "pattern": [],
+            "symbolic_name": "sat5_insights_properties"
+        },
+        {
             "file": "/usr/share/foreman/lib/satellite/version.rb",
             "pattern": [],
             "symbolic_name": "satellite_version_rb"
