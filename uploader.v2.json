@@ -482,6 +482,11 @@
             "symbolic_name": "ls_ocp_cni_openshift_sdn"
         },
         {
+            "command": "/bin/ls -l /var/lib/origin/openshift.local.volumes/pods",
+            "pattern": [],
+            "symbolic_name": "ls_origin_local_volumes_pods"
+        },
+        {
             "command": "/bin/ls -lan /",
             "pattern": [],
             "symbolic_name": "ls_osroot"
