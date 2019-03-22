@@ -599,6 +599,11 @@
             "symbolic_name": "modinfo_i40e"
         },
         {
+            "command": "/sbin/modinfo vmxnet3",
+            "pattern": [],
+            "symbolic_name": "modinfo_vmxnet3"
+        },
+        {
             "command": "/usr/bin/find /sys/devices/virtual/net/ -name multicast_querier -print -exec cat {} \\;",
             "pattern": [],
             "symbolic_name": "multicast_querier"
