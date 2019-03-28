@@ -125,6 +125,8 @@
                 "Emulex OneConnect OCe10100, FCoE Initiator",
                 "FEATURE IBPB_SUPPORT",
                 "FEATURE SPEC_CTRL",
+                "Ignoring BGRT: failed to map image header memory",
+                "Ignoring BGRT: failed to map image memory",
                 "Kernel page table isolation",
                 "Linux version",
                 "NUMA: ",
@@ -142,7 +144,10 @@
                 "ixgbevf: Unknown parameter `InterruptThrottleRate'",
                 "mce: ",
                 "netconsole: network logging started",
+                "resetting",
                 "the DIE domain not a subset of the NUMA domain",
+                "tx hang",
+                "vmxnet3",
                 "vpd r/w failed",
                 "x86/pti"
             ],
@@ -482,6 +487,11 @@
             "symbolic_name": "ls_ocp_cni_openshift_sdn"
         },
         {
+            "command": "/bin/ls -l /var/lib/origin/openshift.local.volumes/pods",
+            "pattern": [],
+            "symbolic_name": "ls_origin_local_volumes_pods"
+        },
+        {
             "command": "/bin/ls -lan /",
             "pattern": [],
             "symbolic_name": "ls_osroot"
@@ -599,6 +609,11 @@
             "symbolic_name": "modinfo_i40e"
         },
         {
+            "command": "/sbin/modinfo vmxnet3",
+            "pattern": [],
+            "symbolic_name": "modinfo_vmxnet3"
+        },
+        {
             "command": "/usr/bin/find /sys/devices/virtual/net/ -name multicast_querier -print -exec cat {} \\;",
             "pattern": [],
             "symbolic_name": "multicast_querier"
@@ -713,6 +728,11 @@
             "symbolic_name": "openvswitch_other_config"
         },
         {
+            "command": "/usr/bin/ovs-vsctl list bridge",
+            "pattern": [],
+            "symbolic_name": "ovs_vsctl_list_bridge"
+        },
+        {
             "command": "/usr/bin/ovs-vsctl show",
             "pattern": [],
             "symbolic_name": "ovs_vsctl_show"
@@ -763,6 +783,7 @@
             "pattern": [
                 "/sbin/multipathd",
                 "/usr/bin/celery worker",
+                "/usr/bin/teamd",
                 "/usr/sbin/fcoemon --syslog",
                 "COMMAND",
                 "catalina.base",
@@ -791,6 +812,7 @@
             "command": "/bin/ps -ef",
             "pattern": [
                 "CMD",
+                "neutron-ns-metadata-proxy",
                 "nginx: master process",
                 "nginx: worker process"
             ],
@@ -1129,6 +1151,26 @@
                 "Cannot inspect data of"
             ],
             "symbolic_name": "ceilometer_compute_log"
+        },
+        {
+            "file": "/var/log/ceilometer/collector.log",
+            "pattern": [
+                "DBDataError",
+                "ERROR",
+                "Out of range value for column",
+                "pymysql.err.DataError"
+            ],
+            "symbolic_name": "ceilometer_collector_log"
+        },
+        {
+            "file": "/var/log/containers/ceilometer/collector.log",
+            "pattern": [
+                "DBDataError",
+                "ERROR",
+                "Out of range value for column",
+                "pymysql.err.DataError"
+            ],
+            "symbolic_name": "ceilometer_collector_log"
         },
         {
             "file": "/etc/ceph/ceph.conf",
@@ -1470,6 +1512,7 @@
                 "ModSecurity: collections_remove_stale: Failed deleting collection",
                 "Require ServerLimit > 0, setting to 1",
                 "Resource temporarily unavailable",
+                "[crit] Memory allocation failed, aborting process",
                 "and would exceed the ServerLimit value of ",
                 "consider raising the MaxClients setting",
                 "consider raising the MaxRequestWorkers setting",
@@ -1665,8 +1708,10 @@
                 "does not seem to be present, delaying initialization",
                 "drivers/input/input-leds.c:115 input_leds_connect",
                 "error Error on attach: Node not found",
+                "evicted, waiting for pod to be cleaned up",
                 "eviction manager: eviction criteria not yet met for threshold",
                 "eviction manager: must evict pod(s) to reclaim nodefsInodes",
+                "eviction manager: observations: signal=allocatableNodeFs.available, available: -",
                 "ext4_ext_search_left",
                 "failed to modify QP to RTR: -22",
                 "failed while handling",
@@ -1695,6 +1740,7 @@
                 "netlink_socket|ERR|fcntl: Too many open file",
                 "nf_conntrack: expectation table full",
                 "nf_conntrack: table full, dropping packet",
+                "nfs_reap_expired_delegations",
                 "page allocation failure",
                 "per_source_limit from",
                 "reservation conflict",
@@ -2151,6 +2197,11 @@
             "symbolic_name": "samba"
         },
         {
+            "file": "/etc/redhat-access/redhat-access-insights.properties",
+            "pattern": [],
+            "symbolic_name": "sat5_insights_properties"
+        },
+        {
             "file": "/usr/share/foreman/lib/satellite/version.rb",
             "pattern": [],
             "symbolic_name": "satellite_version_rb"
@@ -2448,9 +2499,11 @@
             "file": "/var/log/vdsm/vdsm.log",
             "pattern": [
                 "(mailbox-spm) [storage.Misc.excCmd] /usr/bin/taskset --cpu-list",
+                "Bad volume specification",
                 "Changed state to Down: 'NoneType' object has no attribute 'attrib'",
                 "Changed state to Down: internal error: Attempted double use of PCI slot",
                 "ERROR (mailbox-spm) [storage.MailBox.SpmMailMonitor]",
+                "INFO",
                 "RPC call Host.setupNetworks failed",
                 "Stopping connection",
                 "The name org.fedoraproject.FirewallD1 was not provided by any .service files",
@@ -2458,7 +2511,8 @@
                 "_report_inconsistency",
                 "lastCheck",
                 "libvirtError: internal error: failed to format device alias",
-                "looking for unfetched domain"
+                "looking for unfetched domain",
+                "storage.TaskManager.Task"
             ],
             "symbolic_name": "vdsm_log"
         },
@@ -2635,6 +2689,22 @@
                 "dhcp_agents_per_network"
             ],
             "symbolic_name": "neutron_conf"
+        },
+        {
+            "file": "/etc/neutron/dhcp_agent.ini",
+            "pattern": [
+                "[",
+                "force_metadata"
+            ],
+            "symbolic_name": "neutron_dhcp_agent_ini"
+        },
+        {
+            "file": "/var/lib/config-data/puppet-generated/neutron/etc/neutron/dhcp_agent.ini",
+            "pattern": [
+                "[",
+                "force_metadata"
+            ],
+            "symbolic_name": "neutron_dhcp_agent_ini"
         },
         {
             "file": "/etc/neutron/plugin.ini",
@@ -8300,5 +8370,5 @@
             ]
         }
     },
-    "version": "2019-03-14T13:44:38.256625"
+    "version": "2019-03-28T15:10:48.855078"
 }
