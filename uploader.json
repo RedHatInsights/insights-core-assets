@@ -2667,6 +2667,16 @@
             "symbolic_name": "neutron_conf"
         },
         {
+            "file": "/etc/neutron/dhcp_agent.ini",
+            "pattern": [],
+            "symbolic_name": "neutron_dhcp_agent_ini"
+        },
+        {
+            "file": "/var/lib/config-data/puppet-generated/neutron/etc/neutron/dhcp_agent.ini",
+            "pattern": [],
+            "symbolic_name": "neutron_dhcp_agent_ini"
+        },
+        {
             "file": "/etc/neutron/plugin.ini",
             "pattern": [],
             "symbolic_name": "neutron_plugin_ini"
