@@ -1,5 +1,10 @@
 Insights Client Core Changelog
 
+v3.0.87 - Apr 1 2019
+- Fix insights-core var initialization
+- Fix upload traceback caused by above
+- Fix --status return code regression
+
 v3.0.83 - Mar 14 2019
 - Generate machine-id on startup
 
