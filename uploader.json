@@ -139,6 +139,7 @@
                 "blocked FC remote port time out",
                 "crashkernel reservation failed",
                 "crashkernel=auto resulted in zero bytes of reserved memory",
+                "e1000: E1000 MODULE IS NOT SUPPORTED",
                 "fw=8.08.",
                 "is now offline",
                 "ixgbevf: Unknown parameter `InterruptThrottleRate'",
@@ -852,11 +853,6 @@
             "command": "python -m insights.tools.cat --no-header rhev_data_center",
             "pattern": [],
             "symbolic_name": "rhev_data_center"
-        },
-        {
-            "command": "python -m insights.tools.cat --no-header sapcontrol_getsystemupdatelist",
-            "pattern": [],
-            "symbolic_name": "sapcontrol_getsystemupdatelist"
         },
         {
             "command": "/usr/bin/crontab -l -u root",
@@ -1665,6 +1661,7 @@
             "pattern": [
                 " disconnect jid=",
                 ", type vxfs) has no security xattr handler",
+                "- image is referenced in one or more repositories",
                 "/input/input",
                 "11000 E11000 duplicate key error index: pulp_database.repo_profile_applicability.$profile_hash_-1_repo_id_-1",
                 ": Machine check events logged",
@@ -1679,6 +1676,7 @@
                 "Error in FW/Card",
                 "Error running DeviceResume dm_task_run failed",
                 "Failed to bind socket: No such file or directory",
+                "Failed to extend thin",
                 "Failed to get system container stats for",
                 "Link down",
                 "List /apis/image.openshift.io/v1/images",
@@ -1687,6 +1685,7 @@
                 "Medium access timeout failure. Offlining disk!",
                 "MountVolume.SetUp succeeded for volume",
                 "Neighbour table overflow",
+                "Orphaned pod",
                 "Out of MCCQ wrbs",
                 "Out of memory: kill process",
                 "SCSI device reset on",
@@ -8370,5 +8369,5 @@
             ]
         }
     },
-    "version": "2019-03-28T15:10:48.855078"
+    "version": "2019-04-04T15:03:07.781554"
 }
