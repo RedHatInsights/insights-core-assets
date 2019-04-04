@@ -854,11 +854,6 @@
             "symbolic_name": "rhev_data_center"
         },
         {
-            "command": "python -m insights.tools.cat --no-header sapcontrol_getsystemupdatelist",
-            "pattern": [],
-            "symbolic_name": "sapcontrol_getsystemupdatelist"
-        },
-        {
             "command": "/usr/bin/crontab -l -u root",
             "pattern": [
                 "heat-manage"
