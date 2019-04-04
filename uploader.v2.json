@@ -134,6 +134,7 @@
                 "blocked FC remote port time out",
                 "crashkernel reservation failed",
                 "crashkernel=auto resulted in zero bytes of reserved memory",
+                "e1000: E1000 MODULE IS NOT SUPPORTED",
                 "fw=8.08.",
                 "is now offline",
                 "ixgbevf: Unknown parameter `InterruptThrottleRate'",
@@ -1660,6 +1661,7 @@
             "pattern": [
                 " disconnect jid=",
                 ", type vxfs) has no security xattr handler",
+                "- image is referenced in one or more repositories",
                 "/input/input",
                 "11000 E11000 duplicate key error index: pulp_database.repo_profile_applicability.$profile_hash_-1_repo_id_-1",
                 ": Machine check events logged",
@@ -1674,6 +1676,7 @@
                 "Error in FW/Card",
                 "Error running DeviceResume dm_task_run failed",
                 "Failed to bind socket: No such file or directory",
+                "Failed to extend thin",
                 "Failed to get system container stats for",
                 "Link down",
                 "List /apis/image.openshift.io/v1/images",
@@ -1682,6 +1685,7 @@
                 "Medium access timeout failure. Offlining disk!",
                 "MountVolume.SetUp succeeded for volume",
                 "Neighbour table overflow",
+                "Orphaned pod",
                 "Out of MCCQ wrbs",
                 "Out of memory: kill process",
                 "SCSI device reset on",
@@ -2875,5 +2879,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-03-28T15:11:18.036938"
+    "version": "2019-04-04T15:02:59.783709"
 }
