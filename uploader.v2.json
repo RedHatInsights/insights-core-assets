@@ -2092,6 +2092,11 @@
             "pattern": [],
             "symbolic_name": "redhat_release"
         },
+	{
+            "file": "/etc/os-release",
+            "pattern": [],
+            "symbolic_name": "os_release"
+        },
         {
             "file": "/etc/resolv.conf",
             "pattern": [],
