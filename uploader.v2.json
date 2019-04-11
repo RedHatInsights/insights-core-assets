@@ -1493,7 +1493,7 @@
         {
             "file": "/opt/rh/httpd24/root/etc/httpd/conf.modules.d/()*.+\\.conf",
             "pattern": [],
-            "symbolic_name": "httpd_modules_conf_scl_httpd24"
+            "symbolic_name": "httpd_conf_scl_httpd24"
         },
         {
             "file": "/opt/rh/jbcs-httpd24/root/etc/httpd/conf/httpd.conf",
@@ -1508,7 +1508,7 @@
         {
             "file": "/opt/rh/jbcs-httpd24/root/etc/httpd/conf.modules.d/()*.+\\.conf",
             "pattern": [],
-            "symbolic_name": "httpd_modules_conf_scl_jbcs_httpd24"
+            "symbolic_name": "httpd_conf_scl_jbcs_httpd24"
         },
         {
             "file": "/var/log/httpd/error_log",
