@@ -1820,32 +1820,47 @@
             "symbolic_name": "nfs_exports_d"
         },
         {
-            "file": "/etc/nginx/()*nginx.conf",
+            "file": "/etc/nginx/()*.conf",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/etc/opt/rh/rh-nginx112/nginx/()*nginx.conf",
+            "file": "/etc/nginx/conf.d/*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/opt/rh/nginx14/root/etc/nginx/()*nginx.conf",
+            "file": "/etc/nginx/default.d/*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/opt/rh/nginx16/root/etc/nginx/()*nginx.conf",
+            "file": "/etc/opt/rh/rh-nginx()*/nginx/()*.conf",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/etc/opt/rh/rh-nginx110/nginx/()*nginx.conf",
+            "file": "/etc/opt/rh/rh-nginx()*/nginx/conf.d/*,
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/etc/opt/rh/rh-nginx18/nginx/()*nginx.conf",
+            "file": "/etc/opt/rh/rh-nginx()*/nginx/default.d/*",
+            "pattern": [],
+            "symbolic_name": "nginx_conf"
+        },
+        {
+            "file": "/opt/rh/nginx()*/root/etc/nginx/()*.conf",
+            "pattern": [],
+            "symbolic_name": "nginx_conf"
+        },
+        {
+            "file": "/opt/rh/nginx()*/root/etc/nginx/conf.d/*",
+            "pattern": [],
+            "symbolic_name": "nginx_conf"
+        },
+        {
+            "file": "/opt/rh/nginx()*/root/etc/nginx/default.d/*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
