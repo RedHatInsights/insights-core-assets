@@ -1789,6 +1789,21 @@
             "symbolic_name": "multipath_conf"
         },
         {
+            "file": "/var/log/mysql/mysqld.log",
+            "pattern": [],
+            "symbolic_name": "mysql_log"
+        },
+        {
+            "file": "/var/log/mysql.log",
+            "pattern": [],
+            "symbolic_name": "mysql_log"
+        },
+        {
+            "file": "/var/opt/rh/rh-mysql*/log/mysql/mysqld.log",
+            "pattern": [],
+            "symbolic_name": "mysql_log"
+        },
+        {
             "file": "/etc/sysconfig/netconsole",
             "pattern": [],
             "symbolic_name": "netconsole"
