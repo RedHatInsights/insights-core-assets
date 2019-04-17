@@ -463,6 +463,11 @@
             "symbolic_name": "ls_var_log"
         },
         {
+            "command": "/bin/ls -la /var/opt/mssql/log",
+            "pattern": [],
+            "symbolic_name": "ls_var_opt_mssql_log"
+        },
+        {
             "command": "/bin/ls -la /dev/null /var/www",
             "pattern": [],
             "symbolic_name": "ls_var_www"
