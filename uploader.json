@@ -1584,6 +1584,16 @@
             "symbolic_name": "iptables_permanent"
         },
         {
+            "file": "/etc/ironic/ironic.conf",
+            "pattern": [],
+            "symbolic_name": "ironic_conf"
+        },
+        {
+            "file": "/var/lib/config-data/puppet-generated/ironic/etc/ironic/ironic.conf",
+            "pattern": [],
+            "symbolic_name": "ironic_conf"
+        },
+        {
             "file": "/var/log/ironic-inspector/ironic-inspector.log",
             "pattern": [
                 "Certificate did not match expected hostname",
