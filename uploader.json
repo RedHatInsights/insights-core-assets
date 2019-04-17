@@ -1327,6 +1327,11 @@
             "symbolic_name": "crypto_policies_opensshserver"
         },
         {
+            "file": "/etc/crypto-policies/back-ends/bind.config",
+            "pattern": [],
+            "symbolic_name": "crypto_policies_bind"
+        },
+        {
             "file": "/sys/kernel/debug/x86/retp_enabled",
             "pattern": [],
             "symbolic_name": "x86_retp_enabled"
