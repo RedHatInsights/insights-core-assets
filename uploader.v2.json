@@ -1963,6 +1963,11 @@
             "symbolic_name": "ntp_conf"
         },
         {
+            "file": "/sys/module/nvme_core/parameters/io_timeout",
+            "pattern": [],
+            "symbolic_name": "nvme_core_io_timeout"
+        },
+        {
             "file": "/etc/odbc.ini",
             "pattern": [
                 "DRIVER",
@@ -2805,11 +2810,6 @@
                 "reserved_port/range"
             ],
             "symbolic_name": "sap_host_profile"
-        },
-        {
-            "file": "/sys/module/nvme_core/parameters/io_timeout",
-            "pattern": [],
-            "symbolic_name": "nvme_core_io_timeout"
         }
     ],
     "globs": [
