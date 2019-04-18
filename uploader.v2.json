@@ -1214,6 +1214,16 @@
             "symbolic_name": "cinder_conf"
         },
         {
+            "file": "/var/log/cinder/cinder-api.log",
+            "pattern": [],
+            "symbolic_name": "cinder_api_log"
+        },
+        {
+            "file": "/var/log/containers/cinder/cinder-api.log",
+            "pattern": [],
+            "symbolic_name": "cinder_api_log"
+        },
+        {
             "file": "/var/lib/config-data/puppet-generated/cinder/etc/cinder/cinder.conf",
             "pattern": [],
             "symbolic_name": "cinder_conf"
