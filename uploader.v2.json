@@ -1963,6 +1963,11 @@
             "symbolic_name": "ntp_conf"
         },
         {
+            "file": "/sys/module/nvme_core/parameters/io_timeout",
+            "pattern": [],
+            "symbolic_name": "nvme_core_io_timeout"
+        },
+        {
             "file": "/etc/odbc.ini",
             "pattern": [
                 "DRIVER",
