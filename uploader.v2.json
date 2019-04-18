@@ -450,6 +450,11 @@
             "pattern": [],
             "symbolic_name": "ls_var_lib_nova_instances"
         },
+	{
+            "command": "/bin/ls -ld /var/opt/mssql",
+            "pattern": [],
+            "symbolic_name": "ls_var_opt_mssql"
+        },
         {
             "command": "/bin/ls -ln /usr/sbin",
             "pattern": [
