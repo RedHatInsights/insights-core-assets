@@ -2001,6 +2001,13 @@
             "symbolic_name": "pacemaker_log"
         },
         {
+            "file": "/var/log/pacemaker/pacemaker.log",
+            "pattern": [
+                "pcmk_dbus_find_error"
+            ],
+            "symbolic_name": "pacemaker_log"
+        },
+        {
             "file": "/etc/pam.d/password-auth",
             "pattern": [],
             "symbolic_name": "password_auth"
