@@ -796,6 +796,7 @@
                 "iscsid",
                 "java",
                 "jboss",
+                "multipath",
                 "nfs-server",
                 "nfsd",
                 "nginx",
@@ -1901,15 +1902,21 @@
                 "Attempting claim on node",
                 "Claim successful on node",
                 "Could not open ",
+                "Detach volume",
+                "Disk of instance is too large",
                 "During sync_power_state the instance has a pending task",
                 "ERROR nova.virt.libvirt.driver",
                 "ERROR oslo_messaging.rpc.server Command: scp -r",
                 "ERROR oslo_messaging.rpc.server InvalidSharedStorage",
                 "ERROR oslo_messaging.rpc.server Stderr: u'Device crypt-dm-uuid-mpath",
+                "Find Multipath device file for volume WWN",
                 "FlavorDiskSmallerThanImage: Flavor's disk is too small for requested image.",
+                "INFO nova.compute.manager",
+                "INFO os_brick.initiator.linuxscsi",
                 "Instance shutdown by itself. Calling the stop API.",
                 "Live Migration failure: internal error: process exited while connecting to monitor",
                 "Live Migration failure: operation failed: Failed to connect to remote libvirt URI qemu+ssh",
+                "Migration pre-check error: Unable to migrate",
                 "No such device or address",
                 "Resuming guest",
                 "Stderr: u'blockdev: cannot open",
@@ -1917,6 +1924,7 @@
                 "cmt=off: Property '.cmt' not found",
                 "does not match source",
                 "error: Failed to start domain",
+                "from mountpoint /dev",
                 "is not active",
                 "is not on shared storage",
                 "libvirt-guests.sh",
@@ -1935,15 +1943,21 @@
                 "Attempting claim on node",
                 "Claim successful on node",
                 "Could not open ",
+                "Detach volume",
+                "Disk of instance is too large",
                 "During sync_power_state the instance has a pending task",
                 "ERROR nova.virt.libvirt.driver",
                 "ERROR oslo_messaging.rpc.server Command: scp -r",
                 "ERROR oslo_messaging.rpc.server InvalidSharedStorage",
                 "ERROR oslo_messaging.rpc.server Stderr: u'Device crypt-dm-uuid-mpath",
+                "Find Multipath device file for volume WWN",
                 "FlavorDiskSmallerThanImage: Flavor's disk is too small for requested image.",
+                "INFO nova.compute.manager",
+                "INFO os_brick.initiator.linuxscsi",
                 "Instance shutdown by itself. Calling the stop API.",
                 "Live Migration failure: internal error: process exited while connecting to monitor",
                 "Live Migration failure: operation failed: Failed to connect to remote libvirt URI qemu+ssh",
+                "Migration pre-check error: Unable to migrate",
                 "No such device or address",
                 "Resuming guest",
                 "Stderr: u'blockdev: cannot open",
@@ -1951,6 +1965,7 @@
                 "cmt=off: Property '.cmt' not found",
                 "does not match source",
                 "error: Failed to start domain",
+                "from mountpoint /dev",
                 "is not active",
                 "is not on shared storage",
                 "libvirt-guests.sh",
@@ -2134,7 +2149,7 @@
             "pattern": [],
             "symbolic_name": "redhat_release"
         },
-	{
+        {
             "file": "/etc/os-release",
             "pattern": [],
             "symbolic_name": "os_release"
@@ -2699,6 +2714,7 @@
             "file": "/var/lib/config-data/puppet-generated/gnocchi/etc/gnocchi/gnocchi.conf",
             "pattern": [
                 "[",
+                "ceph",
                 "ceph_pool",
                 "driver",
                 "storage"
@@ -2709,6 +2725,7 @@
             "file": "/etc/gnocchi/gnocchi.conf",
             "pattern": [
                 "[",
+                "ceph",
                 "ceph_pool",
                 "driver",
                 "storage"
@@ -2926,5 +2943,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-04-04T15:02:59.783709"
+    "version": "2019-04-18T14:11:37.712362"
 }
