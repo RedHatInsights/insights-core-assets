@@ -1540,6 +1540,16 @@
             "symbolic_name": "httpd_error_log"
         },
         {
+            "file": "/opt/rh/httpd24/root/etc/httpd/logs/error_log",
+            "pattern": [],
+            "symbolic_name": "httpd24_httpd_error_log"
+        },
+        {
+            "file": "/opt/rh/jbcs-httpd24/root/etc/httpd/logs/error_log",
+            "pattern": [],
+            "symbolic_name": "jbcs_httpd24_httpd_error_log"
+        },
+        {
             "file": "/etc/sysconfig/network-scripts/()*ifcfg-.*",
             "pattern": [],
             "symbolic_name": "ifcfg"
