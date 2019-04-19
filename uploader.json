@@ -1840,7 +1840,7 @@
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/etc/opt/rh/rh-nginx()*/nginx/conf.d/*,
+            "file": "/etc/opt/rh/rh-nginx()*/nginx/conf.d/*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
