@@ -796,6 +796,7 @@
                 "iscsid",
                 "java",
                 "jboss",
+                "multipath",
                 "nfs-server",
                 "nfsd",
                 "nginx",
@@ -890,6 +891,11 @@
             "command": "/usr/bin/subscription-manager release --show",
             "pattern": [],
             "symbolic_name": "subscription_manager_release_show"
+        },
+        {
+            "command": "/usr/bin/subscription-manager list --consumed",
+            "pattern": [],
+            "symbolic_name": "subscription_manager_list_consumed"
         },
         {
             "command": "/usr/bin/subscription-manager repos --list-enabled",
@@ -1488,7 +1494,12 @@
         {
             "file": "/etc/httpd/conf.d/()*.+\\.conf",
             "pattern": [],
-            "symbolic_name": "httpd_conf_d"
+            "symbolic_name": "httpd_conf"
+        },
+        {
+            "file": "/etc/httpd/conf.modules.d/()*.+\\.conf",
+            "pattern": [],
+            "symbolic_name": "httpd_conf"
         },
         {
             "file": "/opt/rh/httpd24/root/etc/httpd/conf/httpd.conf",
@@ -1501,12 +1512,22 @@
             "symbolic_name": "httpd_conf_scl_httpd24"
         },
         {
+            "file": "/opt/rh/httpd24/root/etc/httpd/conf.modules.d/()*.+\\.conf",
+            "pattern": [],
+            "symbolic_name": "httpd_conf_scl_httpd24"
+        },
+        {
             "file": "/opt/rh/jbcs-httpd24/root/etc/httpd/conf/httpd.conf",
             "pattern": [],
             "symbolic_name": "httpd_conf_scl_jbcs_httpd24"
         },
         {
             "file": "/opt/rh/jbcs-httpd24/root/etc/httpd/conf.d/()*.+\\.conf",
+            "pattern": [],
+            "symbolic_name": "httpd_conf_scl_jbcs_httpd24"
+        },
+        {
+            "file": "/opt/rh/jbcs-httpd24/root/etc/httpd/conf.modules.d/()*.+\\.conf",
             "pattern": [],
             "symbolic_name": "httpd_conf_scl_jbcs_httpd24"
         },
@@ -1533,6 +1554,16 @@
                 "not allowed, increasing to 1"
             ],
             "symbolic_name": "httpd_error_log"
+        },
+        {
+            "file": "/opt/rh/httpd24/root/etc/httpd/logs/error_log",
+            "pattern": [],
+            "symbolic_name": "httpd24_httpd_error_log"
+        },
+        {
+            "file": "/opt/rh/jbcs-httpd24/root/etc/httpd/logs/error_log",
+            "pattern": [],
+            "symbolic_name": "jbcs_httpd24_httpd_error_log"
         },
         {
             "file": "/etc/sysconfig/network-scripts/()*ifcfg-.*",
@@ -1881,15 +1912,21 @@
                 "Attempting claim on node",
                 "Claim successful on node",
                 "Could not open ",
+                "Detach volume",
+                "Disk of instance is too large",
                 "During sync_power_state the instance has a pending task",
                 "ERROR nova.virt.libvirt.driver",
                 "ERROR oslo_messaging.rpc.server Command: scp -r",
                 "ERROR oslo_messaging.rpc.server InvalidSharedStorage",
                 "ERROR oslo_messaging.rpc.server Stderr: u'Device crypt-dm-uuid-mpath",
+                "Find Multipath device file for volume WWN",
                 "FlavorDiskSmallerThanImage: Flavor's disk is too small for requested image.",
+                "INFO nova.compute.manager",
+                "INFO os_brick.initiator.linuxscsi",
                 "Instance shutdown by itself. Calling the stop API.",
                 "Live Migration failure: internal error: process exited while connecting to monitor",
                 "Live Migration failure: operation failed: Failed to connect to remote libvirt URI qemu+ssh",
+                "Migration pre-check error: Unable to migrate",
                 "No such device or address",
                 "Resuming guest",
                 "Stderr: u'blockdev: cannot open",
@@ -1897,6 +1934,7 @@
                 "cmt=off: Property '.cmt' not found",
                 "does not match source",
                 "error: Failed to start domain",
+                "from mountpoint /dev",
                 "is not active",
                 "is not on shared storage",
                 "libvirt-guests.sh",
@@ -1915,15 +1953,21 @@
                 "Attempting claim on node",
                 "Claim successful on node",
                 "Could not open ",
+                "Detach volume",
+                "Disk of instance is too large",
                 "During sync_power_state the instance has a pending task",
                 "ERROR nova.virt.libvirt.driver",
                 "ERROR oslo_messaging.rpc.server Command: scp -r",
                 "ERROR oslo_messaging.rpc.server InvalidSharedStorage",
                 "ERROR oslo_messaging.rpc.server Stderr: u'Device crypt-dm-uuid-mpath",
+                "Find Multipath device file for volume WWN",
                 "FlavorDiskSmallerThanImage: Flavor's disk is too small for requested image.",
+                "INFO nova.compute.manager",
+                "INFO os_brick.initiator.linuxscsi",
                 "Instance shutdown by itself. Calling the stop API.",
                 "Live Migration failure: internal error: process exited while connecting to monitor",
                 "Live Migration failure: operation failed: Failed to connect to remote libvirt URI qemu+ssh",
+                "Migration pre-check error: Unable to migrate",
                 "No such device or address",
                 "Resuming guest",
                 "Stderr: u'blockdev: cannot open",
@@ -1931,6 +1975,7 @@
                 "cmt=off: Property '.cmt' not found",
                 "does not match source",
                 "error: Failed to start domain",
+                "from mountpoint /dev",
                 "is not active",
                 "is not on shared storage",
                 "libvirt-guests.sh",
@@ -1973,6 +2018,11 @@
             "symbolic_name": "ntp_conf"
         },
         {
+            "file": "/sys/module/nvme_core/parameters/io_timeout",
+            "pattern": [],
+            "symbolic_name": "nvme_core_io_timeout"
+        },
+        {
             "file": "/etc/odbc.ini",
             "pattern": [
                 "DRIVER",
@@ -2005,6 +2055,13 @@
         },
         {
             "file": "/var/log/pacemaker.log",
+            "pattern": [
+                "pcmk_dbus_find_error"
+            ],
+            "symbolic_name": "pacemaker_log"
+        },
+        {
+            "file": "/var/log/pacemaker/pacemaker.log",
             "pattern": [
                 "pcmk_dbus_find_error"
             ],
@@ -2101,6 +2158,11 @@
             "file": "/etc/redhat-release",
             "pattern": [],
             "symbolic_name": "redhat_release"
+        },
+        {
+            "file": "/etc/os-release",
+            "pattern": [],
+            "symbolic_name": "os_release"
         },
         {
             "file": "/etc/resolv.conf",
@@ -2662,6 +2724,7 @@
             "file": "/var/lib/config-data/puppet-generated/gnocchi/etc/gnocchi/gnocchi.conf",
             "pattern": [
                 "[",
+                "ceph",
                 "ceph_pool",
                 "driver",
                 "storage"
@@ -2672,6 +2735,7 @@
             "file": "/etc/gnocchi/gnocchi.conf",
             "pattern": [
                 "[",
+                "ceph",
                 "ceph_pool",
                 "driver",
                 "storage"
@@ -2889,5 +2953,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-04-04T15:02:59.783709"
+    "version": "2019-04-18T14:11:37.712362"
 }
