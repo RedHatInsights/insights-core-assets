@@ -230,6 +230,11 @@
             "symbolic_name": "getcert_list"
         },
         {
+            "command": "/usr/bin/getconf PAGE_SIZE",
+            "pattern": [],
+            "symbolic_name": "getconf_pagesize"
+        },
+        {
             "command": "/usr/sbin/getenforce",
             "pattern": [],
             "symbolic_name": "getenforce"
