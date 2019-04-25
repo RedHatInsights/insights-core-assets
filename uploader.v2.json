@@ -1,6 +1,11 @@
 {
     "commands": [
         {
+            "command": "python -m insights.tools.cat --no-header aws_instance_type",
+            "pattern": [],
+            "symbolic_name": "aws_instance_type"
+        },
+        {
             "command": "/sbin/auditctl -s",
             "pattern": [],
             "symbolic_name": "auditctl_status"
