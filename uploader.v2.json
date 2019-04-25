@@ -1,6 +1,11 @@
 {
     "commands": [
         {
+            "command": "python -m insights.tools.cat --no-header aws_instance_type",
+            "pattern": [],
+            "symbolic_name": "aws_instance_type"
+        },
+        {
             "command": "/sbin/auditctl -s",
             "pattern": [],
             "symbolic_name": "auditctl_status"
@@ -230,6 +235,11 @@
             "symbolic_name": "getcert_list"
         },
         {
+            "command": "/usr/bin/getconf PAGE_SIZE",
+            "pattern": [],
+            "symbolic_name": "getconf_pagesize"
+        },
+        {
             "command": "/usr/sbin/getenforce",
             "pattern": [],
             "symbolic_name": "getenforce"
@@ -451,6 +461,11 @@
             "symbolic_name": "ls_var_lib_nova_instances"
         },
         {
+            "command": "/bin/ls -ld /var/opt/mssql",
+            "pattern": [],
+            "symbolic_name": "ls_var_opt_mssql"
+        },
+        {
             "command": "/bin/ls -ln /usr/sbin",
             "pattern": [
                 "total"
@@ -461,6 +476,11 @@
             "command": "/bin/ls -la /var/log /var/log/audit",
             "pattern": [],
             "symbolic_name": "ls_var_log"
+        },
+        {
+            "command": "/bin/ls -la /var/opt/mssql/log",
+            "pattern": [],
+            "symbolic_name": "ls_var_opt_mssql_log"
         },
         {
             "command": "/bin/ls -la /dev/null /var/www",
@@ -605,6 +625,11 @@
             "symbolic_name": "mount"
         },
         {
+            "file": "/var/opt/mssql/mssql.conf",
+            "pattern": [],
+            "symbolic_name": "mssql_conf"
+        },
+        {
             "command": "/sbin/modinfo i40e",
             "pattern": [],
             "symbolic_name": "modinfo_i40e"
@@ -637,9 +662,67 @@
         {
             "command": "/usr/sbin/named-checkconf -p",
             "pattern": [
+                "DISABLE-ALGORITHMS",
+                "DISABLE-DS-DIGESTS",
                 "DNSSEC-ENABLE",
+                "DSA",
+                "Disable-Algorithms",
+                "Disable-Ds-Digests",
                 "Dnssec-Enable",
-                "dnssec-enable"
+                "Dsa",
+                "ECCGOST",
+                "ECDSAP256SHA256",
+                "ECDSAP384SHA384",
+                "Eccgost",
+                "Ecdsap256Sha256",
+                "Ecdsap384Sha384",
+                "GOST",
+                "Gost",
+                "NSEC3DSA",
+                "NSEC3RSASHA1",
+                "Nsec3Dsa",
+                "Nsec3Rsasha1",
+                "RSAMD5",
+                "RSASHA1",
+                "RSASHA256",
+                "RSASHA512",
+                "Rsamd5",
+                "Rsasha1",
+                "Rsasha256",
+                "Rsasha512",
+                "SHA-1",
+                "SHA-256",
+                "SHA-384",
+                "SHA1",
+                "SHA256",
+                "SHA384",
+                "Sha-1",
+                "Sha-256",
+                "Sha-384",
+                "Sha1",
+                "Sha256",
+                "Sha384",
+                "disable-algorithms",
+                "disable-ds-digests",
+                "dnssec-enable",
+                "dsa",
+                "eccgost",
+                "ecdsap256sha256",
+                "ecdsap384sha384",
+                "gost",
+                "nsec3dsa",
+                "nsec3rsasha1",
+                "rsamd5",
+                "rsasha1",
+                "rsasha256",
+                "rsasha512",
+                "sha-1",
+                "sha-256",
+                "sha-384",
+                "sha1",
+                "sha256",
+                "sha384",
+                "}"
             ],
             "symbolic_name": "named_checkconf_p"
         },
@@ -901,6 +984,11 @@
             "command": "/usr/bin/subscription-manager repos --list-enabled",
             "pattern": [],
             "symbolic_name": "subscription_manager_repos_list_enabled"
+        },
+        {
+            "command": "/usr/bin/subscription-manager facts --list",
+            "pattern": [],
+            "symbolic_name": "subscription_manager_facts_list"
         },
         {
             "command": "/usr/sbin/ss -tupna",
@@ -1220,6 +1308,16 @@
             "symbolic_name": "cinder_conf"
         },
         {
+            "file": "/var/log/cinder/cinder-api.log",
+            "pattern": [],
+            "symbolic_name": "cinder_api_log"
+        },
+        {
+            "file": "/var/log/containers/cinder/cinder-api.log",
+            "pattern": [],
+            "symbolic_name": "cinder_api_log"
+        },
+        {
             "file": "/var/lib/config-data/puppet-generated/cinder/etc/cinder/cinder.conf",
             "pattern": [],
             "symbolic_name": "cinder_conf"
@@ -1325,6 +1423,11 @@
             "file": "/etc/crypto-policies/back-ends/opensshserver.config",
             "pattern": [],
             "symbolic_name": "crypto_policies_opensshserver"
+        },
+        {
+            "file": "/etc/crypto-policies/back-ends/bind.config",
+            "pattern": [],
+            "symbolic_name": "crypto_policies_bind"
         },
         {
             "file": "/sys/kernel/debug/x86/retp_enabled",
@@ -1615,6 +1718,20 @@
             "symbolic_name": "iptables_permanent"
         },
         {
+            "file": "/etc/ironic/ironic.conf",
+            "pattern": [
+                "["
+            ],
+            "symbolic_name": "ironic_conf"
+        },
+        {
+            "file": "/var/lib/config-data/puppet-generated/ironic/etc/ironic/ironic.conf",
+            "pattern": [
+                "["
+            ],
+            "symbolic_name": "ironic_conf"
+        },
+        {
             "file": "/var/log/ironic-inspector/ironic-inspector.log",
             "pattern": [
                 "Certificate did not match expected hostname",
@@ -1708,7 +1825,6 @@
                 "Error running DeviceResume dm_task_run failed",
                 "Failed to bind socket: No such file or directory",
                 "Failed to extend thin",
-                "Failed to get system container stats for",
                 "Link down",
                 "List /apis/image.openshift.io/v1/images",
                 "MDC/MDIO access timeout",
@@ -1851,32 +1967,47 @@
             "symbolic_name": "nfs_exports_d"
         },
         {
-            "file": "/etc/nginx/()*nginx.conf",
+            "file": "/etc/nginx/()*.conf",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/etc/opt/rh/rh-nginx112/nginx/()*nginx.conf",
+            "file": "/etc/nginx/conf.d/*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/opt/rh/nginx14/root/etc/nginx/()*nginx.conf",
+            "file": "/etc/nginx/default.d/*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/opt/rh/nginx16/root/etc/nginx/()*nginx.conf",
+            "file": "/etc/opt/rh/rh-nginx()*/nginx/()*.conf",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/etc/opt/rh/rh-nginx110/nginx/()*nginx.conf",
+            "file": "/etc/opt/rh/rh-nginx()*/nginx/conf.d/*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/etc/opt/rh/rh-nginx18/nginx/()*nginx.conf",
+            "file": "/etc/opt/rh/rh-nginx()*/nginx/default.d/*",
+            "pattern": [],
+            "symbolic_name": "nginx_conf"
+        },
+        {
+            "file": "/opt/rh/nginx()*/root/etc/nginx/()*.conf",
+            "pattern": [],
+            "symbolic_name": "nginx_conf"
+        },
+        {
+            "file": "/opt/rh/nginx()*/root/etc/nginx/conf.d/*",
+            "pattern": [],
+            "symbolic_name": "nginx_conf"
+        },
+        {
+            "file": "/opt/rh/nginx()*/root/etc/nginx/default.d/*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
@@ -2943,5 +3074,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-04-18T14:11:37.712362"
+    "version": "2019-04-25T17:03:32.057039"
 }
