@@ -460,7 +460,7 @@
             "pattern": [],
             "symbolic_name": "ls_var_lib_nova_instances"
         },
-	{
+        {
             "command": "/bin/ls -ld /var/opt/mssql",
             "pattern": [],
             "symbolic_name": "ls_var_opt_mssql"
@@ -624,7 +624,7 @@
             "pattern": [],
             "symbolic_name": "mount"
         },
-	{
+        {
             "file": "/var/opt/mssql/mssql.conf",
             "pattern": [],
             "symbolic_name": "mssql_conf"
@@ -662,9 +662,67 @@
         {
             "command": "/usr/sbin/named-checkconf -p",
             "pattern": [
+                "DISABLE-ALGORITHMS",
+                "DISABLE-DS-DIGESTS",
                 "DNSSEC-ENABLE",
+                "DSA",
+                "Disable-Algorithms",
+                "Disable-Ds-Digests",
                 "Dnssec-Enable",
-                "dnssec-enable"
+                "Dsa",
+                "ECCGOST",
+                "ECDSAP256SHA256",
+                "ECDSAP384SHA384",
+                "Eccgost",
+                "Ecdsap256Sha256",
+                "Ecdsap384Sha384",
+                "GOST",
+                "Gost",
+                "NSEC3DSA",
+                "NSEC3RSASHA1",
+                "Nsec3Dsa",
+                "Nsec3Rsasha1",
+                "RSAMD5",
+                "RSASHA1",
+                "RSASHA256",
+                "RSASHA512",
+                "Rsamd5",
+                "Rsasha1",
+                "Rsasha256",
+                "Rsasha512",
+                "SHA-1",
+                "SHA-256",
+                "SHA-384",
+                "SHA1",
+                "SHA256",
+                "SHA384",
+                "Sha-1",
+                "Sha-256",
+                "Sha-384",
+                "Sha1",
+                "Sha256",
+                "Sha384",
+                "disable-algorithms",
+                "disable-ds-digests",
+                "dnssec-enable",
+                "dsa",
+                "eccgost",
+                "ecdsap256sha256",
+                "ecdsap384sha384",
+                "gost",
+                "nsec3dsa",
+                "nsec3rsasha1",
+                "rsamd5",
+                "rsasha1",
+                "rsasha256",
+                "rsasha512",
+                "sha-1",
+                "sha-256",
+                "sha-384",
+                "sha1",
+                "sha256",
+                "sha384",
+                "}"
             ],
             "symbolic_name": "named_checkconf_p"
         },
@@ -927,7 +985,7 @@
             "pattern": [],
             "symbolic_name": "subscription_manager_repos_list_enabled"
         },
-	{
+        {
             "command": "/usr/bin/subscription-manager facts --list",
             "pattern": [],
             "symbolic_name": "subscription_manager_facts_list"
@@ -1661,12 +1719,16 @@
         },
         {
             "file": "/etc/ironic/ironic.conf",
-            "pattern": [],
+            "pattern": [
+                "["
+            ],
             "symbolic_name": "ironic_conf"
         },
         {
             "file": "/var/lib/config-data/puppet-generated/ironic/etc/ironic/ironic.conf",
-            "pattern": [],
+            "pattern": [
+                "["
+            ],
             "symbolic_name": "ironic_conf"
         },
         {
@@ -1763,7 +1825,6 @@
                 "Error running DeviceResume dm_task_run failed",
                 "Failed to bind socket: No such file or directory",
                 "Failed to extend thin",
-                "Failed to get system container stats for",
                 "Link down",
                 "List /apis/image.openshift.io/v1/images",
                 "MDC/MDIO access timeout",
@@ -8503,5 +8564,5 @@
             ]
         }
     },
-    "version": "2019-04-18T14:11:28.067253"
+    "version": "2019-04-25T17:03:23.071955"
 }
