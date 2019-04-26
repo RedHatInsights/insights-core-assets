@@ -862,6 +862,8 @@
             "pattern": [
                 "/sbin/multipathd",
                 "/usr/bin/celery worker",
+                "/usr/bin/nova-compute",
+                "/usr/bin/nova-conductor",
                 "/usr/bin/teamd",
                 "/usr/sbin/fcoemon --syslog",
                 "COMMAND",
@@ -872,12 +874,12 @@
                 "greenplum",
                 "httpd",
                 "iscsid",
-                "java",
-                "jboss",
                 "multipath",
                 "nfs-server",
                 "nfsd",
                 "nginx",
+                "nova-compute",
+                "nova-conductor",
                 "ntpd",
                 "postgres",
                 "smbd",
@@ -3074,5 +3076,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-04-25T17:03:32.057039"
+    "version": "2019-04-26T09:28:08.315293"
 }

@@ -862,6 +862,8 @@
             "pattern": [
                 "/sbin/multipathd",
                 "/usr/bin/celery worker",
+                "/usr/bin/nova-compute",
+                "/usr/bin/nova-conductor",
                 "/usr/bin/teamd",
                 "/usr/sbin/fcoemon --syslog",
                 "COMMAND",
@@ -872,12 +874,12 @@
                 "greenplum",
                 "httpd",
                 "iscsid",
-                "java",
-                "jboss",
                 "multipath",
                 "nfs-server",
                 "nfsd",
                 "nginx",
+                "nova-compute",
+                "nova-conductor",
                 "ntpd",
                 "postgres",
                 "smbd",
@@ -8564,5 +8566,5 @@
             ]
         }
     },
-    "version": "2019-04-25T17:03:23.071955"
+    "version": "2019-04-26T09:28:01.283563"
 }
