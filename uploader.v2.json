@@ -1752,11 +1752,6 @@
             "symbolic_name": "krb5"
         },
         {
-            "file": "/etc/krb5.conf.d/()*.*\\.conf",
-            "pattern": [],
-            "symbolic_name": "krb5_conf_d"
-        },
-        {
             "file": "/sys/kernel/mm/ksm/run",
             "pattern": [],
             "symbolic_name": "ksmstate"
@@ -3033,6 +3028,11 @@
         {
             "glob": "/var/opt/amq-broker/*/etc/broker.xml",
             "symbolic_name": "amq_broker",
+            "pattern": []
+        },
+        {
+            "glob": "/etc/krb5.conf.d/*",
+            "symbolic_name": "krb5_conf_d",
             "pattern": []
         },
         {
