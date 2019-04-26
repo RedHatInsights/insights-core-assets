@@ -625,11 +625,6 @@
             "symbolic_name": "mount"
         },
         {
-            "file": "/var/opt/mssql/mssql.conf",
-            "pattern": [],
-            "symbolic_name": "mssql_conf"
-        },
-        {
             "command": "/sbin/modinfo i40e",
             "pattern": [],
             "symbolic_name": "modinfo_i40e"
@@ -1929,6 +1924,11 @@
                 "systemLog"
             ],
             "symbolic_name": "mongod_conf"
+        },
+        {
+            "file": "/var/opt/mssql/mssql.conf",
+            "pattern": [],
+            "symbolic_name": "mssql_conf"
         },
         {
             "file": "/etc/multipath.conf",
