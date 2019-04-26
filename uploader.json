@@ -625,11 +625,6 @@
             "symbolic_name": "mount"
         },
         {
-            "file": "/var/opt/mssql/mssql.conf",
-            "pattern": [],
-            "symbolic_name": "mssql_conf"
-        },
-        {
             "command": "/sbin/modinfo i40e",
             "pattern": [],
             "symbolic_name": "modinfo_i40e"
@@ -867,6 +862,8 @@
             "pattern": [
                 "/sbin/multipathd",
                 "/usr/bin/celery worker",
+                "/usr/bin/nova-compute",
+                "/usr/bin/nova-conductor",
                 "/usr/bin/teamd",
                 "/usr/sbin/fcoemon --syslog",
                 "COMMAND",
@@ -877,12 +874,12 @@
                 "greenplum",
                 "httpd",
                 "iscsid",
-                "java",
-                "jboss",
                 "multipath",
                 "nfs-server",
                 "nfsd",
                 "nginx",
+                "nova-compute",
+                "nova-conductor",
                 "ntpd",
                 "postgres",
                 "smbd",
@@ -1929,6 +1926,11 @@
                 "systemLog"
             ],
             "symbolic_name": "mongod_conf"
+        },
+        {
+            "file": "/var/opt/mssql/mssql.conf",
+            "pattern": [],
+            "symbolic_name": "mssql_conf"
         },
         {
             "file": "/etc/multipath.conf",
@@ -8564,5 +8566,5 @@
             ]
         }
     },
-    "version": "2019-04-25T17:03:23.071955"
+    "version": "2019-04-26T09:28:01.283563"
 }
