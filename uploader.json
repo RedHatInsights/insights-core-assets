@@ -1629,6 +1629,7 @@
                 "ModSecurity: collections_remove_stale: Failed deleting collection",
                 "Require ServerLimit > 0, setting to 1",
                 "Resource temporarily unavailable",
+                "The mpm module (prefork.c) is not supported by mod_http2",
                 "[crit] Memory allocation failed, aborting process",
                 "and would exceed the ServerLimit value of ",
                 "consider raising the MaxClients setting",
@@ -8566,5 +8567,5 @@
             ]
         }
     },
-    "version": "2019-04-26T09:28:01.283563"
+    "version": "2019-04-30T15:44:17.252518"
 }
