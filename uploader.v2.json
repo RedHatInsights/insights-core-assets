@@ -1629,6 +1629,7 @@
                 "ModSecurity: collections_remove_stale: Failed deleting collection",
                 "Require ServerLimit > 0, setting to 1",
                 "Resource temporarily unavailable",
+                "The mpm module (prefork.c) is not supported by mod_http2",
                 "[crit] Memory allocation failed, aborting process",
                 "and would exceed the ServerLimit value of ",
                 "consider raising the MaxClients setting",
@@ -1750,11 +1751,6 @@
             "file": "/etc/()*krb5\\.conf",
             "pattern": [],
             "symbolic_name": "krb5"
-        },
-        {
-            "file": "/etc/krb5.conf.d/()*.*\\.conf",
-            "pattern": [],
-            "symbolic_name": "krb5_conf_d"
         },
         {
             "file": "/sys/kernel/mm/ksm/run",
@@ -3036,6 +3032,11 @@
             "pattern": []
         },
         {
+            "glob": "/etc/krb5.conf.d/*",
+            "symbolic_name": "krb5_conf_d",
+            "pattern": []
+        },
+        {
             "glob": "/sys/fs/cgroup/cpu/kubepods.slice/kubepods-burstable.slice/kubepods-burstable-pod[a-f0-9_]*.slice/cpu.cfs_quota_us",
             "symbolic_name": "kubepods_cpu_quota",
             "pattern": []
@@ -3076,5 +3077,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-04-26T09:28:08.315293"
+    "version": "2019-04-30T15:44:11.552001"
 }
