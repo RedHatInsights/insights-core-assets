@@ -2116,6 +2116,11 @@
             "symbolic_name": "nova_conf"
         },
         {
+            "file": "/var/lib/config-data/puppet-generated/nova_libvirt/etc/nova/nova.conf",
+            "pattern": [],
+            "symbolic_name": "nova_conf"
+        },
+        {
             "file": "/etc/nscd.conf",
             "pattern": [
                 "enable-cache"
