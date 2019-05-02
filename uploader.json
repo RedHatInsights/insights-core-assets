@@ -1290,6 +1290,11 @@
             "symbolic_name": "ceph_osd_log"
         },
         {
+            "file": "/proc/cgroups",
+            "pattern": [],
+            "symbolic_name": "cgroups"
+        },
+        {
             "file": "/etc/chrony.conf",
             "pattern": [],
             "symbolic_name": "chrony_conf"
