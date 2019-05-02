@@ -2198,6 +2198,11 @@
             "symbolic_name": "pacemaker_log"
         },
         {
+            "file": "/proc/partitions",
+            "pattern": [],
+            "symbolic_name": "partitions"
+        },
+        {
             "file": "/etc/pam.d/password-auth",
             "pattern": [],
             "symbolic_name": "password_auth"
