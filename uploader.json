@@ -1832,6 +1832,7 @@
                 "Neighbour table overflow",
                 "Orphaned pod",
                 "Out of MCCQ wrbs",
+                "Out of memory: Kill process",
                 "Out of memory: kill process",
                 "SCSI device reset on",
                 "SDN initialization failed: Error: Existing service with IP: None is not part of service network",
@@ -8577,5 +8578,5 @@
             ]
         }
     },
-    "version": "2019-04-30T15:44:17.252518"
+    "version": "2019-05-02T14:15:42.905221"
 }
