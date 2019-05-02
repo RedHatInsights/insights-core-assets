@@ -1290,6 +1290,11 @@
             "symbolic_name": "ceph_osd_log"
         },
         {
+            "file": "/proc/cgroups",
+            "pattern": [],
+            "symbolic_name": "cgroups"
+        },
+        {
             "file": "/etc/chrony.conf",
             "pattern": [],
             "symbolic_name": "chrony_conf"
@@ -1827,6 +1832,7 @@
                 "Neighbour table overflow",
                 "Orphaned pod",
                 "Out of MCCQ wrbs",
+                "Out of memory: Kill process",
                 "Out of memory: kill process",
                 "SCSI device reset on",
                 "SDN initialization failed: Error: Existing service with IP: None is not part of service network",
@@ -2112,6 +2118,11 @@
         },
         {
             "file": "/var/lib/config-data/puppet-generated/nova/etc/nova/nova.conf",
+            "pattern": [],
+            "symbolic_name": "nova_conf"
+        },
+        {
+            "file": "/var/lib/config-data/puppet-generated/nova_libvirt/etc/nova/nova.conf",
             "pattern": [],
             "symbolic_name": "nova_conf"
         },
@@ -3077,5 +3088,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-04-30T15:44:11.552001"
+    "version": "2019-05-02T14:15:34.879264"
 }
