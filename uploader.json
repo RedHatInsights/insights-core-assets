@@ -625,11 +625,6 @@
             "symbolic_name": "mount"
         },
         {
-            "file": "/var/opt/mssql/mssql.conf",
-            "pattern": [],
-            "symbolic_name": "mssql_conf"
-        },
-        {
             "command": "/sbin/modinfo i40e",
             "pattern": [],
             "symbolic_name": "modinfo_i40e"
@@ -867,6 +862,8 @@
             "pattern": [
                 "/sbin/multipathd",
                 "/usr/bin/celery worker",
+                "/usr/bin/nova-compute",
+                "/usr/bin/nova-conductor",
                 "/usr/bin/teamd",
                 "/usr/sbin/fcoemon --syslog",
                 "COMMAND",
@@ -877,12 +874,12 @@
                 "greenplum",
                 "httpd",
                 "iscsid",
-                "java",
-                "jboss",
                 "multipath",
                 "nfs-server",
                 "nfsd",
                 "nginx",
+                "nova-compute",
+                "nova-conductor",
                 "ntpd",
                 "postgres",
                 "smbd",
@@ -1293,6 +1290,11 @@
             "symbolic_name": "ceph_osd_log"
         },
         {
+            "file": "/proc/cgroups",
+            "pattern": [],
+            "symbolic_name": "cgroups"
+        },
+        {
             "file": "/etc/chrony.conf",
             "pattern": [],
             "symbolic_name": "chrony_conf"
@@ -1642,6 +1644,7 @@
                 "ModSecurity: collections_remove_stale: Failed deleting collection",
                 "Require ServerLimit > 0, setting to 1",
                 "Resource temporarily unavailable",
+                "The mpm module (prefork.c) is not supported by mod_http2",
                 "[crit] Memory allocation failed, aborting process",
                 "and would exceed the ServerLimit value of ",
                 "consider raising the MaxClients setting",
@@ -1765,11 +1768,6 @@
             "symbolic_name": "krb5"
         },
         {
-            "file": "/etc/krb5.conf.d/()*.*\\.conf",
-            "pattern": [],
-            "symbolic_name": "krb5_conf_d"
-        },
-        {
             "file": "/sys/kernel/mm/ksm/run",
             "pattern": [],
             "symbolic_name": "ksmstate"
@@ -1844,6 +1842,7 @@
                 "Neighbour table overflow",
                 "Orphaned pod",
                 "Out of MCCQ wrbs",
+                "Out of memory: Kill process",
                 "Out of memory: kill process",
                 "SCSI device reset on",
                 "SDN initialization failed: Error: Existing service with IP: None is not part of service network",
@@ -1939,6 +1938,11 @@
                 "systemLog"
             ],
             "symbolic_name": "mongod_conf"
+        },
+        {
+            "file": "/var/opt/mssql/mssql.conf",
+            "pattern": [],
+            "symbolic_name": "mssql_conf"
         },
         {
             "file": "/etc/multipath.conf",
@@ -2124,6 +2128,11 @@
         },
         {
             "file": "/var/lib/config-data/puppet-generated/nova/etc/nova/nova.conf",
+            "pattern": [],
+            "symbolic_name": "nova_conf"
+        },
+        {
+            "file": "/var/lib/config-data/puppet-generated/nova_libvirt/etc/nova/nova.conf",
             "pattern": [],
             "symbolic_name": "nova_conf"
         },
@@ -3046,6 +3055,11 @@
         {
             "glob": "/var/opt/amq-broker/*/etc/broker.xml",
             "symbolic_name": "amq_broker",
+            "pattern": []
+        },
+        {
+            "glob": "/etc/krb5.conf.d/*",
+            "symbolic_name": "krb5_conf_d",
             "pattern": []
         },
         {
@@ -8574,5 +8588,5 @@
             ]
         }
     },
-    "version": "2019-04-25T17:03:23.071955"
+    "version": "2019-05-02T14:15:42.905221"
 }
