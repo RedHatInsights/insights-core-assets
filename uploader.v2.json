@@ -1577,7 +1577,7 @@
             "symbolic_name": "heat_conf"
         },
 	{
-            "file": "/var/log/heat/heat_api.log",
+            "file": "/var/log/heat/heat-api.log",
             "pattern": [],
             "symbolic_name": "heat_api_log"
         },
