@@ -1,5 +1,8 @@
 Insights Client Core Changelog
 
+v3.0.97 - May 6 2019
+- Fix branch info bug
+
 v3.0.96 - May 4 2019
 - Remove deprecated options: --analyze-container, --analyze-file, --analyze-image-id, --analyze-mountpoint, --to-json
 - Print hostname instead of machine-id on successful upload
