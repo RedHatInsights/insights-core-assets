@@ -1976,12 +1976,12 @@
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/etc/nginx/conf.d/*",
+            "file": "/etc/nginx/conf.d/()*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/etc/nginx/default.d/*",
+            "file": "/etc/nginx/default.d/()*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
@@ -1991,12 +1991,12 @@
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/etc/opt/rh/rh-nginx()*/nginx/conf.d/*",
+            "file": "/etc/opt/rh/rh-nginx()*/nginx/conf.d/()*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/etc/opt/rh/rh-nginx()*/nginx/default.d/*",
+            "file": "/etc/opt/rh/rh-nginx()*/nginx/default.d/()*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
@@ -2006,12 +2006,12 @@
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/opt/rh/nginx()*/root/etc/nginx/conf.d/*",
+            "file": "/opt/rh/nginx()*/root/etc/nginx/conf.d/()*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/opt/rh/nginx()*/root/etc/nginx/default.d/*",
+            "file": "/opt/rh/nginx()*/root/etc/nginx/default.d/()*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
