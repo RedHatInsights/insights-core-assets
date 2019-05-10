@@ -2590,6 +2590,11 @@
             "symbolic_name": "sysconfig_ntpd"
         },
         {
+            "file": "/etc/sysconfig/network",
+            "pattern": [],
+            "symbolic_name": "sysconfig_network"
+        },
+        {
             "file": "/etc/opt/rh/rh-mongodb26/sysconfig/()*mongod",
             "pattern": [],
             "symbolic_name": "sysconfig_rh_mongodb26"
