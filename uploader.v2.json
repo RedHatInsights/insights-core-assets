@@ -827,6 +827,11 @@
             "symbolic_name": "pcs_status"
         },
         {
+            "command": "/bin/ps alxwww",
+            "pattern": [],
+            "symbolic_name": "ps_alxwww"
+        },
+        {
             "command": "/bin/ps aux",
             "pattern": [
                 "/usr/bin/docker",
