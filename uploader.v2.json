@@ -3063,7 +3063,7 @@
             "pattern": []
         },
         {
-            "file": "/var/opt/rh/rh-mysql*/log/mysql/mysqld.log",
+            "glob": "/var/opt/rh/rh-mysql*/log/mysql/mysqld.log",
             "symbolic_name": "mysql_log",
             "pattern": []
         },
