@@ -1922,6 +1922,11 @@
             "symbolic_name": "messages"
         },
         {
+            "file": "/var/log/mistral/executor.log",
+            "pattern": [],
+            "symbolic_name": "mistral_executor_log"
+        },
+        {
             "file": "/etc/()*modprobe\\.conf",
             "pattern": [],
             "symbolic_name": "modprobe_conf"
