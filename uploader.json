@@ -124,6 +124,7 @@
                 "CSUM",
                 "CVE-2017-1000364",
                 "CVE-2018-14634",
+                "Dazed and confused, but trying to continue",
                 "Device is ineligible for IOMMU domain attach due to platform RMRR requirement",
                 "Dropping TSO",
                 "EDAC ",
@@ -134,11 +135,14 @@
                 "Ignoring BGRT: failed to map image memory",
                 "Kernel page table isolation",
                 "Linux version",
+                "Machine Check Exception",
+                "Machine check events logged",
                 "NUMA: ",
                 "Node 0 CPUs: ",
                 "QLogic QLE2692 - QLogic 16Gb FC Dual-port HBA",
                 "SMBIOS ",
                 "TECH PREVIEW: NVMe over FC may not be fully supported.",
+                "Uhhuh. NMI received for unknown reason",
                 "VPD access disabled",
                 "WRITE SAME failed. Manually zeroing",
                 "Warning: QLogic ISP3XXX Network Driver - this hardware has not undergone testing by Red Hat and might not be certified",
@@ -863,6 +867,8 @@
             "pattern": [
                 "/sbin/multipathd",
                 "/usr/bin/celery worker",
+                "/usr/bin/nova-compute",
+                "/usr/bin/nova-conductor",
                 "/usr/bin/teamd",
                 "/usr/sbin/fcoemon --syslog",
                 "COMMAND",
@@ -877,6 +883,8 @@
                 "nfs-server",
                 "nfsd",
                 "nginx",
+                "nova-compute",
+                "nova-conductor",
                 "ntpd",
                 "postgres",
                 "smbd",
@@ -1436,6 +1444,7 @@
         {
             "file": "/var/log/dirsrv/.*/()*(errors|errors\\.2.*)",
             "pattern": [
+                "DSRetroclPlugin - delete_changerecord: could not delete change record",
                 "We recommend to increase the entry cache size nsslapd-cachememsize"
             ],
             "symbolic_name": "dirsrv_errors"
@@ -1821,12 +1830,10 @@
                 "- image is referenced in one or more repositories",
                 "/input/input",
                 "11000 E11000 duplicate key error index: pulp_database.repo_profile_applicability.$profile_hash_-1_repo_id_-1",
-                ": Machine check events logged",
                 ": segfault at ",
                 ": session replaced: jid=",
                 "Abort command issued",
                 "DMA Status error.  Resetting chip",
-                "Dazed and confused, but trying to continue",
                 "Detected Tx Unit Hang",
                 "Device offlined - not ready after error recovery",
                 "Error deleting EBS Disk volume aws",
@@ -1837,7 +1844,6 @@
                 "Link down",
                 "List /apis/image.openshift.io/v1/images",
                 "MDC/MDIO access timeout",
-                "Machine Check Exception",
                 "Medium access timeout failure. Offlining disk!",
                 "MountVolume.SetUp succeeded for volume",
                 "Neighbour table overflow",
@@ -1853,7 +1859,6 @@
                 "TX stuck with port_enabled=1: resetting channels",
                 "Temperature above threshold",
                 "This system does not support \"SSSE3\"",
-                "Uhhuh. NMI received for unknown reason",
                 "Virtualization daemon",
                 "WRITE SAME failed. Manually zeroing",
                 "] trap divide error ",
@@ -1958,12 +1963,20 @@
         },
         {
             "file": "/var/log/mysql/mysqld.log",
-            "pattern": [],
+            "pattern": [
+                "OpenSSL internal error, assertion failed: Digest MD5 forbidden in FIPS mode!",
+                "Too many open files",
+                "[ERROR]"
+            ],
             "symbolic_name": "mysql_log"
         },
         {
             "file": "/var/log/mysql.log",
-            "pattern": [],
+            "pattern": [
+                "OpenSSL internal error, assertion failed: Digest MD5 forbidden in FIPS mode!",
+                "Too many open files",
+                "[ERROR]"
+            ],
             "symbolic_name": "mysql_log"
         },
         {
@@ -8632,5 +8645,5 @@
             ]
         }
     },
-    "version": "2019-05-08T11:18:22.803890"
+    "version": "2019-05-16T14:39:06.420855"
 }
