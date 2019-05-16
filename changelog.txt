@@ -1,5 +1,24 @@
 Insights Client Core Changelog
 
+v3.0.97 - May 6 2019
+- Fix branch info bug
+
+v3.0.96 - May 4 2019
+- Remove deprecated options: --analyze-container, --analyze-file, --analyze-image-id, --analyze-mountpoint, --to-json
+- Print hostname instead of machine-id on successful upload
+- Omit command from archive if command not found
+- Increase HTTP timeout to 120s
+- Isolate legacy code for migration
+- Remove deprecated certificate tests from --test-connection
+- Retool registration for platform
+- Add migration to cloud.redhat.com
+- Tweak option loading
+- Fix --compressor parsing error
+- Restrict branch_info HTTP calls to Satellite
+- Additional remove.conf logging
+- Upload to legacy mirror for platform/payload
+- Connect to both APIs when changing displayname
+
 v3.0.87 - Apr 1 2019
 - Fix insights-core var initialization
 - Fix upload traceback caused by above

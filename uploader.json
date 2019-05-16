@@ -141,7 +141,8 @@
                 "TECH PREVIEW: NVMe over FC may not be fully supported.",
                 "VPD access disabled",
                 "WRITE SAME failed. Manually zeroing",
-                "blocked FC remote port time out",
+                "Warning: QLogic ISP3XXX Network Driver - this hardware has not undergone testing by Red Hat and might not be certified",
+                "blocked FC remote port time out: removing target and saving binding",
                 "crashkernel reservation failed",
                 "crashkernel=auto resulted in zero bytes of reserved memory",
                 "e1000: E1000 MODULE IS NOT SUPPORTED",
@@ -862,8 +863,6 @@
             "pattern": [
                 "/sbin/multipathd",
                 "/usr/bin/celery worker",
-                "/usr/bin/nova-compute",
-                "/usr/bin/nova-conductor",
                 "/usr/bin/teamd",
                 "/usr/sbin/fcoemon --syslog",
                 "COMMAND",
@@ -878,8 +877,6 @@
                 "nfs-server",
                 "nfsd",
                 "nginx",
-                "nova-compute",
-                "nova-conductor",
                 "ntpd",
                 "postgres",
                 "smbd",
@@ -1653,12 +1650,16 @@
         },
         {
             "file": "/opt/rh/httpd24/root/etc/httpd/logs/error_log",
-            "pattern": [],
+            "pattern": [
+                "The mpm module (prefork.c) is not supported by mod_http2"
+            ],
             "symbolic_name": "httpd24_httpd_error_log"
         },
         {
             "file": "/opt/rh/jbcs-httpd24/root/etc/httpd/logs/error_log",
-            "pattern": [],
+            "pattern": [
+                "The mpm module (prefork.c) is not supported by mod_http2"
+            ],
             "symbolic_name": "jbcs_httpd24_httpd_error_log"
         },
         {
@@ -1847,7 +1848,6 @@
                 "WRITE SAME failed. Manually zeroing",
                 "] trap divide error ",
                 "belongs to docker.service",
-                "blocked FC remote port time out",
                 "callbacks suppressed",
                 "chardev: opening backend \"socket\" failed",
                 "does not seem to be present, delaying initialization",
@@ -1873,6 +1873,7 @@
                 "irq handler for vector (irq -1)",
                 "is beyond advertised capabilities",
                 "kernel: CIFS VFS: Unexpected SMB signature",
+                "kernel: Memory cgroup out of memory: Kill process",
                 "kernel: bnx2fc: byte_count",
                 "kernel: kvm: disabled by bios",
                 "kernel: lockd: Unknown symbol register_inet6addr_notifier",
@@ -1889,6 +1890,7 @@
                 "page allocation failure",
                 "per_source_limit from",
                 "reservation conflict",
+                "returned a bad sequence-id error",
                 "segfault at",
                 "server kernel: rhsmcertd-worke",
                 "shm_open failed, Permission denied",
@@ -1986,12 +1988,12 @@
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/etc/nginx/conf.d/*",
+            "file": "/etc/nginx/conf.d/()*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/etc/nginx/default.d/*",
+            "file": "/etc/nginx/default.d/()*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
@@ -2001,12 +2003,12 @@
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/etc/opt/rh/rh-nginx()*/nginx/conf.d/*",
+            "file": "/etc/opt/rh/rh-nginx()*/nginx/conf.d/()*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/etc/opt/rh/rh-nginx()*/nginx/default.d/*",
+            "file": "/etc/opt/rh/rh-nginx()*/nginx/default.d/()*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
@@ -2016,12 +2018,12 @@
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/opt/rh/nginx()*/root/etc/nginx/conf.d/*",
+            "file": "/opt/rh/nginx()*/root/etc/nginx/conf.d/()*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/opt/rh/nginx()*/root/etc/nginx/default.d/*",
+            "file": "/opt/rh/nginx()*/root/etc/nginx/default.d/()*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
@@ -2076,6 +2078,7 @@
                 "libvirtError: Requested operation is not valid: domain has assigned non-USB host devices",
                 "libvirtError: Unable to delete file /var/lib/nova/instances/",
                 "unsupported configuration: Target device drive address",
+                "unsupported configuration: Target network card MTU",
                 "unsupported configuration: Unable to find security driver for model selinux"
             ],
             "symbolic_name": "nova_compute_log"
@@ -2117,6 +2120,7 @@
                 "libvirtError: Requested operation is not valid: domain has assigned non-USB host devices",
                 "libvirtError: Unable to delete file /var/lib/nova/instances/",
                 "unsupported configuration: Target device drive address",
+                "unsupported configuration: Target network card MTU",
                 "unsupported configuration: Unable to find security driver for model selinux"
             ],
             "symbolic_name": "nova_compute_log"
@@ -8593,5 +8597,5 @@
             ]
         }
     },
-    "version": "2019-05-02T14:15:42.905221"
+    "version": "2019-05-08T11:18:22.803890"
 }
