@@ -1942,6 +1942,16 @@
             "symbolic_name": "multipath_conf"
         },
         {
+            "file": "/var/log/mysql/mysqld.log",
+            "pattern": [],
+            "symbolic_name": "mysql_log"
+        },
+        {
+            "file": "/var/log/mysql.log",
+            "pattern": [],
+            "symbolic_name": "mysql_log"
+        },
+        {
             "file": "/etc/sysconfig/netconsole",
             "pattern": [],
             "symbolic_name": "netconsole"
@@ -3054,6 +3064,11 @@
         {
             "glob": "/sys/fs/cgroup/cpu/kubepods.slice/kubepods-burstable.slice/kubepods-burstable-pod[a-f0-9_]*.slice/cpu.cfs_quota_us",
             "symbolic_name": "kubepods_cpu_quota",
+            "pattern": []
+        },
+        {
+            "glob": "/var/opt/rh/rh-mysql*/log/mysql/mysqld.log",
+            "symbolic_name": "mysql_log",
             "pattern": []
         },
         {
