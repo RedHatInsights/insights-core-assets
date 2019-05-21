@@ -988,11 +988,6 @@
             "symbolic_name": "subscription_manager_repos_list_enabled"
         },
         {
-            "command": "/usr/bin/subscription-manager facts --list",
-            "pattern": [],
-            "symbolic_name": "subscription_manager_facts_list"
-        },
-        {
             "command": "/usr/sbin/ss -tupna",
             "pattern": [],
             "symbolic_name": "ss"
