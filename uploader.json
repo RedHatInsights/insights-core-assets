@@ -2597,6 +2597,16 @@
             "symbolic_name": "swift_conf"
         },
         {
+            "file": "/var/log/containers/swift/swift.log",
+            "pattern": [],
+            "symbolic_name": "swift_log"
+        },
+        {
+            "file": "/var/log/swift/swift.log",
+            "pattern": [],
+            "symbolic_name": "swift_log"
+        },
+        {
             "file": "/etc/swift/object-expirer.conf",
             "pattern": [],
             "symbolic_name": "swift_object_expirer_conf"
