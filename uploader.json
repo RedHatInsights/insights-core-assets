@@ -124,6 +124,7 @@
                 "CSUM",
                 "CVE-2017-1000364",
                 "CVE-2018-14634",
+                "Dazed and confused, but trying to continue",
                 "Device is ineligible for IOMMU domain attach due to platform RMRR requirement",
                 "Dropping TSO",
                 "EDAC ",
@@ -134,14 +135,18 @@
                 "Ignoring BGRT: failed to map image memory",
                 "Kernel page table isolation",
                 "Linux version",
+                "Machine Check Exception",
+                "Machine check events logged",
                 "NUMA: ",
                 "Node 0 CPUs: ",
                 "QLogic QLE2692 - QLogic 16Gb FC Dual-port HBA",
                 "SMBIOS ",
                 "TECH PREVIEW: NVMe over FC may not be fully supported.",
+                "Uhhuh. NMI received for unknown reason",
                 "VPD access disabled",
                 "WRITE SAME failed. Manually zeroing",
-                "blocked FC remote port time out",
+                "Warning: QLogic ISP3XXX Network Driver - this hardware has not undergone testing by Red Hat and might not be certified",
+                "blocked FC remote port time out: removing target and saving binding",
                 "crashkernel reservation failed",
                 "crashkernel=auto resulted in zero bytes of reserved memory",
                 "e1000: E1000 MODULE IS NOT SUPPORTED",
@@ -1444,6 +1449,7 @@
         {
             "file": "/var/log/dirsrv/.*/()*(errors|errors\\.2.*)",
             "pattern": [
+                "DSRetroclPlugin - delete_changerecord: could not delete change record",
                 "We recommend to increase the entry cache size nsslapd-cachememsize"
             ],
             "symbolic_name": "dirsrv_errors"
@@ -1582,6 +1588,16 @@
             "symbolic_name": "heat_conf"
         },
         {
+            "file": "/var/log/heat/heat-api.log",
+            "pattern": [],
+            "symbolic_name": "heat_api_log"
+        },
+        {
+            "file": "/var/log/containers/heat/heat_api.log",
+            "pattern": [],
+            "symbolic_name": "heat_api_log"
+        },
+        {
             "file": "/etc/hosts",
             "pattern": [],
             "symbolic_name": "hosts"
@@ -1658,12 +1674,16 @@
         },
         {
             "file": "/opt/rh/httpd24/root/etc/httpd/logs/error_log",
-            "pattern": [],
+            "pattern": [
+                "The mpm module (prefork.c) is not supported by mod_http2"
+            ],
             "symbolic_name": "httpd24_httpd_error_log"
         },
         {
             "file": "/opt/rh/jbcs-httpd24/root/etc/httpd/logs/error_log",
-            "pattern": [],
+            "pattern": [
+                "The mpm module (prefork.c) is not supported by mod_http2"
+            ],
             "symbolic_name": "jbcs_httpd24_httpd_error_log"
         },
         {
@@ -1815,12 +1835,10 @@
                 "- image is referenced in one or more repositories",
                 "/input/input",
                 "11000 E11000 duplicate key error index: pulp_database.repo_profile_applicability.$profile_hash_-1_repo_id_-1",
-                ": Machine check events logged",
                 ": segfault at ",
                 ": session replaced: jid=",
                 "Abort command issued",
                 "DMA Status error.  Resetting chip",
-                "Dazed and confused, but trying to continue",
                 "Detected Tx Unit Hang",
                 "Device offlined - not ready after error recovery",
                 "Error deleting EBS Disk volume aws",
@@ -1831,7 +1849,6 @@
                 "Link down",
                 "List /apis/image.openshift.io/v1/images",
                 "MDC/MDIO access timeout",
-                "Machine Check Exception",
                 "Medium access timeout failure. Offlining disk!",
                 "MountVolume.SetUp succeeded for volume",
                 "Neighbour table overflow",
@@ -1847,12 +1864,10 @@
                 "TX stuck with port_enabled=1: resetting channels",
                 "Temperature above threshold",
                 "This system does not support \"SSSE3\"",
-                "Uhhuh. NMI received for unknown reason",
                 "Virtualization daemon",
                 "WRITE SAME failed. Manually zeroing",
                 "] trap divide error ",
                 "belongs to docker.service",
-                "blocked FC remote port time out",
                 "callbacks suppressed",
                 "chardev: opening backend \"socket\" failed",
                 "does not seem to be present, delaying initialization",
@@ -1878,6 +1893,7 @@
                 "irq handler for vector (irq -1)",
                 "is beyond advertised capabilities",
                 "kernel: CIFS VFS: Unexpected SMB signature",
+                "kernel: Memory cgroup out of memory: Kill process",
                 "kernel: bnx2fc: byte_count",
                 "kernel: kvm: disabled by bios",
                 "kernel: lockd: Unknown symbol register_inet6addr_notifier",
@@ -1894,6 +1910,7 @@
                 "page allocation failure",
                 "per_source_limit from",
                 "reservation conflict",
+                "returned a bad sequence-id error",
                 "segfault at",
                 "server kernel: rhsmcertd-worke",
                 "shm_open failed, Permission denied",
@@ -1913,6 +1930,11 @@
                 "watch chan error: etcdserver: mvcc: required revision has been compacted"
             ],
             "symbolic_name": "messages"
+        },
+        {
+            "file": "/var/log/mistral/executor.log",
+            "pattern": [],
+            "symbolic_name": "mistral_executor_log"
         },
         {
             "file": "/etc/()*modprobe\\.conf",
@@ -1943,6 +1965,24 @@
             "file": "/etc/multipath.conf",
             "pattern": [],
             "symbolic_name": "multipath_conf"
+        },
+        {
+            "file": "/var/log/mysql/mysqld.log",
+            "pattern": [
+                "OpenSSL internal error, assertion failed: Digest MD5 forbidden in FIPS mode!",
+                "Too many open files",
+                "[ERROR]"
+            ],
+            "symbolic_name": "mysql_log"
+        },
+        {
+            "file": "/var/log/mysql.log",
+            "pattern": [
+                "OpenSSL internal error, assertion failed: Digest MD5 forbidden in FIPS mode!",
+                "Too many open files",
+                "[ERROR]"
+            ],
+            "symbolic_name": "mysql_log"
         },
         {
             "file": "/etc/sysconfig/netconsole",
@@ -1981,12 +2021,12 @@
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/etc/nginx/conf.d/*",
+            "file": "/etc/nginx/conf.d/()*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/etc/nginx/default.d/*",
+            "file": "/etc/nginx/default.d/()*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
@@ -1996,12 +2036,12 @@
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/etc/opt/rh/rh-nginx()*/nginx/conf.d/*",
+            "file": "/etc/opt/rh/rh-nginx()*/nginx/conf.d/()*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/etc/opt/rh/rh-nginx()*/nginx/default.d/*",
+            "file": "/etc/opt/rh/rh-nginx()*/nginx/default.d/()*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
@@ -2011,12 +2051,12 @@
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/opt/rh/nginx()*/root/etc/nginx/conf.d/*",
+            "file": "/opt/rh/nginx()*/root/etc/nginx/conf.d/()*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
         {
-            "file": "/opt/rh/nginx()*/root/etc/nginx/default.d/*",
+            "file": "/opt/rh/nginx()*/root/etc/nginx/default.d/()*",
             "pattern": [],
             "symbolic_name": "nginx_conf"
         },
@@ -2071,6 +2111,7 @@
                 "libvirtError: Requested operation is not valid: domain has assigned non-USB host devices",
                 "libvirtError: Unable to delete file /var/lib/nova/instances/",
                 "unsupported configuration: Target device drive address",
+                "unsupported configuration: Target network card MTU",
                 "unsupported configuration: Unable to find security driver for model selinux"
             ],
             "symbolic_name": "nova_compute_log"
@@ -2112,6 +2153,7 @@
                 "libvirtError: Requested operation is not valid: domain has assigned non-USB host devices",
                 "libvirtError: Unable to delete file /var/lib/nova/instances/",
                 "unsupported configuration: Target device drive address",
+                "unsupported configuration: Target network card MTU",
                 "unsupported configuration: Unable to find security driver for model selinux"
             ],
             "symbolic_name": "nova_compute_log"
@@ -2201,6 +2243,11 @@
                 "pcmk_dbus_find_error"
             ],
             "symbolic_name": "pacemaker_log"
+        },
+        {
+            "file": "/proc/partitions",
+            "pattern": [],
+            "symbolic_name": "partitions"
         },
         {
             "file": "/etc/pam.d/password-auth",
@@ -2545,6 +2592,16 @@
             "symbolic_name": "ssh_foreman_proxy_config"
         },
         {
+            "file": "/etc/swift/swift.conf",
+            "pattern": [],
+            "symbolic_name": "swift_conf"
+        },
+        {
+            "file": "/var/lib/config-data/puppet-generated/swift/etc/swift/swift.conf",
+            "pattern": [],
+            "symbolic_name": "swift_conf"
+        },
+        {
             "file": "/etc/swift/object-expirer.conf",
             "pattern": [],
             "symbolic_name": "swift_object_expirer_conf"
@@ -2593,6 +2650,11 @@
             "file": "/etc/sysconfig/ntpd",
             "pattern": [],
             "symbolic_name": "sysconfig_ntpd"
+        },
+        {
+            "file": "/etc/sysconfig/network",
+            "pattern": [],
+            "symbolic_name": "sysconfig_network"
         },
         {
             "file": "/etc/opt/rh/rh-mongodb26/sysconfig/()*mongod",
@@ -3060,6 +3122,11 @@
         {
             "glob": "/sys/fs/cgroup/cpu/kubepods.slice/kubepods-burstable.slice/kubepods-burstable-pod[a-f0-9_]*.slice/cpu.cfs_quota_us",
             "symbolic_name": "kubepods_cpu_quota",
+            "pattern": []
+        },
+        {
+            "glob": "/var/opt/rh/rh-mysql*/log/mysql/mysqld.log",
+            "symbolic_name": "mysql_log",
             "pattern": []
         },
         {
@@ -8583,5 +8650,5 @@
             ]
         }
     },
-    "version": "2019-05-02T14:15:42.905221"
+    "version": "2019-05-16T14:39:06.420855"
 }
