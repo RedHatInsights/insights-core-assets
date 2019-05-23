@@ -141,6 +141,7 @@
                 "VPD access disabled",
                 "WRITE SAME failed. Manually zeroing",
                 "Warning: QLogic ISP3XXX Network Driver - this hardware has not undergone testing by Red Hat and might not be certified",
+                "XFS: possible memory allocation deadlock",
                 "blocked FC remote port time out: removing target and saving binding",
                 "crashkernel reservation failed",
                 "crashkernel=auto resulted in zero bytes of reserved memory",
@@ -151,6 +152,7 @@
                 "mce: ",
                 "netconsole: network logging started",
                 "resetting",
+                "temperature above threshold",
                 "the DIE domain not a subset of the NUMA domain",
                 "tx hang",
                 "vmxnet3",
@@ -833,7 +835,9 @@
         },
         {
             "command": "/bin/ps alxwww",
-            "pattern": [],
+            "pattern": [
+                "COMMAND"
+            ],
             "symbolic_name": "ps_alxwww"
         },
         {
@@ -872,6 +876,7 @@
             "pattern": [
                 "/sbin/multipathd",
                 "/usr/bin/celery worker",
+                "/usr/bin/mistral-server",
                 "/usr/bin/nova-compute",
                 "/usr/bin/nova-conductor",
                 "/usr/bin/teamd",
@@ -883,6 +888,7 @@
                 "cmirrord",
                 "greenplum",
                 "httpd",
+                "ironic_wsgi",
                 "iscsid",
                 "multipath",
                 "nfs-server",
@@ -1311,12 +1317,16 @@
         },
         {
             "file": "/var/log/cinder/cinder-api.log",
-            "pattern": [],
+            "pattern": [
+                "(OperationalError) (1040, 'Too many connections')"
+            ],
             "symbolic_name": "cinder_api_log"
         },
         {
             "file": "/var/log/containers/cinder/cinder-api.log",
-            "pattern": [],
+            "pattern": [
+                "(OperationalError) (1040, 'Too many connections')"
+            ],
             "symbolic_name": "cinder_api_log"
         },
         {
@@ -1579,12 +1589,16 @@
         },
         {
             "file": "/var/log/heat/heat-api.log",
-            "pattern": [],
+            "pattern": [
+                "(OperationalError) (1040, 'Too many connections')"
+            ],
             "symbolic_name": "heat_api_log"
         },
         {
             "file": "/var/log/containers/heat/heat_api.log",
-            "pattern": [],
+            "pattern": [
+                "(OperationalError) (1040, 'Too many connections')"
+            ],
             "symbolic_name": "heat_api_log"
         },
         {
@@ -1852,7 +1866,6 @@
                 "Sense Key : Illegal Request [current]",
                 "TX driver issue detected, PF reset issued",
                 "TX stuck with port_enabled=1: resetting channels",
-                "Temperature above threshold",
                 "This system does not support \"SSSE3\"",
                 "Virtualization daemon",
                 "WRITE SAME failed. Manually zeroing",
@@ -1875,7 +1888,6 @@
                 "fiid_obj_get: 'present_countdown_value': data not available",
                 "firewalld - dynamic firewall daemon",
                 "fit failure summary on nodes : Insufficient pods",
-                "heated above trip temperature",
                 "http2: no cached connection was available",
                 "hw csum failure",
                 "in libnl.so.1",
@@ -2053,6 +2065,7 @@
         {
             "file": "/var/log/nova/nova-api.log",
             "pattern": [
+                "OperationalError: (pymysql.err.OperationalError) (1040, u\u2019Too many connections\u2019)",
                 "Timed out waiting for a reply to message ID"
             ],
             "symbolic_name": "nova_api_log"
@@ -2060,6 +2073,7 @@
         {
             "file": "/var/log/containers/nova/nova-api.log",
             "pattern": [
+                "OperationalError: (pymysql.err.OperationalError) (1040, u\u2019Too many connections\u2019)",
                 "Timed out waiting for a reply to message ID"
             ],
             "symbolic_name": "nova_api_log"
@@ -3160,5 +3174,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-05-16T14:39:13.332041"
+    "version": "2019-05-23T14:07:31.215463"
 }
