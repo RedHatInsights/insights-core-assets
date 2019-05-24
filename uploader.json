@@ -794,6 +794,11 @@
             "symbolic_name": "ntptime"
         },
         {
+            "command": "/usr/sbin/fcoeadm -i",
+            "pattern": [],
+            "symbolic_name": "fcoeadm_i"
+        },
+        {
             "command": "/bin/grep -c '^[[:digit:]]' /etc/passwd /etc/group",
             "pattern": [],
             "symbolic_name": "numeric_user_group_name"
