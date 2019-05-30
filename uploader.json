@@ -237,6 +237,11 @@
             "symbolic_name": "fc_match"
         },
         {
+            "command": "/usr/sbin/fcoeadm -i",
+            "pattern": [],
+            "symbolic_name": "fcoeadm_i"
+        },
+        {
             "command": "/usr/bin/getcert list",
             "pattern": [],
             "symbolic_name": "getcert_list"
@@ -792,11 +797,6 @@
             "command": "/usr/sbin/ntptime",
             "pattern": [],
             "symbolic_name": "ntptime"
-        },
-        {
-            "command": "/usr/sbin/fcoeadm -i",
-            "pattern": [],
-            "symbolic_name": "fcoeadm_i"
         },
         {
             "command": "/bin/grep -c '^[[:digit:]]' /etc/passwd /etc/group",
