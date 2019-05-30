@@ -1863,7 +1863,6 @@
                 "SCSI device reset on",
                 "SDN initialization failed: Error: Existing service with IP: None is not part of service network",
                 "Scheduled import of stream",
-                "Sense Key : Illegal Request [current]",
                 "TX driver issue detected, PF reset issued",
                 "TX stuck with port_enabled=1: resetting channels",
                 "This system does not support \"SSSE3\"",
@@ -1901,6 +1900,7 @@
                 "kernel: lockd: Unknown symbol register_inet6addr_notifier",
                 "kernel: lockd: Unknown symbol unregister_inet6addr_notifier",
                 "kernel: megasas: Found FW in FAULT state,will reset adapter.",
+                "kernel: possible SYN flooding on port",
                 "khash_super_prune_nolock",
                 "megaraid_sas: FW detected to be in faultstate, restarting it",
                 "mode:0x20",
@@ -8664,5 +8664,5 @@
             ]
         }
     },
-    "version": "2019-05-23T14:07:23.998738"
+    "version": "2019-05-30T14:27:06.626523"
 }
