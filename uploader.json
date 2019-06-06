@@ -836,7 +836,10 @@
         {
             "command": "/bin/ps alxwww",
             "pattern": [
-                "COMMAND"
+                "COMMAND",
+                "bash",
+                "docker",
+                "ora"
             ],
             "symbolic_name": "ps_alxwww"
         },
@@ -861,8 +864,7 @@
                 "openshift start node",
                 "phc2sys",
                 "postgres",
-                "ptp4l",
-                "tomcat"
+                "ptp4l"
             ],
             "symbolic_name": "ps_aux"
         },
@@ -882,6 +884,7 @@
                 "/usr/bin/teamd",
                 "/usr/sbin/fcoemon --syslog",
                 "COMMAND",
+                "DFOREGROUND",
                 "catalina.base",
                 "ceilometer-coll",
                 "chronyd",
@@ -898,6 +901,7 @@
                 "nova-conductor",
                 "ntpd",
                 "postgres",
+                "python",
                 "smbd",
                 "target_completi",
                 "taskomaticd",
@@ -987,11 +991,6 @@
             "command": "/usr/bin/subscription-manager release --show",
             "pattern": [],
             "symbolic_name": "subscription_manager_release_show"
-        },
-        {
-            "command": "/usr/bin/subscription-manager repos --list-enabled",
-            "pattern": [],
-            "symbolic_name": "subscription_manager_repos_list_enabled"
         },
         {
             "command": "/usr/sbin/ss -tupna",
@@ -1346,7 +1345,6 @@
         {
             "file": "/etc/cluster/cluster.conf",
             "pattern": [
-                "START_PROFILE",
                 "clusternode name="
             ],
             "symbolic_name": "cluster_conf"
@@ -2943,7 +2941,10 @@
                 "ceph",
                 "ceph_pool",
                 "driver",
-                "storage"
+                "metric_processing_delay",
+                "metricd",
+                "storage",
+                "workers"
             ],
             "symbolic_name": "gnocchi_conf"
         },
@@ -2954,7 +2955,10 @@
                 "ceph",
                 "ceph_pool",
                 "driver",
-                "storage"
+                "metric_processing_delay",
+                "metricd",
+                "storage",
+                "workers"
             ],
             "symbolic_name": "gnocchi_conf"
         },
@@ -8664,5 +8668,5 @@
             ]
         }
     },
-    "version": "2019-05-30T14:27:06.626523"
+    "version": "2019-06-06T15:54:47.079614"
 }
