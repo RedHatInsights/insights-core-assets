@@ -637,6 +637,16 @@
             "symbolic_name": "modinfo_i40e"
         },
         {
+            "command": "/sbin/modinfo igb",
+            "pattern": [],
+            "symbolic_name": "modinfo_igb"
+        },
+        {
+            "command": "/sbin/modinfo vmxnet3",
+            "pattern": [],
+            "symbolic_name": "modinfo_vmxnet3"
+        },
+        {
             "command": "/sbin/modinfo vmxnet3",
             "pattern": [],
             "symbolic_name": "modinfo_vmxnet3"
