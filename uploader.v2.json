@@ -272,6 +272,11 @@
             "symbolic_name": "grub1_config_perms"
         },
         {
+            "command": "/bin/grub2-editenv list",
+            "pattern": [],
+            "symbolic_name": "grub2_editenv_list"
+        },
+        {
             "command": "/bin/ls -l /boot/grub2/grub.cfg",
             "pattern": [],
             "symbolic_name": "grub_config_perms"
