@@ -1114,6 +1114,11 @@
             "symbolic_name": "woopsie"
         },
         {
+            "command": "yum -C --noplugins list installed",
+            "pattern": [],
+            "symbolic_name": "yum_list_installed"
+        },
+        {
             "command": "/usr/bin/yum -C repolist",
             "pattern": [],
             "symbolic_name": "yum_repolist"
