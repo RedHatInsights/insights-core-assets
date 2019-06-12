@@ -204,6 +204,12 @@
             "symbolic_name": "ethtool_S"
         },
         {
+            "command": "/sbin/ethtool -T",
+            "pattern": [],
+            "pre_command": "iface",
+            "symbolic_name": "ethtool_T"
+        },
+        {
             "command": "/sbin/ethtool -g",
             "pattern": [],
             "pre_command": "iface",
