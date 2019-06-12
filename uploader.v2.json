@@ -272,11 +272,6 @@
             "symbolic_name": "grub1_config_perms"
         },
         {
-            "command": "/bin/grub2-editenv list",
-            "pattern": [],
-            "symbolic_name": "grub2_editenv_list"
-        },
-        {
             "command": "/bin/ls -l /boot/grub2/grub.cfg",
             "pattern": [],
             "symbolic_name": "grub_config_perms"
@@ -1566,9 +1561,19 @@
             "symbolic_name": "grub2_efi_cfg"
         },
         {
+            "file": "/boot/efi/EFI/redhat/grubenv",
+            "pattern": [],
+            "symbolic_name": "grub2_efi_grubenv"
+        },
+        {
             "file": "/boot/grub2/grub.cfg",
             "pattern": [],
             "symbolic_name": "grub2_cfg"
+        },
+        {
+            "file": "/boot/grub2/grubenv",
+            "pattern": [],
+            "symbolic_name": "grub2_grubenv"
         },
         {
             "file": "/etc/haproxy/haproxy.cfg",
