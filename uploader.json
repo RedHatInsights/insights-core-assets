@@ -146,6 +146,7 @@
                 "VPD access disabled",
                 "WRITE SAME failed. Manually zeroing",
                 "Warning: QLogic ISP3XXX Network Driver - this hardware has not undergone testing by Red Hat and might not be certified",
+                "XFS: possible memory allocation deadlock",
                 "blocked FC remote port time out: removing target and saving binding",
                 "crashkernel reservation failed",
                 "crashkernel=auto resulted in zero bytes of reserved memory",
@@ -156,6 +157,7 @@
                 "mce: ",
                 "netconsole: network logging started",
                 "resetting",
+                "temperature above threshold",
                 "the DIE domain not a subset of the NUMA domain",
                 "tx hang",
                 "vmxnet3",
@@ -832,6 +834,16 @@
             "symbolic_name": "pcs_status"
         },
         {
+            "command": "/bin/ps alxwww",
+            "pattern": [
+                "COMMAND",
+                "bash",
+                "docker",
+                "ora"
+            ],
+            "symbolic_name": "ps_alxwww"
+        },
+        {
             "command": "/bin/ps aux",
             "pattern": [
                 "/usr/bin/docker",
@@ -852,8 +864,7 @@
                 "openshift start node",
                 "phc2sys",
                 "postgres",
-                "ptp4l",
-                "tomcat"
+                "ptp4l"
             ],
             "symbolic_name": "ps_aux"
         },
@@ -867,17 +878,20 @@
             "pattern": [
                 "/sbin/multipathd",
                 "/usr/bin/celery worker",
+                "/usr/bin/mistral-server",
                 "/usr/bin/nova-compute",
                 "/usr/bin/nova-conductor",
                 "/usr/bin/teamd",
                 "/usr/sbin/fcoemon --syslog",
                 "COMMAND",
+                "DFOREGROUND",
                 "catalina.base",
                 "ceilometer-coll",
                 "chronyd",
                 "cmirrord",
                 "greenplum",
                 "httpd",
+                "ironic_wsgi",
                 "iscsid",
                 "multipath",
                 "nfs-server",
@@ -887,6 +901,7 @@
                 "nova-conductor",
                 "ntpd",
                 "postgres",
+                "python",
                 "smbd",
                 "target_completi",
                 "taskomaticd",
@@ -976,21 +991,6 @@
             "command": "/usr/bin/subscription-manager release --show",
             "pattern": [],
             "symbolic_name": "subscription_manager_release_show"
-        },
-        {
-            "command": "/usr/bin/subscription-manager list --consumed",
-            "pattern": [],
-            "symbolic_name": "subscription_manager_list_consumed"
-        },
-        {
-            "command": "/usr/bin/subscription-manager repos --list-enabled",
-            "pattern": [],
-            "symbolic_name": "subscription_manager_repos_list_enabled"
-        },
-        {
-            "command": "/usr/bin/subscription-manager facts --list",
-            "pattern": [],
-            "symbolic_name": "subscription_manager_facts_list"
         },
         {
             "command": "/usr/sbin/ss -tupna",
@@ -1321,12 +1321,16 @@
         },
         {
             "file": "/var/log/cinder/cinder-api.log",
-            "pattern": [],
+            "pattern": [
+                "(OperationalError) (1040, 'Too many connections')"
+            ],
             "symbolic_name": "cinder_api_log"
         },
         {
             "file": "/var/log/containers/cinder/cinder-api.log",
-            "pattern": [],
+            "pattern": [
+                "(OperationalError) (1040, 'Too many connections')"
+            ],
             "symbolic_name": "cinder_api_log"
         },
         {
@@ -1341,7 +1345,6 @@
         {
             "file": "/etc/cluster/cluster.conf",
             "pattern": [
-                "START_PROFILE",
                 "clusternode name="
             ],
             "symbolic_name": "cluster_conf"
@@ -1584,12 +1587,16 @@
         },
         {
             "file": "/var/log/heat/heat-api.log",
-            "pattern": [],
+            "pattern": [
+                "(OperationalError) (1040, 'Too many connections')"
+            ],
             "symbolic_name": "heat_api_log"
         },
         {
             "file": "/var/log/containers/heat/heat_api.log",
-            "pattern": [],
+            "pattern": [
+                "(OperationalError) (1040, 'Too many connections')"
+            ],
             "symbolic_name": "heat_api_log"
         },
         {
@@ -1854,10 +1861,8 @@
                 "SCSI device reset on",
                 "SDN initialization failed: Error: Existing service with IP: None is not part of service network",
                 "Scheduled import of stream",
-                "Sense Key : Illegal Request [current]",
                 "TX driver issue detected, PF reset issued",
                 "TX stuck with port_enabled=1: resetting channels",
-                "Temperature above threshold",
                 "This system does not support \"SSSE3\"",
                 "Virtualization daemon",
                 "WRITE SAME failed. Manually zeroing",
@@ -1880,7 +1885,6 @@
                 "fiid_obj_get: 'present_countdown_value': data not available",
                 "firewalld - dynamic firewall daemon",
                 "fit failure summary on nodes : Insufficient pods",
-                "heated above trip temperature",
                 "http2: no cached connection was available",
                 "hw csum failure",
                 "in libnl.so.1",
@@ -1894,6 +1898,7 @@
                 "kernel: lockd: Unknown symbol register_inet6addr_notifier",
                 "kernel: lockd: Unknown symbol unregister_inet6addr_notifier",
                 "kernel: megasas: Found FW in FAULT state,will reset adapter.",
+                "kernel: possible SYN flooding on port",
                 "khash_super_prune_nolock",
                 "megaraid_sas: FW detected to be in faultstate, restarting it",
                 "mode:0x20",
@@ -2058,6 +2063,7 @@
         {
             "file": "/var/log/nova/nova-api.log",
             "pattern": [
+                "OperationalError: (pymysql.err.OperationalError) (1040, u\u2019Too many connections\u2019)",
                 "Timed out waiting for a reply to message ID"
             ],
             "symbolic_name": "nova_api_log"
@@ -2065,6 +2071,7 @@
         {
             "file": "/var/log/containers/nova/nova-api.log",
             "pattern": [
+                "OperationalError: (pymysql.err.OperationalError) (1040, u\u2019Too many connections\u2019)",
                 "Timed out waiting for a reply to message ID"
             ],
             "symbolic_name": "nova_api_log"
@@ -2597,6 +2604,16 @@
             "symbolic_name": "swift_conf"
         },
         {
+            "file": "/var/log/containers/swift/swift.log",
+            "pattern": [],
+            "symbolic_name": "swift_log"
+        },
+        {
+            "file": "/var/log/swift/swift.log",
+            "pattern": [],
+            "symbolic_name": "swift_log"
+        },
+        {
             "file": "/etc/swift/object-expirer.conf",
             "pattern": [],
             "symbolic_name": "swift_object_expirer_conf"
@@ -2924,7 +2941,10 @@
                 "ceph",
                 "ceph_pool",
                 "driver",
-                "storage"
+                "metric_processing_delay",
+                "metricd",
+                "storage",
+                "workers"
             ],
             "symbolic_name": "gnocchi_conf"
         },
@@ -2935,7 +2955,10 @@
                 "ceph",
                 "ceph_pool",
                 "driver",
-                "storage"
+                "metric_processing_delay",
+                "metricd",
+                "storage",
+                "workers"
             ],
             "symbolic_name": "gnocchi_conf"
         },
@@ -8659,5 +8682,5 @@
             ]
         }
     },
-    "version": "2019-05-16T14:39:06.420855"
+    "version": "2019-06-06T15:54:47.079614"
 }
