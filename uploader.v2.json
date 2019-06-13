@@ -237,6 +237,11 @@
             "symbolic_name": "fc_match"
         },
         {
+            "command": "/usr/sbin/fcoeadm -i",
+            "pattern": [],
+            "symbolic_name": "fcoeadm_i"
+        },
+        {
             "command": "/usr/bin/getcert list",
             "pattern": [],
             "symbolic_name": "getcert_list"
@@ -893,6 +898,7 @@
                 "httpd",
                 "ironic_wsgi",
                 "iscsid",
+                "mistral-server",
                 "multipath",
                 "nfs-server",
                 "nfsd",
@@ -1840,6 +1846,7 @@
                 ": segfault at ",
                 ": session replaced: jid=",
                 "Abort command issued",
+                "Could not set",
                 "DMA Status error.  Resetting chip",
                 "Detected Tx Unit Hang",
                 "Device offlined - not ready after error recovery",
@@ -1867,6 +1874,7 @@
                 "Virtualization daemon",
                 "WRITE SAME failed. Manually zeroing",
                 "] trap divide error ",
+                "as active slave; either",
                 "belongs to docker.service",
                 "callbacks suppressed",
                 "chardev: opening backend \"socket\" failed",
@@ -1891,6 +1899,7 @@
                 "initiating reset due to tx timeout",
                 "irq handler for vector (irq -1)",
                 "is beyond advertised capabilities",
+                "is down or the link is down",
                 "kernel: CIFS VFS: Unexpected SMB signature",
                 "kernel: Memory cgroup out of memory: Kill process",
                 "kernel: bnx2fc: byte_count",
@@ -1904,8 +1913,6 @@
                 "mode:0x20",
                 "multipathd.service operation timed out. Terminating",
                 "netlink_socket|ERR|fcntl: Too many open file",
-                "nf_conntrack: expectation table full",
-                "nf_conntrack: table full, dropping packet",
                 "nfs_reap_expired_delegations",
                 "page allocation failure",
                 "per_source_limit from",
@@ -3067,6 +3074,20 @@
             "symbolic_name": "neutron_metadata_agent_log"
         },
         {
+            "file": "/etc/neutron/plugins/ml2/ml2_conf.ini",
+            "pattern": [
+                "["
+            ],
+            "symbolic_name": "neutron_ml2_conf"
+        },
+        {
+            "file": "/var/lib/config-data/puppet-generated/neutron/etc/neutron/plugins/ml2/ml2_conf.ini",
+            "pattern": [
+                "["
+            ],
+            "symbolic_name": "neutron_ml2_conf"
+        },
+        {
             "file": "/var/log/neutron/openvswitch-agent.log",
             "pattern": [
                 "Agent main thread died of an exception",
@@ -3178,5 +3199,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-06-06T15:54:53.469795"
+    "version": "2019-06-13T13:51:18.780154"
 }
