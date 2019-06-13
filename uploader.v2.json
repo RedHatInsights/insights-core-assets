@@ -841,7 +841,10 @@
         {
             "command": "/bin/ps alxwww",
             "pattern": [
-                "COMMAND"
+                "COMMAND",
+                "bash",
+                "docker",
+                "ora"
             ],
             "symbolic_name": "ps_alxwww"
         },
@@ -866,8 +869,7 @@
                 "openshift start node",
                 "phc2sys",
                 "postgres",
-                "ptp4l",
-                "tomcat"
+                "ptp4l"
             ],
             "symbolic_name": "ps_aux"
         },
@@ -887,6 +889,7 @@
                 "/usr/bin/teamd",
                 "/usr/sbin/fcoemon --syslog",
                 "COMMAND",
+                "DFOREGROUND",
                 "catalina.base",
                 "ceilometer-coll",
                 "chronyd",
@@ -903,6 +906,7 @@
                 "nova-conductor",
                 "ntpd",
                 "postgres",
+                "python",
                 "smbd",
                 "target_completi",
                 "taskomaticd",
@@ -992,11 +996,6 @@
             "command": "/usr/bin/subscription-manager release --show",
             "pattern": [],
             "symbolic_name": "subscription_manager_release_show"
-        },
-        {
-            "command": "/usr/bin/subscription-manager repos --list-enabled",
-            "pattern": [],
-            "symbolic_name": "subscription_manager_repos_list_enabled"
         },
         {
             "command": "/usr/sbin/ss -tupna",
@@ -1351,7 +1350,6 @@
         {
             "file": "/etc/cluster/cluster.conf",
             "pattern": [
-                "START_PROFILE",
                 "clusternode name="
             ],
             "symbolic_name": "cluster_conf"
@@ -1868,7 +1866,6 @@
                 "SCSI device reset on",
                 "SDN initialization failed: Error: Existing service with IP: None is not part of service network",
                 "Scheduled import of stream",
-                "Sense Key : Illegal Request [current]",
                 "TX driver issue detected, PF reset issued",
                 "TX stuck with port_enabled=1: resetting channels",
                 "This system does not support \"SSSE3\"",
@@ -1906,6 +1903,7 @@
                 "kernel: lockd: Unknown symbol register_inet6addr_notifier",
                 "kernel: lockd: Unknown symbol unregister_inet6addr_notifier",
                 "kernel: megasas: Found FW in FAULT state,will reset adapter.",
+                "kernel: possible SYN flooding on port",
                 "khash_super_prune_nolock",
                 "megaraid_sas: FW detected to be in faultstate, restarting it",
                 "mode:0x20",
@@ -2943,7 +2941,10 @@
                 "ceph",
                 "ceph_pool",
                 "driver",
-                "storage"
+                "metric_processing_delay",
+                "metricd",
+                "storage",
+                "workers"
             ],
             "symbolic_name": "gnocchi_conf"
         },
@@ -2954,7 +2955,10 @@
                 "ceph",
                 "ceph_pool",
                 "driver",
-                "storage"
+                "metric_processing_delay",
+                "metricd",
+                "storage",
+                "workers"
             ],
             "symbolic_name": "gnocchi_conf"
         },
@@ -3179,5 +3183,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-05-23T14:07:31.215463"
+    "version": "2019-06-06T15:54:53.469795"
 }
