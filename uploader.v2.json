@@ -1059,6 +1059,16 @@
             "symbolic_name": "systemctl_smartpdc"
         },
         {
+            "command": "/usr/bin/systemctl cat docker.service",
+            "pattern": [],
+            "symbolic_name": "systemd_docker"
+        },
+        {
+            "command": "/usr/bin/systemctl cat atomic-openshift-node.service",
+            "pattern": [],
+            "symbolic_name": "systemd_openshift_node"
+        },
+        {
             "command": "/bin/systool -b scsi -v",
             "pattern": [],
             "symbolic_name": "systool_b_scsi_v"
@@ -2704,16 +2714,6 @@
             "file": "/etc/systemd/system.conf.d/origin-accounting.conf",
             "pattern": [],
             "symbolic_name": "systemd_system_origin_accounting"
-        },
-        {
-            "file": "/usr/lib/systemd/system/docker.service",
-            "pattern": [],
-            "symbolic_name": "systemd_docker"
-        },
-        {
-            "file": "/usr/lib/systemd/system/atomic-openshift-node.service",
-            "pattern": [],
-            "symbolic_name": "systemd_openshift_node"
         },
         {
             "file": "/etc/systemd/system.conf",
