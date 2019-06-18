@@ -642,6 +642,11 @@
             "symbolic_name": "modinfo_i40e"
         },
         {
+            "command": "/sbin/modinfo veth",
+            "pattern": [],
+            "symbolic_name": "modinfo_veth"
+        },
+        {
             "command": "/sbin/modinfo vmxnet3",
             "pattern": [],
             "symbolic_name": "modinfo_vmxnet3"
