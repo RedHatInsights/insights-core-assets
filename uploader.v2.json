@@ -1581,6 +1581,11 @@
             "pattern": [],
             "symbolic_name": "heat_api_log"
         },
+	{
+            "file": "/var/log/heat/heat_api.log",
+            "pattern": [],
+            "symbolic_name": "heat_api_log"
+        },
         {
             "file": "/var/log/containers/heat/heat_api.log",
             "pattern": [],
