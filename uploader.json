@@ -622,7 +622,32 @@
             "symbolic_name": "max_uid"
         },
         {
-            "command": "/usr/bin/md5sum /dev/null /etc/pki/{product,product-default}/69.pem",
+            "command": "/usr/bin/md5sum /etc/pki/product/69.pem",
+            "pattern": [],
+            "symbolic_name": "md5chk_files"
+        },
+        {
+            "command": "/usr/bin/md5sum /etc/pki/product-default/69.pem",
+            "pattern": [],
+            "symbolic_name": "md5chk_files"
+        },
+        {
+            "command": "/usr/bin/md5sum /usr/lib/libsoftokn3.so",
+            "pattern": [],
+            "symbolic_name": "md5chk_files"
+        },
+        {
+            "command": "/usr/bin/md5sum /usr/lib64/libsoftokn3.so",
+            "pattern": [],
+            "symbolic_name": "md5chk_files"
+        },
+        {
+            "command": "/usr/bin/md5sum /usr/lib/libfreeblpriv3.so",
+            "pattern": [],
+            "symbolic_name": "md5chk_files"
+        },
+        {
+            "command": "/usr/bin/md5sum /usr/lib64/libfreeblpriv3.so",
             "pattern": [],
             "symbolic_name": "md5chk_files"
         },
