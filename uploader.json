@@ -3231,6 +3231,11 @@
             "pattern": []
         },
         {
+            "glob": "/etc/httpd/conf.d/*/*.conf",
+            "pattern": [],
+            "symbolic_name": "httpd_conf"
+        },
+        {
             "glob": "/sys/class/net/bond[0-9]*/bonding/tlb_dynamic_lb",
             "symbolic_name": "bond_dynamic_lb",
             "pattern": []
