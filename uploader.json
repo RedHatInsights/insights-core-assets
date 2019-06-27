@@ -147,6 +147,7 @@
                 "VPD access disabled",
                 "WRITE SAME failed. Manually zeroing",
                 "Warning: QLogic ISP3XXX Network Driver - this hardware has not undergone testing by Red Hat and might not be certified",
+                "XFS: possible memory allocation deadlock",
                 "blocked FC remote port time out: removing target and saving binding",
                 "crashkernel reservation failed",
                 "crashkernel=auto resulted in zero bytes of reserved memory",
@@ -202,6 +203,12 @@
             "pattern": [],
             "pre_command": "iface",
             "symbolic_name": "ethtool_S"
+        },
+        {
+            "command": "/sbin/ethtool -T",
+            "pattern": [],
+            "pre_command": "iface",
+            "symbolic_name": "ethtool_T"
         },
         {
             "command": "/sbin/ethtool -g",
@@ -652,6 +659,11 @@
             "symbolic_name": "modinfo_ixgbe"
         },
         {
+            "command": "/sbin/modinfo veth",
+            "pattern": [],
+            "symbolic_name": "modinfo_veth"
+        },
+        {
             "command": "/sbin/modinfo vmxnet3",
             "pattern": [],
             "symbolic_name": "modinfo_vmxnet3"
@@ -893,22 +905,31 @@
             "pattern": [
                 "/sbin/multipathd",
                 "/usr/bin/celery worker",
+                "/usr/bin/mistral-server",
+                "/usr/bin/nova-compute",
+                "/usr/bin/nova-conductor",
                 "/usr/bin/teamd",
                 "/usr/sbin/fcoemon --syslog",
                 "COMMAND",
+                "DFOREGROUND",
                 "catalina.base",
                 "ceilometer-coll",
                 "chronyd",
                 "cmirrord",
                 "greenplum",
                 "httpd",
+                "ironic_wsgi",
                 "iscsid",
+                "mistral-server",
                 "multipath",
                 "nfs-server",
                 "nfsd",
                 "nginx",
+                "nova-compute",
+                "nova-conductor",
                 "ntpd",
                 "postgres",
+                "python",
                 "smbd",
                 "target_completi",
                 "taskomaticd",
@@ -1334,6 +1355,7 @@
         {
             "file": "/var/log/cinder/cinder-api.log",
             "pattern": [
+                "(OperationalError) (1040, 'Too many connections')",
                 "DEBUG oslo.messaging._drivers.impl_rabbit",
                 "Timed out waiting for RPC response"
             ],
@@ -1342,6 +1364,7 @@
         {
             "file": "/var/log/containers/cinder/cinder-api.log",
             "pattern": [
+                "(OperationalError) (1040, 'Too many connections')",
                 "DEBUG oslo.messaging._drivers.impl_rabbit",
                 "Timed out waiting for RPC response"
             ],
@@ -1577,9 +1600,19 @@
             "symbolic_name": "grub2_efi_cfg"
         },
         {
+            "file": "/boot/efi/EFI/redhat/grubenv",
+            "pattern": [],
+            "symbolic_name": "grub2_efi_grubenv"
+        },
+        {
             "file": "/boot/grub2/grub.cfg",
             "pattern": [],
             "symbolic_name": "grub2_cfg"
+        },
+        {
+            "file": "/boot/grub2/grubenv",
+            "pattern": [],
+            "symbolic_name": "grub2_grubenv"
         },
         {
             "file": "/etc/haproxy/haproxy.cfg",
@@ -1686,7 +1719,8 @@
                 "manager_handler CONFIG error: MEM: Can't update or insert node",
                 "manager_handler ENABLE-APP error: MEM: Can't update or insert context",
                 "manager_handler ENABLE-APP error: MEM: Can't update or insert host alias",
-                "not allowed, increasing to 1"
+                "not allowed, increasing to 1",
+                "prefetch request body failed"
             ],
             "symbolic_name": "httpd_error_log"
         },
@@ -1888,6 +1922,7 @@
                 "belongs to docker.service",
                 "callbacks suppressed",
                 "chardev: opening backend \"socket\" failed",
+                "clearing Tx timestamp hang",
                 "does not seem to be present, delaying initialization",
                 "drivers/input/input-leds.c:115 input_leds_connect",
                 "error Error on attach: Node not found",
@@ -1912,6 +1947,7 @@
                 "is beyond advertised capabilities",
                 "is down or the link is down",
                 "kernel: CIFS VFS: Unexpected SMB signature",
+                "kernel: INFO: task xfsaild/md",
                 "kernel: Memory cgroup out of memory: Kill process",
                 "kernel: bnx2fc: byte_count",
                 "kernel: kvm: disabled by bios",
@@ -2083,6 +2119,7 @@
             "file": "/var/log/nova/nova-api.log",
             "pattern": [
                 "DEBUG oslo.messaging._drivers.impl_rabbit",
+                "OperationalError: (pymysql.err.OperationalError) (1040, u\u2019Too many connections\u2019)",
                 "Timed out waiting for RPC response",
                 "Timed out waiting for a reply to message ID"
             ],
@@ -2092,6 +2129,7 @@
             "file": "/var/log/containers/nova/nova-api.log",
             "pattern": [
                 "DEBUG oslo.messaging._drivers.impl_rabbit",
+                "OperationalError: (pymysql.err.OperationalError) (1040, u\u2019Too many connections\u2019)",
                 "Timed out waiting for RPC response",
                 "Timed out waiting for a reply to message ID"
             ],
@@ -2458,6 +2496,8 @@
                 "Max Smbd Processes",
                 "NT PIPE SUPPORT",
                 "Nt Pipe Support",
+                "PASSDB BACKEND",
+                "Passdb Backend",
                 "REALM",
                 "Realm",
                 "SECURITY",
@@ -2468,6 +2508,7 @@
                 "kerberos method",
                 "max smbd processes",
                 "nt pipe support",
+                "passdb backend",
                 "path",
                 "read only",
                 "realm",
@@ -2966,7 +3007,10 @@
                 "ceph",
                 "ceph_pool",
                 "driver",
-                "storage"
+                "metric_processing_delay",
+                "metricd",
+                "storage",
+                "workers"
             ],
             "symbolic_name": "gnocchi_conf"
         },
@@ -2977,7 +3021,10 @@
                 "ceph",
                 "ceph_pool",
                 "driver",
-                "storage"
+                "metric_processing_delay",
+                "metricd",
+                "storage",
+                "workers"
             ],
             "symbolic_name": "gnocchi_conf"
         },
@@ -8709,5 +8756,5 @@
             ]
         }
     },
-    "version": "2019-06-20T16:09:51.671574"
+    "version": "2019-06-27T14:36:31.591131"
 }
