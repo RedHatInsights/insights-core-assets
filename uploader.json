@@ -119,6 +119,7 @@
         {
             "command": "/bin/dmesg",
             "pattern": [
+                " is now offline",
                 "Brought up ",
                 "CIFS VFS: protocol revalidation - security settings mismatch",
                 "CSUM",
@@ -146,17 +147,16 @@
                 "VPD access disabled",
                 "WRITE SAME failed. Manually zeroing",
                 "Warning: QLogic ISP3XXX Network Driver - this hardware has not undergone testing by Red Hat and might not be certified",
-                "XFS: possible memory allocation deadlock",
                 "blocked FC remote port time out: removing target and saving binding",
                 "crashkernel reservation failed",
                 "crashkernel=auto resulted in zero bytes of reserved memory",
                 "e1000: E1000 MODULE IS NOT SUPPORTED",
                 "fw=8.08.",
-                "is now offline",
                 "ixgbevf: Unknown parameter `InterruptThrottleRate'",
                 "mce: ",
                 "netconsole: network logging started",
                 "resetting",
+                "smpboot: CPU ",
                 "temperature above threshold",
                 "the DIE domain not a subset of the NUMA domain",
                 "tx hang",
@@ -235,6 +235,11 @@
             "command": "/bin/fc-match -sv 'sans:regular:roman' family fontformat",
             "pattern": [],
             "symbolic_name": "fc_match"
+        },
+        {
+            "command": "/usr/sbin/fcoeadm -i",
+            "pattern": [],
+            "symbolic_name": "fcoeadm_i"
         },
         {
             "command": "/usr/bin/getcert list",
@@ -637,6 +642,16 @@
             "symbolic_name": "modinfo_i40e"
         },
         {
+            "command": "/sbin/modinfo igb",
+            "pattern": [],
+            "symbolic_name": "modinfo_igb"
+        },
+        {
+            "command": "/sbin/modinfo ixgbe",
+            "pattern": [],
+            "symbolic_name": "modinfo_ixgbe"
+        },
+        {
             "command": "/sbin/modinfo vmxnet3",
             "pattern": [],
             "symbolic_name": "modinfo_vmxnet3"
@@ -878,30 +893,22 @@
             "pattern": [
                 "/sbin/multipathd",
                 "/usr/bin/celery worker",
-                "/usr/bin/mistral-server",
-                "/usr/bin/nova-compute",
-                "/usr/bin/nova-conductor",
                 "/usr/bin/teamd",
                 "/usr/sbin/fcoemon --syslog",
                 "COMMAND",
-                "DFOREGROUND",
                 "catalina.base",
                 "ceilometer-coll",
                 "chronyd",
                 "cmirrord",
                 "greenplum",
                 "httpd",
-                "ironic_wsgi",
                 "iscsid",
                 "multipath",
                 "nfs-server",
                 "nfsd",
                 "nginx",
-                "nova-compute",
-                "nova-conductor",
                 "ntpd",
                 "postgres",
-                "python",
                 "smbd",
                 "target_completi",
                 "taskomaticd",
@@ -1114,6 +1121,11 @@
             "symbolic_name": "woopsie"
         },
         {
+            "command": "yum -C --noplugins list installed",
+            "pattern": [],
+            "symbolic_name": "yum_list_installed"
+        },
+        {
             "command": "/usr/bin/yum -C repolist",
             "pattern": [],
             "symbolic_name": "yum_repolist"
@@ -1322,22 +1334,26 @@
         {
             "file": "/var/log/cinder/cinder-api.log",
             "pattern": [
-                "(OperationalError) (1040, 'Too many connections')"
+                "DEBUG oslo.messaging._drivers.impl_rabbit",
+                "Timed out waiting for RPC response"
             ],
             "symbolic_name": "cinder_api_log"
         },
         {
             "file": "/var/log/containers/cinder/cinder-api.log",
             "pattern": [
-                "(OperationalError) (1040, 'Too many connections')"
+                "DEBUG oslo.messaging._drivers.impl_rabbit",
+                "Timed out waiting for RPC response"
             ],
             "symbolic_name": "cinder_api_log"
         },
         {
             "file": "/var/log/cinder/volume.log",
             "pattern": [
+                "DEBUG oslo.messaging._drivers.impl_rabbit",
                 "Image cloning unsuccessful for image",
                 "Message: NFS file could not be discovered.",
+                "Timed out waiting for RPC response",
                 "[Errno 24] Too many open files"
             ],
             "symbolic_name": "cinder_volume_log"
@@ -1850,6 +1866,7 @@
                 ": segfault at ",
                 ": session replaced: jid=",
                 "Abort command issued",
+                "Could not set",
                 "DMA Status error.  Resetting chip",
                 "Detected Tx Unit Hang",
                 "Device offlined - not ready after error recovery",
@@ -1877,6 +1894,7 @@
                 "Virtualization daemon",
                 "WRITE SAME failed. Manually zeroing",
                 "] trap divide error ",
+                "as active slave; either",
                 "belongs to docker.service",
                 "callbacks suppressed",
                 "chardev: opening backend \"socket\" failed",
@@ -1895,12 +1913,14 @@
                 "fiid_obj_get: 'present_countdown_value': data not available",
                 "firewalld - dynamic firewall daemon",
                 "fit failure summary on nodes : Insufficient pods",
+                "from image service failed: rpc error: code = Canceled desc = context canceled",
                 "http2: no cached connection was available",
                 "hw csum failure",
                 "in libnl.so.1",
                 "initiating reset due to tx timeout",
                 "irq handler for vector (irq -1)",
                 "is beyond advertised capabilities",
+                "is down or the link is down",
                 "kernel: CIFS VFS: Unexpected SMB signature",
                 "kernel: Memory cgroup out of memory: Kill process",
                 "kernel: bnx2fc: byte_count",
@@ -1909,13 +1929,12 @@
                 "kernel: lockd: Unknown symbol unregister_inet6addr_notifier",
                 "kernel: megasas: Found FW in FAULT state,will reset adapter.",
                 "kernel: possible SYN flooding on port",
+                "kernel: request_module: runaway loop modprobe fs-cifs",
                 "khash_super_prune_nolock",
                 "megaraid_sas: FW detected to be in faultstate, restarting it",
                 "mode:0x20",
                 "multipathd.service operation timed out. Terminating",
                 "netlink_socket|ERR|fcntl: Too many open file",
-                "nf_conntrack: expectation table full",
-                "nf_conntrack: table full, dropping packet",
                 "nfs_reap_expired_delegations",
                 "page allocation failure",
                 "per_source_limit from",
@@ -2073,7 +2092,8 @@
         {
             "file": "/var/log/nova/nova-api.log",
             "pattern": [
-                "OperationalError: (pymysql.err.OperationalError) (1040, u\u2019Too many connections\u2019)",
+                "DEBUG oslo.messaging._drivers.impl_rabbit",
+                "Timed out waiting for RPC response",
                 "Timed out waiting for a reply to message ID"
             ],
             "symbolic_name": "nova_api_log"
@@ -2081,7 +2101,8 @@
         {
             "file": "/var/log/containers/nova/nova-api.log",
             "pattern": [
-                "OperationalError: (pymysql.err.OperationalError) (1040, u\u2019Too many connections\u2019)",
+                "DEBUG oslo.messaging._drivers.impl_rabbit",
+                "Timed out waiting for RPC response",
                 "Timed out waiting for a reply to message ID"
             ],
             "symbolic_name": "nova_api_log"
@@ -2094,6 +2115,7 @@
                 "Attempting claim on node",
                 "Claim successful on node",
                 "Could not open ",
+                "DEBUG oslo.messaging._drivers.impl_rabbit",
                 "Detach volume",
                 "Disk of instance is too large",
                 "During sync_power_state the instance has a pending task",
@@ -2113,6 +2135,7 @@
                 "Resuming guest",
                 "Stderr: u'blockdev: cannot open",
                 "Successfully plugged vif VIFBridge",
+                "Timed out waiting for RPC response",
                 "cmt=off: Property '.cmt' not found",
                 "does not match source",
                 "error: Failed to start domain",
@@ -2136,6 +2159,7 @@
                 "Attempting claim on node",
                 "Claim successful on node",
                 "Could not open ",
+                "DEBUG oslo.messaging._drivers.impl_rabbit",
                 "Detach volume",
                 "Disk of instance is too large",
                 "During sync_power_state the instance has a pending task",
@@ -2155,6 +2179,7 @@
                 "Resuming guest",
                 "Stderr: u'blockdev: cannot open",
                 "Successfully plugged vif VIFBridge",
+                "Timed out waiting for RPC response",
                 "cmt=off: Property '.cmt' not found",
                 "does not match source",
                 "error: Failed to start domain",
@@ -2951,10 +2976,7 @@
                 "ceph",
                 "ceph_pool",
                 "driver",
-                "metric_processing_delay",
-                "metricd",
-                "storage",
-                "workers"
+                "storage"
             ],
             "symbolic_name": "gnocchi_conf"
         },
@@ -2965,10 +2987,7 @@
                 "ceph",
                 "ceph_pool",
                 "driver",
-                "metric_processing_delay",
-                "metricd",
-                "storage",
-                "workers"
+                "storage"
             ],
             "symbolic_name": "gnocchi_conf"
         },
@@ -2976,6 +2995,7 @@
             "file": "/etc/neutron/neutron.conf",
             "pattern": [
                 "[",
+                "debug",
                 "dhcp_agents_per_network"
             ],
             "symbolic_name": "neutron_conf"
@@ -2984,6 +3004,7 @@
             "file": "/var/lib/config-data/puppet-generated/neutron/etc/neutron/neutron.conf",
             "pattern": [
                 "[",
+                "debug",
                 "dhcp_agents_per_network"
             ],
             "symbolic_name": "neutron_conf"
@@ -3045,9 +3066,11 @@
         {
             "file": "/var/log/neutron/l3-agent.log",
             "pattern": [
+                "DEBUG oslo.messaging._drivers.impl_rabbit",
                 "Duplicate iptables rule detected",
                 "Error while deleting router",
-                "Stderr: Another app is currently holding the xtables lock"
+                "Stderr: Another app is currently holding the xtables lock",
+                "Timed out waiting for RPC response"
             ],
             "symbolic_name": "neutron_l3_agent_log"
         },
@@ -3082,9 +3105,25 @@
             "symbolic_name": "neutron_metadata_agent_log"
         },
         {
+            "file": "/etc/neutron/plugins/ml2/ml2_conf.ini",
+            "pattern": [
+                "["
+            ],
+            "symbolic_name": "neutron_ml2_conf"
+        },
+        {
+            "file": "/var/lib/config-data/puppet-generated/neutron/etc/neutron/plugins/ml2/ml2_conf.ini",
+            "pattern": [
+                "["
+            ],
+            "symbolic_name": "neutron_ml2_conf"
+        },
+        {
             "file": "/var/log/neutron/openvswitch-agent.log",
             "pattern": [
                 "Agent main thread died of an exception",
+                "DEBUG oslo.messaging._drivers.impl_rabbit",
+                "Timed out waiting for RPC response",
                 "neutron.plugins.ml2.drivers.openvswitch.agent.openflow.native.ovs_ryuapp",
                 "u'device_owner': u'network:router_interface_distributed'"
             ],
@@ -3094,6 +3133,8 @@
             "file": "/var/log/containers/neutron/openvswitch-agent.log",
             "pattern": [
                 "Agent main thread died of an exception",
+                "DEBUG oslo.messaging._drivers.impl_rabbit",
+                "Timed out waiting for RPC response",
                 "neutron.plugins.ml2.drivers.openvswitch.agent.openflow.native.ovs_ryuapp",
                 "u'device_owner': u'network:router_interface_distributed'"
             ],
@@ -8678,5 +8719,5 @@
             ]
         }
     },
-    "version": "2019-06-06T15:54:47.079614"
+    "version": "2019-06-20T16:09:51.671574"
 }
