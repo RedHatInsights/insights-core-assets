@@ -30,6 +30,11 @@
             "pattern": [],
             "symbolic_name": "ceph_health_detail"
         },
+	{
+            "command": "/usr/bin/ceph df detail -f json-pretty",
+            "pattern": [],
+            "symbolic_name": "ceph_df_detail"
+        },
         {
             "command": "/usr/bin/ceph osd dump -f json-pretty",
             "pattern": [],
