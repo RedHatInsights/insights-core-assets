@@ -3236,6 +3236,11 @@
             "pattern": []
         },
         {
+            "glob": "/boot/loader/entries/*.conf",
+            "symbolic_name": "boot_loader_entries",
+            "pattern": []
+        },
+        {
             "glob": "/var/opt/amq-broker/*/etc/broker.xml",
             "symbolic_name": "amq_broker",
             "pattern": []
