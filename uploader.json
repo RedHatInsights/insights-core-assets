@@ -2601,6 +2601,11 @@
             "symbolic_name": "foreman_tasks_config"
         },
         {
+            "file": "/etc/sysconfig/dynflowd",
+            "pattern": [],
+            "symbolic_name": "foreman_tasks_config"
+        },
+        {
             "file": "/proc/net/softnet_stat",
             "pattern": [],
             "symbolic_name": "softnet_stat"
