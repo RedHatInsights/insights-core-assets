@@ -659,11 +659,6 @@
             "symbolic_name": "md5chk_files"
         },
         {
-            "command": "/usr/bin/find /sys/bus/pci/devices/*/mlx4_port[0-9] -print -exec cat {} \\;",
-            "pattern": [],
-            "symbolic_name": "mlx4_port"
-        },
-        {
             "command": "/bin/mount",
             "pattern": [],
             "symbolic_name": "mount"
@@ -3265,6 +3260,11 @@
         {
             "glob": "/sys/fs/cgroup/cpu/kubepods.slice/kubepods-burstable.slice/kubepods-burstable-pod[a-f0-9_]*.slice/cpu.cfs_quota_us",
             "symbolic_name": "kubepods_cpu_quota",
+            "pattern": []
+        },
+        {
+            "glob": "/sys/bus/pci/devices/*/mlx4_port[0-9]",
+            "symbolic_name": "mlx4_port",
             "pattern": []
         },
         {
