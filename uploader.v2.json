@@ -142,7 +142,6 @@
                 "VPD access disabled",
                 "WRITE SAME failed. Manually zeroing",
                 "Warning: QLogic ISP3XXX Network Driver - this hardware has not undergone testing by Red Hat and might not be certified",
-                "XFS: possible memory allocation deadlock",
                 "blocked FC remote port time out: removing target and saving binding",
                 "crashkernel reservation failed",
                 "crashkernel=auto resulted in zero bytes of reserved memory",
@@ -924,32 +923,23 @@
             "command": "/bin/ps auxww",
             "pattern": [
                 "/sbin/multipathd",
-                "/usr/bin/celery worker",
-                "/usr/bin/mistral-server",
-                "/usr/bin/nova-compute",
-                "/usr/bin/nova-conductor",
                 "/usr/bin/teamd",
                 "/usr/sbin/fcoemon --syslog",
                 "COMMAND",
-                "DFOREGROUND",
                 "catalina.base",
                 "ceilometer-coll",
                 "chronyd",
                 "cmirrord",
                 "greenplum",
                 "httpd",
-                "ironic_wsgi",
                 "iscsid",
                 "multipath",
                 "nfs-server",
                 "nfsd",
                 "nginx",
-                "nova-compute",
-                "nova-conductor",
                 "ntpd",
                 "octavia-worker",
                 "postgres",
-                "python",
                 "smbd",
                 "target_completi",
                 "taskomaticd",
@@ -1375,7 +1365,6 @@
         {
             "file": "/var/log/cinder/cinder-api.log",
             "pattern": [
-                "(OperationalError) (1040, 'Too many connections')",
                 "DEBUG oslo.messaging._drivers.impl_rabbit",
                 "Timed out waiting for RPC response"
             ],
@@ -1384,7 +1373,6 @@
         {
             "file": "/var/log/containers/cinder/cinder-api.log",
             "pattern": [
-                "(OperationalError) (1040, 'Too many connections')",
                 "DEBUG oslo.messaging._drivers.impl_rabbit",
                 "Timed out waiting for RPC response"
             ],
@@ -1915,6 +1903,7 @@
             "file": "/var/log/messages",
             "pattern": [
                 " disconnect jid=",
+                "(enic): transmit queue 0 timed out",
                 ", type vxfs) has no security xattr handler",
                 "- image is referenced in one or more repositories",
                 "/input/input",
@@ -1943,7 +1932,6 @@
                 "Out of MCCQ wrbs",
                 "Out of memory: Kill process",
                 "Out of memory: kill process",
-                "SCSI device reset on",
                 "SDN initialization failed: Error: Existing service with IP: None is not part of service network",
                 "Scheduled import of stream",
                 "TX driver issue detected, PF reset issued",
@@ -2154,7 +2142,6 @@
             "file": "/var/log/nova/nova-api.log",
             "pattern": [
                 "DEBUG oslo.messaging._drivers.impl_rabbit",
-                "OperationalError: (pymysql.err.OperationalError) (1040, u\u2019Too many connections\u2019)",
                 "Timed out waiting for RPC response",
                 "Timed out waiting for a reply to message ID"
             ],
@@ -2164,7 +2151,6 @@
             "file": "/var/log/containers/nova/nova-api.log",
             "pattern": [
                 "DEBUG oslo.messaging._drivers.impl_rabbit",
-                "OperationalError: (pymysql.err.OperationalError) (1040, u\u2019Too many connections\u2019)",
                 "Timed out waiting for RPC response",
                 "Timed out waiting for a reply to message ID"
             ],
@@ -2597,7 +2583,11 @@
         },
         {
             "file": "/etc/sysconfig/dynflowd",
-            "pattern": [],
+            "pattern": [
+                "EXECUTOR_MEMORY_LIMIT",
+                "EXECUTOR_MEMORY_MONITOR_DELAY",
+                "EXECUTOR_MEMORY_MONITOR_INTERVAL"
+            ],
             "symbolic_name": "foreman_tasks_config"
         },
         {
@@ -3044,10 +3034,7 @@
                 "ceph",
                 "ceph_pool",
                 "driver",
-                "metric_processing_delay",
-                "metricd",
-                "storage",
-                "workers"
+                "storage"
             ],
             "symbolic_name": "gnocchi_conf"
         },
@@ -3058,10 +3045,7 @@
                 "ceph",
                 "ceph_pool",
                 "driver",
-                "metric_processing_delay",
-                "metricd",
-                "storage",
-                "workers"
+                "storage"
             ],
             "symbolic_name": "gnocchi_conf"
         },
@@ -3313,5 +3297,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-07-03T14:36:03.366240"
+    "version": "2019-07-11T16:37:48.122285"
 }
