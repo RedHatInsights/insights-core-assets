@@ -3231,6 +3231,16 @@
             "symbolic_name": "httpd_conf"
         },
         {
+            "glob": "/opt/rh/httpd24/root/etc/httpd/conf.d/*/*.conf",
+            "pattern": [],
+            "symbolic_name": "httpd_conf_scl_httpd24"
+        },
+        {
+            "glob": "/opt/rh/jbcs-httpd24/root/etc/httpd/conf.d/*/*.conf",
+            "pattern": [],
+            "symbolic_name": "httpd_conf_scl_jbcs_httpd24"
+        },
+        {
             "glob": "/sys/class/net/bond[0-9]*/bonding/tlb_dynamic_lb",
             "symbolic_name": "bond_dynamic_lb",
             "pattern": []
