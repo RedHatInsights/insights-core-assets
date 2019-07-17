@@ -1,5 +1,8 @@
 Insights Client Core Changelog
 
+v3.0.112 - Jul 17 2019
+- Relocate egg version logging
+
 v3.0.111 - Jul 17 2019
 - Revert cgroups check
 
