@@ -1,5 +1,12 @@
 Insights Client Core Changelog
 
+v3.0.112 - Jul 17 2019
+- Revert cgroups check
+
+v3.0.111 - Jul 16 2019
+- Include core version in debug info and in archive
+- Check for cgroups on run start
+
 v3.0.102 - Jun 4 2019
 - Enable unregistration
 - Display-name tweaks
