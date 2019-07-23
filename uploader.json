@@ -31,27 +31,32 @@
             "symbolic_name": "brctl_show"
         },
         {
-            "command": "/usr/bin/ceph health detail -f json-pretty",
+            "command": "/usr/bin/ceph health detail -f json",
             "pattern": [],
             "symbolic_name": "ceph_health_detail"
         },
 	{
-            "command": "/usr/bin/ceph df detail -f json-pretty",
+            "command": "/usr/bin/ceph df detail -f json",
             "pattern": [],
             "symbolic_name": "ceph_df_detail"
         },
         {
-            "command": "/usr/bin/ceph osd dump -f json-pretty",
+            "command": "/usr/bin/ceph osd dump -f json",
             "pattern": [],
             "symbolic_name": "ceph_osd_dump"
         },
         {
-            "command": "/usr/bin/ceph osd tree -f json-pretty",
+            "command": "/usr/bin/ceph osd df -f json",
+            "pattern": [],
+            "symbolic_name": "ceph_osd_df"
+        },
+        {
+            "command": "/usr/bin/ceph osd tree -f json",
             "pattern": [],
             "symbolic_name": "ceph_osd_tree"
         },
         {
-            "command": "/usr/bin/ceph -s -f json-pretty",
+            "command": "/usr/bin/ceph -s -f json",
             "pattern": [],
             "symbolic_name": "ceph_s"
         },
@@ -3619,8 +3624,8 @@
         "ceph_health_detail": {
             "host": [
                 {
-                    "archive_file_name": "/insights_commands/ceph_health_detail_-f_json-pretty",
-                    "command": "/usr/bin/ceph health detail -f json-pretty",
+                    "archive_file_name": "/insights_commands/ceph_health_detail_-f_json",
+                    "command": "/usr/bin/ceph health detail -f json",
                     "pattern": []
                 }
             ]
@@ -3657,8 +3662,8 @@
         "ceph_osd_dump": {
             "host": [
                 {
-                    "archive_file_name": "/insights_commands/ceph_osd_dump_-f_json-pretty",
-                    "command": "/usr/bin/ceph osd dump -f json-pretty",
+                    "archive_file_name": "/insights_commands/ceph_osd_dump_-f_json",
+                    "command": "/usr/bin/ceph osd dump -f json",
                     "pattern": []
                 }
             ]
@@ -3666,8 +3671,8 @@
         "ceph_osd_tree": {
             "host": [
                 {
-                    "archive_file_name": "/insights_commands/ceph_osd_tree_-f_json-pretty",
-                    "command": "/usr/bin/ceph osd tree -f json-pretty",
+                    "archive_file_name": "/insights_commands/ceph_osd_tree_-f_json",
+                    "command": "/usr/bin/ceph osd tree -f json",
                     "pattern": []
                 }
             ]
@@ -3675,8 +3680,8 @@
         "ceph_s": {
             "host": [
                 {
-                    "archive_file_name": "/insights_commands/ceph_-s_-f_json-pretty",
-                    "command": "/usr/bin/ceph -s -f json-pretty",
+                    "archive_file_name": "/insights_commands/ceph_-s_-f_json",
+                    "command": "/usr/bin/ceph -s -f json",
                     "pattern": []
                 }
             ]

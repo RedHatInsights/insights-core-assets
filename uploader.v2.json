@@ -26,27 +26,32 @@
             "symbolic_name": "brctl_show"
         },
         {
-            "command": "/usr/bin/ceph health detail -f json-pretty",
+            "command": "/usr/bin/ceph health detail -f json",
             "pattern": [],
             "symbolic_name": "ceph_health_detail"
         },
 	{
-            "command": "/usr/bin/ceph df detail -f json-pretty",
+            "command": "/usr/bin/ceph df detail -f json",
             "pattern": [],
             "symbolic_name": "ceph_df_detail"
         },
         {
-            "command": "/usr/bin/ceph osd dump -f json-pretty",
+            "command": "/usr/bin/ceph osd dump -f json",
             "pattern": [],
             "symbolic_name": "ceph_osd_dump"
         },
+	{
+            "command": "/usr/bin/ceph osd df -f json",
+            "pattern": [],
+            "symbolic_name": "ceph_osd_df"
+        },
         {
-            "command": "/usr/bin/ceph osd tree -f json-pretty",
+            "command": "/usr/bin/ceph osd tree -f json",
             "pattern": [],
             "symbolic_name": "ceph_osd_tree"
         },
         {
-            "command": "/usr/bin/ceph -s -f json-pretty",
+            "command": "/usr/bin/ceph -s -f json",
             "pattern": [],
             "symbolic_name": "ceph_s"
         },
