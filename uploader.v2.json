@@ -249,11 +249,6 @@
             "symbolic_name": "fcoeadm_i"
         },
         {
-            "command": "/usr/bin/getcert list",
-            "pattern": [],
-            "symbolic_name": "getcert_list"
-        },
-        {
             "command": "/usr/bin/getconf PAGE_SIZE",
             "pattern": [],
             "symbolic_name": "getconf_pagesize"
