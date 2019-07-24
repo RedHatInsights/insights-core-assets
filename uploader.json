@@ -155,6 +155,7 @@
                 "ixgbevf: Unknown parameter `InterruptThrottleRate'",
                 "mce: ",
                 "netconsole: network logging started",
+                "page allocation failure: order:",
                 "resetting",
                 "smpboot: CPU ",
                 "temperature above threshold",
@@ -318,16 +319,6 @@
             "command": "/usr/sbin/httpd -V",
             "pattern": [],
             "symbolic_name": "httpd_V"
-        },
-        {
-            "command": "/usr/sbin/httpd.event -V",
-            "pattern": [],
-            "symbolic_name": "httpd_event_V"
-        },
-        {
-            "command": "/usr/sbin/httpd.worker -V",
-            "pattern": [],
-            "symbolic_name": "httpd_worker_V"
         },
         {
             "command": "python -m insights.tools.cat --no-header httpd_on_nfs",
@@ -594,6 +585,7 @@
             "pattern": [
                 "******",
                 "CreationClassName",
+                "FullQualifiedHostname",
                 "Hostname",
                 "InstanceName",
                 "SID",
@@ -1713,6 +1705,7 @@
             "pattern": [
                 "(28)No space left on device: ",
                 "AH00485: scoreboard is full, not at MaxRequestWorkers",
+                "Cannot assign requested address",
                 "ModSecurity: collections_remove_stale: Failed deleting collection",
                 "Require ServerLimit > 0, setting to 1",
                 "Resource temporarily unavailable",
@@ -1902,6 +1895,7 @@
                 ": session replaced: jid=",
                 "Abort command issued",
                 "Broken pipe",
+                "Cannot assign requested address",
                 "Could not set",
                 "DMA Status error.  Resetting chip",
                 "Detected Tx Unit Hang",
@@ -3254,7 +3248,11 @@
         {
             "glob": "/var/opt/rh/rh-mysql*/log/mysql/mysqld.log",
             "symbolic_name": "mysql_log",
-            "pattern": []
+            "pattern": [
+                "OpenSSL internal error, assertion failed: Digest MD5 forbidden in FIPS mode!",
+                "Too many open files",
+                "[ERROR]"
+            ]
         },
         {
             "glob": "/sys/devices/system/node/node[0-9]*/cpulist",
@@ -8777,5 +8775,5 @@
             ]
         }
     },
-    "version": "2019-07-11T16:37:44.717437"
+    "version": "2019-07-18T14:32:57.487944"
 }
