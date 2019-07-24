@@ -3186,12 +3186,7 @@
             "symbolic_name": "httpd_conf"
         },
         {
-            "glob": "/etc/httpd/conf*.d/*.conf",
-            "pattern": [],
-            "symbolic_name": "httpd_conf"
-        },
-        {
-            "glob": "/etc/httpd/conf/httpd.conf",
+            "glob": "/etc/httpd/conf*/*.conf",
             "pattern": [],
             "symbolic_name": "httpd_conf"
         },
@@ -3201,12 +3196,7 @@
             "symbolic_name": "httpd_conf_scl_httpd24"
         },
         {
-            "glob": "/opt/rh/httpd24/root/etc/httpd/conf*.d/*.conf",
-            "pattern": [],
-            "symbolic_name": "httpd_conf_scl_httpd24"
-        },
-        {
-            "glob": "/opt/rh/httpd24/root/etc/httpd/conf/httpd.conf",
+            "glob": "/opt/rh/httpd24/root/etc/httpd/conf*/*.conf",
             "pattern": [],
             "symbolic_name": "httpd_conf_scl_httpd24"
         },
@@ -3216,12 +3206,7 @@
             "symbolic_name": "httpd_conf_scl_jbcs_httpd24"
         },
         {
-            "glob": "/opt/rh/jbcs-httpd24/root/etc/httpd/conf*.d/*.conf",
-            "pattern": [],
-            "symbolic_name": "httpd_conf_scl_jbcs_httpd24"
-        },
-        {
-            "glob": "/opt/rh/jbcs-httpd24/root/etc/httpd/conf/httpd.conf",
+            "glob": "/opt/rh/jbcs-httpd24/root/etc/httpd/conf*/*.conf",
             "pattern": [],
             "symbolic_name": "httpd_conf_scl_jbcs_httpd24"
         },
