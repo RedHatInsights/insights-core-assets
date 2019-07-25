@@ -2149,51 +2149,6 @@
             "symbolic_name": "nfs_exports_d"
         },
         {
-            "file": "/etc/nginx/()*.conf",
-            "pattern": [],
-            "symbolic_name": "nginx_conf"
-        },
-        {
-            "file": "/etc/nginx/conf.d/()*",
-            "pattern": [],
-            "symbolic_name": "nginx_conf"
-        },
-        {
-            "file": "/etc/nginx/default.d/()*",
-            "pattern": [],
-            "symbolic_name": "nginx_conf"
-        },
-        {
-            "file": "/etc/opt/rh/rh-nginx()*/nginx/()*.conf",
-            "pattern": [],
-            "symbolic_name": "nginx_conf"
-        },
-        {
-            "file": "/etc/opt/rh/rh-nginx()*/nginx/conf.d/()*",
-            "pattern": [],
-            "symbolic_name": "nginx_conf"
-        },
-        {
-            "file": "/etc/opt/rh/rh-nginx()*/nginx/default.d/()*",
-            "pattern": [],
-            "symbolic_name": "nginx_conf"
-        },
-        {
-            "file": "/opt/rh/nginx()*/root/etc/nginx/()*.conf",
-            "pattern": [],
-            "symbolic_name": "nginx_conf"
-        },
-        {
-            "file": "/opt/rh/nginx()*/root/etc/nginx/conf.d/()*",
-            "pattern": [],
-            "symbolic_name": "nginx_conf"
-        },
-        {
-            "file": "/opt/rh/nginx()*/root/etc/nginx/default.d/()*",
-            "pattern": [],
-            "symbolic_name": "nginx_conf"
-        },
-        {
             "file": "/var/log/nova/nova-api.log",
             "pattern": [
                 "DEBUG oslo.messaging._drivers.impl_rabbit",
@@ -3334,6 +3289,36 @@
             "glob": "/etc/krb5.conf.d/*",
             "symbolic_name": "krb5_conf_d",
             "pattern": []
+        },
+        {
+            "glob": "/etc/nginx/*.conf",
+            "pattern": [],
+            "symbolic_name": "nginx_conf"
+        },
+        {
+            "glob": "/etc/nginx/*.d/*.conf",
+            "pattern": [],
+            "symbolic_name": "nginx_conf"
+        },
+        {
+            "glob": "/etc/opt/rh/rh-nginx*/nginx/*.conf",
+            "pattern": [],
+            "symbolic_name": "nginx_conf"
+        },
+        {
+            "glob": "/etc/opt/rh/rh-nginx*/nginx/*.d/*.conf",
+            "pattern": [],
+            "symbolic_name": "nginx_conf"
+        },
+        {
+            "glob": "/opt/rh/nginx*/root/etc/nginx/*.conf",
+            "pattern": [],
+            "symbolic_name": "nginx_conf"
+        },
+        {
+            "glob": "/opt/rh/nginx*/root/etc/nginx/*.d/*.conf",
+            "pattern": [],
+            "symbolic_name": "nginx_conf"
         },
         {
             "glob": "/sys/fs/cgroup/cpu/kubepods.slice/kubepods-burstable.slice/kubepods-burstable-pod[a-f0-9_]*.slice/cpu.cfs_quota_us",
