@@ -115,6 +115,7 @@
             "command": "/bin/dmesg",
             "pattern": [
                 " is now offline",
+                "Amazon EC2",
                 "Brought up ",
                 "CIFS VFS: protocol revalidation - security settings mismatch",
                 "CSUM",
@@ -130,6 +131,8 @@
                 "Ignoring BGRT: failed to map image header memory",
                 "Ignoring BGRT: failed to map image memory",
                 "Kernel page table isolation",
+                "L1TF",
+                "L1Tf",
                 "Linux version",
                 "Machine Check Exception",
                 "Machine check events logged",
@@ -148,6 +151,7 @@
                 "e1000: E1000 MODULE IS NOT SUPPORTED",
                 "fw=8.08.",
                 "ixgbevf: Unknown parameter `InterruptThrottleRate'",
+                "l1tf",
                 "mce: ",
                 "netconsole: network logging started",
                 "page allocation failure: order:",
@@ -247,11 +251,6 @@
             "command": "/usr/sbin/fcoeadm -i",
             "pattern": [],
             "symbolic_name": "fcoeadm_i"
-        },
-        {
-            "command": "/usr/bin/getcert list",
-            "pattern": [],
-            "symbolic_name": "getcert_list"
         },
         {
             "command": "/usr/bin/getconf PAGE_SIZE",
@@ -1088,6 +1087,16 @@
             "symbolic_name": "systemctl_smartpdc"
         },
         {
+            "command": "/usr/bin/systemctl cat docker.service",
+            "pattern": [],
+            "symbolic_name": "systemd_docker"
+        },
+        {
+            "command": "/usr/bin/systemctl cat atomic-openshift-node.service",
+            "pattern": [],
+            "symbolic_name": "systemd_openshift_node"
+        },
+        {
             "command": "/bin/systool -b scsi -v",
             "pattern": [],
             "symbolic_name": "systool_b_scsi_v"
@@ -1605,19 +1614,9 @@
             "symbolic_name": "grub2_efi_cfg"
         },
         {
-            "file": "/boot/efi/EFI/redhat/grubenv",
-            "pattern": [],
-            "symbolic_name": "grub2_efi_grubenv"
-        },
-        {
             "file": "/boot/grub2/grub.cfg",
             "pattern": [],
             "symbolic_name": "grub2_cfg"
-        },
-        {
-            "file": "/boot/grub2/grubenv",
-            "pattern": [],
-            "symbolic_name": "grub2_grubenv"
         },
         {
             "file": "/etc/haproxy/haproxy.cfg",
@@ -1732,8 +1731,7 @@
                 "manager_handler CONFIG error: MEM: Can't update or insert node",
                 "manager_handler ENABLE-APP error: MEM: Can't update or insert context",
                 "manager_handler ENABLE-APP error: MEM: Can't update or insert host alias",
-                "not allowed, increasing to 1",
-                "prefetch request body failed"
+                "not allowed, increasing to 1"
             ],
             "symbolic_name": "httpd_error_log"
         },
@@ -1909,6 +1907,7 @@
                 "Could not set",
                 "DMA Status error.  Resetting chip",
                 "Detected Tx Unit Hang",
+                "Device is still in reset",
                 "Device offlined - not ready after error recovery",
                 "Error deleting EBS Disk volume aws",
                 "Error in FW/Card",
@@ -1939,6 +1938,7 @@
                 "callbacks suppressed",
                 "chardev: opening backend \"socket\" failed",
                 "clearing Tx timestamp hang",
+                "dev_set_mac_address of dev",
                 "does not seem to be present, delaying initialization",
                 "drivers/input/input-leds.c:115 input_leds_connect",
                 "error Error on attach: Node not found",
@@ -1949,12 +1949,14 @@
                 "ext4_ext_search_left",
                 "failed to modify QP to RTR: -22",
                 "failed while handling",
+                "failed! ALB mode requires that the base driver support setting the hw address also when the network",
                 "failed: Connection amqps:",
                 "failed: rpc error: code = 2 desc = unable to inspect docker image",
                 "fiid_obj_get: 'present_countdown_value': data not available",
                 "firewalld - dynamic firewall daemon",
                 "fit failure summary on nodes : Insufficient pods",
                 "from image service failed: rpc error: code = Canceled desc = context canceled",
+                "host not found in",
                 "http2: no cached connection was available",
                 "hw csum failure",
                 "in libnl.so.1",
@@ -1971,6 +1973,7 @@
                 "kernel: lockd: Unknown symbol register_inet6addr_notifier",
                 "kernel: lockd: Unknown symbol unregister_inet6addr_notifier",
                 "kernel: megasas: Found FW in FAULT state,will reset adapter.",
+                "kernel: nfs: server",
                 "kernel: possible SYN flooding on port",
                 "kernel: request_module: runaway loop modprobe fs-cifs",
                 "khash_super_prune_nolock",
@@ -1979,6 +1982,7 @@
                 "multipathd.service operation timed out. Terminating",
                 "netlink_socket|ERR|fcntl: Too many open file",
                 "nfs_reap_expired_delegations",
+                "not responding, timed out",
                 "page allocation failure",
                 "per_source_limit from",
                 "reservation conflict",
@@ -2633,6 +2637,7 @@
                 "PermitRootLogin",
                 "Permitemptypasswords",
                 "Permitrootlogin",
+                "Port",
                 "Protocol",
                 "USEPAM",
                 "UsePAM",
@@ -2789,16 +2794,6 @@
             "file": "/etc/systemd/system.conf.d/origin-accounting.conf",
             "pattern": [],
             "symbolic_name": "systemd_system_origin_accounting"
-        },
-        {
-            "file": "/usr/lib/systemd/system/docker.service",
-            "pattern": [],
-            "symbolic_name": "systemd_docker"
-        },
-        {
-            "file": "/usr/lib/systemd/system/atomic-openshift-node.service",
-            "pattern": [],
-            "symbolic_name": "systemd_openshift_node"
         },
         {
             "file": "/etc/systemd/system.conf",
@@ -3231,6 +3226,11 @@
             "pattern": []
         },
         {
+            "glob": "/boot/loader/entries/*.conf",
+            "symbolic_name": "boot_loader_entries",
+            "pattern": []
+        },
+        {
             "glob": "/var/opt/amq-broker/*/etc/broker.xml",
             "symbolic_name": "amq_broker",
             "pattern": []
@@ -3295,5 +3295,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-07-18T14:32:52.673524"
+    "version": "2019-07-25T16:59:06.699989"
 }
