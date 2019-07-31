@@ -100,6 +100,7 @@ v3.0.47 - Sep 27 2018
 - Don't exit when display_name only set in config file
 - Make remove.conf location configurable
 - Restore exit handler to remove temporary files
+- Reduce default command timeout (BZ1541969)
 - Better enforcement of HTTP timeouts
 - Fix Satellite 5 auto configuration
 - Python 3 string compatibility fixes
@@ -127,7 +128,18 @@ v3.0.33 - Aug 3 2018
 v3.0.28 - Jul 18 2018
 - Overhaul config management
 - Remove dead cluster code
-- Improve messaging, remove tracebacks
+- Fix group naming bug (BZ1549213)
+- Improve messaging, remove tracebacks (BZ1553657, BZ1554999)
+- Don't retry upload on 412 (BZ1554794)
 - Backward compatibility fixes
 - Python 3 compatibility fixes
 
+v3.0.12 - May 10 2018
+- Replace "spec" collection with original files/commands (BZ1570966)
+- Remove cluster logic and analysis targets
+
+v3.0.4 - Mar 14 2018
+- Initial v3 client release egg
+
+v3.0.3 - Nov 21 2017
+- Pre-release core egg
