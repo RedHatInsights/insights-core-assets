@@ -3193,6 +3193,11 @@
             "symbolic_name": "neutron_ovs_agent_log"
         },
         {
+            "file": "/usr/libexec/setup-named-chroot.sh",
+            "pattern": [],
+            "symbolic_name": "setup_named_chroot"
+        },
+        {
             "file": "/usr/sap/hostctrl/exe/host_profile",
             "pattern": [
                 "DIR_",
