@@ -1670,51 +1670,6 @@
             "symbolic_name": "hosts"
         },
         {
-            "file": "/etc/httpd/conf/()*httpd\\.conf",
-            "pattern": [],
-            "symbolic_name": "httpd_conf"
-        },
-        {
-            "file": "/etc/httpd/conf.d/()*.+\\.conf",
-            "pattern": [],
-            "symbolic_name": "httpd_conf"
-        },
-        {
-            "file": "/etc/httpd/conf.modules.d/()*.+\\.conf",
-            "pattern": [],
-            "symbolic_name": "httpd_conf"
-        },
-        {
-            "file": "/opt/rh/httpd24/root/etc/httpd/conf/httpd.conf",
-            "pattern": [],
-            "symbolic_name": "httpd_conf_scl_httpd24"
-        },
-        {
-            "file": "/opt/rh/httpd24/root/etc/httpd/conf.d/()*.+\\.conf",
-            "pattern": [],
-            "symbolic_name": "httpd_conf_scl_httpd24"
-        },
-        {
-            "file": "/opt/rh/httpd24/root/etc/httpd/conf.modules.d/()*.+\\.conf",
-            "pattern": [],
-            "symbolic_name": "httpd_conf_scl_httpd24"
-        },
-        {
-            "file": "/opt/rh/jbcs-httpd24/root/etc/httpd/conf/httpd.conf",
-            "pattern": [],
-            "symbolic_name": "httpd_conf_scl_jbcs_httpd24"
-        },
-        {
-            "file": "/opt/rh/jbcs-httpd24/root/etc/httpd/conf.d/()*.+\\.conf",
-            "pattern": [],
-            "symbolic_name": "httpd_conf_scl_jbcs_httpd24"
-        },
-        {
-            "file": "/opt/rh/jbcs-httpd24/root/etc/httpd/conf.modules.d/()*.+\\.conf",
-            "pattern": [],
-            "symbolic_name": "httpd_conf_scl_jbcs_httpd24"
-        },
-        {
             "file": "/var/log/httpd/error_log",
             "pattern": [
                 "(28)No space left on device: ",
@@ -3234,6 +3189,36 @@
             "glob": "/sys/class/net/*/address",
             "symbolic_name": "mac_addresses",
             "pattern": []
+        },
+        {
+            "glob": "/etc/httpd/conf.d/*/*.conf",
+            "pattern": [],
+            "symbolic_name": "httpd_conf"
+        },
+        {
+            "glob": "/etc/httpd/conf*/*.conf",
+            "pattern": [],
+            "symbolic_name": "httpd_conf"
+        },
+        {
+            "glob": "/opt/rh/httpd24/root/etc/httpd/conf.d/*/*.conf",
+            "pattern": [],
+            "symbolic_name": "httpd_conf_scl_httpd24"
+        },
+        {
+            "glob": "/opt/rh/httpd24/root/etc/httpd/conf*/*.conf",
+            "pattern": [],
+            "symbolic_name": "httpd_conf_scl_httpd24"
+        },
+        {
+            "glob": "/opt/rh/jbcs-httpd24/root/etc/httpd/conf.d/*/*.conf",
+            "pattern": [],
+            "symbolic_name": "httpd_conf_scl_jbcs_httpd24"
+        },
+        {
+            "glob": "/opt/rh/jbcs-httpd24/root/etc/httpd/conf*/*.conf",
+            "pattern": [],
+            "symbolic_name": "httpd_conf_scl_jbcs_httpd24"
         },
         {
             "glob": "/sys/class/net/bond[0-9]*/bonding/tlb_dynamic_lb",
