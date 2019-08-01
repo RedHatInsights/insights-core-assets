@@ -928,6 +928,7 @@
                 "nfs-server",
                 "nfsd",
                 "nginx",
+                "nova-compute",
                 "ntpd",
                 "octavia-worker",
                 "postgres",
@@ -1507,7 +1508,11 @@
         },
         {
             "file": "/var/log/dmesg",
-            "pattern": [],
+            "pattern": [
+                "L1TF",
+                "L1Tf",
+                "l1tf"
+            ],
             "symbolic_name": "dmesg_log"
         },
         {
@@ -1864,6 +1869,7 @@
                 "Abort command issued",
                 "Broken pipe",
                 "Cannot assign requested address",
+                "Connection amqps://subscription.rhn.redhat.com:5647 disconnected",
                 "Could not set",
                 "DMA Status error.  Resetting chip",
                 "Detected Tx Unit Hang",
@@ -1916,7 +1922,7 @@
                 "firewalld - dynamic firewall daemon",
                 "fit failure summary on nodes : Insufficient pods",
                 "from image service failed: rpc error: code = Canceled desc = context canceled",
-                "host not found in",
+                "host not found in upstream",
                 "http2: no cached connection was available",
                 "hw csum failure",
                 "in libnl.so.1",
@@ -1925,6 +1931,7 @@
                 "is beyond advertised capabilities",
                 "is down or the link is down",
                 "kernel/softirq.c:159 local_bh_enable+",
+                "kernel: BUG: soft lockup",
                 "kernel: CIFS VFS: Unexpected SMB signature",
                 "kernel: INFO: task xfsaild/md",
                 "kernel: Memory cgroup out of memory: Kill process",
@@ -3154,7 +3161,10 @@
         },
         {
             "file": "/usr/libexec/setup-named-chroot.sh",
-            "pattern": [],
+            "pattern": [
+                "/",
+                "ROOTDIR_MOUNT"
+            ],
             "symbolic_name": "setup_named_chroot"
         },
         {
@@ -8780,5 +8790,5 @@
             ]
         }
     },
-    "version": "2019-07-25T16:59:01.086548"
+    "version": "2019-08-01T13:26:13.164835"
 }
