@@ -1506,6 +1506,11 @@
             "symbolic_name": "dirsrv_errors"
         },
         {
+            "file": "/var/log/dmesg",
+            "pattern": [],
+            "symbolic_name": "dmesg_log"
+        },
+        {
             "file": "/etc/dnf/modules.d/.*\\.module",
             "pattern": [],
             "symbolic_name": "dnf_modules"
