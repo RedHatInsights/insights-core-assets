@@ -56,7 +56,7 @@
             "symbolic_name": "certificates_enddate"
         },
         {
-            "command": "/usr/bin/find /sys/devices/pci* -mindepth 8 -maxdepth 8",
+            "command": "/usr/bin/find /sys/devices/pci0000:00 -mindepth 8 -maxdepth 8",
             "pattern": [],
             "symbolic_name": "pci_rport_target_disk_paths"
         },
