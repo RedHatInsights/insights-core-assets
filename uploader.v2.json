@@ -1574,16 +1574,6 @@
             "symbolic_name": "ovirt_engine_ui_log"
         },
         {
-            "file": "/var/log/ovirt-engine/boot.log",
-            "pattern": [],
-            "symbolic_name": "ovirt_engine_boot_log"
-        },
-        {
-            "file": "/var/log/ovirt-engine/console.log",
-            "pattern": [],
-            "symbolic_name": "ovirt_engine_console_log"
-        },
-        {
             "file": "/etc/systemd/()*journald\\.conf",
             "pattern": [],
             "symbolic_name": "etc_journald_conf"
@@ -1973,11 +1963,6 @@
                 "watch chan error: etcdserver: mvcc: required revision has been compacted"
             ],
             "symbolic_name": "messages"
-        },
-        {
-            "file": "/var/log/mistral/executor.log",
-            "pattern": [],
-            "symbolic_name": "mistral_executor_log"
         },
         {
             "file": "/etc/()*modprobe\\.conf",
@@ -2661,16 +2646,6 @@
             "file": "/var/lib/config-data/puppet-generated/swift/etc/swift/swift.conf",
             "pattern": [],
             "symbolic_name": "swift_conf"
-        },
-        {
-            "file": "/var/log/containers/swift/swift.log",
-            "pattern": [],
-            "symbolic_name": "swift_log"
-        },
-        {
-            "file": "/var/log/swift/swift.log",
-            "pattern": [],
-            "symbolic_name": "swift_log"
         },
         {
             "file": "/etc/swift/object-expirer.conf",
