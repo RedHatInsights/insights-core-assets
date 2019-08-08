@@ -526,6 +526,11 @@
             "symbolic_name": "ls_osroot"
         },
         {
+            "command": "/bin/ls -lan /run/systemd/generator",
+            "pattern": [],
+            "symbolic_name": "ls_run_systemd_generator"
+        },
+        {
             "command": "/bin/ls -ln /var/tmp",
             "pattern": [
                 "/var/tmp",
