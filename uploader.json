@@ -1019,7 +1019,9 @@
         },
         {
             "command": "/usr/bin/find /etc/pki/product-default/ /etc/pki/product/ -name '*pem' -exec rct cat-cert --no-content '{}' \\;",
-            "pattern": [],
+            "pattern": [
+                "ID:"
+            ],
             "symbolic_name": "subscription_manager_installed_product_ids"
         },
         {
@@ -1866,6 +1868,7 @@
                 "Cannot assign requested address",
                 "Connection amqps://subscription.rhn.redhat.com:5647 disconnected",
                 "Could not set",
+                "DHCPv4 lease renewal requested",
                 "DMA Status error.  Resetting chip",
                 "Detected Tx Unit Hang",
                 "Device is still in reset",
@@ -1882,6 +1885,7 @@
                 "Medium access timeout failure. Offlining disk!",
                 "MountVolume.SetUp succeeded for volume",
                 "Neighbour table overflow",
+                "NetworkManager state is now CONNECTED_SITE",
                 "Orphaned pod",
                 "Out of MCCQ wrbs",
                 "Out of memory: Kill process",
@@ -1897,6 +1901,7 @@
                 "as active slave; either",
                 "belongs to docker.service",
                 "callbacks suppressed",
+                "canceled DHCP transaction, DHCP client pid",
                 "chardev: opening backend \"socket\" failed",
                 "clearing Tx timestamp hang",
                 "dev_set_mac_address of dev",
@@ -1937,7 +1942,6 @@
                 "kernel: megasas: Found FW in FAULT state,will reset adapter.",
                 "kernel: nfs: server",
                 "kernel: possible SYN flooding on port",
-                "kernel: request_module: runaway loop modprobe fs-cifs",
                 "khash_super_prune_nolock",
                 "megaraid_sas: FW detected to be in faultstate, restarting it",
                 "mode:0x20",
@@ -1955,6 +1959,7 @@
                 "skb_copy",
                 "skb_over_panic",
                 "start request repeated too quickly for docker.service",
+                "state changed timeout -> done",
                 "swapper: page allocation failure",
                 "systemd: Unit ip6tables.service entered failed state",
                 "systemd: Unit iptables.service entered failed state",
@@ -8770,5 +8775,5 @@
             ]
         }
     },
-    "version": "2019-08-01T13:26:13.164835"
+    "version": "2019-08-08T16:24:15.976548"
 }
