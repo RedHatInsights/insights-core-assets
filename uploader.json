@@ -549,6 +549,11 @@
             "symbolic_name": "lsblk_pairs"
         },
         {
+            "command": "/usr/bin/lscpu",
+            "pattern": [],
+            "symbolic_name": "lscpu"
+        },
+        {
             "command": "/sbin/lsmod",
             "pattern": [],
             "symbolic_name": "lsmod"
