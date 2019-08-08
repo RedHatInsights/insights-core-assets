@@ -1018,7 +1018,7 @@
             "symbolic_name": "subscription_manager_id"
         },
         {
-            "command": "/usr/bin/find /etc/pki/product-default/ /etc/pki/product/ -name '*pem' -exec rct cat-cert --no-content '{}' +",
+            "command": "/usr/bin/find /etc/pki/product-default/ /etc/pki/product/ -name '*pem' -exec rct cat-cert --no-content '{}' \\;",
             "pattern": [],
             "symbolic_name": "subscription_manager_installed_product_ids"
         },
