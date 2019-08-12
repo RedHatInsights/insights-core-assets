@@ -1,5 +1,11 @@
 Insights Client Core Changelog
 
+v3.0.115 - Aug 1 2019
+- Fix version logging on RHEL8 (BZ1733221)
+- Tweak config option handling for --offline
+- Improve messaging
+- Compliance collection added
+
 v3.0.112 - Jul 17 2019
 - Relocate egg version logging
 

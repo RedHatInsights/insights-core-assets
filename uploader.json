@@ -866,7 +866,7 @@
             "symbolic_name": "passenger_status"
         },
 	{
-            "command": "/usr/bin/find /sys/devices/pci0000:00 -mindepth 8 -maxdepth 8",
+            "command": "/usr/bin/find /sys/devices/ -maxdepth 10 -mindepth 9 -name stat -type f",
             "pattern": [],
             "symbolic_name": "pci_rport_target_disk_paths"
         },
@@ -1021,6 +1021,13 @@
             "command": "/usr/bin/subscription-manager identity",
             "pattern": [],
             "symbolic_name": "subscription_manager_id"
+        },
+        {
+            "command": "/usr/bin/find /etc/pki/product-default/ /etc/pki/product/ -name '*pem' -exec rct cat-cert --no-content '{}' \\;",
+            "pattern": [
+                "ID:"
+            ],
+            "symbolic_name": "subscription_manager_installed_product_ids"
         },
         {
             "command": "/usr/bin/subscription-manager release --show",
@@ -1579,16 +1586,6 @@
             "symbolic_name": "ovirt_engine_ui_log"
         },
         {
-            "file": "/var/log/ovirt-engine/boot.log",
-            "pattern": [],
-            "symbolic_name": "ovirt_engine_boot_log"
-        },
-        {
-            "file": "/var/log/ovirt-engine/console.log",
-            "pattern": [],
-            "symbolic_name": "ovirt_engine_console_log"
-        },
-        {
             "file": "/etc/systemd/()*journald\\.conf",
             "pattern": [],
             "symbolic_name": "etc_journald_conf"
@@ -1876,6 +1873,7 @@
                 "Cannot assign requested address",
                 "Connection amqps://subscription.rhn.redhat.com:5647 disconnected",
                 "Could not set",
+                "DHCPv4 lease renewal requested",
                 "DMA Status error.  Resetting chip",
                 "Detected Tx Unit Hang",
                 "Device is still in reset",
@@ -1892,6 +1890,7 @@
                 "Medium access timeout failure. Offlining disk!",
                 "MountVolume.SetUp succeeded for volume",
                 "Neighbour table overflow",
+                "NetworkManager state is now CONNECTED_SITE",
                 "Orphaned pod",
                 "Out of MCCQ wrbs",
                 "Out of memory: Kill process",
@@ -1907,6 +1906,7 @@
                 "as active slave; either",
                 "belongs to docker.service",
                 "callbacks suppressed",
+                "canceled DHCP transaction, DHCP client pid",
                 "chardev: opening backend \"socket\" failed",
                 "clearing Tx timestamp hang",
                 "dev_set_mac_address of dev",
@@ -1947,7 +1947,6 @@
                 "kernel: megasas: Found FW in FAULT state,will reset adapter.",
                 "kernel: nfs: server",
                 "kernel: possible SYN flooding on port",
-                "kernel: request_module: runaway loop modprobe fs-cifs",
                 "khash_super_prune_nolock",
                 "megaraid_sas: FW detected to be in faultstate, restarting it",
                 "mode:0x20",
@@ -1965,6 +1964,7 @@
                 "skb_copy",
                 "skb_over_panic",
                 "start request repeated too quickly for docker.service",
+                "state changed timeout -> done",
                 "swapper: page allocation failure",
                 "systemd: Unit ip6tables.service entered failed state",
                 "systemd: Unit iptables.service entered failed state",
@@ -1978,11 +1978,6 @@
                 "watch chan error: etcdserver: mvcc: required revision has been compacted"
             ],
             "symbolic_name": "messages"
-        },
-        {
-            "file": "/var/log/mistral/executor.log",
-            "pattern": [],
-            "symbolic_name": "mistral_executor_log"
         },
         {
             "file": "/etc/()*modprobe\\.conf",
@@ -2671,16 +2666,6 @@
             "file": "/var/lib/config-data/puppet-generated/swift/etc/swift/swift.conf",
             "pattern": [],
             "symbolic_name": "swift_conf"
-        },
-        {
-            "file": "/var/log/containers/swift/swift.log",
-            "pattern": [],
-            "symbolic_name": "swift_log"
-        },
-        {
-            "file": "/var/log/swift/swift.log",
-            "pattern": [],
-            "symbolic_name": "swift_log"
         },
         {
             "file": "/etc/swift/object-expirer.conf",
@@ -8795,5 +8780,5 @@
             ]
         }
     },
-    "version": "2019-08-01T13:26:13.164835"
+    "version": "2019-08-08T16:24:15.976548"
 }
