@@ -866,6 +866,11 @@
             "symbolic_name": "passenger_status"
         },
         {
+            "command": "/usr/bin/find /sys/devices/ -maxdepth 10 -mindepth 9 -name stat -type f",
+            "pattern": [],
+            "symbolic_name": "pci_rport_target_disk_paths"
+        },
+        {
             "command": "/usr/sbin/pcs status",
             "pattern": [],
             "symbolic_name": "pcs_status"
