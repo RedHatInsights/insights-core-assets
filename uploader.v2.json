@@ -1216,6 +1216,11 @@
             "symbolic_name": "init_process_cgroup"
         },
         {
+            "file": "/etc/default/pulp_workers",
+            "pattern": [],
+            "symbolic_name": "pulp_worker_defaults"
+        },
+        {
             "file": "/etc/insights-client/machine-id",
             "pattern": [],
             "symbolic_name": "machine_id3"
