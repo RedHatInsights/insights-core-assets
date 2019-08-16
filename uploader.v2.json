@@ -526,6 +526,11 @@
             "symbolic_name": "ls_osroot"
         },
         {
+            "command": "/bin/ls -lan /run/systemd/generator",
+            "pattern": [],
+            "symbolic_name": "ls_run_systemd_generator"
+        },
+        {
             "command": "/bin/ls -ln /var/tmp",
             "pattern": [
                 "/var/tmp",
@@ -864,6 +869,11 @@
             "command": "/usr/bin/passenger-status",
             "pattern": [],
             "symbolic_name": "passenger_status"
+        },
+        {
+            "command": "/usr/bin/find /sys/devices/ -maxdepth 10 -mindepth 9 -name stat -type f",
+            "pattern": [],
+            "symbolic_name": "pci_rport_target_disk_paths"
         },
         {
             "command": "/usr/sbin/pcs status",
@@ -3285,5 +3295,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-08-08T16:23:43.316783"
+    "version": "2019-08-15T16:15:43.261461"
 }
