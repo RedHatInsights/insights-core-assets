@@ -272,6 +272,11 @@
             "pattern": [],
             "symbolic_name": "gluster_v_info"
         },
+	{
+            "command": "/usr/sbin/gluster peer status",
+            "pattern": [],
+            "symbolic_name": "gluster_peer_status"
+        },
         {
             "command": "/usr/sbin/gluster volume status",
             "pattern": [],
