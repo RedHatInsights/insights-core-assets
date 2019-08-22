@@ -1293,6 +1293,11 @@
             "symbolic_name": "cciss"
         },
         {
+            "file": "/sys/bus/usb/drivers/cdc_wdm/module/refcnt",
+            "pattern": [],
+            "symbolic_name": "cdc_wdm"
+        },
+        {
             "file": "/etc/ceilometer/ceilometer.conf",
             "pattern": [],
             "symbolic_name": "ceilometer_conf"
