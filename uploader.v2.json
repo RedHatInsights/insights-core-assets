@@ -3053,6 +3053,11 @@
             "symbolic_name": "zipl_conf"
         },
         {
+            "file": "/var/log/foreman/production.log",
+            "pattern": [],
+            "symbolic_name": "foreman_production_log"
+        },
+        {
             "file": "/etc/smart_proxy_dynflow_core/settings.yml",
             "pattern": [
                 ":database:"
