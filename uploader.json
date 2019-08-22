@@ -86,12 +86,6 @@
             "symbolic_name": "date_utc"
         },
         {
-            "command": "/sbin/dcbtool gc  dcb",
-            "pattern": [],
-            "pre_command": "iface",
-            "symbolic_name": "dcbtool_gc_dcb"
-        },
-        {
             "command": "/bin/df -al",
             "pattern": [],
             "symbolic_name": "df__al"
@@ -1128,12 +1122,6 @@
             "command": "/bin/systool -b scsi -v",
             "pattern": [],
             "symbolic_name": "systool_b_scsi_v"
-        },
-        {
-            "command": "/usr/bin/teamdctl  state dump",
-            "pattern": [],
-            "pre_command": "iface",
-            "symbolic_name": "teamdctl_state_dump"
         },
         {
             "command": "/usr/bin/find /usr/share -maxdepth 1 -name 'tomcat*' -exec /bin/grep -R -s 'VirtualDirContext' --include '*.xml' '{}' +",
