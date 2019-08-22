@@ -6,6 +6,11 @@
             "symbolic_name": "aws_instance_type"
         },
         {
+            "command": "python -m insights.tools.cat --no-header azure_instance_type",
+            "pattern": [],
+            "symbolic_name": "azure_instance_type"
+        },
+        {
             "command": "/sbin/auditctl -s",
             "pattern": [],
             "symbolic_name": "auditctl_status"
@@ -74,12 +79,6 @@
             "command": "/bin/date --utc",
             "pattern": [],
             "symbolic_name": "date_utc"
-        },
-        {
-            "command": "/sbin/dcbtool gc  dcb",
-            "pattern": [],
-            "pre_command": "iface",
-            "symbolic_name": "dcbtool_gc_dcb"
         },
         {
             "command": "/bin/df -al",
@@ -547,6 +546,11 @@
             "command": "/bin/lsblk -P -o NAME,KNAME,MAJ:MIN,FSTYPE,MOUNTPOINT,LABEL,UUID,RA,RO,RM,MODEL,SIZE,STATE,OWNER,GROUP,MODE,ALIGNMENT,MIN-IO,OPT-IO,PHY-SEC,LOG-SEC,ROTA,SCHED,RQ-SIZE,TYPE,DISC-ALN,DISC-GRAN,DISC-MAX,DISC-ZERO",
             "pattern": [],
             "symbolic_name": "lsblk_pairs"
+        },
+        {
+            "command": "/usr/bin/lscpu",
+            "pattern": [],
+            "symbolic_name": "lscpu"
         },
         {
             "command": "/sbin/lsmod",
@@ -1120,12 +1124,6 @@
             "symbolic_name": "systool_b_scsi_v"
         },
         {
-            "command": "/usr/bin/teamdctl  state dump",
-            "pattern": [],
-            "pre_command": "iface",
-            "symbolic_name": "teamdctl_state_dump"
-        },
-        {
             "command": "/usr/bin/find /usr/share -maxdepth 1 -name 'tomcat*' -exec /bin/grep -R -s 'VirtualDirContext' --include '*.xml' '{}' +",
             "pattern": [],
             "symbolic_name": "tomcat_vdc_fallback"
@@ -1286,6 +1284,11 @@
             "file": "/proc/driver/cciss/()*cciss.*",
             "pattern": [],
             "symbolic_name": "cciss"
+        },
+        {
+            "file": "/sys/bus/usb/drivers/cdc_wdm/module/refcnt",
+            "pattern": [],
+            "symbolic_name": "cdc_wdm"
         },
         {
             "file": "/etc/ceilometer/ceilometer.conf",
@@ -3295,5 +3298,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-08-15T16:15:43.261461"
+    "version": "2019-08-22T16:31:45.386899"
 }
