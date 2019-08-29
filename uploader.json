@@ -119,6 +119,7 @@
             "command": "/bin/dmesg",
             "pattern": [
                 " is now offline",
+                "AMD Secure Memory Encryption (SME) active",
                 "Amazon EC2",
                 "Brought up ",
                 "CIFS VFS: protocol revalidation - security settings mismatch",
@@ -8803,5 +8804,5 @@
             ]
         }
     },
-    "version": "2019-08-22T16:31:36.005099"
+    "version": "2019-08-29T17:11:00.979020"
 }
