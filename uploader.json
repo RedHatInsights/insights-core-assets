@@ -2371,6 +2371,11 @@
             "symbolic_name": "ps_auxwww"
         },
         {
+            "file": "/etc/default/pulp_workers",
+            "pattern": [],
+            "symbolic_name": "pulp_worker_defaults"
+        },
+        {
             "file": "/etc/libvirt/qemu.conf",
             "pattern": [],
             "symbolic_name": "qemu_conf"
