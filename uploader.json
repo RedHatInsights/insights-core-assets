@@ -1609,6 +1609,11 @@
             "symbolic_name": "etc_journald_conf_d"
         },
         {
+            "file": "/var/log/foreman/production.log",
+            "pattern": [],
+            "symbolic_name": "foreman_production_log"
+        },
+        {
             "file": "/etc/fstab",
             "pattern": [],
             "symbolic_name": "fstab"
