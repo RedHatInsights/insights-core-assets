@@ -305,6 +305,11 @@
             "symbolic_name": "heat_crontab"
         },
         {
+            "command": "/bin/hostname",
+            "pattern": [],
+            "symbolic_name": "hostname_default"
+        },
+        {
             "command": "/bin/hostname -f",
             "pattern": [],
             "symbolic_name": "hostname"
@@ -313,6 +318,11 @@
             "command": "/bin/hostname -I",
             "pattern": [],
             "symbolic_name": "ip_addresses"
+        },
+        {
+            "command": "/bin/hostname -s",
+            "pattern": [],
+            "symbolic_name": "hostname_short"
         },
         {
             "command": "/usr/sbin/httpd -V",
