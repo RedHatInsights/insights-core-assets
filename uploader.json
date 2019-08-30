@@ -1635,6 +1635,11 @@
             "symbolic_name": "grub_efi_conf"
         },
         {
+            "file": "/boot/efi/EFI/redhat/grubenv",
+            "pattern": [],
+            "symbolic_name": "grub2_efi_grubenv"
+        },
+        {
             "file": "/boot/grub/grub.conf",
             "pattern": [],
             "symbolic_name": "grub_conf"
@@ -1648,6 +1653,11 @@
             "file": "/boot/grub2/grub.cfg",
             "pattern": [],
             "symbolic_name": "grub2_cfg"
+        },
+        {
+            "file": "/boot/grub2/grubenv",
+            "pattern": [],
+            "symbolic_name": "grub2_grubenv"
         },
         {
             "file": "/etc/haproxy/haproxy.cfg",
