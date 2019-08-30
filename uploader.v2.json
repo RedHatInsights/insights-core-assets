@@ -1001,6 +1001,11 @@
             "symbolic_name": "rhev_data_center"
         },
         {
+            "command": "/usr/sbin/rndc status",
+            "pattern": [],
+            "symbolic_name": "rndc_status"
+        },
+        {
             "command": "/usr/bin/crontab -l -u root",
             "pattern": [
                 "heat-manage"
