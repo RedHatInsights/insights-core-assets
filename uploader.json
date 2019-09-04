@@ -1215,6 +1215,11 @@
             "symbolic_name": "etc_machine_id"
         },
         {
+            "file": "/etc/etcd/etcd.conf",
+            "pattern": [],
+            "symbolic_name": "etcd_conf"
+        },
+        {
             "file": "/proc/1/cgroup",
             "pattern": [],
             "symbolic_name": "init_process_cgroup"
