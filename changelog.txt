@@ -1,5 +1,8 @@
 Insights Client Core Changelog
 
+v3.0.121 - Aug 26 2019
+- Fix Satellite 5 autoconfig bug
+
 v3.0.115 - Aug 1 2019
 - Fix version logging on RHEL8 (BZ1733221)
 - Tweak config option handling for --offline

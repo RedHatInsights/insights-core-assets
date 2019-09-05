@@ -114,6 +114,7 @@
             "command": "/bin/dmesg",
             "pattern": [
                 " is now offline",
+                "AMD Secure Memory Encryption (SME) active",
                 "Amazon EC2",
                 "Brought up ",
                 "CIFS VFS: protocol revalidation - security settings mismatch",
@@ -1104,6 +1105,11 @@
             "symbolic_name": "systemctl_httpd"
         },
         {
+            "command": "/bin/systemctl show nginx",
+            "pattern": [],
+            "symbolic_name": "systemctl_nginx"
+        },
+        {
             "command": "/bin/systemctl show smart_proxy_dynflow_core",
             "pattern": [],
             "symbolic_name": "systemctl_smartpdc"
@@ -1602,6 +1608,11 @@
             "file": "/etc/systemd/journald.conf.d/()*.+\\.conf",
             "pattern": [],
             "symbolic_name": "etc_journald_conf_d"
+        },
+        {
+            "file": "/var/log/foreman/production.log",
+            "pattern": [],
+            "symbolic_name": "foreman_production_log"
         },
         {
             "file": "/etc/fstab",
@@ -2357,6 +2368,11 @@
             "file": "/sos_commands/process/ps_auxwww",
             "pattern": [],
             "symbolic_name": "ps_auxwww"
+        },
+        {
+            "file": "/etc/default/pulp_workers",
+            "pattern": [],
+            "symbolic_name": "pulp_worker_defaults"
         },
         {
             "file": "/etc/sysconfig/puppetserver",
@@ -3303,5 +3319,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-08-22T16:31:45.386899"
+    "version": "2019-08-29T17:11:09.551840"
 }
