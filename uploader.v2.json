@@ -1567,6 +1567,11 @@
             "symbolic_name": "docker_sysconfig"
         },
         {
+            "file": "/etc/etcd/etcd.conf",
+            "pattern": [],
+            "symbolic_name": "etcd_conf"
+        },
+        {
             "file": "/var/log/ovirt-engine/engine.log",
             "pattern": [
                 "Data Center",
