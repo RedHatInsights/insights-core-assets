@@ -6,6 +6,11 @@
             "symbolic_name": "aws_instance_type"
         },
         {
+            "command": "python -m insights.tools.cat --no-header azure_instance_type",
+            "pattern": [],
+            "symbolic_name": "azure_instance_type"
+        },
+        {
             "command": "/sbin/auditctl -s",
             "pattern": [],
             "symbolic_name": "auditctl_status"
@@ -76,12 +81,6 @@
             "symbolic_name": "date_utc"
         },
         {
-            "command": "/sbin/dcbtool gc  dcb",
-            "pattern": [],
-            "pre_command": "iface",
-            "symbolic_name": "dcbtool_gc_dcb"
-        },
-        {
             "command": "/bin/df -al",
             "pattern": [],
             "symbolic_name": "df__al"
@@ -115,6 +114,7 @@
             "command": "/bin/dmesg",
             "pattern": [
                 " is now offline",
+                "AMD Secure Memory Encryption (SME) active",
                 "Amazon EC2",
                 "Brought up ",
                 "CIFS VFS: protocol revalidation - security settings mismatch",
@@ -526,6 +526,11 @@
             "symbolic_name": "ls_osroot"
         },
         {
+            "command": "/bin/ls -lan /run/systemd/generator",
+            "pattern": [],
+            "symbolic_name": "ls_run_systemd_generator"
+        },
+        {
             "command": "/bin/ls -ln /var/tmp",
             "pattern": [
                 "/var/tmp",
@@ -542,6 +547,11 @@
             "command": "/bin/lsblk -P -o NAME,KNAME,MAJ:MIN,FSTYPE,MOUNTPOINT,LABEL,UUID,RA,RO,RM,MODEL,SIZE,STATE,OWNER,GROUP,MODE,ALIGNMENT,MIN-IO,OPT-IO,PHY-SEC,LOG-SEC,ROTA,SCHED,RQ-SIZE,TYPE,DISC-ALN,DISC-GRAN,DISC-MAX,DISC-ZERO",
             "pattern": [],
             "symbolic_name": "lsblk_pairs"
+        },
+        {
+            "command": "/usr/bin/lscpu",
+            "pattern": [],
+            "symbolic_name": "lscpu"
         },
         {
             "command": "/sbin/lsmod",
@@ -866,6 +876,11 @@
             "symbolic_name": "passenger_status"
         },
         {
+            "command": "/usr/bin/find /sys/devices/ -maxdepth 10 -mindepth 9 -name stat -type f",
+            "pattern": [],
+            "symbolic_name": "pci_rport_target_disk_paths"
+        },
+        {
             "command": "/usr/sbin/pcs status",
             "pattern": [],
             "symbolic_name": "pcs_status"
@@ -928,6 +943,7 @@
                 "nfs-server",
                 "nfsd",
                 "nginx",
+                "nova-compute",
                 "ntpd",
                 "octavia-worker",
                 "postgres",
@@ -1017,6 +1033,13 @@
             "symbolic_name": "subscription_manager_id"
         },
         {
+            "command": "/usr/bin/find /etc/pki/product-default/ /etc/pki/product/ -name '*pem' -exec rct cat-cert --no-content '{}' \\;",
+            "pattern": [
+                "ID:"
+            ],
+            "symbolic_name": "subscription_manager_installed_product_ids"
+        },
+        {
             "command": "/usr/bin/subscription-manager release --show",
             "pattern": [],
             "symbolic_name": "subscription_manager_release_show"
@@ -1082,6 +1105,11 @@
             "symbolic_name": "systemctl_httpd"
         },
         {
+            "command": "/bin/systemctl show nginx",
+            "pattern": [],
+            "symbolic_name": "systemctl_nginx"
+        },
+        {
             "command": "/bin/systemctl show smart_proxy_dynflow_core",
             "pattern": [],
             "symbolic_name": "systemctl_smartpdc"
@@ -1100,12 +1128,6 @@
             "command": "/bin/systool -b scsi -v",
             "pattern": [],
             "symbolic_name": "systool_b_scsi_v"
-        },
-        {
-            "command": "/usr/bin/teamdctl  state dump",
-            "pattern": [],
-            "pre_command": "iface",
-            "symbolic_name": "teamdctl_state_dump"
         },
         {
             "command": "/usr/bin/find /usr/share -maxdepth 1 -name 'tomcat*' -exec /bin/grep -R -s 'VirtualDirContext' --include '*.xml' '{}' +",
@@ -1273,6 +1295,11 @@
             "file": "/proc/driver/cciss/()*cciss.*",
             "pattern": [],
             "symbolic_name": "cciss"
+        },
+        {
+            "file": "/sys/bus/usb/drivers/cdc_wdm/module/refcnt",
+            "pattern": [],
+            "symbolic_name": "cdc_wdm"
         },
         {
             "file": "/etc/ceilometer/ceilometer.conf",
@@ -1511,6 +1538,15 @@
             "symbolic_name": "dirsrv_errors"
         },
         {
+            "file": "/var/log/dmesg",
+            "pattern": [
+                "L1TF",
+                "L1Tf",
+                "l1tf"
+            ],
+            "symbolic_name": "dmesg_log"
+        },
+        {
             "file": "/etc/dnf/modules.d/.*\\.module",
             "pattern": [],
             "symbolic_name": "dnf_modules"
@@ -1569,16 +1605,6 @@
             "symbolic_name": "ovirt_engine_ui_log"
         },
         {
-            "file": "/var/log/ovirt-engine/boot.log",
-            "pattern": [],
-            "symbolic_name": "ovirt_engine_boot_log"
-        },
-        {
-            "file": "/var/log/ovirt-engine/console.log",
-            "pattern": [],
-            "symbolic_name": "ovirt_engine_console_log"
-        },
-        {
             "file": "/etc/systemd/()*journald\\.conf",
             "pattern": [],
             "symbolic_name": "etc_journald_conf"
@@ -1587,6 +1613,11 @@
             "file": "/etc/systemd/journald.conf.d/()*.+\\.conf",
             "pattern": [],
             "symbolic_name": "etc_journald_conf_d"
+        },
+        {
+            "file": "/var/log/foreman/production.log",
+            "pattern": [],
+            "symbolic_name": "foreman_production_log"
         },
         {
             "file": "/etc/fstab",
@@ -1668,51 +1699,6 @@
             "file": "/etc/hosts",
             "pattern": [],
             "symbolic_name": "hosts"
-        },
-        {
-            "file": "/etc/httpd/conf/()*httpd\\.conf",
-            "pattern": [],
-            "symbolic_name": "httpd_conf"
-        },
-        {
-            "file": "/etc/httpd/conf.d/()*.+\\.conf",
-            "pattern": [],
-            "symbolic_name": "httpd_conf"
-        },
-        {
-            "file": "/etc/httpd/conf.modules.d/()*.+\\.conf",
-            "pattern": [],
-            "symbolic_name": "httpd_conf"
-        },
-        {
-            "file": "/opt/rh/httpd24/root/etc/httpd/conf/httpd.conf",
-            "pattern": [],
-            "symbolic_name": "httpd_conf_scl_httpd24"
-        },
-        {
-            "file": "/opt/rh/httpd24/root/etc/httpd/conf.d/()*.+\\.conf",
-            "pattern": [],
-            "symbolic_name": "httpd_conf_scl_httpd24"
-        },
-        {
-            "file": "/opt/rh/httpd24/root/etc/httpd/conf.modules.d/()*.+\\.conf",
-            "pattern": [],
-            "symbolic_name": "httpd_conf_scl_httpd24"
-        },
-        {
-            "file": "/opt/rh/jbcs-httpd24/root/etc/httpd/conf/httpd.conf",
-            "pattern": [],
-            "symbolic_name": "httpd_conf_scl_jbcs_httpd24"
-        },
-        {
-            "file": "/opt/rh/jbcs-httpd24/root/etc/httpd/conf.d/()*.+\\.conf",
-            "pattern": [],
-            "symbolic_name": "httpd_conf_scl_jbcs_httpd24"
-        },
-        {
-            "file": "/opt/rh/jbcs-httpd24/root/etc/httpd/conf.modules.d/()*.+\\.conf",
-            "pattern": [],
-            "symbolic_name": "httpd_conf_scl_jbcs_httpd24"
         },
         {
             "file": "/var/log/httpd/error_log",
@@ -1909,7 +1895,9 @@
                 "Abort command issued",
                 "Broken pipe",
                 "Cannot assign requested address",
+                "Connection amqps://subscription.rhn.redhat.com:5647 disconnected",
                 "Could not set",
+                "DHCPv4 lease renewal requested",
                 "DMA Status error.  Resetting chip",
                 "Detected Tx Unit Hang",
                 "Device is still in reset",
@@ -1926,6 +1914,7 @@
                 "Medium access timeout failure. Offlining disk!",
                 "MountVolume.SetUp succeeded for volume",
                 "Neighbour table overflow",
+                "NetworkManager state is now CONNECTED_SITE",
                 "Orphaned pod",
                 "Out of MCCQ wrbs",
                 "Out of memory: Kill process",
@@ -1941,6 +1930,7 @@
                 "as active slave; either",
                 "belongs to docker.service",
                 "callbacks suppressed",
+                "canceled DHCP transaction, DHCP client pid",
                 "chardev: opening backend \"socket\" failed",
                 "clearing Tx timestamp hang",
                 "dev_set_mac_address of dev",
@@ -1961,7 +1951,7 @@
                 "firewalld - dynamic firewall daemon",
                 "fit failure summary on nodes : Insufficient pods",
                 "from image service failed: rpc error: code = Canceled desc = context canceled",
-                "host not found in",
+                "host not found in upstream",
                 "http2: no cached connection was available",
                 "hw csum failure",
                 "in libnl.so.1",
@@ -1970,6 +1960,7 @@
                 "is beyond advertised capabilities",
                 "is down or the link is down",
                 "kernel/softirq.c:159 local_bh_enable+",
+                "kernel: BUG: soft lockup",
                 "kernel: CIFS VFS: Unexpected SMB signature",
                 "kernel: INFO: task xfsaild/md",
                 "kernel: Memory cgroup out of memory: Kill process",
@@ -1980,7 +1971,6 @@
                 "kernel: megasas: Found FW in FAULT state,will reset adapter.",
                 "kernel: nfs: server",
                 "kernel: possible SYN flooding on port",
-                "kernel: request_module: runaway loop modprobe fs-cifs",
                 "khash_super_prune_nolock",
                 "megaraid_sas: FW detected to be in faultstate, restarting it",
                 "mode:0x20",
@@ -1998,6 +1988,7 @@
                 "skb_copy",
                 "skb_over_panic",
                 "start request repeated too quickly for docker.service",
+                "state changed timeout -> done",
                 "swapper: page allocation failure",
                 "systemd: Unit ip6tables.service entered failed state",
                 "systemd: Unit iptables.service entered failed state",
@@ -2011,11 +2002,6 @@
                 "watch chan error: etcdserver: mvcc: required revision has been compacted"
             ],
             "symbolic_name": "messages"
-        },
-        {
-            "file": "/var/log/mistral/executor.log",
-            "pattern": [],
-            "symbolic_name": "mistral_executor_log"
         },
         {
             "file": "/etc/()*modprobe\\.conf",
@@ -2389,6 +2375,11 @@
             "symbolic_name": "ps_auxwww"
         },
         {
+            "file": "/etc/default/pulp_workers",
+            "pattern": [],
+            "symbolic_name": "pulp_worker_defaults"
+        },
+        {
             "file": "/etc/sysconfig/puppetserver",
             "pattern": [
                 "JAVA_ARGS"
@@ -2699,16 +2690,6 @@
             "file": "/var/lib/config-data/puppet-generated/swift/etc/swift/swift.conf",
             "pattern": [],
             "symbolic_name": "swift_conf"
-        },
-        {
-            "file": "/var/log/containers/swift/swift.log",
-            "pattern": [],
-            "symbolic_name": "swift_log"
-        },
-        {
-            "file": "/var/log/swift/swift.log",
-            "pattern": [],
-            "symbolic_name": "swift_log"
         },
         {
             "file": "/etc/swift/object-expirer.conf",
@@ -3193,6 +3174,14 @@
             "symbolic_name": "neutron_ovs_agent_log"
         },
         {
+            "file": "/usr/libexec/setup-named-chroot.sh",
+            "pattern": [
+                "/",
+                "ROOTDIR_MOUNT"
+            ],
+            "symbolic_name": "setup_named_chroot"
+        },
+        {
             "file": "/usr/sap/hostctrl/exe/host_profile",
             "pattern": [
                 "DIR_",
@@ -3224,6 +3213,36 @@
             "glob": "/sys/class/net/*/address",
             "symbolic_name": "mac_addresses",
             "pattern": []
+        },
+        {
+            "glob": "/etc/httpd/conf.d/*/*.conf",
+            "pattern": [],
+            "symbolic_name": "httpd_conf"
+        },
+        {
+            "glob": "/etc/httpd/conf*/*.conf",
+            "pattern": [],
+            "symbolic_name": "httpd_conf"
+        },
+        {
+            "glob": "/opt/rh/httpd24/root/etc/httpd/conf.d/*/*.conf",
+            "pattern": [],
+            "symbolic_name": "httpd_conf_scl_httpd24"
+        },
+        {
+            "glob": "/opt/rh/httpd24/root/etc/httpd/conf*/*.conf",
+            "pattern": [],
+            "symbolic_name": "httpd_conf_scl_httpd24"
+        },
+        {
+            "glob": "/opt/rh/jbcs-httpd24/root/etc/httpd/conf.d/*/*.conf",
+            "pattern": [],
+            "symbolic_name": "httpd_conf_scl_jbcs_httpd24"
+        },
+        {
+            "glob": "/opt/rh/jbcs-httpd24/root/etc/httpd/conf*/*.conf",
+            "pattern": [],
+            "symbolic_name": "httpd_conf_scl_jbcs_httpd24"
         },
         {
             "glob": "/sys/class/net/bond[0-9]*/bonding/tlb_dynamic_lb",
@@ -3300,5 +3319,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-07-25T16:59:06.699989"
+    "version": "2019-08-29T17:11:09.551840"
 }
