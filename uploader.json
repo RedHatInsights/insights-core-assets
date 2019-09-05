@@ -1155,6 +1155,11 @@
             "symbolic_name": "uptime"
         },
         {
+            "command": "/usr/bin/vdo status",
+            "pattern": [],
+            "symbolic_name": "vdo_status"
+        },
+        {
             "command": "/sbin/vgdisplay -vv",
             "pattern": [],
             "symbolic_name": "vgdisplay"
