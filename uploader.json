@@ -1221,7 +1221,9 @@
         },
         {
             "file": "/etc/etcd/etcd.conf",
-            "pattern": [],
+            "pattern": [
+                "["
+            ],
             "symbolic_name": "etcd_conf"
         },
         {
@@ -8814,5 +8816,5 @@
             ]
         }
     },
-    "version": "2019-08-29T17:11:00.979020"
+    "version": "2019-09-05T13:53:28.250118"
 }
