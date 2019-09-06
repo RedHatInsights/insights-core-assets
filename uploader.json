@@ -474,6 +474,13 @@
             "symbolic_name": "ls_var_opt_mssql"
         },
         {
+            "command": "/bin/ls -lan /usr/lib64",
+            "pattern": [
+                "total"
+            ],
+            "symbolic_name": "ls_usr_lib64"
+        },
+        {
             "command": "/bin/ls -ln /usr/sbin",
             "pattern": [
                 "total"
