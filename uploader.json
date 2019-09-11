@@ -1165,6 +1165,11 @@
             "symbolic_name": "uptime"
         },
         {
+            "command": "/usr/bin/vdo status",
+            "pattern": [],
+            "symbolic_name": "vdo_status"
+        },
+        {
             "command": "/sbin/vgdisplay -vv",
             "pattern": [],
             "symbolic_name": "vgdisplay"
@@ -1223,6 +1228,13 @@
             "file": "/etc/machine-id",
             "pattern": [],
             "symbolic_name": "etc_machine_id"
+        },
+        {
+            "file": "/etc/etcd/etcd.conf",
+            "pattern": [
+                "["
+            ],
+            "symbolic_name": "etcd_conf"
         },
         {
             "file": "/proc/1/cgroup",
@@ -8814,5 +8826,5 @@
             ]
         }
     },
-    "version": "2019-08-29T17:11:00.979020"
+    "version": "2019-09-05T13:53:28.250118"
 }
