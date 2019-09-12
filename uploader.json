@@ -2704,6 +2704,11 @@
             "symbolic_name": "ssh_foreman_proxy_config"
         },
         {
+            "file": "/etc/sssd/sssd.conf",
+            "pattern": [],
+            "symbolic_name": "sssd_config"
+        },
+        {
             "file": "/etc/swift/swift.conf",
             "pattern": [],
             "symbolic_name": "swift_conf"
