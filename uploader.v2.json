@@ -1550,9 +1550,15 @@
         {
             "file": "/var/log/dmesg",
             "pattern": [
+                "Amazon EC2",
+                "FEATURE IBPB_SUPPORT",
+                "FEATURE SPEC_CTRL",
+                "Kernel page table isolation",
                 "L1TF",
                 "L1Tf",
-                "l1tf"
+                "Linux version",
+                "l1tf",
+                "x86/pti"
             ],
             "symbolic_name": "dmesg_log"
         },
@@ -3341,5 +3347,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-09-05T13:53:32.840765"
+    "version": "2019-09-12T14:24:56.017756"
 }

@@ -1557,9 +1557,15 @@
         {
             "file": "/var/log/dmesg",
             "pattern": [
+                "Amazon EC2",
+                "FEATURE IBPB_SUPPORT",
+                "FEATURE SPEC_CTRL",
+                "Kernel page table isolation",
                 "L1TF",
                 "L1Tf",
-                "l1tf"
+                "Linux version",
+                "l1tf",
+                "x86/pti"
             ],
             "symbolic_name": "dmesg_log"
         },
@@ -8831,5 +8837,5 @@
             ]
         }
     },
-    "version": "2019-09-05T13:53:28.250118"
+    "version": "2019-09-12T14:24:51.299607"
 }
