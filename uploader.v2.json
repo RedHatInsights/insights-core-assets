@@ -305,6 +305,11 @@
             "symbolic_name": "heat_crontab"
         },
         {
+            "command": "/bin/hostname",
+            "pattern": [],
+            "symbolic_name": "hostname_default"
+        },
+        {
             "command": "/bin/hostname -f",
             "pattern": [],
             "symbolic_name": "hostname"
@@ -313,6 +318,11 @@
             "command": "/bin/hostname -I",
             "pattern": [],
             "symbolic_name": "ip_addresses"
+        },
+        {
+            "command": "/bin/hostname -s",
+            "pattern": [],
+            "symbolic_name": "hostname_short"
         },
         {
             "command": "/usr/sbin/httpd -V",
@@ -1540,9 +1550,15 @@
         {
             "file": "/var/log/dmesg",
             "pattern": [
+                "Amazon EC2",
+                "FEATURE IBPB_SUPPORT",
+                "FEATURE SPEC_CTRL",
+                "Kernel page table isolation",
                 "L1TF",
                 "L1Tf",
-                "l1tf"
+                "Linux version",
+                "l1tf",
+                "x86/pti"
             ],
             "symbolic_name": "dmesg_log"
         },
@@ -2689,6 +2705,11 @@
             "symbolic_name": "ssh_foreman_proxy_config"
         },
         {
+            "file": "/etc/sssd/sssd.conf",
+            "pattern": [],
+            "symbolic_name": "sssd_config"
+        },
+        {
             "file": "/etc/swift/swift.conf",
             "pattern": [],
             "symbolic_name": "swift_conf"
@@ -3326,5 +3347,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-09-05T13:53:32.840765"
+    "version": "2019-09-12T14:24:56.017756"
 }
