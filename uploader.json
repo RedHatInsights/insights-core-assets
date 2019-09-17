@@ -1931,6 +1931,11 @@
             "symbolic_name": "ksmstate"
         },
         {
+            "file": "/var/log/libvirt/qemu/().*\\.log",
+            "pattern": [],
+            "symbolic_name": "libvirtd_qemu_log"
+        },
+        {
             "file": "/etc/security/()*limits\\.conf",
             "pattern": [],
             "symbolic_name": "limits_conf"
