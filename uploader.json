@@ -129,6 +129,7 @@
             "command": "/bin/dmesg",
             "pattern": [
                 " is now offline",
+                "AMD Secure Memory Encryption (SME) active",
                 "Amazon EC2",
                 "Brought up ",
                 "CIFS VFS: protocol revalidation - security settings mismatch",
@@ -314,6 +315,11 @@
             "symbolic_name": "heat_crontab"
         },
         {
+            "command": "/bin/hostname",
+            "pattern": [],
+            "symbolic_name": "hostname_default"
+        },
+        {
             "command": "/bin/hostname -f",
             "pattern": [],
             "symbolic_name": "hostname"
@@ -322,6 +328,11 @@
             "command": "/bin/hostname -I",
             "pattern": [],
             "symbolic_name": "ip_addresses"
+        },
+        {
+            "command": "/bin/hostname -s",
+            "pattern": [],
+            "symbolic_name": "hostname_short"
         },
         {
             "command": "/usr/sbin/httpd -V",
@@ -1114,6 +1125,11 @@
             "symbolic_name": "systemctl_httpd"
         },
         {
+            "command": "/bin/systemctl show nginx",
+            "pattern": [],
+            "symbolic_name": "systemctl_nginx"
+        },
+        {
             "command": "/bin/systemctl show smart_proxy_dynflow_core",
             "pattern": [],
             "symbolic_name": "systemctl_smartpdc"
@@ -1157,6 +1173,11 @@
             "command": "/usr/bin/uptime",
             "pattern": [],
             "symbolic_name": "uptime"
+        },
+        {
+            "command": "/usr/bin/vdo status",
+            "pattern": [],
+            "symbolic_name": "vdo_status"
         },
         {
             "command": "/sbin/vgdisplay -vv",
@@ -1217,6 +1238,13 @@
             "file": "/etc/machine-id",
             "pattern": [],
             "symbolic_name": "etc_machine_id"
+        },
+        {
+            "file": "/etc/etcd/etcd.conf",
+            "pattern": [
+                "["
+            ],
+            "symbolic_name": "etcd_conf"
         },
         {
             "file": "/proc/1/cgroup",
@@ -1539,9 +1567,15 @@
         {
             "file": "/var/log/dmesg",
             "pattern": [
+                "Amazon EC2",
+                "FEATURE IBPB_SUPPORT",
+                "FEATURE SPEC_CTRL",
+                "Kernel page table isolation",
                 "L1TF",
                 "L1Tf",
-                "l1tf"
+                "Linux version",
+                "l1tf",
+                "x86/pti"
             ],
             "symbolic_name": "dmesg_log"
         },
@@ -1612,6 +1646,11 @@
             "file": "/etc/systemd/journald.conf.d/()*.+\\.conf",
             "pattern": [],
             "symbolic_name": "etc_journald_conf_d"
+        },
+        {
+            "file": "/var/log/foreman/production.log",
+            "pattern": [],
+            "symbolic_name": "foreman_production_log"
         },
         {
             "file": "/etc/fstab",
@@ -2376,6 +2415,11 @@
             "symbolic_name": "ps_auxwww"
         },
         {
+            "file": "/etc/default/pulp_workers",
+            "pattern": [],
+            "symbolic_name": "pulp_worker_defaults"
+        },
+        {
             "file": "/etc/libvirt/qemu.conf",
             "pattern": [],
             "symbolic_name": "qemu_conf"
@@ -2674,6 +2718,11 @@
                 "ProxyCommand"
             ],
             "symbolic_name": "ssh_foreman_proxy_config"
+        },
+        {
+            "file": "/etc/sssd/sssd.conf",
+            "pattern": [],
+            "symbolic_name": "sssd_config"
         },
         {
             "file": "/etc/swift/swift.conf",
@@ -8798,5 +8847,5 @@
             ]
         }
     },
-    "version": "2019-08-22T16:31:36.005099"
+    "version": "2019-09-12T14:24:51.299607"
 }
