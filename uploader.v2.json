@@ -1,6 +1,16 @@
 {
     "commands": [
         {
+            "command": "python -m insights.tools.cat --no-header aws_instance_id_doc",
+            "pattern": [],
+            "symbolic_name": "aws_instance_id_doc"
+        },
+        {
+            "command": "python -m insights.tools.cat --no-header aws_instance_id_pkcs7",
+            "pattern": [],
+            "symbolic_name": "aws_instance_id_pkcs7"
+        },
+        {
             "command": "python -m insights.tools.cat --no-header aws_instance_type",
             "pattern": [],
             "symbolic_name": "aws_instance_type"
