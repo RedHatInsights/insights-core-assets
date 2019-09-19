@@ -273,6 +273,11 @@
             "symbolic_name": "gluster_v_info"
         },
         {
+            "command": "/usr/sbin/gluster peer status",
+            "pattern": [],
+            "symbolic_name": "gluster_peer_status"
+        },
+        {
             "command": "/usr/sbin/gluster volume status",
             "pattern": [],
             "symbolic_name": "gluster_v_status"
@@ -482,6 +487,13 @@
             "command": "/bin/ls -ld /var/opt/mssql",
             "pattern": [],
             "symbolic_name": "ls_var_opt_mssql"
+        },
+        {
+            "command": "/bin/ls -lan /usr/lib64",
+            "pattern": [
+                "total"
+            ],
+            "symbolic_name": "ls_usr_lib64"
         },
         {
             "command": "/bin/ls -ln /usr/sbin",
@@ -891,6 +903,11 @@
             "symbolic_name": "pci_rport_target_disk_paths"
         },
         {
+            "command": "/usr/sbin/pcs quorum status",
+            "pattern": [],
+            "symbolic_name": "pcs_quorum_status"
+        },
+        {
             "command": "/usr/sbin/pcs status",
             "pattern": [],
             "symbolic_name": "pcs_status"
@@ -1009,6 +1026,11 @@
             "command": "python -m insights.tools.cat --no-header rhev_data_center",
             "pattern": [],
             "symbolic_name": "rhev_data_center"
+        },
+        {
+            "command": "/usr/sbin/rndc status",
+            "pattern": [],
+            "symbolic_name": "rndc_status"
         },
         {
             "command": "/usr/bin/crontab -l -u root",
@@ -1232,6 +1254,7 @@
         {
             "file": "/etc/etcd/etcd.conf",
             "pattern": [
+                "ETCD_DATA_DIR",
                 "["
             ],
             "symbolic_name": "etcd_conf"
@@ -8837,5 +8860,5 @@
             ]
         }
     },
-    "version": "2019-09-12T14:24:51.299607"
+    "version": "2019-09-19T15:36:23.576264"
 }
