@@ -896,6 +896,11 @@
             "symbolic_name": "pci_rport_target_disk_paths"
         },
         {
+            "command": "/usr/sbin/pcs quorum status",
+            "pattern": [],
+            "symbolic_name": "pcs_quorum_status"
+        },
+        {
             "command": "/usr/sbin/pcs status",
             "pattern": [],
             "symbolic_name": "pcs_status"
