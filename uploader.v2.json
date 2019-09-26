@@ -1,6 +1,16 @@
 {
     "commands": [
         {
+            "command": "python -m insights.tools.cat --no-header aws_instance_id_doc",
+            "pattern": [],
+            "symbolic_name": "aws_instance_id_doc"
+        },
+        {
+            "command": "python -m insights.tools.cat --no-header aws_instance_id_pkcs7",
+            "pattern": [],
+            "symbolic_name": "aws_instance_id_pkcs7"
+        },
+        {
             "command": "python -m insights.tools.cat --no-header aws_instance_type",
             "pattern": [],
             "symbolic_name": "aws_instance_type"
@@ -26,22 +36,32 @@
             "symbolic_name": "brctl_show"
         },
         {
-            "command": "/usr/bin/ceph health detail -f json-pretty",
+            "command": "/usr/bin/ceph health detail -f json",
             "pattern": [],
             "symbolic_name": "ceph_health_detail"
         },
         {
-            "command": "/usr/bin/ceph osd dump -f json-pretty",
+            "command": "/usr/bin/ceph df detail -f json",
+            "pattern": [],
+            "symbolic_name": "ceph_df_detail"
+        },
+        {
+            "command": "/usr/bin/ceph osd dump -f json",
             "pattern": [],
             "symbolic_name": "ceph_osd_dump"
         },
         {
-            "command": "/usr/bin/ceph osd tree -f json-pretty",
+            "command": "/usr/bin/ceph osd df -f json",
+            "pattern": [],
+            "symbolic_name": "ceph_osd_df"
+        },
+        {
+            "command": "/usr/bin/ceph osd tree -f json",
             "pattern": [],
             "symbolic_name": "ceph_osd_tree"
         },
         {
-            "command": "/usr/bin/ceph -s -f json-pretty",
+            "command": "/usr/bin/ceph -s -f json",
             "pattern": [],
             "symbolic_name": "ceph_s"
         },
@@ -846,6 +866,11 @@
             "command": "/usr/bin/id -u nova_migration",
             "pattern": [],
             "symbolic_name": "nova_migration_uid"
+        },
+        {
+            "command": "/usr/bin/hammer --config /root/.hammer/cli.modules.d/foreman.yml --output csv task list --search 'state=running AND ( label=Actions::Candlepin::ListenOnCandlepinEvents OR label=Actions::Katello::EventQueue::Monitor )'",
+            "pattern": [],
+            "symbolic_name": "hammer_task_list"
         },
         {
             "command": "/usr/sbin/ntpq -c 'rv 0 leap'",
@@ -3370,5 +3395,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-09-19T15:36:17.541566"
+    "version": "2019-09-26T13:24:09.598736"
 }
