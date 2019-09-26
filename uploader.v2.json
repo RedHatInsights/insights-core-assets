@@ -858,6 +858,11 @@
             "symbolic_name": "nova_migration_uid"
         },
         {
+            "command": "/usr/bin/hammer --config /root/.hammer/cli.modules.d/foreman.yml --output csv task list --search 'state=running AND ( label=Actions::Candlepin::ListenOnCandlepinEvents OR label=Actions::Katello::EventQueue::Monitor )'",
+            "pattern": [],
+            "symbolic_name": "hammer_task_list"
+        },
+        {
             "command": "/usr/sbin/ntpq -c 'rv 0 leap'",
             "pattern": [],
             "symbolic_name": "ntpq_leap"
