@@ -45,7 +45,7 @@
             "pattern": [],
             "symbolic_name": "ceph_health_detail"
         },
-	{
+        {
             "command": "/usr/bin/ceph df detail -f json",
             "pattern": [],
             "symbolic_name": "ceph_df_detail"
@@ -8885,5 +8885,5 @@
             ]
         }
     },
-    "version": "2019-09-19T15:36:23.576264"
+    "version": "2019-09-26T13:24:14.297768"
 }

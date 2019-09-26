@@ -40,7 +40,7 @@
             "pattern": [],
             "symbolic_name": "ceph_health_detail"
         },
-	{
+        {
             "command": "/usr/bin/ceph df detail -f json",
             "pattern": [],
             "symbolic_name": "ceph_df_detail"
@@ -50,7 +50,7 @@
             "pattern": [],
             "symbolic_name": "ceph_osd_dump"
         },
-	{
+        {
             "command": "/usr/bin/ceph osd df -f json",
             "pattern": [],
             "symbolic_name": "ceph_osd_df"
@@ -3395,5 +3395,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-09-19T15:36:17.541566"
+    "version": "2019-09-26T13:24:09.598736"
 }
