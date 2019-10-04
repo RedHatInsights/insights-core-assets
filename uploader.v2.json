@@ -1478,13 +1478,6 @@
             "symbolic_name": "ceph_conf"
         },
         {
-            "file": "/var/log/ceph/()ceph.log*",
-            "pattern": [
-                "[WRN] slow request"
-            ],
-            "symbolic_name": "ceph_log"
-        },
-        {
             "file": "/var/log/ceph/()*ceph-osd.*\\.log$",
             "pattern": [
                 "common/Thread.cc"
@@ -3493,6 +3486,13 @@
             "glob": "/sys/fs/cgroup/cpu/kubepods.slice/kubepods-burstable.slice/kubepods-burstable-pod[a-f0-9_]*.slice/cpu.cfs_quota_us",
             "symbolic_name": "kubepods_cpu_quota",
             "pattern": []
+        },
+        {
+            "glob": "/var/log/ceph/ceph.log*",
+            "pattern": [
+                "[WRN] slow request"
+            ],
+            "symbolic_name": "ceph_log"
         },
         {
             "glob": "/var/log/libvirt/qemu/*.log",
