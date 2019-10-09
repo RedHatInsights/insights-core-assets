@@ -3331,6 +3331,11 @@
             "pattern": []
         },
         {
+            "glob": "/boot/config-*",
+            "symbolic_name": "kernel_config",
+            "pattern": []
+        },
+        {
             "glob": "/etc/krb5.conf.d/*",
             "symbolic_name": "krb5_conf_d",
             "pattern": []
