@@ -1893,6 +1893,11 @@
             "symbolic_name": "kdump_conf"
         },
         {
+            "file": "/boot/()config-.*",
+            "pattern": [],
+            "symbolic_name": "kernel_config"
+        },
+        {
             "file": "/sys/kernel/kexec_crash_size",
             "pattern": [],
             "symbolic_name": "kexec_crash_size"
@@ -3333,11 +3338,6 @@
         {
             "glob": "/var/opt/amq-broker/*/etc/broker.xml",
             "symbolic_name": "amq_broker",
-            "pattern": []
-        },
-        {
-            "file": "/boot/()config-.*",
-            "symbolic_name": "kernel_config",
             "pattern": []
         },
         {
