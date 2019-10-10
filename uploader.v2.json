@@ -1598,6 +1598,8 @@
             "file": "/var/log/dmesg",
             "pattern": [
                 "Amazon EC2",
+                "CVE-2017-1000364",
+                "CVE-2018-14634",
                 "FEATURE IBPB_SUPPORT",
                 "FEATURE SPEC_CTRL",
                 "Kernel page table isolation",
@@ -1743,21 +1745,21 @@
         {
             "file": "/var/log/heat/heat-api.log",
             "pattern": [
-                "(OperationalError) (1040, 'Too many connections')"
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "heat_api_log"
         },
         {
             "file": "/var/log/heat/heat_api.log",
             "pattern": [
-                "(OperationalError) (1040, 'Too many connections')"
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "heat_api_log"
         },
         {
             "file": "/var/log/containers/heat/heat_api.log",
             "pattern": [
-                "(OperationalError) (1040, 'Too many connections')"
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "heat_api_log"
         },
@@ -1968,6 +1970,7 @@
                 "Detected Tx Unit Hang",
                 "Device is still in reset",
                 "Device offlined - not ready after error recovery",
+                "Error I40E_AQ_RC_EINVAL adding RX filters on PF, promiscuous mode forced on",
                 "Error deleting EBS Disk volume aws",
                 "Error in FW/Card",
                 "Error running DeviceResume dm_task_run failed",
@@ -2062,6 +2065,7 @@
                 "tg3_start_xmit",
                 "there is a meaningful conflict",
                 "timeout; kill it",
+                "transmit queue 30 timed out",
                 "udev: renamed network interface",
                 "unknown filesystem type 'binfmt_misc'",
                 "vdsm-tool: EnvironmentError: Failed to restore the persisted networks",
@@ -2623,7 +2627,7 @@
         {
             "file": "/var/log/secure",
             "pattern": [
-                "error: session_pty_req: session"
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "secure"
         },
@@ -2734,8 +2738,7 @@
         {
             "file": "/usr/share/foreman/.ssh/ssh_config",
             "pattern": [
-                "Host",
-                "ProxyCommand"
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "ssh_foreman_config"
         },
@@ -2900,7 +2903,7 @@
         {
             "file": "/var/log/up2date",
             "pattern": [
-                "Temporary failure in name resolution"
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "up2date_log"
         },
@@ -3333,7 +3336,9 @@
         {
             "glob": "/boot/config-*",
             "symbolic_name": "kernel_config",
-            "pattern": []
+            "pattern": [
+                "CONFIG_PREEMPT_RT_FULL"
+            ]
         },
         {
             "glob": "/etc/krb5.conf.d/*",
@@ -3395,5 +3400,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-09-27T14:18:15.985083"
+    "version": "2019-10-10T13:23:22.926272"
 }
