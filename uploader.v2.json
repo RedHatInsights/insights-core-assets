@@ -1924,6 +1924,17 @@
             "symbolic_name": "ksmstate"
         },
         {
+            "file": "/var/log/libvirt/libvirtd.log",
+            "pattern": [
+		"virDomainBlockPull:",
+		"virDomainBlockCopy:",
+		"virDomainBlockCommit:",
+		"virDomainSnapshotCreateXML:",
+		"qemuMigrationSrcNBDStorageCopyBlockdev:",
+             ],
+            "symbolic_name": "libvirtd_log"
+        },
+        {
             "file": "/etc/security/()*limits\\.conf",
             "pattern": [],
             "symbolic_name": "limits_conf"
