@@ -38,7 +38,7 @@ pipeline {
                             ssh-add \"$privateKeyFile\"
                             cp $AKAMAI_HOST_KEY ~/.ssh/known_hosts
                             chmod 600 ~/.ssh/known_hosts
-                            rsync -arv -e \"ssh -2\" ./uploader* sshacs@cloud-unprotected.upload.akamai.com:/822386/api/static/
+                            rsync -arv -e \"ssh -2\" ./uploader* sshacs@cloud-unprotected.upload.akamai.com:/822386/api/v1/static/
                             """
                   }
              }
@@ -62,8 +62,8 @@ pipeline {
                             ssh-add \"$privateKeyFile\"
                             cp $AKAMAI_HOST_KEY ~/.ssh/known_hosts
                             chmod 600 ~/.ssh/known_hosts
-                            rsync -arv -e \"ssh -2\" ./insights-core.egg* sshacs@cloud-unprotected.upload.akamai.com:/822386/api/static/
-                            rsync -arv -e \"ssh -2\" ./changelog.txt sshacs@cloud-unprotected.upload.akamai.com:/822386/api/static/
+                            rsync -arv -e \"ssh -2\" ./insights-core.egg* sshacs@cloud-unprotected.upload.akamai.com:/822386/api/v1/static/
+                            rsync -arv -e \"ssh -2\" ./changelog.txt sshacs@cloud-unprotected.upload.akamai.com:/822386/api/v1/static/
                             """
                   }
              }
