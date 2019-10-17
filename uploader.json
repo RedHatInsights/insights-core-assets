@@ -2672,6 +2672,11 @@
             "symbolic_name": "softnet_stat"
         },
         {
+            "file": "/proc/net/sockstat",
+            "pattern": [],
+            "symbolic_name": "sockstat"
+        },
+        {
             "file": "/etc/ssh/sshd_config",
             "pattern": [
                 "ALLOWUSERS",
