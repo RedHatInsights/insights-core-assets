@@ -1085,7 +1085,7 @@
             "symbolic_name": "software_collections_list"
         },
         {
-            "command": "/usr/bin/subscription-manager identity",
+            "command": "/usr/sbin/subscription-manager identity",
             "pattern": [],
             "symbolic_name": "subscription_manager_id"
         },
@@ -1097,7 +1097,7 @@
             "symbolic_name": "subscription_manager_installed_product_ids"
         },
         {
-            "command": "/usr/bin/subscription-manager release --show",
+            "command": "/usr/sbin/subscription-manager release --show",
             "pattern": [],
             "symbolic_name": "subscription_manager_release_show"
         },
