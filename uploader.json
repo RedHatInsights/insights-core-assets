@@ -1085,7 +1085,7 @@
             "symbolic_name": "software_collections_list"
         },
         {
-            "command": "/usr/bin/subscription-manager identity",
+            "command": "/usr/sbin/subscription-manager identity",
             "pattern": [],
             "symbolic_name": "subscription_manager_id"
         },
@@ -1097,7 +1097,7 @@
             "symbolic_name": "subscription_manager_installed_product_ids"
         },
         {
-            "command": "/usr/bin/subscription-manager release --show",
+            "command": "/usr/sbin/subscription-manager release --show",
             "pattern": [],
             "symbolic_name": "subscription_manager_release_show"
         },
@@ -1305,6 +1305,15 @@
             "symbolic_name": "audit_log"
         },
         {
+            "file": "/var/log/cloud-init.log",
+            "pattern": [
+                "Failed loading yaml blob",
+                "99-datasource.cfg",
+                "Invalid format"
+            ],
+            "symbolic_name": "cloud_init_log"
+        },
+        {
             "file": "/etc/audit/auditd.conf",
             "pattern": [],
             "symbolic_name": "auditd_conf"
@@ -1469,7 +1478,8 @@
             "file": "/var/log/cinder/cinder-api.log",
             "pattern": [
                 "DEBUG oslo.messaging._drivers.impl_rabbit",
-                "Timed out waiting for RPC response"
+                "Timed out waiting for RPC response",
+                "Too many connections"
             ],
             "symbolic_name": "cinder_api_log"
         },
@@ -1477,7 +1487,8 @@
             "file": "/var/log/containers/cinder/cinder-api.log",
             "pattern": [
                 "DEBUG oslo.messaging._drivers.impl_rabbit",
-                "Timed out waiting for RPC response"
+                "Timed out waiting for RPC response",
+                "Too many connections"
             ],
             "symbolic_name": "cinder_api_log"
         },
@@ -1745,6 +1756,7 @@
         {
             "file": "/var/log/heat/heat-api.log",
             "pattern": [
+                "Too many connections",
                 "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "heat_api_log"
@@ -1752,6 +1764,7 @@
         {
             "file": "/var/log/heat/heat_api.log",
             "pattern": [
+                "Too many connections",
                 "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "heat_api_log"
@@ -1759,6 +1772,7 @@
         {
             "file": "/var/log/containers/heat/heat_api.log",
             "pattern": [
+                "Too many connections",
                 "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "heat_api_log"
@@ -2040,6 +2054,7 @@
                 "kernel: CIFS VFS: Unexpected SMB signature",
                 "kernel: INFO: task xfsaild/md",
                 "kernel: Memory cgroup out of memory: Kill process",
+                "kernel: TCP: out of memory -- consider tuning tcp_mem",
                 "kernel: bnx2fc: byte_count",
                 "kernel: kvm: disabled by bios",
                 "kernel: lockd: Unknown symbol register_inet6addr_notifier",
@@ -2209,7 +2224,8 @@
             "pattern": [
                 "DEBUG oslo.messaging._drivers.impl_rabbit",
                 "Timed out waiting for RPC response",
-                "Timed out waiting for a reply to message ID"
+                "Timed out waiting for a reply to message ID",
+                "Too many connections"
             ],
             "symbolic_name": "nova_api_log"
         },
@@ -2218,7 +2234,8 @@
             "pattern": [
                 "DEBUG oslo.messaging._drivers.impl_rabbit",
                 "Timed out waiting for RPC response",
-                "Timed out waiting for a reply to message ID"
+                "Timed out waiting for a reply to message ID",
+                "Too many connections"
             ],
             "symbolic_name": "nova_api_log"
         },
@@ -2670,6 +2687,11 @@
             "file": "/proc/net/softnet_stat",
             "pattern": [],
             "symbolic_name": "softnet_stat"
+        },
+        {
+            "file": "/proc/net/sockstat",
+            "pattern": [],
+            "symbolic_name": "sockstat"
         },
         {
             "file": "/etc/ssh/sshd_config",
@@ -8890,5 +8912,5 @@
             ]
         }
     },
-    "version": "2019-10-10T13:23:17.546968"
+    "version": "2019-10-17T14:27:31.187730"
 }
