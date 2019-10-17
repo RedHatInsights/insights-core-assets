@@ -1296,6 +1296,15 @@
             ],
             "symbolic_name": "audit_log"
         },
+	{
+            "file": "/var/log/cloud-init.log",
+            "pattern": [
+                "Failed loading yaml blob",
+                "99-datasource.cfg",
+                "Invalid format"
+            ],
+            "symbolic_name": "cloud_init_log"
+        },
         {
             "file": "/etc/audit/auditd.conf",
             "pattern": [],
