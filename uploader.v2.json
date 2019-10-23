@@ -1,6 +1,16 @@
 {
     "commands": [
         {
+            "command": "python -m insights.tools.cat --no-header aws_instance_id_doc",
+            "pattern": [],
+            "symbolic_name": "aws_instance_id_doc"
+        },
+        {
+            "command": "python -m insights.tools.cat --no-header aws_instance_id_pkcs7",
+            "pattern": [],
+            "symbolic_name": "aws_instance_id_pkcs7"
+        },
+        {
             "command": "python -m insights.tools.cat --no-header aws_instance_type",
             "pattern": [],
             "symbolic_name": "aws_instance_type"
@@ -26,22 +36,32 @@
             "symbolic_name": "brctl_show"
         },
         {
-            "command": "/usr/bin/ceph health detail -f json-pretty",
+            "command": "/usr/bin/ceph health detail -f json",
             "pattern": [],
             "symbolic_name": "ceph_health_detail"
         },
         {
-            "command": "/usr/bin/ceph osd dump -f json-pretty",
+            "command": "/usr/bin/ceph df detail -f json",
+            "pattern": [],
+            "symbolic_name": "ceph_df_detail"
+        },
+        {
+            "command": "/usr/bin/ceph osd dump -f json",
             "pattern": [],
             "symbolic_name": "ceph_osd_dump"
         },
         {
-            "command": "/usr/bin/ceph osd tree -f json-pretty",
+            "command": "/usr/bin/ceph osd df -f json",
+            "pattern": [],
+            "symbolic_name": "ceph_osd_df"
+        },
+        {
+            "command": "/usr/bin/ceph osd tree -f json",
             "pattern": [],
             "symbolic_name": "ceph_osd_tree"
         },
         {
-            "command": "/usr/bin/ceph -s -f json-pretty",
+            "command": "/usr/bin/ceph -s -f json",
             "pattern": [],
             "symbolic_name": "ceph_s"
         },
@@ -273,6 +293,11 @@
             "symbolic_name": "gluster_v_info"
         },
         {
+            "command": "/usr/sbin/gluster peer status",
+            "pattern": [],
+            "symbolic_name": "gluster_peer_status"
+        },
+        {
             "command": "/usr/sbin/gluster volume status",
             "pattern": [],
             "symbolic_name": "gluster_v_status"
@@ -305,6 +330,11 @@
             "symbolic_name": "heat_crontab"
         },
         {
+            "command": "/bin/hostname",
+            "pattern": [],
+            "symbolic_name": "hostname_default"
+        },
+        {
             "command": "/bin/hostname -f",
             "pattern": [],
             "symbolic_name": "hostname"
@@ -313,6 +343,11 @@
             "command": "/bin/hostname -I",
             "pattern": [],
             "symbolic_name": "ip_addresses"
+        },
+        {
+            "command": "/bin/hostname -s",
+            "pattern": [],
+            "symbolic_name": "hostname_short"
         },
         {
             "command": "/usr/sbin/httpd -V",
@@ -472,6 +507,13 @@
             "command": "/bin/ls -ld /var/opt/mssql",
             "pattern": [],
             "symbolic_name": "ls_var_opt_mssql"
+        },
+        {
+            "command": "/bin/ls -lan /usr/lib64",
+            "pattern": [
+                "total"
+            ],
+            "symbolic_name": "ls_usr_lib64"
         },
         {
             "command": "/bin/ls -ln /usr/sbin",
@@ -826,6 +868,11 @@
             "symbolic_name": "nova_migration_uid"
         },
         {
+            "command": "/usr/bin/hammer --config /root/.hammer/cli.modules.d/foreman.yml --output csv task list --search 'state=running AND ( label=Actions::Candlepin::ListenOnCandlepinEvents OR label=Actions::Katello::EventQueue::Monitor )'",
+            "pattern": [],
+            "symbolic_name": "hammer_task_list"
+        },
+        {
             "command": "/usr/sbin/ntpq -c 'rv 0 leap'",
             "pattern": [],
             "symbolic_name": "ntpq_leap"
@@ -879,6 +926,11 @@
             "command": "/usr/bin/find /sys/devices/ -maxdepth 10 -mindepth 9 -name stat -type f",
             "pattern": [],
             "symbolic_name": "pci_rport_target_disk_paths"
+        },
+        {
+            "command": "/usr/sbin/pcs quorum status",
+            "pattern": [],
+            "symbolic_name": "pcs_quorum_status"
         },
         {
             "command": "/usr/sbin/pcs status",
@@ -1001,6 +1053,11 @@
             "symbolic_name": "rhev_data_center"
         },
         {
+            "command": "/usr/sbin/rndc status",
+            "pattern": [],
+            "symbolic_name": "rndc_status"
+        },
+        {
             "command": "/usr/bin/crontab -l -u root",
             "pattern": [
                 "heat-manage"
@@ -1028,7 +1085,7 @@
             "symbolic_name": "software_collections_list"
         },
         {
-            "command": "/usr/bin/subscription-manager identity",
+            "command": "/usr/sbin/subscription-manager identity",
             "pattern": [],
             "symbolic_name": "subscription_manager_id"
         },
@@ -1040,7 +1097,7 @@
             "symbolic_name": "subscription_manager_installed_product_ids"
         },
         {
-            "command": "/usr/bin/subscription-manager release --show",
+            "command": "/usr/sbin/subscription-manager release --show",
             "pattern": [],
             "symbolic_name": "subscription_manager_release_show"
         },
@@ -1155,6 +1212,11 @@
             "symbolic_name": "uptime"
         },
         {
+            "command": "/usr/bin/vdo status",
+            "pattern": [],
+            "symbolic_name": "vdo_status"
+        },
+        {
             "command": "/sbin/vgdisplay -vv",
             "pattern": [],
             "symbolic_name": "vgdisplay"
@@ -1233,6 +1295,15 @@
                 "type=AVC"
             ],
             "symbolic_name": "audit_log"
+        },
+        {
+            "file": "/var/log/cloud-init.log",
+            "pattern": [
+                "Failed loading yaml blob",
+                "99-datasource.cfg",
+                "Invalid format"
+            ],
+            "symbolic_name": "cloud_init_log"
         },
         {
             "file": "/etc/audit/auditd.conf",
@@ -1394,7 +1465,8 @@
             "file": "/var/log/cinder/cinder-api.log",
             "pattern": [
                 "DEBUG oslo.messaging._drivers.impl_rabbit",
-                "Timed out waiting for RPC response"
+                "Timed out waiting for RPC response",
+                "Too many connections"
             ],
             "symbolic_name": "cinder_api_log"
         },
@@ -1402,7 +1474,8 @@
             "file": "/var/log/containers/cinder/cinder-api.log",
             "pattern": [
                 "DEBUG oslo.messaging._drivers.impl_rabbit",
-                "Timed out waiting for RPC response"
+                "Timed out waiting for RPC response",
+                "Too many connections"
             ],
             "symbolic_name": "cinder_api_log"
         },
@@ -1535,9 +1608,17 @@
         {
             "file": "/var/log/dmesg",
             "pattern": [
+                "Amazon EC2",
+                "CVE-2017-1000364",
+                "CVE-2018-14634",
+                "FEATURE IBPB_SUPPORT",
+                "FEATURE SPEC_CTRL",
+                "Kernel page table isolation",
                 "L1TF",
                 "L1Tf",
-                "l1tf"
+                "Linux version",
+                "l1tf",
+                "x86/pti"
             ],
             "symbolic_name": "dmesg_log"
         },
@@ -1565,6 +1646,14 @@
             "file": "/etc/sysconfig/docker",
             "pattern": [],
             "symbolic_name": "docker_sysconfig"
+        },
+        {
+            "file": "/etc/etcd/etcd.conf",
+            "pattern": [
+                "ETCD_DATA_DIR",
+                "["
+            ],
+            "symbolic_name": "etcd_conf"
         },
         {
             "file": "/var/log/ovirt-engine/engine.log",
@@ -1608,11 +1697,6 @@
             "file": "/etc/systemd/journald.conf.d/()*.+\\.conf",
             "pattern": [],
             "symbolic_name": "etc_journald_conf_d"
-        },
-        {
-            "file": "/var/log/foreman/production.log",
-            "pattern": [],
-            "symbolic_name": "foreman_production_log"
         },
         {
             "file": "/etc/fstab",
@@ -1682,21 +1766,24 @@
         {
             "file": "/var/log/heat/heat-api.log",
             "pattern": [
-                "(OperationalError) (1040, 'Too many connections')"
+                "Too many connections",
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "heat_api_log"
         },
         {
             "file": "/var/log/heat/heat_api.log",
             "pattern": [
-                "(OperationalError) (1040, 'Too many connections')"
+                "Too many connections",
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "heat_api_log"
         },
         {
             "file": "/var/log/containers/heat/heat_api.log",
             "pattern": [
-                "(OperationalError) (1040, 'Too many connections')"
+                "Too many connections",
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "heat_api_log"
         },
@@ -1907,6 +1994,7 @@
                 "Detected Tx Unit Hang",
                 "Device is still in reset",
                 "Device offlined - not ready after error recovery",
+                "Error I40E_AQ_RC_EINVAL adding RX filters on PF, promiscuous mode forced on",
                 "Error deleting EBS Disk volume aws",
                 "Error in FW/Card",
                 "Error running DeviceResume dm_task_run failed",
@@ -1969,6 +2057,7 @@
                 "kernel: CIFS VFS: Unexpected SMB signature",
                 "kernel: INFO: task xfsaild/md",
                 "kernel: Memory cgroup out of memory: Kill process",
+                "kernel: TCP: out of memory -- consider tuning tcp_mem",
                 "kernel: bnx2fc: byte_count",
                 "kernel: kvm: disabled by bios",
                 "kernel: lockd: Unknown symbol register_inet6addr_notifier",
@@ -2001,6 +2090,7 @@
                 "tg3_start_xmit",
                 "there is a meaningful conflict",
                 "timeout; kill it",
+                "transmit queue 30 timed out",
                 "udev: renamed network interface",
                 "unknown filesystem type 'binfmt_misc'",
                 "vdsm-tool: EnvironmentError: Failed to restore the persisted networks",
@@ -2137,7 +2227,8 @@
             "pattern": [
                 "DEBUG oslo.messaging._drivers.impl_rabbit",
                 "Timed out waiting for RPC response",
-                "Timed out waiting for a reply to message ID"
+                "Timed out waiting for a reply to message ID",
+                "Too many connections"
             ],
             "symbolic_name": "nova_api_log"
         },
@@ -2146,7 +2237,8 @@
             "pattern": [
                 "DEBUG oslo.messaging._drivers.impl_rabbit",
                 "Timed out waiting for RPC response",
-                "Timed out waiting for a reply to message ID"
+                "Timed out waiting for a reply to message ID",
+                "Too many connections"
             ],
             "symbolic_name": "nova_api_log"
         },
@@ -2562,7 +2654,7 @@
         {
             "file": "/var/log/secure",
             "pattern": [
-                "error: session_pty_req: session"
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "secure"
         },
@@ -2593,6 +2685,11 @@
             "file": "/proc/net/softnet_stat",
             "pattern": [],
             "symbolic_name": "softnet_stat"
+        },
+        {
+            "file": "/proc/net/sockstat",
+            "pattern": [],
+            "symbolic_name": "sockstat"
         },
         {
             "file": "/etc/ssh/sshd_config",
@@ -2673,8 +2770,7 @@
         {
             "file": "/usr/share/foreman/.ssh/ssh_config",
             "pattern": [
-                "Host",
-                "ProxyCommand"
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "ssh_foreman_config"
         },
@@ -2685,6 +2781,11 @@
                 "ProxyCommand"
             ],
             "symbolic_name": "ssh_foreman_proxy_config"
+        },
+        {
+            "file": "/etc/sssd/sssd.conf",
+            "pattern": [],
+            "symbolic_name": "sssd_config"
         },
         {
             "file": "/etc/swift/swift.conf",
@@ -2834,7 +2935,7 @@
         {
             "file": "/var/log/up2date",
             "pattern": [
-                "Temporary failure in name resolution"
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "up2date_log"
         },
@@ -3265,6 +3366,13 @@
             "pattern": []
         },
         {
+            "glob": "/boot/config-*",
+            "symbolic_name": "kernel_config",
+            "pattern": [
+                "CONFIG_PREEMPT_RT_FULL"
+            ]
+        },
+        {
             "glob": "/etc/krb5.conf.d/*",
             "symbolic_name": "krb5_conf_d",
             "pattern": []
@@ -3324,5 +3432,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-08-29T17:11:09.551840"
+    "version": "2019-10-17T14:27:26.510456"
 }
