@@ -1943,13 +1943,7 @@
         },
         {
             "file": "/var/log/libvirt/libvirtd.log",
-            "pattern": [
-		"virDomainBlockPull:",
-		"virDomainBlockCopy:",
-		"virDomainBlockCommit:",
-		"virDomainSnapshotCreateXML:",
-		"qemuMigrationSrcNBDStorageCopyBlockdev:",
-             ],
+            "pattern": [],
             "symbolic_name": "libvirtd_log"
         },
         {
