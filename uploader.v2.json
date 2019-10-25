@@ -165,6 +165,7 @@
                 "VPD access disabled",
                 "WRITE SAME failed. Manually zeroing",
                 "Warning: QLogic ISP3XXX Network Driver - this hardware has not undergone testing by Red Hat and might not be certified",
+                "__cpufreq_add_dev",
                 "blocked FC remote port time out: removing target and saving binding",
                 "crashkernel reservation failed",
                 "crashkernel=auto resulted in zero bytes of reserved memory",
@@ -793,6 +794,7 @@
                 "Sha1",
                 "Sha256",
                 "Sha384",
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!",
                 "disable-algorithms",
                 "disable-ds-digests",
                 "dnssec-enable",
@@ -1299,9 +1301,10 @@
         {
             "file": "/var/log/cloud-init.log",
             "pattern": [
-                "Failed loading yaml blob",
-                "99-datasource.cfg",
-                "Invalid format"
+                "Attempting to load yaml from string of length 59 with allowed root types",
+                "Failed loading yaml blob. Invalid format at line 1 column 1",
+                "Read 59 bytes from /etc/cloud/cloud.cfg.d/99-datasource.cfg",
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "cloud_init_log"
         },
@@ -1617,6 +1620,8 @@
                 "L1TF",
                 "L1Tf",
                 "Linux version",
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!",
+                "__cpufreq_add_dev",
                 "l1tf",
                 "x86/pti"
             ],
@@ -1847,7 +1852,8 @@
             "pattern": [
                 "</policymap>",
                 "<policy",
-                "<policymap>"
+                "<policymap>",
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "imagemagick_policy"
         },
@@ -1856,7 +1862,8 @@
             "pattern": [
                 "</policymap>",
                 "<policy",
-                "<policymap>"
+                "<policymap>",
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "imagemagick_policy"
         },
@@ -1865,7 +1872,8 @@
             "pattern": [
                 "</policymap>",
                 "<policy",
-                "<policymap>"
+                "<policymap>",
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "imagemagick_policy"
         },
@@ -2012,6 +2020,7 @@
                 "Out of MCCQ wrbs",
                 "Out of memory: Kill process",
                 "Out of memory: kill process",
+                "PPM exceeds tolerance 500 PPM",
                 "SDN initialization failed: Error: Existing service with IP: None is not part of service network",
                 "Scheduled import of stream",
                 "TX driver issue detected, PF reset issued",
@@ -2993,6 +3002,7 @@
                 "SSL_SSLV3",
                 "Ssl_Enable",
                 "Ssl_Sslv3",
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!",
                 "local_enable",
                 "ssl_enable",
                 "ssl_sslv3"
@@ -3374,7 +3384,9 @@
         },
         {
             "glob": "/var/log/libvirt/qemu/*.log",
-            "pattern": [],
+            "pattern": [
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
+            ],
             "symbolic_name": "libvirtd_qemu_log"
         },
         {
@@ -3427,5 +3439,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-10-17T14:27:26.510456"
+    "version": "2019-10-25T11:17:40.946403"
 }
