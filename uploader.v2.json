@@ -3378,6 +3378,11 @@
             "pattern": []
         },
         {
+            "glob": "/var/log/libvirt/qemu/*.log",
+            "pattern": [],
+            "symbolic_name": "libvirtd_qemu_log"
+        },
+        {
             "glob": "/sys/bus/pci/devices/*/mlx4_port[0-9]",
             "symbolic_name": "mlx4_port",
             "pattern": []
