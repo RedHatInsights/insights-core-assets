@@ -2564,6 +2564,11 @@
             "symbolic_name": "rhn_taskomatic_daemon_log"
         },
         {
+            "file": "/etc/rhosp-release",
+            "pattern": [],
+            "symbolic_name": "rhosp_release"
+        },
+        {
             "file": "/etc/rhsm/rhsm.conf",
             "pattern": [],
             "symbolic_name": "rhsm_conf"
