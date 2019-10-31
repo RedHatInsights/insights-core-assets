@@ -1950,7 +1950,13 @@
         },
         {
             "file": "/var/log/libvirt/libvirtd.log",
-            "pattern": [],
+            "pattern": [
+                "qemuMigrationSrcNBDStorageCopyBlockdev:",
+                "virDomainBlockCommit:",
+                "virDomainBlockCopy:",
+                "virDomainBlockPull:",
+                "virDomainSnapshotCreateXML:"
+            ],
             "symbolic_name": "libvirtd_log"
         },
         {
@@ -8949,5 +8955,5 @@
             ]
         }
     },
-    "version": "2019-10-25T11:17:45.769528"
+    "version": "2019-10-31T15:05:02.458357"
 }
