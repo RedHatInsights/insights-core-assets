@@ -1942,6 +1942,17 @@
             "symbolic_name": "ksmstate"
         },
         {
+            "file": "/var/log/libvirt/libvirtd.log",
+            "pattern": [
+                "qemuMigrationSrcNBDStorageCopyBlockdev:",
+                "virDomainBlockCommit:",
+                "virDomainBlockCopy:",
+                "virDomainBlockPull:",
+                "virDomainSnapshotCreateXML:"
+            ],
+            "symbolic_name": "libvirtd_log"
+        },
+        {
             "file": "/etc/security/()*limits\\.conf",
             "pattern": [],
             "symbolic_name": "limits_conf"
@@ -3439,5 +3450,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-10-25T11:17:40.946403"
+    "version": "2019-10-31T15:05:07.073778"
 }
