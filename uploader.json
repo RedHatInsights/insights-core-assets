@@ -96,6 +96,11 @@
             "symbolic_name": "chronyc_sources"
         },
         {
+            "command": "/usr/bin/cpupower -c all frequency-info",
+            "pattern": [],
+            "symbolic_name": "cpupower_frequency_info"
+        },
+        {
             "command": "/bin/date",
             "pattern": [],
             "symbolic_name": "date"
@@ -8955,5 +8960,5 @@
             ]
         }
     },
-    "version": "2019-10-31T15:05:02.458357"
+    "version": "2019-11-07T13:26:45.040853"
 }

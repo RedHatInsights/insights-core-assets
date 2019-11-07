@@ -91,6 +91,11 @@
             "symbolic_name": "chronyc_sources"
         },
         {
+            "command": "/usr/bin/cpupower -c all frequency-info",
+            "pattern": [],
+            "symbolic_name": "cpupower_frequency_info"
+        },
+        {
             "command": "/bin/date",
             "pattern": [],
             "symbolic_name": "date"
@@ -3450,5 +3455,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-10-31T15:05:07.073778"
+    "version": "2019-11-07T13:26:49.987745"
 }
