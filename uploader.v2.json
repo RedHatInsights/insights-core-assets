@@ -2062,6 +2062,7 @@
                 "ext4_ext_search_left",
                 "failed to modify QP to RTR: -22",
                 "failed while handling",
+                "failed with error -110",
                 "failed! ALB mode requires that the base driver support setting the hw address also when the network",
                 "failed: Connection amqps:",
                 "failed: rpc error: code = 2 desc = unable to inspect docker image",
@@ -2071,6 +2072,8 @@
                 "from image service failed: rpc error: code = Canceled desc = context canceled",
                 "host not found in upstream",
                 "http2: no cached connection was available",
+                "hv_netvsc vmbus_",
+                "hv_netvsc: probe of vmbus_",
                 "hw csum failure",
                 "in libnl.so.1",
                 "initiating reset due to tx timeout",
@@ -2114,6 +2117,7 @@
                 "systemd[1]: Received SIGCHLD from PID",
                 "tg3_start_xmit",
                 "there is a meaningful conflict",
+                "timeout before we got a set response",
                 "timeout; kill it",
                 "transmit queue 30 timed out",
                 "udev: renamed network interface",
@@ -3355,6 +3359,7 @@
             "glob": "/boot/config-*",
             "symbolic_name": "kernel_config",
             "pattern": [
+                "CONFIG_BPF_SYSCALL",
                 "CONFIG_PREEMPT_RT_FULL"
             ]
         },
@@ -3455,5 +3460,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-11-07T13:26:49.987745"
+    "version": "2019-11-14T14:31:35.423953"
 }
