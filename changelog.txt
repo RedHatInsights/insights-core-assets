@@ -1,5 +1,13 @@
 Insights Client Core Changelog
 
+v3.0.134 - Nov 20 2019
+- Use pidfile and systemd-notify to extend job timer
+- Simplify egg version logging
+- Improve error handling
+- Remove deprecated option --to-stdout
+- Python 3 compatibility fix
+- Add more information to user agent
+
 v3.0.121 - Aug 26 2019
 - Fix Satellite 5 autoconfig bug
 
