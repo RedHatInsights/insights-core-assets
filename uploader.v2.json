@@ -91,6 +91,11 @@
             "symbolic_name": "chronyc_sources"
         },
         {
+            "command": "/usr/bin/cpupower -c all frequency-info",
+            "pattern": [],
+            "symbolic_name": "cpupower_frequency_info"
+        },
+        {
             "command": "/bin/date",
             "pattern": [],
             "symbolic_name": "date"
@@ -165,6 +170,7 @@
                 "VPD access disabled",
                 "WRITE SAME failed. Manually zeroing",
                 "Warning: QLogic ISP3XXX Network Driver - this hardware has not undergone testing by Red Hat and might not be certified",
+                "__cpufreq_add_dev",
                 "blocked FC remote port time out: removing target and saving binding",
                 "crashkernel reservation failed",
                 "crashkernel=auto resulted in zero bytes of reserved memory",
@@ -793,6 +799,7 @@
                 "Sha1",
                 "Sha256",
                 "Sha384",
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!",
                 "disable-algorithms",
                 "disable-ds-digests",
                 "dnssec-enable",
@@ -1085,7 +1092,7 @@
             "symbolic_name": "software_collections_list"
         },
         {
-            "command": "/usr/bin/subscription-manager identity",
+            "command": "/usr/sbin/subscription-manager identity",
             "pattern": [],
             "symbolic_name": "subscription_manager_id"
         },
@@ -1097,7 +1104,7 @@
             "symbolic_name": "subscription_manager_installed_product_ids"
         },
         {
-            "command": "/usr/bin/subscription-manager release --show",
+            "command": "/usr/sbin/subscription-manager release --show",
             "pattern": [],
             "symbolic_name": "subscription_manager_release_show"
         },
@@ -1297,6 +1304,16 @@
             "symbolic_name": "audit_log"
         },
         {
+            "file": "/var/log/cloud-init.log",
+            "pattern": [
+                "Attempting to load yaml from string of length 59 with allowed root types",
+                "Failed loading yaml blob. Invalid format at line 1 column 1",
+                "Read 59 bytes from /etc/cloud/cloud.cfg.d/99-datasource.cfg",
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
+            ],
+            "symbolic_name": "cloud_init_log"
+        },
+        {
             "file": "/etc/audit/auditd.conf",
             "pattern": [],
             "symbolic_name": "auditd_conf"
@@ -1456,7 +1473,8 @@
             "file": "/var/log/cinder/cinder-api.log",
             "pattern": [
                 "DEBUG oslo.messaging._drivers.impl_rabbit",
-                "Timed out waiting for RPC response"
+                "Timed out waiting for RPC response",
+                "Too many connections"
             ],
             "symbolic_name": "cinder_api_log"
         },
@@ -1464,7 +1482,8 @@
             "file": "/var/log/containers/cinder/cinder-api.log",
             "pattern": [
                 "DEBUG oslo.messaging._drivers.impl_rabbit",
-                "Timed out waiting for RPC response"
+                "Timed out waiting for RPC response",
+                "Too many connections"
             ],
             "symbolic_name": "cinder_api_log"
         },
@@ -1606,6 +1625,8 @@
                 "L1TF",
                 "L1Tf",
                 "Linux version",
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!",
+                "__cpufreq_add_dev",
                 "l1tf",
                 "x86/pti"
             ],
@@ -1708,6 +1729,11 @@
             "symbolic_name": "grub_efi_conf"
         },
         {
+            "file": "/boot/efi/EFI/redhat/grubenv",
+            "pattern": [],
+            "symbolic_name": "grub2_efi_grubenv"
+        },
+        {
             "file": "/boot/grub/grub.conf",
             "pattern": [],
             "symbolic_name": "grub_conf"
@@ -1721,6 +1747,11 @@
             "file": "/boot/grub2/grub.cfg",
             "pattern": [],
             "symbolic_name": "grub2_cfg"
+        },
+        {
+            "file": "/boot/grub2/grubenv",
+            "pattern": [],
+            "symbolic_name": "grub2_grubenv"
         },
         {
             "file": "/etc/haproxy/haproxy.cfg",
@@ -1745,6 +1776,7 @@
         {
             "file": "/var/log/heat/heat-api.log",
             "pattern": [
+                "Too many connections",
                 "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "heat_api_log"
@@ -1752,6 +1784,7 @@
         {
             "file": "/var/log/heat/heat_api.log",
             "pattern": [
+                "Too many connections",
                 "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "heat_api_log"
@@ -1759,6 +1792,7 @@
         {
             "file": "/var/log/containers/heat/heat_api.log",
             "pattern": [
+                "Too many connections",
                 "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "heat_api_log"
@@ -1823,7 +1857,8 @@
             "pattern": [
                 "</policymap>",
                 "<policy",
-                "<policymap>"
+                "<policymap>",
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "imagemagick_policy"
         },
@@ -1832,7 +1867,8 @@
             "pattern": [
                 "</policymap>",
                 "<policy",
-                "<policymap>"
+                "<policymap>",
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "imagemagick_policy"
         },
@@ -1841,7 +1877,8 @@
             "pattern": [
                 "</policymap>",
                 "<policy",
-                "<policymap>"
+                "<policymap>",
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
             ],
             "symbolic_name": "imagemagick_policy"
         },
@@ -1908,6 +1945,17 @@
             "file": "/sys/kernel/mm/ksm/run",
             "pattern": [],
             "symbolic_name": "ksmstate"
+        },
+        {
+            "file": "/var/log/libvirt/libvirtd.log",
+            "pattern": [
+                "qemuMigrationSrcNBDStorageCopyBlockdev:",
+                "virDomainBlockCommit:",
+                "virDomainBlockCopy:",
+                "virDomainBlockPull:",
+                "virDomainSnapshotCreateXML:"
+            ],
+            "symbolic_name": "libvirtd_log"
         },
         {
             "file": "/etc/security/()*limits\\.conf",
@@ -1988,6 +2036,7 @@
                 "Out of MCCQ wrbs",
                 "Out of memory: Kill process",
                 "Out of memory: kill process",
+                "PPM exceeds tolerance 500 PPM",
                 "SDN initialization failed: Error: Existing service with IP: None is not part of service network",
                 "Scheduled import of stream",
                 "TX driver issue detected, PF reset issued",
@@ -2013,6 +2062,7 @@
                 "ext4_ext_search_left",
                 "failed to modify QP to RTR: -22",
                 "failed while handling",
+                "failed with error -110",
                 "failed! ALB mode requires that the base driver support setting the hw address also when the network",
                 "failed: Connection amqps:",
                 "failed: rpc error: code = 2 desc = unable to inspect docker image",
@@ -2022,6 +2072,8 @@
                 "from image service failed: rpc error: code = Canceled desc = context canceled",
                 "host not found in upstream",
                 "http2: no cached connection was available",
+                "hv_netvsc vmbus_",
+                "hv_netvsc: probe of vmbus_",
                 "hw csum failure",
                 "in libnl.so.1",
                 "initiating reset due to tx timeout",
@@ -2033,6 +2085,7 @@
                 "kernel: CIFS VFS: Unexpected SMB signature",
                 "kernel: INFO: task xfsaild/md",
                 "kernel: Memory cgroup out of memory: Kill process",
+                "kernel: TCP: out of memory -- consider tuning tcp_mem",
                 "kernel: bnx2fc: byte_count",
                 "kernel: kvm: disabled by bios",
                 "kernel: lockd: Unknown symbol register_inet6addr_notifier",
@@ -2064,6 +2117,7 @@
                 "systemd[1]: Received SIGCHLD from PID",
                 "tg3_start_xmit",
                 "there is a meaningful conflict",
+                "timeout before we got a set response",
                 "timeout; kill it",
                 "transmit queue 30 timed out",
                 "udev: renamed network interface",
@@ -2153,56 +2207,12 @@
             "symbolic_name": "nfs_exports_d"
         },
         {
-            "file": "/etc/nginx/()*.conf",
-            "pattern": [],
-            "symbolic_name": "nginx_conf"
-        },
-        {
-            "file": "/etc/nginx/conf.d/()*",
-            "pattern": [],
-            "symbolic_name": "nginx_conf"
-        },
-        {
-            "file": "/etc/nginx/default.d/()*",
-            "pattern": [],
-            "symbolic_name": "nginx_conf"
-        },
-        {
-            "file": "/etc/opt/rh/rh-nginx()*/nginx/()*.conf",
-            "pattern": [],
-            "symbolic_name": "nginx_conf"
-        },
-        {
-            "file": "/etc/opt/rh/rh-nginx()*/nginx/conf.d/()*",
-            "pattern": [],
-            "symbolic_name": "nginx_conf"
-        },
-        {
-            "file": "/etc/opt/rh/rh-nginx()*/nginx/default.d/()*",
-            "pattern": [],
-            "symbolic_name": "nginx_conf"
-        },
-        {
-            "file": "/opt/rh/nginx()*/root/etc/nginx/()*.conf",
-            "pattern": [],
-            "symbolic_name": "nginx_conf"
-        },
-        {
-            "file": "/opt/rh/nginx()*/root/etc/nginx/conf.d/()*",
-            "pattern": [],
-            "symbolic_name": "nginx_conf"
-        },
-        {
-            "file": "/opt/rh/nginx()*/root/etc/nginx/default.d/()*",
-            "pattern": [],
-            "symbolic_name": "nginx_conf"
-        },
-        {
             "file": "/var/log/nova/nova-api.log",
             "pattern": [
                 "DEBUG oslo.messaging._drivers.impl_rabbit",
                 "Timed out waiting for RPC response",
-                "Timed out waiting for a reply to message ID"
+                "Timed out waiting for a reply to message ID",
+                "Too many connections"
             ],
             "symbolic_name": "nova_api_log"
         },
@@ -2211,7 +2221,8 @@
             "pattern": [
                 "DEBUG oslo.messaging._drivers.impl_rabbit",
                 "Timed out waiting for RPC response",
-                "Timed out waiting for a reply to message ID"
+                "Timed out waiting for a reply to message ID",
+                "Too many connections"
             ],
             "symbolic_name": "nova_api_log"
         },
@@ -2540,6 +2551,11 @@
             "symbolic_name": "rhn_taskomatic_daemon_log"
         },
         {
+            "file": "/etc/rhosp-release",
+            "pattern": [],
+            "symbolic_name": "rhosp_release"
+        },
+        {
             "file": "/etc/rhsm/rhsm.conf",
             "pattern": [],
             "symbolic_name": "rhsm_conf"
@@ -2663,6 +2679,11 @@
             "file": "/proc/net/softnet_stat",
             "pattern": [],
             "symbolic_name": "softnet_stat"
+        },
+        {
+            "file": "/proc/net/sockstat",
+            "pattern": [],
+            "symbolic_name": "sockstat"
         },
         {
             "file": "/etc/ssh/sshd_config",
@@ -3006,6 +3027,7 @@
                 "SSL_SSLV3",
                 "Ssl_Enable",
                 "Ssl_Sslv3",
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!",
                 "local_enable",
                 "ssl_enable",
                 "ssl_sslv3"
@@ -3342,6 +3364,7 @@
             "glob": "/boot/config-*",
             "symbolic_name": "kernel_config",
             "pattern": [
+                "CONFIG_BPF_SYSCALL",
                 "CONFIG_PREEMPT_RT_FULL"
             ]
         },
@@ -3351,9 +3374,46 @@
             "pattern": []
         },
         {
+            "glob": "/etc/nginx/*.conf",
+            "pattern": [],
+            "symbolic_name": "nginx_conf"
+        },
+        {
+            "glob": "/etc/nginx/*.d/*.conf",
+            "pattern": [],
+            "symbolic_name": "nginx_conf"
+        },
+        {
+            "glob": "/etc/opt/rh/rh-nginx*/nginx/*.conf",
+            "pattern": [],
+            "symbolic_name": "nginx_conf"
+        },
+        {
+            "glob": "/etc/opt/rh/rh-nginx*/nginx/*.d/*.conf",
+            "pattern": [],
+            "symbolic_name": "nginx_conf"
+        },
+        {
+            "glob": "/opt/rh/nginx*/root/etc/nginx/*.conf",
+            "pattern": [],
+            "symbolic_name": "nginx_conf"
+        },
+        {
+            "glob": "/opt/rh/nginx*/root/etc/nginx/*.d/*.conf",
+            "pattern": [],
+            "symbolic_name": "nginx_conf"
+        },
+        {
             "glob": "/sys/fs/cgroup/cpu/kubepods.slice/kubepods-burstable.slice/kubepods-burstable-pod[a-f0-9_]*.slice/cpu.cfs_quota_us",
             "symbolic_name": "kubepods_cpu_quota",
             "pattern": []
+        },
+        {
+            "glob": "/var/log/libvirt/qemu/*.log",
+            "pattern": [
+                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
+            ],
+            "symbolic_name": "libvirtd_qemu_log"
         },
         {
             "glob": "/sys/bus/pci/devices/*/mlx4_port[0-9]",
@@ -3405,5 +3465,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-10-10T13:23:22.926272"
+    "version": "2019-11-14T14:31:35.423953"
 }
