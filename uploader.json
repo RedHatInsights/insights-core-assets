@@ -2706,6 +2706,11 @@
             "symbolic_name": "sctp_eps"
         },
         {
+            "file": "/proc/net/sctp/snmp",
+            "pattern": [],
+            "symbolic_name": "sctp_snmp"
+        },
+        {
             "file": "/var/log/secure",
             "pattern": [
                 "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
