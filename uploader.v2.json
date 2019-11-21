@@ -2641,6 +2641,11 @@
             "symbolic_name": "sctp_eps"
         },
         {
+            "file": "/proc/net/sctp/snmp",
+            "pattern": [],
+            "symbolic_name": "sctp_snmp"
+        },
+        {
             "file": "/var/log/secure",
             "pattern": [
                 "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
@@ -3460,5 +3465,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-11-14T14:31:35.423953"
+    "version": "2019-11-21T14:57:23.020214"
 }
