@@ -1179,6 +1179,11 @@
             "symbolic_name": "systemctl_smartpdc"
         },
         {
+            "command": "/bin/systemctl show *.service --all",
+            "pattern": [],
+            "symbolic_name": "systemctl_show_all_services"
+        },
+        {
             "command": "/usr/bin/systemctl cat docker.service",
             "pattern": [],
             "symbolic_name": "systemd_docker"
