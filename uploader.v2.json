@@ -1179,7 +1179,7 @@
             "symbolic_name": "systemctl_smartpdc"
         },
         {
-            "command": "/bin/systemctl show *.service --all",
+            "command": "/bin/systemctl show *.service",
             "pattern": [],
             "symbolic_name": "systemctl_show_all_services"
         },
