@@ -377,7 +377,7 @@
             "image": true
         },
         {
-            "command": "/sbin/ip -s link",
+            "command": "/sbin/ip -s -d link",
             "pattern": [],
             "symbolic_name": "ip_s_link"
         },
