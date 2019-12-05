@@ -1077,6 +1077,11 @@
             "symbolic_name": "rpm__V_packages"
         },
         {
+            "command": "/usr/bin/sealert -l \"*\"",
+            "pattern": [],
+            "symbolic_name": "sealert"
+        },
+        {
             "command": "/usr/sbin/sestatus -b",
             "pattern": [],
             "symbolic_name": "sestatus"
@@ -7659,6 +7664,15 @@
                 {
                     "archive_file_name": "/etc/selinux/config",
                     "file": "/etc/selinux/config",
+                    "pattern": []
+                }
+            ]
+        },
+        "sealert": {
+            "host": [
+                {
+                    "archive_file_name": "/insights_commands/sealert_-l",
+                    "command": "/usr/bin/sealert -l \"*\"",
                     "pattern": []
                 }
             ]
