@@ -377,7 +377,7 @@
             "image": true
         },
         {
-            "command": "/sbin/ip -s link",
+            "command": "/sbin/ip -s -d link",
             "pattern": [],
             "symbolic_name": "ip_s_link"
         },
@@ -799,7 +799,6 @@
                 "Sha1",
                 "Sha256",
                 "Sha384",
-                "[CAUTION] This_is_the default_filter_string_for_all_large_files!",
                 "disable-algorithms",
                 "disable-ds-digests",
                 "dnssec-enable",
@@ -1077,6 +1076,11 @@
             "symbolic_name": "rpm__V_packages"
         },
         {
+            "command": "/usr/bin/sealert -l \"*\"",
+            "pattern": [],
+            "symbolic_name": "sealert"
+        },
+        {
             "command": "/usr/sbin/sestatus -b",
             "pattern": [],
             "symbolic_name": "sestatus"
@@ -1308,8 +1312,11 @@
             "pattern": [
                 "Attempting to load yaml from string of length 59 with allowed root types",
                 "Failed loading yaml blob. Invalid format at line 1 column 1",
+                "Network config is likely broken",
+                "No available network renderers found",
                 "Read 59 bytes from /etc/cloud/cloud.cfg.d/99-datasource.cfg",
-                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
+                "Unable to render networking",
+                "sysconfig"
             ],
             "symbolic_name": "cloud_init_log"
         },
@@ -1625,7 +1632,6 @@
                 "L1TF",
                 "L1Tf",
                 "Linux version",
-                "[CAUTION] This_is_the default_filter_string_for_all_large_files!",
                 "__cpufreq_add_dev",
                 "l1tf",
                 "x86/pti"
@@ -1776,24 +1782,21 @@
         {
             "file": "/var/log/heat/heat-api.log",
             "pattern": [
-                "Too many connections",
-                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
+                "Too many connections"
             ],
             "symbolic_name": "heat_api_log"
         },
         {
             "file": "/var/log/heat/heat_api.log",
             "pattern": [
-                "Too many connections",
-                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
+                "Too many connections"
             ],
             "symbolic_name": "heat_api_log"
         },
         {
             "file": "/var/log/containers/heat/heat_api.log",
             "pattern": [
-                "Too many connections",
-                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
+                "Too many connections"
             ],
             "symbolic_name": "heat_api_log"
         },
@@ -1857,8 +1860,7 @@
             "pattern": [
                 "</policymap>",
                 "<policy",
-                "<policymap>",
-                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
+                "<policymap>"
             ],
             "symbolic_name": "imagemagick_policy"
         },
@@ -1867,8 +1869,7 @@
             "pattern": [
                 "</policymap>",
                 "<policy",
-                "<policymap>",
-                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
+                "<policymap>"
             ],
             "symbolic_name": "imagemagick_policy"
         },
@@ -1877,8 +1878,7 @@
             "pattern": [
                 "</policymap>",
                 "<policy",
-                "<policymap>",
-                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
+                "<policymap>"
             ],
             "symbolic_name": "imagemagick_policy"
         },
@@ -2001,6 +2001,7 @@
             "file": "/var/log/messages",
             "pattern": [
                 " disconnect jid=",
+                "\"/var/lib/pgsql/data\" is missing or empty",
                 "(enic): transmit queue 0 timed out",
                 ", type vxfs) has no security xattr handler",
                 "- image is referenced in one or more repositories",
@@ -2080,6 +2081,7 @@
                 "irq handler for vector (irq -1)",
                 "is beyond advertised capabilities",
                 "is down or the link is down",
+                "iscsiadm: iscsiadm: Could not log into all portals",
                 "kernel/softirq.c:159 local_bh_enable+",
                 "kernel: BUG: soft lockup",
                 "kernel: CIFS VFS: Unexpected SMB signature",
@@ -3027,7 +3029,6 @@
                 "SSL_SSLV3",
                 "Ssl_Enable",
                 "Ssl_Sslv3",
-                "[CAUTION] This_is_the default_filter_string_for_all_large_files!",
                 "local_enable",
                 "ssl_enable",
                 "ssl_sslv3"
@@ -3465,5 +3466,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2019-11-21T14:57:23.020214"
+    "version": "2019-12-05T13:48:43.783713"
 }
