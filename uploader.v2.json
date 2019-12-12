@@ -1228,6 +1228,11 @@
             "symbolic_name": "vdo_status"
         },
         {
+            "command": "/usr/bin/readlink -e /etc/mtab",
+            "pattern": [],
+            "symbolic_name": "readlink_e_etc_mtab"
+        },
+        {
             "command": "/sbin/vgdisplay -vv",
             "pattern": [],
             "symbolic_name": "vgdisplay"
