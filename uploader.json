@@ -1049,6 +1049,11 @@
             "symbolic_name": "rabbitmq_users"
         },
         {
+            "command": "/usr/bin/readlink -e /etc/mtab",
+            "pattern": [],
+            "symbolic_name": "readlink_e_etc_mtab"
+        },
+        {
             "command": "/usr/bin/rhn-schema-version",
             "pattern": [],
             "symbolic_name": "rhn_schema_version"
@@ -1226,11 +1231,6 @@
             "command": "/usr/bin/vdo status",
             "pattern": [],
             "symbolic_name": "vdo_status"
-        },
-        {
-            "command": "/usr/bin/readlink -e /etc/mtab",
-            "pattern": [],
-            "symbolic_name": "readlink_e_etc_mtab"
         },
         {
             "command": "/sbin/vgdisplay -vv",
