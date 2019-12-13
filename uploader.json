@@ -3081,6 +3081,11 @@
             "symbolic_name": "virtlogd_conf"
         },
         {
+            "file": "/sys/kernel/mm/swap/vma_ra_enabled",
+            "pattern": [],
+            "symbolic_name": "vma_ra_enabled"
+        },
+        {
             "file": "/etc/pam.d/vsftpd",
             "pattern": [],
             "symbolic_name": "vsftpd"
