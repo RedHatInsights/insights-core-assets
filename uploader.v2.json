@@ -1208,11 +1208,6 @@
             "symbolic_name": "tuned_adm"
         },
         {
-            "command": "/usr/bin/ulimit -a -H",
-            "pattern": [],
-            "symbolic_name": "ulimit_hard"
-        },
-        {
             "command": "/bin/uname -a",
             "pattern": [],
             "symbolic_name": "uname"
