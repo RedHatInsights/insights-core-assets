@@ -2031,6 +2031,7 @@
                 ": session replaced: jid=",
                 "Abort command issued",
                 "Broken pipe",
+                "Buffer I/O error on device",
                 "Cannot assign requested address",
                 "Connection amqps://subscription.rhn.redhat.com:5647 disconnected",
                 "Could not set",
@@ -2051,6 +2052,7 @@
                 "MDC/MDIO access timeout",
                 "Medium access timeout failure. Offlining disk!",
                 "MountVolume.SetUp succeeded for volume",
+                "NETDEV WATCHDOG",
                 "Neighbour table overflow",
                 "NetworkManager state is now CONNECTED_SITE",
                 "Orphaned pod",
@@ -2058,6 +2060,7 @@
                 "Out of memory: Kill process",
                 "Out of memory: kill process",
                 "PPM exceeds tolerance 500 PPM",
+                "SCSI error: return code =",
                 "SDN initialization failed: Error: Existing service with IP: None is not part of service network",
                 "Scheduled import of stream",
                 "TX driver issue detected, PF reset issued",
@@ -2073,8 +2076,10 @@
                 "chardev: opening backend \"socket\" failed",
                 "clearing Tx timestamp hang",
                 "dev_set_mac_address of dev",
+                "device-mapper: multipath: Failing path",
                 "does not seem to be present, delaying initialization",
                 "drivers/input/input-leds.c:115 input_leds_connect",
+                "end_request: I/O error, dev",
                 "error Error on attach: Node not found",
                 "evicted, waiting for pod to be cleaned up",
                 "eviction manager: eviction criteria not yet met for threshold",
@@ -2139,9 +2144,11 @@
                 "systemd[1]: Received SIGCHLD from PID",
                 "tg3_start_xmit",
                 "there is a meaningful conflict",
+                "timed out",
                 "timeout before we got a set response",
                 "timeout; kill it",
-                "transmit queue 30 timed out",
+                "timing out command, waited",
+                "transmit queue",
                 "udev: renamed network interface",
                 "unknown filesystem type 'binfmt_misc'",
                 "vdsm-tool: EnvironmentError: Failed to restore the persisted networks",
@@ -8990,5 +8997,5 @@
             ]
         }
     },
-    "version": "2019-12-13T13:05:54.717342"
+    "version": "2019-12-18T14:13:43.573013"
 }
