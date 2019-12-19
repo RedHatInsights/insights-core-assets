@@ -1,6 +1,9 @@
 Insights Client Core Changelog
 
-v3.0.134 - Dec 6 2019
+v3.0.139 - Dec 18 2019
+- Autoconfig fix for platform URLs
+
+v3.0.137 - Dec 6 2019
 - Use pidfile and systemd-notify to extend job timer
 - Simplify egg version logging
 - Improve error handling
