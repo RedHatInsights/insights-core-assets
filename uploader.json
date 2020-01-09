@@ -2098,6 +2098,7 @@
                 "hw csum failure",
                 "in libnl.so.1",
                 "initiating reset due to tx timeout",
+                "invalid key/value pair in file /usr/lib/udev/rules.d/59-fc-wwpn-id.rules",
                 "irq handler for vector (irq -1)",
                 "is beyond advertised capabilities",
                 "is down or the link is down",
@@ -8997,5 +8998,5 @@
             ]
         }
     },
-    "version": "2019-12-18T14:13:43.573013"
+    "version": "2020-01-09T14:42:19.551303"
 }
