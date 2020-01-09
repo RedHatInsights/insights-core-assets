@@ -2512,6 +2512,11 @@
             "symbolic_name": "postgresql_log"
         },
         {
+            "file": "/proc/net/netstat",
+            "pattern": [],
+            "symbolic_name": "proc_netstat"
+        },
+        {
             "file": "/proc/net/snmp",
             "pattern": [],
             "symbolic_name": "proc_snmp_ipv4"
