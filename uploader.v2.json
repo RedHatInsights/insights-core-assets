@@ -1715,6 +1715,11 @@
             "symbolic_name": "etc_journald_conf_d"
         },
         {
+            "file": "/var/log/ipa/healthcheck/healthcheck.log",
+            "pattern": [],
+            "symbolic_name": "freeipa_healthcheck_log"
+        },
+        {
             "file": "/etc/fstab",
             "pattern": [],
             "symbolic_name": "fstab"
