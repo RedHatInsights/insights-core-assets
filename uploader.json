@@ -279,6 +279,11 @@
             "symbolic_name": "fcoeadm_i"
         },
         {
+            "command": "/bin/findmnt -lo+PROPAGATION",
+            "pattern": [],
+            "symbolic_name": "findmnt_lo_propagation"
+        },
+        {
             "command": "/usr/bin/getconf PAGE_SIZE",
             "pattern": [],
             "symbolic_name": "getconf_pagesize"
@@ -1713,6 +1718,11 @@
             "file": "/etc/systemd/journald.conf.d/()*.+\\.conf",
             "pattern": [],
             "symbolic_name": "etc_journald_conf_d"
+        },
+        {
+            "file": "/var/log/ipa/healthcheck/healthcheck.log",
+            "pattern": [],
+            "symbolic_name": "freeipa_healthcheck_log"
         },
         {
             "file": "/etc/fstab",
@@ -8998,5 +9008,5 @@
             ]
         }
     },
-    "version": "2020-01-09T14:42:19.551303"
+    "version": "2020-01-16T13:04:20.419483"
 }
