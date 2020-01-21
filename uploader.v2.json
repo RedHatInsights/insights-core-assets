@@ -445,6 +445,11 @@
             "symbolic_name": "keystone_crontab"
         },
         {
+            "command": "/usr/sbin/kpatch list",
+            "pattern": [],
+            "symbolic_name": "kpatch_list"
+        },
+        {
             "command": "/usr/bin/find -L /lib /lib64 -name 'libkeyutils.so*'",
             "pattern": [],
             "symbolic_name": "libkeyutils"
