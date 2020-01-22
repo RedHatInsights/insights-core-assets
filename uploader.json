@@ -279,6 +279,11 @@
             "symbolic_name": "fcoeadm_i"
         },
         {
+            "command": "/bin/findmnt -lo+PROPAGATION",
+            "pattern": [],
+            "symbolic_name": "findmnt_lo_propagation"
+        },
+        {
             "command": "/usr/bin/getconf PAGE_SIZE",
             "pattern": [],
             "symbolic_name": "getconf_pagesize"
@@ -1188,6 +1193,11 @@
             "symbolic_name": "systemctl_smartpdc"
         },
         {
+            "command": "/bin/systemctl show *.service",
+            "pattern": [],
+            "symbolic_name": "systemctl_show_all_services"
+        },
+        {
             "command": "/usr/bin/systemctl cat docker.service",
             "pattern": [],
             "symbolic_name": "systemd_docker"
@@ -1211,11 +1221,6 @@
             "command": "/usr/sbin/tuned-adm list",
             "pattern": [],
             "symbolic_name": "tuned_adm"
-        },
-        {
-            "command": "/usr/bin/ulimit -a -H",
-            "pattern": [],
-            "symbolic_name": "ulimit_hard"
         },
         {
             "command": "/bin/uname -a",
@@ -1720,6 +1725,11 @@
             "symbolic_name": "etc_journald_conf_d"
         },
         {
+            "file": "/var/log/ipa/healthcheck/healthcheck.log",
+            "pattern": [],
+            "symbolic_name": "freeipa_healthcheck_log"
+        },
+        {
             "file": "/etc/fstab",
             "pattern": [],
             "symbolic_name": "fstab"
@@ -2031,6 +2041,7 @@
                 ": session replaced: jid=",
                 "Abort command issued",
                 "Broken pipe",
+                "Buffer I/O error on device",
                 "Cannot assign requested address",
                 "Connection amqps://subscription.rhn.redhat.com:5647 disconnected",
                 "Could not set",
@@ -2051,6 +2062,7 @@
                 "MDC/MDIO access timeout",
                 "Medium access timeout failure. Offlining disk!",
                 "MountVolume.SetUp succeeded for volume",
+                "NETDEV WATCHDOG",
                 "Neighbour table overflow",
                 "NetworkManager state is now CONNECTED_SITE",
                 "Orphaned pod",
@@ -2058,6 +2070,7 @@
                 "Out of memory: Kill process",
                 "Out of memory: kill process",
                 "PPM exceeds tolerance 500 PPM",
+                "SCSI error: return code =",
                 "SDN initialization failed: Error: Existing service with IP: None is not part of service network",
                 "Scheduled import of stream",
                 "TX driver issue detected, PF reset issued",
@@ -2073,8 +2086,10 @@
                 "chardev: opening backend \"socket\" failed",
                 "clearing Tx timestamp hang",
                 "dev_set_mac_address of dev",
+                "device-mapper: multipath: Failing path",
                 "does not seem to be present, delaying initialization",
                 "drivers/input/input-leds.c:115 input_leds_connect",
+                "end_request: I/O error, dev",
                 "error Error on attach: Node not found",
                 "evicted, waiting for pod to be cleaned up",
                 "eviction manager: eviction criteria not yet met for threshold",
@@ -2098,6 +2113,7 @@
                 "hw csum failure",
                 "in libnl.so.1",
                 "initiating reset due to tx timeout",
+                "invalid key/value pair in file /usr/lib/udev/rules.d/59-fc-wwpn-id.rules",
                 "irq handler for vector (irq -1)",
                 "is beyond advertised capabilities",
                 "is down or the link is down",
@@ -2139,9 +2155,11 @@
                 "systemd[1]: Received SIGCHLD from PID",
                 "tg3_start_xmit",
                 "there is a meaningful conflict",
+                "timed out",
                 "timeout before we got a set response",
                 "timeout; kill it",
-                "transmit queue 30 timed out",
+                "timing out command, waited",
+                "transmit queue",
                 "udev: renamed network interface",
                 "unknown filesystem type 'binfmt_misc'",
                 "vdsm-tool: EnvironmentError: Failed to restore the persisted networks",
@@ -2508,6 +2526,11 @@
                 "remaining connection slots are reserved for non-replication superuser connections"
             ],
             "symbolic_name": "postgresql_log"
+        },
+        {
+            "file": "/proc/net/netstat",
+            "pattern": [],
+            "symbolic_name": "proc_netstat"
         },
         {
             "file": "/proc/net/snmp",
@@ -8990,5 +9013,5 @@
             ]
         }
     },
-    "version": "2019-12-13T13:05:54.717342"
+    "version": "2020-01-16T13:04:20.419483"
 }
