@@ -485,6 +485,11 @@
             "symbolic_name": "ls_docker_volumes"
         },
         {
+            "command": "/bin/ls -lan /sys/devices/system/edac/mc",
+            "pattern": [],
+            "symbolic_name": "ls_edac_mc"
+        },
+        {
             "command": "/bin/ls -lanR /etc",
             "pattern": [],
             "symbolic_name": "ls_etc"
