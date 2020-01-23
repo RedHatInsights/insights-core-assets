@@ -3301,11 +3301,6 @@
             "symbolic_name": "setup_named_chroot"
         },
         {
-            "file": "/usr/lib/udev/rules.d/59-fc-wwpn-id.rules",
-            "pattern": [],
-            "symbolic_name": "udev_fc_wwpn_id_rules"
-        },
-        {
             "file": "/usr/sap/hostctrl/exe/host_profile",
             "pattern": [
                 "DIR_",
@@ -3315,6 +3310,11 @@
                 "reserved_port/range"
             ],
             "symbolic_name": "sap_host_profile"
+        },
+        {
+            "file": "/usr/lib/udev/rules.d/59-fc-wwpn-id.rules",
+            "pattern": [],
+            "symbolic_name": "udev_fc_wwpn_id_rules"
         }
     ],
     "globs": [
