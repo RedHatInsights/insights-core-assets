@@ -279,6 +279,11 @@
             "symbolic_name": "fcoeadm_i"
         },
         {
+            "command": "/bin/findmnt -lo+PROPAGATION",
+            "pattern": [],
+            "symbolic_name": "findmnt_lo_propagation"
+        },
+        {
             "command": "/usr/bin/getconf PAGE_SIZE",
             "pattern": [],
             "symbolic_name": "getconf_pagesize"
@@ -1213,11 +1218,6 @@
             "symbolic_name": "tuned_adm"
         },
         {
-            "command": "/usr/bin/ulimit -a -H",
-            "pattern": [],
-            "symbolic_name": "ulimit_hard"
-        },
-        {
             "command": "/bin/uname -a",
             "pattern": [],
             "symbolic_name": "uname"
@@ -1720,6 +1720,11 @@
             "symbolic_name": "etc_journald_conf_d"
         },
         {
+            "file": "/var/log/ipa/healthcheck/healthcheck.log",
+            "pattern": [],
+            "symbolic_name": "freeipa_healthcheck_log"
+        },
+        {
             "file": "/etc/fstab",
             "pattern": [],
             "symbolic_name": "fstab"
@@ -2103,6 +2108,7 @@
                 "hw csum failure",
                 "in libnl.so.1",
                 "initiating reset due to tx timeout",
+                "invalid key/value pair in file /usr/lib/udev/rules.d/59-fc-wwpn-id.rules",
                 "irq handler for vector (irq -1)",
                 "is beyond advertised capabilities",
                 "is down or the link is down",
@@ -2515,6 +2521,11 @@
                 "remaining connection slots are reserved for non-replication superuser connections"
             ],
             "symbolic_name": "postgresql_log"
+        },
+        {
+            "file": "/proc/net/netstat",
+            "pattern": [],
+            "symbolic_name": "proc_netstat"
         },
         {
             "file": "/proc/net/snmp",
@@ -9002,5 +9013,5 @@
             ]
         }
     },
-    "version": "2019-12-18T14:13:43.573013"
+    "version": "2020-01-16T13:04:20.419483"
 }
