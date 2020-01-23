@@ -3399,7 +3399,11 @@
         },
         {
             "file": "/usr/lib/udev/rules.d/59-fc-wwpn-id.rules",
-            "pattern": [],
+            "pattern": [
+                "ENV{FC_INITIATOR_WWPN}",
+                "ENV{FC_TARGET_LUN}",
+                "ENV{FC_TARGET_WWPN}"
+            ],
             "symbolic_name": "udev_fc_wwpn_id_rules"
         }
     ],
@@ -9023,5 +9027,5 @@
             ]
         }
     },
-    "version": "2020-01-16T13:04:20.419483"
+    "version": "2020-01-23T13:28:49.512585"
 }
