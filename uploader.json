@@ -3391,6 +3391,11 @@
                 "reserved_port/range"
             ],
             "symbolic_name": "sap_host_profile"
+        },
+        {
+            "file": "/usr/lib/udev/rules.d/59-fc-wwpn-id.rules",
+            "pattern": [],
+            "symbolic_name": "udev_fc_wwpn_id_rules"
         }
     ],
     "globs": [
