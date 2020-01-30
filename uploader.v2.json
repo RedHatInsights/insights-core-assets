@@ -2481,6 +2481,11 @@
             "symbolic_name": "proc_snmp_ipv6"
         },
         {
+            "file": "/proc/slabinfo",
+            "pattern": [],
+            "symbolic_name": "proc_slabinfo"
+        },
+        {
             "file": "/proc/stat",
             "pattern": [],
             "symbolic_name": "proc_stat"
