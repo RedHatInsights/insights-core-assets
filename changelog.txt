@@ -1,5 +1,13 @@
 Insights Client Core Changelog
 
+v3.0.146 - Feb 3 2019
+- Add --portal-access option for entitling AWS hosts
+- Include branch_info in payload metadata
+- Unicode fix in soscleaner (BZ1794848)
+- Keep separate log files for --payload uploads (BZ1734283)
+- Additional validation for machine-id
+- Collect multiple compliance reports
+
 v3.0.139 - Dec 18 2019
 - Autoconfig fix for platform URLs
 
