@@ -2060,6 +2060,7 @@
                 "Out of memory: Kill process",
                 "Out of memory: kill process",
                 "PPM exceeds tolerance 500 PPM",
+                "ProcessExecutionError: Exit code: 1; Stdin: ; Stdout: ; Stderr: setting the network namespace",
                 "SCSI error: return code =",
                 "SDN initialization failed: Error: Existing service with IP: None is not part of service network",
                 "Scheduled import of stream",
@@ -2091,6 +2092,7 @@
                 "failed with error -110",
                 "failed! ALB mode requires that the base driver support setting the hw address also when the network",
                 "failed: Connection amqps:",
+                "failed: Invalid argument",
                 "failed: rpc error: code = 2 desc = unable to inspect docker image",
                 "fiid_obj_get: 'present_countdown_value': data not available",
                 "firewalld - dynamic firewall daemon",
@@ -2130,6 +2132,7 @@
                 "not responding, timed out",
                 "page allocation failure",
                 "per_source_limit from",
+                "platform microcode: firmware: requesting",
                 "reservation conflict",
                 "returned a bad sequence-id error",
                 "segfault at",
@@ -3518,5 +3521,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2020-01-23T13:28:54.788068"
+    "version": "2020-02-06T14:45:55.563923"
 }
