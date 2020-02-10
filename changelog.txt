@@ -1,5 +1,10 @@
 Insights Client Core Changelog
 
+v3.0.150 - Feb 7 2019
+- Fix for AWS certificate pinning (BZ1798557)
+- Fix for compliance report gathering
+- Improve temporary file cleanup
+
 v3.0.147 - Feb 4 2019
 - Add --portal-access option for entitling AWS hosts
 - Include branch_info in payload metadata
@@ -9,7 +14,7 @@ v3.0.147 - Feb 4 2019
 - Collect multiple compliance reports
 
 v3.0.139 - Dec 18 2019
-- Autoconfig fix for platform URLs
+- Autoconfig fix for platform URLs (BZ1708683)
 
 v3.0.137 - Dec 6 2019
 - Use pidfile and systemd-notify to extend job timer
