@@ -1730,6 +1730,11 @@
             "symbolic_name": "etc_journald_conf_d"
         },
         {
+            "file": "/etc/firewalld/firewalld.conf",
+            "pattern": [],
+            "symbolic_name": "firewalld_conf"
+        },
+        {
             "file": "/var/log/ipa/healthcheck/healthcheck.log",
             "pattern": [],
             "symbolic_name": "freeipa_healthcheck_log"
