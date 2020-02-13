@@ -747,6 +747,11 @@
             "symbolic_name": "modinfo_vmxnet3"
         },
         {
+            "command": "/usr/bin/mongo pulp_database --eval 'db.serverStatus().storageEngine'",
+            "pattern": [],
+            "symbolic_name": "mongo_storage_engine"
+        },
+        {
             "command": "/usr/bin/find /sys/devices/virtual/net/ -name multicast_querier -print -exec cat {} \\;",
             "pattern": [],
             "symbolic_name": "multicast_querier"
