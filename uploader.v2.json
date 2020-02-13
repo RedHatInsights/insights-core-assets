@@ -490,6 +490,11 @@
             "symbolic_name": "ls_docker_volumes"
         },
         {
+            "command": "/bin/ls -lan /sys/devices/system/edac/mc",
+            "pattern": [],
+            "symbolic_name": "ls_edac_mc"
+        },
+        {
             "command": "/bin/ls -lanR /etc",
             "pattern": [],
             "symbolic_name": "ls_etc"
@@ -1730,6 +1735,11 @@
             "symbolic_name": "etc_journald_conf_d"
         },
         {
+            "file": "/etc/firewalld/firewalld.conf",
+            "pattern": [],
+            "symbolic_name": "firewalld_conf"
+        },
+        {
             "file": "/var/log/ipa/healthcheck/healthcheck.log",
             "pattern": [],
             "symbolic_name": "freeipa_healthcheck_log"
@@ -2060,6 +2070,7 @@
                 "Out of memory: Kill process",
                 "Out of memory: kill process",
                 "PPM exceeds tolerance 500 PPM",
+                "ProcessExecutionError: Exit code: 1; Stdin: ; Stdout: ; Stderr: setting the network namespace",
                 "SCSI error: return code =",
                 "SDN initialization failed: Error: Existing service with IP: None is not part of service network",
                 "Scheduled import of stream",
@@ -2091,6 +2102,7 @@
                 "failed with error -110",
                 "failed! ALB mode requires that the base driver support setting the hw address also when the network",
                 "failed: Connection amqps:",
+                "failed: Invalid argument",
                 "failed: rpc error: code = 2 desc = unable to inspect docker image",
                 "fiid_obj_get: 'present_countdown_value': data not available",
                 "firewalld - dynamic firewall daemon",
@@ -2130,6 +2142,7 @@
                 "not responding, timed out",
                 "page allocation failure",
                 "per_source_limit from",
+                "platform microcode: firmware: requesting",
                 "reservation conflict",
                 "returned a bad sequence-id error",
                 "segfault at",
@@ -2479,6 +2492,11 @@
             "file": "/proc/net/snmp6",
             "pattern": [],
             "symbolic_name": "proc_snmp_ipv6"
+        },
+        {
+            "file": "/proc/slabinfo",
+            "pattern": [],
+            "symbolic_name": "proc_slabinfo"
         },
         {
             "file": "/proc/stat",
@@ -3513,5 +3531,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2020-01-23T13:28:54.788068"
+    "version": "2020-02-13T15:03:47.965248"
 }
