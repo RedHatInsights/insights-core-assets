@@ -747,11 +747,6 @@
             "symbolic_name": "modinfo_vmxnet3"
         },
         {
-            "command": "/usr/bin/mongo pulp_database --eval 'db.serverStatus().storageEngine'",
-            "pattern": [],
-            "symbolic_name": "mongo_storage_engine"
-        },
-        {
             "command": "/usr/bin/find /sys/devices/virtual/net/ -name multicast_querier -print -exec cat {} \\;",
             "pattern": [],
             "symbolic_name": "multicast_querier"
@@ -1094,6 +1089,11 @@
             "command": "/bin/rpm -V coreutils procps procps-ng shadow-utils passwd sudo",
             "pattern": [],
             "symbolic_name": "rpm__V_packages"
+        },
+        {
+            "command": "/usr/bin/mongo pulp_database --eval 'db.serverStatus().storageEngine'",
+            "pattern": [],
+            "symbolic_name": "satellite_mongodb_storage_engine"
         },
         {
             "command": "/usr/bin/sealert -l \"*\"",
