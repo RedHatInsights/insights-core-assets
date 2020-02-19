@@ -1278,7 +1278,7 @@
             "symbolic_name": "yum_list_installed"
         },
         {
-            "command": "/usr/bin/yum -C repolist",
+            "command": "/usr/bin/yum -C --noplugins repolist",
             "pattern": [],
             "symbolic_name": "yum_repolist"
         }
