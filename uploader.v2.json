@@ -1096,6 +1096,11 @@
             "symbolic_name": "rpm__V_packages"
         },
         {
+            "command": "/usr/bin/mongo pulp_database --eval 'db.serverStatus().storageEngine'",
+            "pattern": [],
+            "symbolic_name": "satellite_mongodb_storage_engine"
+        },
+        {
             "command": "/usr/bin/sealert -l \"*\"",
             "pattern": [],
             "symbolic_name": "sealert"
