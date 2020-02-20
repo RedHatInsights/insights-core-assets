@@ -2679,6 +2679,11 @@
             "symbolic_name": "sat5_insights_properties"
         },
         {
+            "file": "/etc/foreman-installer/custom-hiera.yaml",
+            "pattern": [],
+            "symbolic_name": "satellite_custom_hiera"
+        },
+        {
             "file": "/usr/share/foreman/lib/satellite/version.rb",
             "pattern": [],
             "symbolic_name": "satellite_version_rb"
