@@ -1096,6 +1096,11 @@
             "symbolic_name": "rpm__V_packages"
         },
         {
+            "command": "/usr/bin/mongo pulp_database --eval 'db.serverStatus().storageEngine'",
+            "pattern": [],
+            "symbolic_name": "satellite_mongodb_storage_engine"
+        },
+        {
             "command": "/usr/bin/sealert -l \"*\"",
             "pattern": [],
             "symbolic_name": "sealert"
@@ -2737,6 +2742,11 @@
             "file": "/etc/redhat-access/redhat-access-insights.properties",
             "pattern": [],
             "symbolic_name": "sat5_insights_properties"
+        },
+        {
+            "file": "/etc/foreman-installer/custom-hiera.yaml",
+            "pattern": [],
+            "symbolic_name": "satellite_custom_hiera"
         },
         {
             "file": "/usr/share/foreman/lib/satellite/version.rb",
@@ -9045,5 +9055,5 @@
             ]
         }
     },
-    "version": "2020-02-13T15:03:53.318863"
+    "version": "2020-02-20T13:16:01.893689"
 }
