@@ -1338,6 +1338,11 @@
             "symbolic_name": "audit_log"
         },
         {
+            "file": "/etc/cloud/cloud.cfg.d/99-custom-networking.cfg",
+            "pattern": [],
+            "symbolic_name": "cloud_init_custom_network"
+        },
+        {
             "file": "/var/log/cloud-init.log",
             "pattern": [
                 "Attempting to load yaml from string of length 59 with allowed root types",
