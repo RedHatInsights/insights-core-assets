@@ -1286,6 +1286,11 @@
             "command": "/usr/bin/yum -C repolist",
             "pattern": [],
             "symbolic_name": "yum_repolist"
+        },
+        {
+            "command": "/usr/sbin/zdump -v /etc/localtime -c 2019,2039",
+            "pattern": [],
+            "symbolic_name": "zdump_v"
         }
     ],
     "files": [
