@@ -1286,6 +1286,11 @@
             "command": "/usr/bin/yum -C repolist",
             "pattern": [],
             "symbolic_name": "yum_repolist"
+        },
+        {
+            "command": "/usr/sbin/zdump -v /etc/localtime -c 2019,2039",
+            "pattern": [],
+            "symbolic_name": "zdump_v"
         }
     ],
     "files": [
@@ -1331,6 +1336,11 @@
                 "type=AVC"
             ],
             "symbolic_name": "audit_log"
+        },
+        {
+            "file": "/etc/cloud/cloud.cfg.d/99-custom-networking.cfg",
+            "pattern": [],
+            "symbolic_name": "cloud_init_custom_network"
         },
         {
             "file": "/var/log/cloud-init.log",
@@ -3541,5 +3551,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2020-02-20T13:16:08.127812"
+    "version": "2020-02-27T15:05:59.642105"
 }
