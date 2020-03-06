@@ -1,6 +1,11 @@
 {
     "commands": [
         {
+            "command": "/usr/bin/abrt status --bare=True",
+            "pattern": [],
+            "symbolic_name": "abrt_status_bare"
+        },
+        {
             "command": "python -m insights.tools.cat --no-header aws_instance_id_doc",
             "pattern": [],
             "symbolic_name": "aws_instance_id_doc"
@@ -1478,13 +1483,6 @@
             "symbolic_name": "ceph_conf"
         },
         {
-            "file": "/var/log/ceph/ceph.log",
-            "pattern": [
-                "[WRN] slow request"
-            ],
-            "symbolic_name": "ceph_log"
-        },
-        {
             "file": "/var/log/ceph/()*ceph-osd.*\\.log$",
             "pattern": [
                 "common/Thread.cc"
@@ -1855,7 +1853,6 @@
             "pattern": [
                 "(28)No space left on device: ",
                 "AH00485: scoreboard is full, not at MaxRequestWorkers",
-                "Cannot assign requested address",
                 "ModSecurity: collections_remove_stale: Failed deleting collection",
                 "Require ServerLimit > 0, setting to 1",
                 "Resource temporarily unavailable",
@@ -2058,6 +2055,7 @@
                 "Broken pipe",
                 "Buffer I/O error on device",
                 "Cannot assign requested address",
+                "Cannot assign requested address: AH00072",
                 "Connection amqps://subscription.rhn.redhat.com:5647 disconnected",
                 "Could not set",
                 "DHCPv4 lease renewal requested",
@@ -2125,6 +2123,7 @@
                 "from image service failed: rpc error: code = Canceled desc = context canceled",
                 "host not found in upstream",
                 "http2: no cached connection was available",
+                "httpd",
                 "hv_netvsc vmbus_",
                 "hv_netvsc: probe of vmbus_",
                 "hw csum failure",
@@ -3495,6 +3494,13 @@
             "pattern": []
         },
         {
+            "glob": "/var/log/ceph/ceph.log*",
+            "pattern": [
+                "[WRN] slow request"
+            ],
+            "symbolic_name": "ceph_log"
+        },
+        {
             "glob": "/var/log/libvirt/qemu/*.log",
             "pattern": [
                 "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
@@ -3551,5 +3557,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2020-02-27T15:05:59.642105"
+    "version": "2020-03-06T10:26:07.271655"
 }
