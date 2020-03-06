@@ -1,6 +1,11 @@
 {
     "commands": [
         {
+            "command": "/usr/bin/abrt status --bare=True",
+            "pattern": [],
+            "symbolic_name": "abrt_status_bare"
+        },
+        {
             "command": "python -m insights.tools.cat --no-header aws_instance_id_doc",
             "pattern": [],
             "symbolic_name": "aws_instance_id_doc"
