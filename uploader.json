@@ -1491,7 +1491,7 @@
             "symbolic_name": "ceph_conf"
         },
         {
-            "file": "/var/log/ceph/ceph.log",
+            "file": "/var/log/ceph/()ceph.log*",
             "pattern": [
                 "[WRN] slow request"
             ],
