@@ -1860,7 +1860,6 @@
             "pattern": [
                 "(28)No space left on device: ",
                 "AH00485: scoreboard is full, not at MaxRequestWorkers",
-                "Cannot assign requested address",
                 "ModSecurity: collections_remove_stale: Failed deleting collection",
                 "Require ServerLimit > 0, setting to 1",
                 "Resource temporarily unavailable",
@@ -2078,6 +2077,7 @@
                 "Broken pipe",
                 "Buffer I/O error on device",
                 "Cannot assign requested address",
+                "Cannot assign requested address: AH00072",
                 "Connection amqps://subscription.rhn.redhat.com:5647 disconnected",
                 "Could not set",
                 "DHCPv4 lease renewal requested",
@@ -2145,6 +2145,7 @@
                 "from image service failed: rpc error: code = Canceled desc = context canceled",
                 "host not found in upstream",
                 "http2: no cached connection was available",
+                "httpd",
                 "hv_netvsc vmbus_",
                 "hv_netvsc: probe of vmbus_",
                 "hw csum failure",
@@ -9070,5 +9071,5 @@
             ]
         }
     },
-    "version": "2020-02-27T15:05:54.133698"
+    "version": "2020-03-06T10:26:12.855716"
 }
