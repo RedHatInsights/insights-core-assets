@@ -1138,11 +1138,6 @@
             "symbolic_name": "subscription_manager_installed_product_ids"
         },
         {
-            "command": "/usr/sbin/subscription-manager release --show",
-            "pattern": [],
-            "symbolic_name": "subscription_manager_release_show"
-        },
-        {
             "command": "/usr/sbin/ss -tupna",
             "pattern": [],
             "symbolic_name": "ss"
@@ -2693,6 +2688,11 @@
             "file": "/etc/rhsm/rhsm.conf",
             "pattern": [],
             "symbolic_name": "rhsm_conf"
+        },
+        {
+            "file": "/var/lib/rhsm/cache/releasever.json",
+            "pattern": [],
+            "symbolic_name": "rhsm_releasever"
         },
         {
             "file": "/etc/qpid/qpidd.conf",
