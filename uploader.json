@@ -1,6 +1,11 @@
 {
     "commands": [
         {
+            "command": "/usr/bin/abrt status --bare=True",
+            "pattern": [],
+            "symbolic_name": "abrt_status_bare"
+        },
+        {
             "command": "python -m insights.tools.cat --no-header aws_instance_id_doc",
             "pattern": [],
             "symbolic_name": "aws_instance_id_doc"
@@ -1096,6 +1101,11 @@
             "symbolic_name": "rpm__V_packages"
         },
         {
+            "command": "/usr/bin/mongo pulp_database --eval 'db.serverStatus().storageEngine'",
+            "pattern": [],
+            "symbolic_name": "satellite_mongodb_storage_engine"
+        },
+        {
             "command": "/usr/bin/sealert -l \"*\"",
             "pattern": [],
             "symbolic_name": "sealert"
@@ -1281,6 +1291,11 @@
             "command": "/usr/bin/yum -C --noplugins repolist",
             "pattern": [],
             "symbolic_name": "yum_repolist"
+        },
+        {
+            "command": "/usr/sbin/zdump -v /etc/localtime -c 2019,2039",
+            "pattern": [],
+            "symbolic_name": "zdump_v"
         }
     ],
     "files": [
@@ -1334,6 +1349,11 @@
                 "type=AVC"
             ],
             "symbolic_name": "audit_log"
+        },
+        {
+            "file": "/etc/cloud/cloud.cfg.d/99-custom-networking.cfg",
+            "pattern": [],
+            "symbolic_name": "cloud_init_custom_network"
         },
         {
             "file": "/var/log/cloud-init.log",
@@ -1471,7 +1491,7 @@
             "symbolic_name": "ceph_conf"
         },
         {
-            "file": "/var/log/ceph/ceph.log",
+            "file": "/var/log/ceph/()ceph.log*",
             "pattern": [
                 "[WRN] slow request"
             ],
@@ -1840,7 +1860,6 @@
             "pattern": [
                 "(28)No space left on device: ",
                 "AH00485: scoreboard is full, not at MaxRequestWorkers",
-                "Cannot assign requested address",
                 "ModSecurity: collections_remove_stale: Failed deleting collection",
                 "Require ServerLimit > 0, setting to 1",
                 "Resource temporarily unavailable",
@@ -2058,6 +2077,7 @@
                 "Broken pipe",
                 "Buffer I/O error on device",
                 "Cannot assign requested address",
+                "Cannot assign requested address: AH00072",
                 "Connection amqps://subscription.rhn.redhat.com:5647 disconnected",
                 "Could not set",
                 "DHCPv4 lease renewal requested",
@@ -2125,6 +2145,7 @@
                 "from image service failed: rpc error: code = Canceled desc = context canceled",
                 "host not found in upstream",
                 "http2: no cached connection was available",
+                "httpd",
                 "hv_netvsc vmbus_",
                 "hv_netvsc: probe of vmbus_",
                 "hw csum failure",
@@ -2737,6 +2758,11 @@
             "file": "/etc/redhat-access/redhat-access-insights.properties",
             "pattern": [],
             "symbolic_name": "sat5_insights_properties"
+        },
+        {
+            "file": "/etc/foreman-installer/custom-hiera.yaml",
+            "pattern": [],
+            "symbolic_name": "satellite_custom_hiera"
         },
         {
             "file": "/usr/share/foreman/lib/satellite/version.rb",
@@ -9045,5 +9071,5 @@
             ]
         }
     },
-    "version": "2020-02-13T15:03:53.318863"
+    "version": "2020-03-06T10:26:12.855716"
 }
