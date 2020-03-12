@@ -26,6 +26,7 @@ v3.0.137 - Dec 6 2019
 - Compliance collection fixes
 - Fix autoconfig bug for platform URLs
 - Add autoconfig support for staging URLs
+- Send INFO logging to stdout instead of stderr (BZ1576348)
 
 v3.0.121 - Aug 26 2019
 - Fix Satellite 5 autoconfig bug
