@@ -1138,11 +1138,6 @@
             "symbolic_name": "subscription_manager_installed_product_ids"
         },
         {
-            "command": "/usr/sbin/subscription-manager release --show",
-            "pattern": [],
-            "symbolic_name": "subscription_manager_release_show"
-        },
-        {
             "command": "/usr/sbin/ss -tupna",
             "pattern": [],
             "symbolic_name": "ss"
@@ -1288,7 +1283,7 @@
             "symbolic_name": "yum_list_installed"
         },
         {
-            "command": "/usr/bin/yum -C repolist",
+            "command": "/usr/bin/yum -C --noplugins repolist",
             "pattern": [],
             "symbolic_name": "yum_repolist"
         },
@@ -2628,6 +2623,11 @@
             "symbolic_name": "rhsm_conf"
         },
         {
+            "file": "/var/lib/rhsm/cache/releasever.json",
+            "pattern": [],
+            "symbolic_name": "rhsm_releasever"
+        },
+        {
             "file": "/etc/qpid/qpidd.conf",
             "pattern": [],
             "symbolic_name": "qpidd_conf"
@@ -3557,5 +3557,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2020-03-06T10:26:07.271655"
+    "version": "2020-03-12T13:32:22.374604"
 }
