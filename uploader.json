@@ -3442,6 +3442,11 @@
             "symbolic_name": "sap_host_profile"
         },
         {
+            "file": "/proc/sys/kernel/sched_rt_runtime_us",
+            "pattern": [],
+            "symbolic_name": "sched_rt_runtime_us"
+        },
+        {
             "file": "/usr/lib/udev/rules.d/59-fc-wwpn-id.rules",
             "pattern": [
                 "ENV{FC_INITIATOR_WWPN}",
