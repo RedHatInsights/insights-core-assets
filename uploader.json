@@ -175,6 +175,8 @@
                 "Node 0 CPUs: ",
                 "QLogic QLE2692 - QLogic 16Gb FC Dual-port HBA",
                 "SMBIOS ",
+                "SPLXMOD: SPLX 3.0: KHM loaded. Version [30118]",
+                "SPLXMOD: SPLX 3.0: KHM loaded. Version [30119]",
                 "TECH PREVIEW: NVMe over FC may not be fully supported.",
                 "Uhhuh. NMI received for unknown reason",
                 "VPD access disabled",
@@ -1024,6 +1026,7 @@
                 "nova-compute",
                 "ntpd",
                 "octavia-worker",
+                "pkla-check-auth",
                 "postgres",
                 "smbd",
                 "target_completi",
@@ -2094,6 +2097,7 @@
                 "Failed to extend thin",
                 "Link down",
                 "List /apis/image.openshift.io/v1/images",
+                "Loop callback failed with: Cannot allocate memory",
                 "MDC/MDIO access timeout",
                 "Medium access timeout failure. Offlining disk!",
                 "MountVolume.SetUp succeeded for volume",
@@ -3439,10 +3443,7 @@
             "file": "/usr/sap/hostctrl/exe/host_profile",
             "pattern": [
                 "DIR_",
-                "IP_LOCAL_PORT_RANGE",
-                "SAPSYSTEM",
-                "reserved_port/enable",
-                "reserved_port/range"
+                "SAPSYSTEM"
             ],
             "symbolic_name": "sap_host_profile"
         },
@@ -9076,5 +9077,5 @@
             ]
         }
     },
-    "version": "2020-03-12T13:32:17.359242"
+    "version": "2020-03-19T14:17:33.896725"
 }
