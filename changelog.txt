@@ -1,5 +1,17 @@
 Insights Client Core Changelog
 
+v3.0.156 - Mar 19 2019
+- Log network request information to network log level (BZ1708685) [RHCLOUD-2198]
+- Warn when remove.conf has invalid permissions (BZ1553798) [RHCLOUD-2649]
+- Add --output-dir and --output-file options to copy collected data to a specified path (BZ1538226) [RHCLOUD-3754]
+- Add --check-results and --show-results options for Cockpit integration [RHCLOUD-3537]
+- Handle 413/415 errors from API (BZ1629874) [RHCLOUD-1983]
+- Don't retry upload on API errors [RHCLOUD-2199, RHCLOUD-4776]
+- Improve compliance error handling [RHICOMPL-480]
+- {Beta} Add YAML parsing for remove.conf (BZ1607458) [RHCLOUD-161]
+- Don't create unused temp dir when obfuscation enabled (BZ1774106) [RHCLOUD-4065]
+- Allow JSON files in soscleaner obfuscation
+
 v3.0.150 - Feb 7 2019
 - Fix for AWS certificate pinning (BZ1798557)
 - Fix for compliance report gathering
