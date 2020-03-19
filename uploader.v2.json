@@ -1213,6 +1213,11 @@
             "symbolic_name": "systemctl_show_all_services"
         },
         {
+            "command": "/bin/systemctl show *.target",
+            "pattern": [],
+            "symbolic_name": "systemctl_show_target"
+        },
+        {
             "command": "/usr/bin/systemctl cat docker.service",
             "pattern": [],
             "symbolic_name": "systemd_docker"
