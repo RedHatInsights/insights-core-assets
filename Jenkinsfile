@@ -73,5 +73,17 @@ pipeline {
         }
       }
   }
+  post {
+    success {
+      slackSend channel: '#team-platform-data',
+                color: 'good',
+                message: 'Uploader.json and Egg successfully Deployed'
+    }
+    failure {
+      slackSend channel: '#team-platform-data',
+                color: 'bad',
+                message: 'Something went wrong with uploader.json and egg deployment'
+    }
+  }
 }
 
