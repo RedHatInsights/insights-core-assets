@@ -1,5 +1,8 @@
 Insights Client Core Changelog
 
+v3.0.157 - Mar 26 2020
+- Remove duplicate logging requests when a payload fails (BZ1708686) [RHCLOUD-2198]
+
 v3.0.156 - Mar 19 2019
 - Log network request information to network log level (BZ1708685) [RHCLOUD-2198]
 - Warn when remove.conf has invalid permissions (BZ1553798) [RHCLOUD-2649]
