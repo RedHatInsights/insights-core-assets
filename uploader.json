@@ -2965,6 +2965,11 @@
             "symbolic_name": "swift_proxy_server_conf"
         },
         {
+            "file": "/sys/kernel/debug/sched_features",
+            "pattern": [],
+            "symbolic_name": "sys_kernel_sched_features"
+        },
+        {
             "file": "/etc/sysconfig/kdump",
             "pattern": [],
             "symbolic_name": "sysconfig_kdump"
