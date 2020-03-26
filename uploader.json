@@ -1077,6 +1077,16 @@
             "symbolic_name": "readlink_e_etc_mtab"
         },
         {
+            "command": "/usr/bin/readlink -e /etc/origin/node/certificates/kubelet-client-current.pem",
+            "pattern": [],
+            "symbolic_name": "readlink_e_shift_cert_client"
+        },
+        {
+            "command": "/usr/bin/readlink -e /etc/origin/node/certificates/kubelet-server-current.pem",
+            "pattern": [],
+            "symbolic_name": "readlink_e_shift_cert_server"
+        },
+        {
             "command": "/usr/bin/rhn-schema-version",
             "pattern": [],
             "symbolic_name": "rhn_schema_version"
