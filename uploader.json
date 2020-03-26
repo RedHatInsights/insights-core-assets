@@ -1077,6 +1077,16 @@
             "symbolic_name": "readlink_e_etc_mtab"
         },
         {
+            "command": "/usr/bin/readlink -e /etc/origin/node/certificates/kubelet-client-current.pem",
+            "pattern": [],
+            "symbolic_name": "readlink_e_shift_cert_client"
+        },
+        {
+            "command": "/usr/bin/readlink -e /etc/origin/node/certificates/kubelet-server-current.pem",
+            "pattern": [],
+            "symbolic_name": "readlink_e_shift_cert_server"
+        },
+        {
             "command": "/usr/bin/rhn-schema-version",
             "pattern": [],
             "symbolic_name": "rhn_schema_version"
@@ -2965,6 +2975,11 @@
             "symbolic_name": "swift_proxy_server_conf"
         },
         {
+            "file": "/sys/kernel/debug/sched_features",
+            "pattern": [],
+            "symbolic_name": "sys_kernel_sched_features"
+        },
+        {
             "file": "/etc/sysconfig/kdump",
             "pattern": [],
             "symbolic_name": "sysconfig_kdump"
@@ -3446,6 +3461,11 @@
                 "SAPSYSTEM"
             ],
             "symbolic_name": "sap_host_profile"
+        },
+        {
+            "file": "/proc/sys/kernel/sched_rt_runtime_us",
+            "pattern": [],
+            "symbolic_name": "sched_rt_runtime_us"
         },
         {
             "file": "/usr/lib/udev/rules.d/59-fc-wwpn-id.rules",
@@ -9077,5 +9097,5 @@
             ]
         }
     },
-    "version": "2020-03-19T14:17:33.896725"
+    "version": "2020-03-26T13:37:48.290367"
 }

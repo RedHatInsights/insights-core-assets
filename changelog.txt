@@ -1,6 +1,10 @@
 Insights Client Core Changelog
 
-v3.0.156 - Mar 19 2019
+v3.0.157 - Mar 26 2020
+- Remove duplicate logging requests when a payload fails (BZ1708686) [RHCLOUD-2198]
+- Download tailoring file for tailored policies [RHICOMPL-517]
+
+v3.0.156 - Mar 19 2020
 - Log network request information to network log level (BZ1708685) [RHCLOUD-2198]
 - Warn when remove.conf has invalid permissions (BZ1553798) [RHCLOUD-2649]
 - Add --output-dir and --output-file options to copy collected data to a specified path (BZ1538226) [RHCLOUD-3754]
@@ -12,12 +16,12 @@ v3.0.156 - Mar 19 2019
 - Don't create unused temp dir when obfuscation enabled (BZ1774106) [RHCLOUD-4065]
 - Allow JSON files in soscleaner obfuscation
 
-v3.0.150 - Feb 7 2019
+v3.0.150 - Feb 7 2020
 - Fix for AWS certificate pinning (BZ1798557)
 - Fix for compliance report gathering
 - Improve temporary file cleanup
 
-v3.0.147 - Feb 4 2019
+v3.0.147 - Feb 4 2020
 - Add --portal-access option for entitling AWS hosts
 - Include branch_info in payload metadata
 - Unicode fix in soscleaner (BZ1794848)
