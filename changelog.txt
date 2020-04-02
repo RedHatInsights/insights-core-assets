@@ -1,5 +1,8 @@
 Insights Client Core Changelog
 
+v3.0.158 - Apr 2 2020
+- systemd use --now to only run systemctl once [RHCLOUD-5320]
+
 v3.0.157 - Mar 26 2020
 - Remove duplicate logging requests when a payload fails (BZ1708686) [RHCLOUD-2198]
 - Download tailoring file for tailored policies [RHICOMPL-517]
