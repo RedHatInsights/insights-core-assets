@@ -1021,6 +1021,7 @@
                 "ceilometer-coll",
                 "chronyd",
                 "cmirrord",
+                "elasticsearch",
                 "greenplum",
                 "httpd",
                 "iscsid",
@@ -1774,7 +1775,9 @@
         },
         {
             "file": "/etc/firewalld/firewalld.conf",
-            "pattern": [],
+            "pattern": [
+                "AllowZoneDrifting"
+            ],
             "symbolic_name": "firewalld_conf"
         },
         {
@@ -9102,5 +9105,5 @@
             ]
         }
     },
-    "version": "2020-03-26T13:37:48.290367"
+    "version": "2020-04-02T14:01:59.110475"
 }

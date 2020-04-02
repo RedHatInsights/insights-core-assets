@@ -1021,6 +1021,7 @@
                 "ceilometer-coll",
                 "chronyd",
                 "cmirrord",
+                "elasticsearch",
                 "greenplum",
                 "httpd",
                 "iscsid",
@@ -1767,7 +1768,9 @@
         },
         {
             "file": "/etc/firewalld/firewalld.conf",
-            "pattern": [],
+            "pattern": [
+                "AllowZoneDrifting"
+            ],
             "symbolic_name": "firewalld_conf"
         },
         {
@@ -3588,5 +3591,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2020-03-26T13:37:53.439851"
+    "version": "2020-04-02T14:00:59.773145"
 }
