@@ -1,10 +1,10 @@
 Insights Client Core Changelog
 v3.0.159 - Apr 9 2020
 - Change default tags file to tags.yaml (BZ1814135) [RHCLOUD-5374]
-- Fix rpm version logging
-- Split remove.conf [RHCLOUD-4278]
-- Messaging fixes for blacklist [RHCLOUD-4982]
-- Do not error when using --group on platform 
+- Fix RPM version logging [RHCLOUD-5404]
+- Enhance remove.conf with new redaction config files [RHCLOUD-4278]
+- Add components to blacklist config [RHCLOUD-4982]
+- Allow use of --group on platform
 
 v3.0.158 - Apr 2 2020
 - systemd use --now to only run systemctl once [RHCLOUD-5320]
