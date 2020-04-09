@@ -996,6 +996,7 @@
                 "chronyd",
                 "mysqld",
                 "ntpd",
+                "oc observe csr",
                 "openshift start master api",
                 "openshift start master controllers",
                 "openshift start node",
@@ -1022,6 +1023,7 @@
                 "chronyd",
                 "cmirrord",
                 "elasticsearch",
+                "goferd",
                 "greenplum",
                 "httpd",
                 "iscsid",
@@ -2112,6 +2114,7 @@
                 "TX driver issue detected, PF reset issued",
                 "TX stuck with port_enabled=1: resetting channels",
                 "This system does not support \"SSSE3\"",
+                "TypeError: object of type 'NoneType' has no len()",
                 "Virtualization daemon",
                 "WRITE SAME failed. Manually zeroing",
                 "] trap divide error ",
@@ -2152,6 +2155,7 @@
                 "in libnl.so.1",
                 "initiating reset due to tx timeout",
                 "invalid key/value pair in file /usr/lib/udev/rules.d/59-fc-wwpn-id.rules",
+                "ip_local_port_range: prefer different parity for start/end values",
                 "irq handler for vector (irq -1)",
                 "is beyond advertised capabilities",
                 "is down or the link is down",
@@ -3591,5 +3595,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2020-04-02T14:00:59.773145"
+    "version": "2020-04-09T15:07:26.604697"
 }
