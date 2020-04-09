@@ -1655,6 +1655,11 @@
             "symbolic_name": "cpuset_cpus"
         },
         {
+            "file": "/etc/cron.daily/rhsmd",
+            "pattern": [],
+            "symbolic_name": "cron_daily_rhsmd"
+        },
+        {
             "file": "/etc/crypto-policies/config",
             "pattern": [],
             "symbolic_name": "crypto_policies_config"
