@@ -856,6 +856,11 @@
             "symbolic_name": "namespace"
         },
         {
+            "command": "/usr/bin/ndctl list -Ni",
+            "pattern": [],
+            "symbolic_name": "ndctl_list"
+        },
+        {
             "command": "/bin/netstat -neopa",
             "pattern": [],
             "symbolic_name": "netstat"
