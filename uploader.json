@@ -858,7 +858,7 @@
         {
             "command": "/usr/bin/ndctl list -Ni",
             "pattern": [],
-            "symbolic_name": "ndctl_list"
+            "symbolic_name": "ndctl_list_Ni"
         },
         {
             "command": "/bin/netstat -neopa",
