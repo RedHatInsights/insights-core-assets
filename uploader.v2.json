@@ -856,6 +856,11 @@
             "symbolic_name": "namespace"
         },
         {
+            "command": "/usr/bin/ndctl list -Ni",
+            "pattern": [],
+            "symbolic_name": "ndctl_list_Ni"
+        },
+        {
             "command": "/bin/netstat -neopa",
             "pattern": [],
             "symbolic_name": "netstat"
@@ -976,7 +981,8 @@
                 "COMMAND",
                 "bash",
                 "docker",
-                "ora"
+                "ora",
+                "pacemakerd"
             ],
             "symbolic_name": "ps_alxwww"
         },
@@ -1000,6 +1006,7 @@
                 "openshift start master api",
                 "openshift start master controllers",
                 "openshift start node",
+                "pacemakerd",
                 "phc2sys",
                 "postgres",
                 "ptp4l"
@@ -1034,6 +1041,7 @@
                 "nova-compute",
                 "ntpd",
                 "octavia-worker",
+                "pacemakerd",
                 "pkla-check-auth",
                 "postgres",
                 "smbd",
@@ -1050,7 +1058,8 @@
                 "CMD",
                 "neutron-ns-metadata-proxy",
                 "nginx: master process",
-                "nginx: worker process"
+                "nginx: worker process",
+                "pacemakerd"
             ],
             "symbolic_name": "ps_ef"
         },
@@ -2128,6 +2137,7 @@
                 "device-mapper: multipath: Failing path",
                 "does not seem to be present, delaying initialization",
                 "drivers/input/input-leds.c:115 input_leds_connect",
+                "enabling it in",
                 "end_request: I/O error, dev",
                 "error Error on attach: Node not found",
                 "evicted, waiting for pod to be cleaned up",
@@ -2174,6 +2184,7 @@
                 "kernel: nfs: server",
                 "kernel: possible SYN flooding on port",
                 "khash_super_prune_nolock",
+                "link status up for interface",
                 "megaraid_sas: FW detected to be in faultstate, restarting it",
                 "mode:0x20",
                 "multipathd.service operation timed out. Terminating",
@@ -3595,5 +3606,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2020-04-09T15:07:26.604697"
+    "version": "2020-04-16T15:39:51.691847"
 }
