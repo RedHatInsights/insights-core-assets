@@ -1718,6 +1718,11 @@
             "symbolic_name": "docker_sysconfig"
         },
         {
+            "file": "/usr/lib/dracut/modules.d/99kdumpbase/kdump-capture.service",
+            "pattern": [],
+            "symbolic_name": "dracut_kdump_capture_service"
+        },
+        {
             "file": "/etc/etcd/etcd.conf",
             "pattern": [
                 "ETCD_DATA_DIR",

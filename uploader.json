@@ -1733,6 +1733,11 @@
             "symbolic_name": "docker_sysconfig"
         },
         {
+            "file": "/usr/lib/dracut/modules.d/99kdumpbase/kdump-capture.service",
+            "pattern": [],
+            "symbolic_name": "dracut_kdump_capture_service"
+        },
+        {
             "file": "/var/log/ovirt-engine/engine.log",
             "pattern": [
                 "Data Center",
