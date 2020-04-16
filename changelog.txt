@@ -1,4 +1,7 @@
 Insights Client Core Changelog
+v3.0.160 - Apr 16 2020
+- Direct to console after registration (BZ1715980) [RHCLOUD-4094]
+
 v3.0.159 - Apr 9 2020
 - Change default tags file to tags.yaml (BZ1814135) [RHCLOUD-5374]
 - Fix RPM version logging [RHCLOUD-5404]
