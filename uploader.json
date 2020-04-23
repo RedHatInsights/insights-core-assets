@@ -2520,6 +2520,11 @@
             "symbolic_name": "nvme_core_io_timeout"
         },
         {
+            "file": "/var/lib/config-data/puppet-generated/octavia/etc/octavia/octavia.conf",
+            "pattern": [],
+            "symbolic_name": "octavia_conf"
+        },
+        {
             "file": "/etc/odbc.ini",
             "pattern": [
                 "DRIVER",
