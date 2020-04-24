@@ -1,4 +1,9 @@
 Insights Client Core Changelog
+
+v3.0.161 - Apr 24 2020
+- Validate tags [RHCLOUD-5302]
+- Automatically migrate existing tags.conf files to tags.yaml [RHCLOUD-6008]
+
 v3.0.160 - Apr 16 2020
 - Direct to console after registration (BZ1715980) [RHCLOUD-4094]
 
