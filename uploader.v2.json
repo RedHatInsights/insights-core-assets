@@ -507,7 +507,7 @@
             "symbolic_name": "ls_edac_mc"
         },
         {
-            "command": "/bin/ls -lanR /etc",
+            "command": "/bin/ls -lan /etc /etc/cloud/cloud.cfg.d /etc/nova/migration /etc/pki/ovirt-vmconsole /etc/pki/tls/certs /etc/pki/tls/private /etc/sysconfig",
             "pattern": [],
             "symbolic_name": "ls_etc"
         },
@@ -3782,5 +3782,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2020-04-23T15:17:46.544636"
+    "version": "2020-04-30T14:18:19.990181"
 }
