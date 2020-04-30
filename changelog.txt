@@ -1,5 +1,8 @@
 Insights Client Core Changelog
 
+v 3.0.162 - Apr 30 2020
+- Show tested URLs when failing --test-connection [RHCLOUD-6035]
+
 v3.0.161 - Apr 24 2020
 - Validate tags [RHCLOUD-5302]
 - Automatically migrate existing tags.conf files to tags.yaml [RHCLOUD-6008]
