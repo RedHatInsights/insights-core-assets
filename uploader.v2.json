@@ -346,6 +346,11 @@
             "symbolic_name": "grubby_default_kernel"
         },
         {
+            "command": "/usr/sbin/grubby --default-kernel",
+            "pattern": [],
+            "symbolic_name": "grubby_default_kernel"
+        },
+        {
             "command": "/usr/bin/crontab -l -u heat",
             "pattern": [
                 "heat-manage"
