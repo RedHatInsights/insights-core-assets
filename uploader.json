@@ -1252,6 +1252,11 @@
             "symbolic_name": "systemctl_show_target"
         },
         {
+            "command": "/bin/systemd-analyze blame",
+            "pattern": [],
+            "symbolic_name": "systemd_analyze_blame"
+        },
+        {
             "command": "/usr/bin/systemctl cat docker.service",
             "pattern": [],
             "symbolic_name": "systemd_docker"
