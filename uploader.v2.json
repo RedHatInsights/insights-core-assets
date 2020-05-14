@@ -341,7 +341,7 @@
             "symbolic_name": "grubby_default_index"
         },
         {
-            "command": "/usr/sbin/grubby --default-kernel",
+            "command": "/sbin/grubby --default-kernel",
             "pattern": [],
             "symbolic_name": "grubby_default_kernel"
         },
