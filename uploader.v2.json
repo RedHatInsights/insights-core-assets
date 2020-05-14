@@ -1317,6 +1317,11 @@
             "symbolic_name": "woopsie"
         },
         {
+            "command": "yum -C --noplugins list available",
+            "pattern": [],
+            "symbolic_name": "yum_list_available"
+        },
+        {
             "command": "yum -C --noplugins list installed",
             "pattern": [],
             "symbolic_name": "yum_list_installed"
