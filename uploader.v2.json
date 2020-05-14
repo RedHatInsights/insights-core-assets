@@ -1590,6 +1590,11 @@
             "symbolic_name": "cmdline"
         },
         {
+            "file": "/etc/cni/net.d/87-podman-bridge.conflist",
+            "pattern": [],
+            "symbolic_name": "cni_podman_bridge_conf"
+        },
+        {
             "file": "/etc/corosync/corosync.conf",
             "pattern": [],
             "symbolic_name": "corosync_conf"
