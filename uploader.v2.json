@@ -341,7 +341,7 @@
             "symbolic_name": "grubby_default_index"
         },
         {
-            "command": "/usr/sbin/grubby --default-kernel",
+            "command": "/sbin/grubby --default-kernel",
             "pattern": [],
             "symbolic_name": "grubby_default_kernel"
         },
@@ -995,6 +995,7 @@
                 "/usr/bin/docker-current",
                 "/usr/bin/docker-current daemon",
                 "/usr/bin/dockerd-current",
+                "/usr/bin/hyperkube kubelet",
                 "/usr/bin/openshift start master",
                 "/usr/bin/openshift start node",
                 "COMMAND",
@@ -1252,6 +1253,11 @@
             "symbolic_name": "systemctl_show_target"
         },
         {
+            "command": "/bin/systemd-analyze blame",
+            "pattern": [],
+            "symbolic_name": "systemd_analyze_blame"
+        },
+        {
             "command": "/usr/bin/systemctl cat docker.service",
             "pattern": [],
             "symbolic_name": "systemd_docker"
@@ -1315,6 +1321,11 @@
             "command": "/usr/bin/find /var/crash /var/tmp -path '*.reports-*/whoopsie-report' -print -quit",
             "pattern": [],
             "symbolic_name": "woopsie"
+        },
+        {
+            "command": "yum -C --noplugins list available",
+            "pattern": [],
+            "symbolic_name": "yum_list_available"
         },
         {
             "command": "yum -C --noplugins list installed",
@@ -2137,6 +2148,7 @@
                 "TX driver issue detected, PF reset issued",
                 "TX stuck with port_enabled=1: resetting channels",
                 "This system does not support \"SSSE3\"",
+                "Throttling request took",
                 "TypeError: object of type 'NoneType' has no len()",
                 "Virtualization daemon",
                 "WRITE SAME failed. Manually zeroing",
@@ -3782,5 +3794,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2020-05-07T15:41:19.779217"
+    "version": "2020-05-14T14:08:53.653910"
 }

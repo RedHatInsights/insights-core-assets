@@ -1,5 +1,12 @@
 Insights Client Core Changelog
 
+v 3.0.164 - May 14 2020
+- fix machine-id validation [RHCLOUD-6009]
+- fix issue with compliance hostnames on RHEL6 [RHICOMPL-692]
+- fix issue with compliance subprocess calls [RHICOMPL-670]
+- remove KBACCESS code paths [RHCLOUD-4898]
+- add more exception handling for egg fetch [RHCLOUD-2139]
+
 v 3.0.163 - May 7 2020
 - Always create archive_tmp_dir for compatibility (BZ1831496) [RHCLOUD-6373]
 
