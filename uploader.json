@@ -983,7 +983,8 @@
                 "docker",
                 "ora",
                 "pacemakerd",
-                "pcsd"
+                "pcsd",
+                "tuned"
             ],
             "symbolic_name": "ps_alxwww"
         },
@@ -1000,19 +1001,23 @@
                 "/usr/bin/openshift start node",
                 "COMMAND",
                 "STAP/8.2",
+                "bash",
                 "ceph-osd",
                 "chronyd",
+                "docker",
                 "mysqld",
                 "ntpd",
                 "oc observe csr",
                 "openshift start master api",
                 "openshift start master controllers",
                 "openshift start node",
+                "ora",
                 "pacemakerd",
                 "pcsd",
                 "phc2sys",
                 "postgres",
-                "ptp4l"
+                "ptp4l",
+                "tuned"
             ],
             "symbolic_name": "ps_aux"
         },
@@ -1028,10 +1033,12 @@
                 "/usr/bin/teamd",
                 "/usr/sbin/fcoemon --syslog",
                 "COMMAND",
+                "bash",
                 "catalina.base",
                 "ceilometer-coll",
                 "chronyd",
                 "cmirrord",
+                "docker",
                 "elasticsearch",
                 "goferd",
                 "greenplum",
@@ -1044,6 +1051,7 @@
                 "nova-compute",
                 "ntpd",
                 "octavia-worker",
+                "ora",
                 "pacemakerd",
                 "pcsd",
                 "pkla-check-auth",
@@ -1052,6 +1060,7 @@
                 "target_completi",
                 "taskomaticd",
                 "tgtd",
+                "tuned",
                 "virt-who"
             ],
             "symbolic_name": "ps_auxww"
@@ -1060,11 +1069,15 @@
             "command": "/bin/ps -ef",
             "pattern": [
                 "CMD",
+                "bash",
+                "docker",
                 "neutron-ns-metadata-proxy",
                 "nginx: master process",
                 "nginx: worker process",
+                "ora",
                 "pacemakerd",
-                "pcsd"
+                "pcsd",
+                "tuned"
             ],
             "symbolic_name": "ps_ef"
         },
@@ -1389,7 +1402,6 @@
             "file": "/var/log/audit/audit.log",
             "pattern": [
                 "comm=\"logrotate\" path=\"/var/log/candlepin",
-                "comm=\"mongod\"",
                 "comm=\"virtlogd\" name=\"console.log\"",
                 "type=AVC"
             ],
@@ -1614,6 +1626,11 @@
             "file": "/proc/cmdline",
             "pattern": [],
             "symbolic_name": "cmdline"
+        },
+        {
+            "file": "/etc/cni/net.d/87-podman-bridge.conflist",
+            "pattern": [],
+            "symbolic_name": "cni_podman_bridge_conf"
         },
         {
             "file": "/etc/corosync/corosync.conf",
@@ -2283,10 +2300,7 @@
         {
             "file": "/etc/()*mongod.conf",
             "pattern": [
-                "dbpath",
-                "destination",
-                "syslog",
-                "systemLog"
+                "dbpath"
             ],
             "symbolic_name": "mongod_conf"
         },
@@ -9308,5 +9322,5 @@
             ]
         }
     },
-    "version": "2020-05-14T14:08:59.012731"
+    "version": "2020-05-21T13:20:45.308090"
 }

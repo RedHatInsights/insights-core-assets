@@ -1,5 +1,8 @@
 Insights Client Core Changelog
 
+v 3.0.165 - May 21 2020
+- New filters added to filters.yaml
+
 v 3.0.164 - May 14 2020
 - fix machine-id validation [RHCLOUD-6009]
 - fix issue with compliance hostnames on RHEL6 [RHICOMPL-692]
