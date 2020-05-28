@@ -1029,10 +1029,13 @@
         {
             "command": "/bin/ps auxww",
             "pattern": [
+                "/exe/sapstartsrv",
                 "/sbin/multipathd",
                 "/usr/bin/teamd",
+                "/usr/sap/",
                 "/usr/sbin/fcoemon --syslog",
                 "COMMAND",
+                "HDB",
                 "bash",
                 "catalina.base",
                 "ceilometer-coll",
@@ -2060,7 +2063,8 @@
             "file": "/boot/()config-.*",
             "pattern": [
                 "CONFIG_BPF_SYSCALL",
-                "CONFIG_PREEMPT_RT_FULL"
+                "CONFIG_PREEMPT_RT_FULL",
+                "CONFIG_SMP"
             ],
             "symbolic_name": "kernel_config"
         },
@@ -9322,5 +9326,5 @@
             ]
         }
     },
-    "version": "2020-05-21T13:20:45.308090"
+    "version": "2020-05-28T13:56:59.653339"
 }
