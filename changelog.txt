@@ -1,5 +1,8 @@
 Insights Client Core Changelog
 
+v 3.0.166 - May 28 2020
+- New filters added to filters.yaml
+
 v 3.0.165 - May 21 2020
 - New filters added to filters.yaml
 
