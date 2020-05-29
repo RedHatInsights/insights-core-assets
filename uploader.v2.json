@@ -16,11 +16,6 @@
             "symbolic_name": "aws_instance_id_pkcs7"
         },
         {
-            "command": "python -m insights.tools.cat --no-header aws_instance_type",
-            "pattern": [],
-            "symbolic_name": "aws_instance_type"
-        },
-        {
             "command": "python -m insights.tools.cat --no-header azure_instance_type",
             "pattern": [],
             "symbolic_name": "azure_instance_type"
