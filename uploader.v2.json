@@ -497,11 +497,6 @@
             "symbolic_name": "ls_disk"
         },
         {
-            "command": "/bin/ls -lanR /var/lib/docker/volumes",
-            "pattern": [],
-            "symbolic_name": "ls_docker_volumes"
-        },
-        {
             "command": "/bin/ls -lan /sys/devices/system/edac/mc",
             "pattern": [],
             "symbolic_name": "ls_edac_mc"
@@ -2204,7 +2199,6 @@
                 "from image service failed: rpc error: code = Canceled desc = context canceled",
                 "host not found in upstream",
                 "http2: no cached connection was available",
-                "httpd",
                 "hv_netvsc vmbus_",
                 "hv_netvsc: probe of vmbus_",
                 "hw csum failure",
