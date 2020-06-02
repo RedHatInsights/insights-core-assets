@@ -1,4 +1,4 @@
-{
+{ 
     "commands": [
         {
             "command": "/usr/bin/abrt status --bare=True",
@@ -495,11 +495,6 @@
             "command": "/bin/ls -lanR /dev/disk",
             "pattern": [],
             "symbolic_name": "ls_disk"
-        },
-        {
-            "command": "/bin/ls -lanR /var/lib/docker/volumes",
-            "pattern": [],
-            "symbolic_name": "ls_docker_volumes"
         },
         {
             "command": "/bin/ls -lan /sys/devices/system/edac/mc",
@@ -2227,7 +2222,6 @@
                 "from image service failed: rpc error: code = Canceled desc = context canceled",
                 "host not found in upstream",
                 "http2: no cached connection was available",
-                "httpd",
                 "hv_netvsc vmbus_",
                 "hv_netvsc: probe of vmbus_",
                 "hw csum failure",
@@ -5844,29 +5838,6 @@
                 {
                     "archive_file_name": "/insights_commands/ls_-lanR_.dev.disk",
                     "command": "/bin/ls -lanR /dev/disk",
-                    "pattern": []
-                }
-            ]
-        },
-        "ls_docker_volumes": {
-            "docker_container": [
-                {
-                    "archive_file_name": "/insights_data/container/commands/ls_-lanR_.var.lib.docker.volumes",
-                    "command": "/bin/ls -lanR {CONTAINER_MOUNT_POINT}/var/lib/docker/volumes",
-                    "pattern": []
-                }
-            ],
-            "docker_image": [
-                {
-                    "archive_file_name": "/insights_data/image/commands/ls_-lanR_.var.lib.docker.volumes",
-                    "command": "/bin/ls -lanR {CONTAINER_MOUNT_POINT}/var/lib/docker/volumes",
-                    "pattern": []
-                }
-            ],
-            "host": [
-                {
-                    "archive_file_name": "/insights_commands/ls_-lanR_.var.lib.docker.volumes",
-                    "command": "/bin/ls -lanR /var/lib/docker/volumes",
                     "pattern": []
                 }
             ]
