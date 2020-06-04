@@ -155,6 +155,8 @@
                 "Device is ineligible for IOMMU domain attach due to platform RMRR requirement",
                 "Dropping TSO",
                 "EDAC ",
+                "EFI",
+                "Efi",
                 "Emulex OneConnect OCe10100, FCoE Initiator",
                 "FEATURE IBPB_SUPPORT",
                 "FEATURE SPEC_CTRL",
@@ -182,6 +184,7 @@
                 "crashkernel reservation failed",
                 "crashkernel=auto resulted in zero bytes of reserved memory",
                 "e1000: E1000 MODULE IS NOT SUPPORTED",
+                "efi",
                 "fw=8.08.",
                 "ixgbevf: Unknown parameter `InterruptThrottleRate'",
                 "l1tf",
@@ -973,9 +976,11 @@
         {
             "command": "/bin/ps alxwww",
             "pattern": [
+                "/usr/bin/gnome-shell",
                 "COMMAND",
                 "bash",
                 "docker",
+                "ntpd",
                 "ora",
                 "pacemakerd",
                 "pcsd",
@@ -991,6 +996,7 @@
                 "/usr/bin/docker-current",
                 "/usr/bin/docker-current daemon",
                 "/usr/bin/dockerd-current",
+                "/usr/bin/gnome-shell",
                 "/usr/bin/hyperkube kubelet",
                 "/usr/bin/openshift start master",
                 "/usr/bin/openshift start node",
@@ -1024,13 +1030,11 @@
         {
             "command": "/bin/ps auxww",
             "pattern": [
-                "/exe/sapstartsrv",
                 "/sbin/multipathd",
+                "/usr/bin/gnome-shell",
                 "/usr/bin/teamd",
-                "/usr/sap/",
                 "/usr/sbin/fcoemon --syslog",
                 "COMMAND",
-                "HDB",
                 "bash",
                 "catalina.base",
                 "ceilometer-coll",
@@ -1066,12 +1070,14 @@
         {
             "command": "/bin/ps -ef",
             "pattern": [
+                "/usr/bin/gnome-shell",
                 "CMD",
                 "bash",
                 "docker",
                 "neutron-ns-metadata-proxy",
                 "nginx: master process",
                 "nginx: worker process",
+                "ntpd",
                 "ora",
                 "pacemakerd",
                 "pcsd",
@@ -1726,6 +1732,8 @@
                 "Amazon EC2",
                 "CVE-2017-1000364",
                 "CVE-2018-14634",
+                "EFI",
+                "Efi",
                 "FEATURE IBPB_SUPPORT",
                 "FEATURE SPEC_CTRL",
                 "Kernel page table isolation",
@@ -1733,6 +1741,7 @@
                 "L1Tf",
                 "Linux version",
                 "__cpufreq_add_dev",
+                "efi",
                 "l1tf",
                 "x86/pti"
             ],
@@ -2168,6 +2177,7 @@
                 "Virtualization daemon",
                 "WRITE SAME failed. Manually zeroing",
                 "] trap divide error ",
+                "_NET_ACTIVE_WINDOW",
                 "as active slave; either",
                 "belongs to docker.service",
                 "callbacks suppressed",
@@ -2209,6 +2219,7 @@
                 "irq handler for vector (irq -1)",
                 "is beyond advertised capabilities",
                 "is down or the link is down",
+                "is greater than comparison timestamp",
                 "iscsiadm: iscsiadm: Could not log into all portals",
                 "kernel/softirq.c:159 local_bh_enable+",
                 "kernel: BUG: soft lockup",
@@ -3247,7 +3258,7 @@
         {
             "file": "/var/log/up2date",
             "pattern": [
-                "[CAUTION] This_is_the default_filter_string_for_all_large_files!"
+                "The certificate /usr/share/rhn/RHNS-CA-CERT is expired"
             ],
             "symbolic_name": "up2date_log"
         },
@@ -3806,5 +3817,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2020-05-28T13:56:54.119585"
+    "version": "2020-06-04T15:43:08.528343"
 }
