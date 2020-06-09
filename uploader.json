@@ -1148,9 +1148,9 @@
             "symbolic_name": "root_crontab"
         },
         {
-            "command": "/bin/rpm -V coreutils procps procps-ng shadow-utils passwd sudo",
+            "command": "/bin/rpm -V coreutils procps procps-ng shadow-utils passwd sudo chrony",
             "pattern": [],
-            "symbolic_name": "rpm__V_packages"
+            "symbolic_name": "rpm_V_packages"
         },
         {
             "command": "/usr/bin/mongo pulp_database --eval 'db.serverStatus().storageEngine'",
