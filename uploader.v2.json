@@ -16,11 +16,6 @@
             "symbolic_name": "aws_instance_id_pkcs7"
         },
         {
-            "command": "python -m insights.tools.cat --no-header aws_instance_type",
-            "pattern": [],
-            "symbolic_name": "aws_instance_type"
-        },
-        {
             "command": "python -m insights.tools.cat --no-header azure_instance_type",
             "pattern": [],
             "symbolic_name": "azure_instance_type"
@@ -979,6 +974,7 @@
                 "/usr/bin/gnome-shell",
                 "COMMAND",
                 "bash",
+                "chronyd",
                 "docker",
                 "ntpd",
                 "ora",
@@ -1073,6 +1069,7 @@
                 "/usr/bin/gnome-shell",
                 "CMD",
                 "bash",
+                "chronyd",
                 "docker",
                 "neutron-ns-metadata-proxy",
                 "nginx: master process",
@@ -2896,6 +2893,7 @@
         {
             "file": "/etc/rsyslog.conf",
             "pattern": [
+                "$ActionQueueFileName",
                 "imjournal",
                 "imtcp",
                 "regex"
@@ -3817,5 +3815,5 @@
     "pre_commands": {
         "iface": "/sbin/ip -o link | awk -F ': ' '/.*link\\/ether/ {print $2}'"
     },
-    "version": "2020-06-04T15:43:08.528343"
+    "version": "2020-06-10T14:25:19.310123"
 }
