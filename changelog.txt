@@ -1,5 +1,8 @@
 Insights Client Core Changelog
 
+v 3.0.168 - Jun 10 2020
+- Fix loading policy metadata parsing error (BZ1841409) [RHCOMPL-728]
+
 v 3.0.167 - Jun 04 2020
 - New filters added to filters.yaml
 
