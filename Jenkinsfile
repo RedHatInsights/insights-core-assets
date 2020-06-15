@@ -88,6 +88,8 @@ pipeline {
                           sh """
                             eval `ssh-agent`
                             ssh-add \"$privateKeyFile\"
+                            mkdir ~/.ssh
+                            chmod 700 ~/.ssh
                             cp $AKAMAI_HOST_KEY ~/.ssh/known_hosts
                             chmod 600 ~/.ssh/known_hosts
                             rsync -arv -e \"ssh -2\" ./insights-core.egg* sshacs@cloud-unprotected.upload.akamai.com:/822386/api/v1/static/testing
