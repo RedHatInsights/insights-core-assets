@@ -67,23 +67,13 @@ pipeline {
                             chmod 600 ~/.ssh/known_hosts
                             rsync -arv -e \"ssh -2\" ./insights-core.egg* sshacs@cloud-unprotected.upload.akamai.com:/822386/api/v1/static/
                             rsync -arv -e \"ssh -2\" ./changelog.txt sshacs@cloud-unprotected.upload.akamai.com:/822386/api/v1/static/
+                            rsync -arv -e \"ssh -2\" ./insights-core.egg* sshacs@cloud-unprotected.upload.akamai.com:/822386/api/v1/static/release/
+                            rsync -arv -e \"ssh -2\" ./changelog.txt sshacs@cloud-unprotected.upload.akamai.com:/822386/api/v1/static/release/
                             """
                   }
              }
         }
       }
-  }
-  post {
-    success {
-      slackSend channel: '#team-platform-data',
-                color: 'good',
-                message: 'Uploader.json and Egg successfully Deployed'
-    }
-    failure {
-      slackSend channel: '#team-platform-data',
-                color: 'bad',
-                message: 'Something went wrong with uploader.json and egg deployment'
-    }
   }
 }
 
