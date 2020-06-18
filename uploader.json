@@ -228,6 +228,11 @@
             "symbolic_name": "docker_list_images"
         },
         {
+            "command": "/bin/du -s -k /var/lib/candlepin/activemq-artemis",
+            "pattern": [],
+            "symbolic_name": "du_dirs"
+        },
+        {
             "command": "/sbin/ethtool",
             "pattern": [],
             "pre_command": "iface",
@@ -633,6 +638,7 @@
                 "/var/log/journal",
                 "COMMAND",
                 "libcrypto",
+                "liblvm2cmd.so",
                 "libssl",
                 "libssl.so",
                 "lsnrctl",
@@ -972,11 +978,17 @@
             "command": "/bin/ps alxwww",
             "pattern": [
                 "/usr/bin/gnome-shell",
+                "/usr/bin/openshift start master",
+                "/usr/bin/openshift start node",
                 "COMMAND",
                 "bash",
                 "chronyd",
+                "corosync",
                 "docker",
                 "ntpd",
+                "openshift start master api",
+                "openshift start master controllers",
+                "openshift start node",
                 "ora",
                 "pacemakerd",
                 "pcsd",
@@ -1001,6 +1013,7 @@
                 "bash",
                 "ceph-osd",
                 "chronyd",
+                "corosync",
                 "docker",
                 "mysqld",
                 "ntpd",
@@ -1026,8 +1039,11 @@
         {
             "command": "/bin/ps auxww",
             "pattern": [
+                "/opt/perf/bin/midaemon",
                 "/sbin/multipathd",
                 "/usr/bin/gnome-shell",
+                "/usr/bin/openshift start master",
+                "/usr/bin/openshift start node",
                 "/usr/bin/teamd",
                 "/usr/sbin/fcoemon --syslog",
                 "COMMAND",
@@ -1036,6 +1052,7 @@
                 "ceilometer-coll",
                 "chronyd",
                 "cmirrord",
+                "corosync",
                 "docker",
                 "elasticsearch",
                 "goferd",
@@ -1049,6 +1066,9 @@
                 "nova-compute",
                 "ntpd",
                 "octavia-worker",
+                "openshift start master api",
+                "openshift start master controllers",
+                "openshift start node",
                 "ora",
                 "pacemakerd",
                 "pcsd",
@@ -1067,14 +1087,20 @@
             "command": "/bin/ps -ef",
             "pattern": [
                 "/usr/bin/gnome-shell",
+                "/usr/bin/openshift start master",
+                "/usr/bin/openshift start node",
                 "CMD",
                 "bash",
                 "chronyd",
+                "corosync",
                 "docker",
                 "neutron-ns-metadata-proxy",
                 "nginx: master process",
                 "nginx: worker process",
                 "ntpd",
+                "openshift start master api",
+                "openshift start master controllers",
+                "openshift start node",
                 "ora",
                 "pacemakerd",
                 "pcsd",
@@ -1145,9 +1171,9 @@
             "symbolic_name": "root_crontab"
         },
         {
-            "command": "/bin/rpm -V coreutils procps procps-ng shadow-utils passwd sudo",
+            "command": "/bin/rpm -V coreutils procps procps-ng shadow-utils passwd sudo chrony",
             "pattern": [],
-            "symbolic_name": "rpm__V_packages"
+            "symbolic_name": "rpm_V_packages"
         },
         {
             "command": "/usr/bin/mongo pulp_database --eval 'db.serverStatus().storageEngine'",
@@ -9306,5 +9332,5 @@
             ]
         }
     },
-    "version": "2020-06-10T14:25:24.409348"
+    "version": "2020-06-18T15:18:45.627551"
 }

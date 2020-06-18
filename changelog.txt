@@ -1,5 +1,9 @@
 Insights Client Core Changelog
 
+v 3.0.169 - Jun 18 2020
+- New Filters added to filters.yaml
+- Create thread for sdnotify [RHCLOUD-5841]
+
 v 3.0.168 - Jun 10 2020
 - Fix loading policy metadata parsing error (BZ1841409) [RHCOMPL-728]
 
