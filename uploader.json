@@ -228,6 +228,11 @@
             "symbolic_name": "docker_list_images"
         },
         {
+            "command": "/bin/du -s -k /var/lib/candlepin/activemq-artemis",
+            "pattern": [],
+            "symbolic_name": "du_dirs"
+        },
+        {
             "command": "/sbin/ethtool",
             "pattern": [],
             "pre_command": "iface",
