@@ -57,6 +57,8 @@ pipeline {
         steps {
              sh 'rsync -arv -e "ssh -i /tmp/akamai-ssh -o StrictHostKeyChecking=no" ./insights-core.egg* sshacs@unprotected.upload.akamai.com:/114034/r/insights/v1/static/core/'
              sh 'rsync -arv -e "ssh -i /tmp/akamai-ssh -o StrictHostKeyChecking=no" ./changelog.txt sshacs@unprotected.upload.akamai.com:/114034/r/insights/v1/static/core/'
+             sh 'rsync -arv -e "ssh -i /tmp/akamai-ssh -o StrictHostKeyChecking=no" ./insights-core.egg* sshacs@unprotected.upload.akamai.com:/114034/r/insights/v1/static/release/'
+             sh 'rsync -arv -e "ssh -i /tmp/akamai-ssh -o StrictHostKeyChecking=no" ./changelog.txt sshacs@unprotected.upload.akamai.com:/114034/r/insights/v1/static/release/'
              withCredentials(bindings: [sshUserPrivateKey(credentialsId: "cloud-netstorage",
                                                           keyFileVariable: "privateKeyFile")]) {
                   configFileProvider([configFile(fileId: "9f0c91bc-4feb-4076-9f3e-13da94ff3cef", variable: "AKAMAI_HOST_KEY")]) {
@@ -82,6 +84,8 @@ pipeline {
           }
         }
         steps {
+             sh 'rsync -arv -e "ssh -i /tmp/akamai-ssh -o StrictHostKeyChecking=no" ./insights-core.egg* sshacs@unprotected.upload.akamai.com:/114034/r/insights/v1/static/testing/'
+             sh 'rsync -arv -e "ssh -i /tmp/akamai-ssh -o StrictHostKeyChecking=no" ./changelog.txt sshacs@unprotected.upload.akamai.com:/114034/r/insights/v1/static/testing/'
              withCredentials(bindings: [sshUserPrivateKey(credentialsId: "cloud-netstorage",
                                                           keyFileVariable: "privateKeyFile")]) {
                   configFileProvider([configFile(fileId: "9f0c91bc-4feb-4076-9f3e-13da94ff3cef", variable: "AKAMAI_HOST_KEY")]) {
