@@ -1,5 +1,9 @@
 Insights Client Core Changelog
 
+v 3.0.171 - Jun 25 2020
+- Fix bug in unregister with --force [RHCLOUD-2638]
+- Ignore failure to write .registered file when non-root [RHCLOUD-6547]
+
 v 3.0.169 - Jun 18 2020
 - New Filters added to filters.yaml
 - Create thread for sdnotify [RHCLOUD-5841]
