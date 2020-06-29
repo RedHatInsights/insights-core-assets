@@ -664,6 +664,16 @@
             "symbolic_name": "lssap"
         },
         {
+            "command": "/usr/sbin/lvmconfig --type full",
+            "pattern": [],
+            "symbolic_name": "lvmconfig"
+        },
+        {
+            "command": "/usr/sbin/lvm dumpconfig --type full",
+            "pattern": [],
+            "symbolic_name": "lvmconfig"
+        },
+        {
             "command": "/usr/sap/hostctrl/exe/saphostctrl -function GetCIMObject -enuminstances SAPInstance",
             "pattern": [
                 "******",
